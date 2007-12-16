@@ -1,0 +1,170 @@
+﻿<UserControl x:Class="WpfApplication1.UserControls.Gyroscope"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:p3D="clr-namespace:Perspective.Wpf3D;assembly=Perspective.Wpf3D">
+    <UserControl.Resources>
+        <MaterialGroup x:Key="GlossySteelBlue">
+            <DiffuseMaterial>
+                <DiffuseMaterial.Brush>
+                    <SolidColorBrush Color="SteelBlue" Opacity="1.0"/>
+                </DiffuseMaterial.Brush>
+            </DiffuseMaterial>
+            <SpecularMaterial SpecularPower="100.0">
+                <SpecularMaterial.Brush>
+                    <SolidColorBrush Color="White" Opacity="1.0" />
+                </SpecularMaterial.Brush>
+            </SpecularMaterial>
+        </MaterialGroup>
+        <MaterialGroup x:Key="GlossyGold">
+            <DiffuseMaterial>
+                <DiffuseMaterial.Brush>
+                    <SolidColorBrush Color="Gold" Opacity="1.0"/>
+                </DiffuseMaterial.Brush>
+            </DiffuseMaterial>
+            <SpecularMaterial SpecularPower="100.0">
+                <SpecularMaterial.Brush>
+                    <SolidColorBrush Color="White" Opacity="1.0" />
+                </SpecularMaterial.Brush>
+            </SpecularMaterial>
+        </MaterialGroup>
+        <AxisAngleRotation3D x:Key="X90Rotation" Axis="1,0,0" Angle="90" />
+    </UserControl.Resources>
+    <Border Name="bMain" 
+        Background="White" >
+        <Viewport3D Name="vMain">
+            <Viewport3D.Camera>
+                <PerspectiveCamera 	  
+                    LookDirection="-40, -15, -50"
+                    UpDirection="0, 1, 0"
+                    NearPlaneDistance="1" 
+                    FarPlaneDistance="100"
+                    Position="40, 15, 50" 
+                    FieldOfView="60" />
+            </Viewport3D.Camera>
+            <ModelVisual3D>
+                <ModelVisual3D.Content>
+                    <Model3DGroup>
+                        <DirectionalLight Color="#FFFFFFFF" Direction="-10, 0, -15" />
+                        <DirectionalLight Color="#FFFFFFFF" Direction="10, 0, 15" />
+                        <DirectionalLight Color="#FFFFFFFF" Direction="0, -10, 0" />
+                    </Model3DGroup>
+                </ModelVisual3D.Content>
+            </ModelVisual3D>
+            <ModelVisual3D>
+
+                <!-- Rotor and spin axis -->
+                <ModelVisual3D>
+
+                    <ModelVisual3D.Transform>
+                        <RotateTransform3D>
+                            <RotateTransform3D.Rotation>
+                                <AxisAngleRotation3D x:Name="RotorRotation" Axis="0,1,0" />
+                            </RotateTransform3D.Rotation>
+                        </RotateTransform3D>
+                    </ModelVisual3D.Transform>
+
+                    <!-- Spin Axis -->
+                    <p3D:Bar3D SideCount="20" Material="{StaticResource GlossySteelBlue}" >
+                        <p3D:Bar3D.Transform>
+                            <Transform3DGroup>
+                                <RotateTransform3D Rotation="{StaticResource X90Rotation}"/>
+                                <TranslateTransform3D OffsetX="0" OffsetY="0.5" OffsetZ="0"/>
+                                <ScaleTransform3D ScaleX="0.2" ScaleY="26" ScaleZ="0.2" CenterX="0" CenterY="0" CenterZ="0" />
+                            </Transform3DGroup>
+                        </p3D:Bar3D.Transform>
+                    </p3D:Bar3D>
+
+                    <!-- Rotor -->
+                    <p3D:Bar3D SideCount="120" Material="{StaticResource GlossyGold}" >
+                        <p3D:Bar3D.Transform>
+                            <Transform3DGroup>
+                                <RotateTransform3D Rotation="{StaticResource X90Rotation}"/>
+                                <TranslateTransform3D OffsetX="0" OffsetY="0.5" OffsetZ="0"/>
+                                <ScaleTransform3D ScaleX="10" ScaleY="4" ScaleZ="10" CenterX="0" CenterY="0" CenterZ="0" />
+                            </Transform3DGroup>
+                        </p3D:Bar3D.Transform>
+                    </p3D:Bar3D>
+
+                </ModelVisual3D>
+
+                <p3D:Ring3D SegmentCount="800" Radius="13" SideCount="4" InitialAngle="45.0" RoundingRate="0.15" Material="{StaticResource GlossySteelBlue}">
+                    <p3D:Ring3D.Transform>
+                        <Transform3DGroup>
+                            <RotateTransform3D Rotation="{StaticResource X90Rotation}"/>
+                            <ScaleTransform3D ScaleX="1" ScaleY="1" ScaleZ="2" CenterX="0" CenterY="0" CenterZ="0" />
+                            <RotateTransform3D>
+                                <RotateTransform3D.Rotation>
+                                    <AxisAngleRotation3D Axis="0,1,0" Angle="90" />
+                                </RotateTransform3D.Rotation>
+                            </RotateTransform3D>
+                        </Transform3DGroup>
+                    </p3D:Ring3D.Transform>
+                </p3D:Ring3D>
+
+                <!-- 2 external rings model -->
+                <ModelVisual3D>
+                    <ModelVisual3D.Transform>
+                        <!-- 2 rings model rotation -->
+                        <RotateTransform3D>
+                            <RotateTransform3D.Rotation>
+                                <AxisAngleRotation3D x:Name="RingModelRotation" Axis="0,0,1" />
+                            </RotateTransform3D.Rotation>
+                        </RotateTransform3D>
+                    </ModelVisual3D.Transform>
+
+                    <!-- Frame ring -->
+                    <p3D:Ring3D SegmentCount="800" Radius="16" SideCount="4" InitialAngle="45.0" RoundingRate="0.15" Material="{StaticResource GlossySteelBlue}">
+                        <p3D:Ring3D.Transform>
+                            <Transform3DGroup>
+                                <RotateTransform3D Rotation="{StaticResource X90Rotation}"/>
+                                <ScaleTransform3D ScaleX="1" ScaleY="1" ScaleZ="2" CenterX="0" CenterY="0" CenterZ="0" />
+                                <RotateTransform3D>
+                                    <RotateTransform3D.Rotation>
+                                        <AxisAngleRotation3D x:Name="FrameRingRotation" Axis="1,0,0" />
+                                    </RotateTransform3D.Rotation>
+                                </RotateTransform3D>
+                            </Transform3DGroup>
+                        </p3D:Ring3D.Transform>
+                    </p3D:Ring3D>
+
+                    <!-- Second ring -->
+                    <p3D:Ring3D SegmentCount="800" Radius="14.5" SideCount="4" InitialAngle="45.0" RoundingRate="0.15" Material="{StaticResource GlossySteelBlue}">
+                        <p3D:Ring3D.Transform>
+                            <ScaleTransform3D ScaleX="1" ScaleY="2" ScaleZ="1" CenterX="0" CenterY="0" CenterZ="0" />
+                        </p3D:Ring3D.Transform>
+                    </p3D:Ring3D>
+                </ModelVisual3D>
+            </ModelVisual3D>
+
+            <Viewport3D.Triggers>
+                <EventTrigger RoutedEvent="Viewport3D.Loaded">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation 
+                                    From="0" 
+                                    To="360" 
+                                    Duration="0:0:30" 
+                                    Storyboard.TargetName="FrameRingRotation"
+                                    Storyboard.TargetProperty="Angle" 
+                                    RepeatBehavior="Forever"/>
+                                <DoubleAnimation 
+                                    From="0" 
+                                    To="360" 
+                                    Duration="0:0:15" 
+                                    Storyboard.TargetName="RingModelRotation"
+                                    Storyboard.TargetProperty="Angle" RepeatBehavior="Forever"/>
+                                <DoubleAnimation 
+                                    From="360" 
+                                    To="0" 
+                                    Duration="0:0:3" 
+                                    Storyboard.TargetName="RotorRotation"
+                                    Storyboard.TargetProperty="Angle" RepeatBehavior="Forever" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Viewport3D.Triggers>
+        </Viewport3D>
+    </Border>
+</UserControl>

@@ -1,0 +1,74 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perspective.Wpf3D-dn3.5", "Perspective.Wpf3D\Perspective.Wpf3D-dn3.5.csproj", "{F1121E62-AE79-4460-9419-E74F19C011F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApplication1", "WpfApplication1\WpfApplication1.csproj", "{F09C87FA-351D-4778-93AF-15D2859FE3D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perspective.Wpf-dn3.5", "Perspective.Wpf\Perspective.Wpf-dn3.5.csproj", "{34860E9C-F566-4F14-BFB9-45F6B37503F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perspective.Core-dn3.5", "Perspective.Core\Perspective.Core-dn3.5.csproj", "{19FC4939-5269-4B1E-93BF-569D3E14A9B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perspective.Core-dn3.0", "Perspective.Core\Perspective.Core-dn3.0.csproj", "{303B131F-113B-4DF2-881E-9233DCBBEFDA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perspective.Wpf-dn3.0", "Perspective.Wpf\Perspective.Wpf-dn3.0.csproj", "{0E9C5AEB-A826-42FE-8C96-D27E5070AC2F}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 7
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs03.codeplex.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Perspective.Core\\Perspective.Core-dn3.0.csproj
+		SccProjectName1 = Perspective.Core
+		SccLocalPath1 = Perspective.Core
+		SccProjectUniqueName2 = Perspective.Core\\Perspective.Core-dn3.5.csproj
+		SccProjectName2 = Perspective.Core
+		SccLocalPath2 = Perspective.Core
+		SccProjectUniqueName3 = Perspective.Wpf3D\\Perspective.Wpf3D-dn3.5.csproj
+		SccProjectName3 = Perspective.Wpf3D
+		SccLocalPath3 = Perspective.Wpf3D
+		SccProjectUniqueName4 = Perspective.Wpf\\Perspective.Wpf-dn3.0.csproj
+		SccProjectName4 = Perspective.Wpf
+		SccLocalPath4 = Perspective.Wpf
+		SccProjectUniqueName5 = Perspective.Wpf\\Perspective.Wpf-dn3.5.csproj
+		SccProjectName5 = Perspective.Wpf
+		SccLocalPath5 = Perspective.Wpf
+		SccProjectUniqueName6 = WpfApplication1\\WpfApplication1.csproj
+		SccProjectName6 = WpfApplication1
+		SccLocalPath6 = WpfApplication1
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F1121E62-AE79-4460-9419-E74F19C011F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1121E62-AE79-4460-9419-E74F19C011F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1121E62-AE79-4460-9419-E74F19C011F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1121E62-AE79-4460-9419-E74F19C011F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F09C87FA-351D-4778-93AF-15D2859FE3D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F09C87FA-351D-4778-93AF-15D2859FE3D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F09C87FA-351D-4778-93AF-15D2859FE3D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F09C87FA-351D-4778-93AF-15D2859FE3D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34860E9C-F566-4F14-BFB9-45F6B37503F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34860E9C-F566-4F14-BFB9-45F6B37503F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34860E9C-F566-4F14-BFB9-45F6B37503F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34860E9C-F566-4F14-BFB9-45F6B37503F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19FC4939-5269-4B1E-93BF-569D3E14A9B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19FC4939-5269-4B1E-93BF-569D3E14A9B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19FC4939-5269-4B1E-93BF-569D3E14A9B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19FC4939-5269-4B1E-93BF-569D3E14A9B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{303B131F-113B-4DF2-881E-9233DCBBEFDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{303B131F-113B-4DF2-881E-9233DCBBEFDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{303B131F-113B-4DF2-881E-9233DCBBEFDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{303B131F-113B-4DF2-881E-9233DCBBEFDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E9C5AEB-A826-42FE-8C96-D27E5070AC2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E9C5AEB-A826-42FE-8C96-D27E5070AC2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E9C5AEB-A826-42FE-8C96-D27E5070AC2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E9C5AEB-A826-42FE-8C96-D27E5070AC2F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
