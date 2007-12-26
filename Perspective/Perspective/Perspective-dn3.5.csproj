@@ -74,8 +74,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppCommands.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Base3D.xaml.cs">
+      <DependentUpon>Base3D.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -108,9 +112,24 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\Base3D.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Pages\" />
+    <ProjectReference Include="..\Perspective.Core\Perspective.Core-dn3.5.csproj">
+      <Project>{19FC4939-5269-4B1E-93BF-569D3E14A9B0}</Project>
+      <Name>Perspective.Core-dn3.5</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Perspective.Wpf3D\Perspective.Wpf3D-dn3.5.csproj">
+      <Project>{F1121E62-AE79-4460-9419-E74F19C011F7}</Project>
+      <Name>Perspective.Wpf3D-dn3.5</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Perspective.Wpf\Perspective.Wpf-dn3.5.csproj">
+      <Project>{34860E9C-F566-4F14-BFB9-45F6B37503F9}</Project>
+      <Name>Perspective.Wpf-dn3.5</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,12 +1,20 @@
 ﻿<Window x:Uid="Window_1" x:Class="Perspective.MainWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:Perspective"
     Title="Perspective" Loaded="Window_Loaded" WindowState="Maximized">
+    <Window.CommandBindings>
+        <CommandBinding Command="ApplicationCommands.Close" Executed="CloseCommand_Executed" />
+        <CommandBinding Command="local:AppCommands.OpenPageCommand" Executed="OpenPageCommand_Executed" />
+    </Window.CommandBindings>
     <DockPanel x:Uid="dockPanel1" Name="dockPanel1">
         <TabControl x:Uid="tabControl1" Name="tabControl1" Width="200" DockPanel.Dock="Left">
             <TabItem x:Uid="TabItem_1" Header="Content" >
-                <TreeView x:Uid="treeView1" Name="treeView1">
-                    <TreeViewItem x:Uid="TreeViewItem_1" Header="My Test" />
+                <TreeView x:Uid="treeView1" Name="treeView1" >
+                    <TreeViewItem x:Uid="TreeViewItem_1" Header="WPF Demo" />
+                    <TreeViewItem Header="Perspective Demo" >
+                        <Hyperlink Command="local:AppCommands.OpenPageCommand" CommandParameter="Pages/Base3D.xaml">3D Demo</Hyperlink>
+                    </TreeViewItem>
                 </TreeView>
             </TabItem>
             <TabItem x:Uid="TabItem_2" />
