@@ -104,6 +104,10 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Page Include="Skins\BlackAndWhite\Resources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Skins\Button3D.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

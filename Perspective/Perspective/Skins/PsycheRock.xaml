@@ -13,12 +13,16 @@
         Color="Black" />
 
     <SolidColorBrush
+        x:Key="{ComponentResourceKey {x:Type local:ResourceKeys}, PanelForegroundBrush}" 
+        Color="White" />
+
+    <SolidColorBrush
         x:Key="{ComponentResourceKey {x:Type local:ResourceKeys}, PanelBackgroundBrush}" 
-        Color="Green" />
+        Color="SteelBlue" />
 
     <SolidColorBrush
         x:Key="{ComponentResourceKey {x:Type local:ResourceKeys}, ViewBackgroundBrush}" 
-        Color="Yellow" />
+        Color="LightCyan" />
 
     <Style 
         BasedOn="{StaticResource GroupBoxStyle}" 

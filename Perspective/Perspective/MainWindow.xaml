@@ -32,14 +32,17 @@
                 </TreeView>
             </TabItem>
             <TabItem x:Uid="TabItem_2" Header="Skin" >
-                <GroupBox>
+                <GroupBox >
                     <StackPanel>
                         <RadioButton 
-                    Command="local:AppCommands.LoadSkinCommand" 
-                    CommandParameter="LaMoisson">LaMoisson</RadioButton>
+                            Command="local:AppCommands.LoadSkinCommand" 
+                            CommandParameter="LaMoisson">LaMoisson</RadioButton>
+                        <RadioButton IsChecked="True"
+                            Command="local:AppCommands.LoadSkinCommand" 
+                            CommandParameter="PsycheRock">PsycheRock</RadioButton>
                         <RadioButton 
-                    Command="local:AppCommands.LoadSkinCommand" 
-                    CommandParameter="PsycheRock">PsycheRock</RadioButton>
+                            Command="local:AppCommands.LoadSkinCommand" 
+                            CommandParameter="BlackAndWhite">BlackAndWhite</RadioButton>
                     </StackPanel>
                 </GroupBox>
             </TabItem>

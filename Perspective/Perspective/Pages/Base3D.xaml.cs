@@ -30,33 +30,8 @@ namespace Perspective.Pages
         {
             InitializeComponent();
         }
-        private void b1_Click(object sender, RoutedEventArgs e)
-        {
-            Perspective.Wpf3D.SkinManager.Current.LoadSkin("LaMoisson");
-        }
 
-        private void b2_Click(object sender, RoutedEventArgs e)
-        {
-            Perspective.Wpf3D.SkinManager.Current.LoadDefaultSkin();
-        }
-
-        private void b3_Click(object sender, RoutedEventArgs e)
-        {
-            Perspective.Wpf.SkinManager.Current.LoadSkin("BlackAndWhite");
-        }
-
-        private void b4_Click(object sender, RoutedEventArgs e)
-        {
-            Perspective.Wpf.SkinManager.Current.LoadDefaultSkin();
-        }
-
-        private void b5_Click(object sender, RoutedEventArgs e)
-        {
-            //Window2 w2 = new Window2();
-            //w2.Show();
-        }
-
-        private void b6_Click(object sender, RoutedEventArgs e)
+        private void bDynamicKnob_Click(object sender, RoutedEventArgs e)
         {
             GenerateCustomKnob();
         }

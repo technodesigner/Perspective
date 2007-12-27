@@ -8,6 +8,9 @@
         <Setter 
             Property="BorderBrush" 
             Value="{DynamicResource {ComponentResourceKey {x:Type local:ResourceKeys}, BorderBrush}}" />
+        <Setter 
+            Property="Foreground" 
+            Value="{DynamicResource {ComponentResourceKey {x:Type local:ResourceKeys}, PanelForegroundBrush}}" />
     </Style>
 
     <Style x:Key="PanelStyle" >

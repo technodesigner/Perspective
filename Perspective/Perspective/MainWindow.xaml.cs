@@ -34,7 +34,9 @@ namespace Perspective
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-
+            SkinManager.Current.LoadDefaultSkin();
+            Perspective.Wpf.SkinManager.Current.LoadDefaultSkin();
+            Perspective.Wpf3D.SkinManager.Current.LoadDefaultSkin();
         }
 
         private void OpenPageCommand_Executed(object sender, ExecutedRoutedEventArgs e)
@@ -62,6 +64,8 @@ namespace Perspective
                 if (!String.IsNullOrEmpty(skin))
                 {
                     SkinManager.Current.LoadSkin(skin);
+                    Perspective.Wpf.SkinManager.Current.LoadSkin(skin);
+                    Perspective.Wpf3D.SkinManager.Current.LoadSkin(skin);
                 }
             }
         }

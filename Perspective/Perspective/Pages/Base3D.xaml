@@ -94,22 +94,9 @@
                     Value="1.0" 
                     />
             </GroupBox>
-            <GroupBox Header="3D Skins">
-                <StackPanel>
-                    <Button x:Name="b1" Click="b1_Click" Height="20.0">LaMoisson</Button>
-                    <Button x:Name="b2" Click="b2_Click" Height="20.0">PsycheRock</Button>
-                </StackPanel>
-            </GroupBox>
-            <GroupBox Header="2D Skins">
-                <StackPanel>
-                    <Button x:Name="b3" Click="b3_Click" Height="20.0">BlackAndWhite</Button>
-                    <Button x:Name="b4" Click="b4_Click" Height="20.0">Generic</Button>
-                </StackPanel>
-            </GroupBox>
             <GroupBox Header="Test">
                 <StackPanel>
-                    <Button x:Name="b5" Click="b5_Click" Height="20.0">Gyroscope</Button>
-                    <Button x:Name="b6" Click="b6_Click" Height="20.0">Dynamic Knob</Button>
+                    <Button x:Name="bDynamicKnob" Click="bDynamicKnob_Click" Height="20.0">Dynamic Knob</Button>
                 </StackPanel>
             </GroupBox>
         </StackPanel>

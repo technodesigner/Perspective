@@ -10,20 +10,20 @@
 
     <SolidColorBrush
         x:Key="{ComponentResourceKey {x:Type local:ResourceKeys}, BorderBrush}" 
-        Color="Red" />
-    
-    <SolidColorBrush
-        x:Key="{ComponentResourceKey {x:Type local:ResourceKeys}, PanelForegroundBrush}" 
         Color="Black" />
 
     <SolidColorBrush
+        x:Key="{ComponentResourceKey {x:Type local:ResourceKeys}, PanelForegroundBrush}" 
+        Color="White" />
+    
+    <SolidColorBrush
         x:Key="{ComponentResourceKey {x:Type local:ResourceKeys}, PanelBackgroundBrush}" 
-        Color="#A7AEB4" />
+        Color="#333333" />
 
     <SolidColorBrush
         x:Key="{ComponentResourceKey {x:Type local:ResourceKeys}, ViewBackgroundBrush}" 
         Color="White" />
-    
+
     <Style 
         BasedOn="{StaticResource GroupBoxStyle}" 
         TargetType="{x:Type GroupBox}" 

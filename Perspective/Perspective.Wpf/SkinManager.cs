@@ -17,12 +17,14 @@ namespace Perspective.Wpf
 {
     /// <summary>
     /// A class for skin handling of Perspective.Wpf controls.
+    /// The default skin (PsycheRock) matches the current theme (currently Generic.xaml).
     /// </summary>
     public class SkinManager : Perspective.Core.SkinManagerBase
     {
         private const string _defaultSkinFolder = "Skins";
         private const string _defaultThemeFolder = "Themes";
         private const string _defaultTheme = "Generic";
+        private const string _defaultSkin = "PsycheRock";
         private const string _assemblyName = "Perspective.Wpf";
 
         private SkinManager()
@@ -82,11 +84,19 @@ namespace Perspective.Wpf
 
         /// <summary>
         /// Loads a skin from the default skin folder and/or the default dictionary name.
+        /// The default skin matches the current theme (currently Generic.xaml).
         /// </summary>
         /// <param name="skinName">Name of the skin</param>
         public override void LoadSkin(string skinName)
         {
-            LoadSkin(_defaultSkinFolder, skinName);
+            if (skinName == _defaultSkin)
+            {
+                LoadDefaultSkin();
+            }
+            else
+            {
+                LoadSkin(_defaultSkinFolder, skinName);
+            }
         }
 
         private void UnloadSkin()
