@@ -10,13 +10,12 @@
 //
 //------------------------------------------------------------------
 using System;
-using System.Windows;
-using System.Collections.ObjectModel;
+using System.Collections.Generic;
 
-namespace Perspective.Wpf3D
+namespace Perspective
 {
     /// <summary>
-    /// A class for skin handling of Perspective.Wpf3D controls.
+    /// A class for skin handling of Perspective application UI
     /// </summary>
     public class SkinManager : Perspective.Core.SkinManagerBase
     {
@@ -27,10 +26,9 @@ namespace Perspective.Wpf3D
             get { return _defaultSkinBaseFolder; }
         }
 
-        private const string _defaultSkinFolder = "PsycheRock";
-        private const string _defaultDictionary = "Resources";
-        private const string _assemblyName = "Perspective.Wpf3D";
-
+        private const string _defaultSkin = "PsycheRock";
+        // private const string _defaultDictionary = "Resources";
+        private const string _assemblyName = "Perspective";
         private SkinManager()
         {
         }
@@ -50,7 +48,6 @@ namespace Perspective.Wpf3D
                     if (_instance == null)
                     {
                         _instance = new SkinManager();
-                        _instance.LoadDefaultSkin();
                     }
                     return _instance;
                 }
@@ -73,7 +70,8 @@ namespace Perspective.Wpf3D
         /// </summary>
         public override void LoadDefaultSkin()
         {
-            LoadSkin(_defaultSkinBaseFolder, _defaultSkinFolder, _defaultDictionary);
+            // LoadSkin(_defaultSkinBaseFolder, _defaultSkinFolder, _defaultDictionary);
+            LoadSkin(_defaultSkinBaseFolder, _defaultSkin);
         }
 
         /// <summary>
@@ -93,7 +91,9 @@ namespace Perspective.Wpf3D
         /// <param name="skinName">Name of the skin.</param>
         public override void LoadSkin(string skinName)
         {
-            LoadSkin(_defaultSkinBaseFolder, skinName, _defaultDictionary);
+            // LoadSkin(_defaultSkinBaseFolder, skinName, _defaultDictionary);
+            LoadSkin(_defaultSkinBaseFolder, skinName);
         }
+
     }
 }

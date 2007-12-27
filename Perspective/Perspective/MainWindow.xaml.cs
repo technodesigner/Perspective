@@ -53,5 +53,17 @@ namespace Perspective
         {
             App.Current.Shutdown();
         }
+
+        private void LoadSkinCommand_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            if (e.Parameter != null)
+            {
+                string skin = e.Parameter.ToString();
+                if (!String.IsNullOrEmpty(skin))
+                {
+                    SkinManager.Current.LoadSkin(skin);
+                }
+            }
+        }
     }
 }

@@ -43,10 +43,6 @@
             <Setter Property="HorizontalAlignment" Value="Center" />
             <Setter Property="VerticalAlignment" Value="Center" />
         </Style>
-        <Style TargetType="{x:Type GroupBox}">
-            <Setter Property="Margin" Value="4.0" />
-            <Setter Property="BorderBrush" Value="Black" />
-        </Style>
         <Style BasedOn="{StaticResource {x:Type p:Fader}}"
                TargetType="p:Fader">
             <Setter Property="Orientation" Value="Vertical" />
@@ -63,8 +59,12 @@
             <Setter Property="VerticalAlignment" Value="Center" />
         </Style>
     </Page.Resources>
-    <DockPanel Background="#333333">
-        <StackPanel DockPanel.Dock="Right" Width="120.0" Background="#A7AEB4">
+    <DockPanel >
+        <StackPanel 
+            DockPanel.Dock="Right" 
+            Width="120.0" 
+            Style="{DynamicResource ColoredPanelStyle}"
+            >
             <GroupBox 
                 Header="Rotation" >
                 <Grid>

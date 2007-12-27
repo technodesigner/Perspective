@@ -24,9 +24,17 @@ namespace Perspective
             get { return _openPageCommand; }
         }
 
+        private static RoutedCommand _loadSkinCommand;
+
+        public static RoutedCommand LoadSkinCommand
+        {
+            get { return AppCommands._loadSkinCommand; }
+        }
+
         static AppCommands()
         {
             _openPageCommand = new RoutedCommand();
+            _loadSkinCommand = new RoutedCommand();
         }
 
     }

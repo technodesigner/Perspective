@@ -9,16 +9,21 @@
     <Window.CommandBindings>
         <CommandBinding Command="ApplicationCommands.Close" Executed="CloseCommand_Executed" />
         <CommandBinding Command="local:AppCommands.OpenPageCommand" Executed="OpenPageCommand_Executed" />
+        <CommandBinding Command="local:AppCommands.LoadSkinCommand" Executed="LoadSkinCommand_Executed" />
     </Window.CommandBindings>
     <DockPanel x:Uid="dockPanel1" Name="dockPanel1">
-        <TabControl x:Uid="tabControl1" Name="tabControl1" Width="200" DockPanel.Dock="Left">
+        <TabControl Background="White"
+            DockPanel.Dock="Left"
+            x:Uid="tabControl1" Name="tabControl1" 
+            Width="200" >
             <TabItem x:Uid="TabItem_1" Header="Content" >
-                <TreeView x:Uid="treeView1" Name="treeView1" >
-                    <TreeViewItem x:Uid="TreeViewItem_1" Header="WPF Demo" />
-                    <TreeViewItem Header="Perspective Demo" >
+                <TreeView 
+                    x:Uid="treeView1" Name="treeView1" >
+                    <TreeViewItem x:Uid="TreeViewItem_1" Header="WPF Demo" IsExpanded="True" />
+                    <TreeViewItem Header="Perspective Demo" IsExpanded="True">
                         <mc:AlternateContent>
                             <mc:Choice Requires="dn35">
-                                <TreeViewItem Header="3D" >
+                                <TreeViewItem Header="3D" IsExpanded="True">
                                     <Hyperlink Command="local:AppCommands.OpenPageCommand" CommandParameter="Pages/Base3D.xaml">3D Demo</Hyperlink>
                                 </TreeViewItem>
                             </mc:Choice>
@@ -26,8 +31,20 @@
                     </TreeViewItem>
                 </TreeView>
             </TabItem>
-            <TabItem x:Uid="TabItem_2" />
+            <TabItem x:Uid="TabItem_2" Header="Skin" >
+                <GroupBox>
+                    <StackPanel>
+                        <RadioButton 
+                    Command="local:AppCommands.LoadSkinCommand" 
+                    CommandParameter="LaMoisson">LaMoisson</RadioButton>
+                        <RadioButton 
+                    Command="local:AppCommands.LoadSkinCommand" 
+                    CommandParameter="PsycheRock">PsycheRock</RadioButton>
+                    </StackPanel>
+                </GroupBox>
+            </TabItem>
         </TabControl>
         <Frame x:Uid="frame1" Name="frame1" />
+        
     </DockPanel>
 </Window>

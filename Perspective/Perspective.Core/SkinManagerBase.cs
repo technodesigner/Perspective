@@ -18,7 +18,7 @@ namespace Perspective.Core
     /// <summary>
     /// A class for skin handling.
     /// </summary>
-    public abstract class SkinManager
+    public abstract class SkinManagerBase
     {
         private string _dictionaryName = "";
 

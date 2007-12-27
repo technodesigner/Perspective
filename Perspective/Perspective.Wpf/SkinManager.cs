@@ -18,7 +18,7 @@ namespace Perspective.Wpf
     /// <summary>
     /// A class for skin handling of Perspective.Wpf controls.
     /// </summary>
-    public class SkinManager : Perspective.Core.SkinManager
+    public class SkinManager : Perspective.Core.SkinManagerBase
     {
         private const string _defaultSkinFolder = "Skins";
         private const string _defaultThemeFolder = "Themes";
