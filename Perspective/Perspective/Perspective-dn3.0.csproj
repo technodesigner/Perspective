@@ -86,13 +86,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="BuildLocDll.bat" />
-    <None Include="BuildLocFile.bat" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="UpdateUid.bat" />
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
