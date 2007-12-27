@@ -10,33 +10,27 @@
 //
 //------------------------------------------------------------------
 using System;
+using System.Windows;
+using System.Windows.Media;
 using System.Windows.Media.Media3D;
 using Perspective.Wpf3D.Primitives;
 using Perspective.Wpf3D.Sculptors;
 
-namespace Perspective.Wpf3D
+namespace Perspective.Wpf3D.Shapes
 {
     /// <summary>
-    /// A 3D flat polygon element.
-    /// Default radius is 1.0.
+    /// A 3D flat square model.
+    /// Default size of a side is 1.0.
     /// </summary>
-    public class Polygon3D : PolygonalElement3D
+    public class Square3D : GeometryElement3D
     {
-        /// <summary>
-        /// Initializes a new instance of Polygon3D.
-        /// </summary>
-        public Polygon3D()
-        {
-        }
-
-        private PolygonSculptor _sculptor = new PolygonSculptor();
+        private SquareSculptor _sculptor = new SquareSculptor();
 
         /// <summary>
         /// Called by UIElement3D.InvalidateModel() to update the 3D model.
         /// </summary>
         protected override void OnUpdateModel()
         {
-            _sculptor.Initialize(SideCount, InitialAngle, RoundingRate);
             _sculptor.BuildMesh();
             Geometry = _sculptor.Mesh;
             base.OnUpdateModel();

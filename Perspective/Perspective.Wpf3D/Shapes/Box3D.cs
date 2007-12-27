@@ -16,49 +16,49 @@ using System.Windows.Media.Media3D;
 using Perspective.Wpf3D.Primitives;
 using Perspective.Wpf3D.Sculptors;
 
-namespace Perspective.Wpf3D
+namespace Perspective.Wpf3D.Shapes
 {
     /// <summary>
-    /// A 3D arrow element.
-    /// By default, the direction of the arrow is the Z axis, and the length is 1.0.
-    /// Default radius of the body is 0.1.
-    /// Default radius of the head is 0.2.
+    /// A 3D box element.
+    /// The same material is used for all the faces through the Material property.
+    /// Default size of a side is 1.0.
     /// </summary>
-    public class Arrow3D : GeometryElement3D
+    public class Box3D : GeometryElement3D
     {
-        private ArrowSculptor _sculptor = new ArrowSculptor();
+        private BoxSculptor _sculptor = new BoxSculptor();
 
         /// <summary>
         /// Called by UIElement3D.InvalidateModel() to update the 3D model.
         /// </summary>
         protected override void OnUpdateModel()
         {
-            _sculptor.Initialize(Length);
+            _sculptor.Initialize(VisibleSides);
             _sculptor.BuildMesh();
             Geometry = _sculptor.Mesh;
             base.OnUpdateModel();
         }
 
         /// <summary>
-        /// Gets or sets the axis length.
+        /// Gets or sets the sides of the model.
+        /// Default is BoxSides.All
+        /// XAML usage : VisibleSides="Back,Left,Right,Up,Down"
         /// </summary>
-        public double Length
+        public BoxSides VisibleSides
         {
-            get { return (double)GetValue(LengthProperty); }
-            set { SetValue(LengthProperty, value); }
+            get { return (BoxSides)GetValue(VisibleSidesProperty); }
+            set { SetValue(VisibleSidesProperty, value); }
         }
 
         /// <summary>
-        /// Identifies the Length dependency property.
-        /// Default value is 1.0.
+        /// Identifies the VisibleSides dependency property.
         /// </summary>
-        public static readonly DependencyProperty LengthProperty =
+        public static readonly DependencyProperty VisibleSidesProperty =
             DependencyProperty.Register(
-                "Length",
-                typeof(double),
-                typeof(Arrow3D),
-                new PropertyMetadata(
-                    ArrowSculptor.DefaultLength,
+                "VisibleSides", 
+                typeof(BoxSides), 
+                typeof(Box3D), 
+                new UIPropertyMetadata(
+                    BoxSides.All,
                     VisualPropertyChanged));
     }
 }

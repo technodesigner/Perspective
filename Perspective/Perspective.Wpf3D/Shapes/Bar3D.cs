@@ -16,21 +16,23 @@ using System.Windows.Media.Media3D;
 using Perspective.Wpf3D.Primitives;
 using Perspective.Wpf3D.Sculptors;
 
-namespace Perspective.Wpf3D
+namespace Perspective.Wpf3D.Shapes
 {
     /// <summary>
-    /// A 3D flat square model.
-    /// Default size of a side is 1.0.
+    /// A 3D bar element.
+    /// By default, the direction of the bar is the Z axis, and the length is 1.0.
+    /// Default radius is 1.0.
     /// </summary>
-    public class Square3D : GeometryElement3D
+    public class Bar3D : PolygonalElement3D
     {
-        private SquareSculptor _sculptor = new SquareSculptor();
+        private BarSculptor _sculptor = new BarSculptor();
 
         /// <summary>
         /// Called by UIElement3D.InvalidateModel() to update the 3D model.
         /// </summary>
         protected override void OnUpdateModel()
         {
+            _sculptor.Initialize(SideCount, InitialAngle, RoundingRate);
             _sculptor.BuildMesh();
             Geometry = _sculptor.Mesh;
             base.OnUpdateModel();

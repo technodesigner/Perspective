@@ -58,16 +58,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Arrow3D.cs" />
-    <Compile Include="Bar3D.cs" />
-    <Compile Include="Box3D.cs" />
-    <Compile Include="BoxSides.cs" />
+    <Compile Include="Shapes\Arrow3D.cs" />
+    <Compile Include="Shapes\Bar3D.cs" />
+    <Compile Include="Shapes\Box3D.cs" />
+    <Compile Include="Primitives\BoxSides.cs" />
     <Compile Include="Controls\Button3D.cs" />
-    <Compile Include="Conical3D.cs" />
-    <Compile Include="Football3D.cs" />
-    <Compile Include="Isocahedron3D.cs" />
+    <Compile Include="Shapes\Conical3D.cs" />
+    <Compile Include="Shapes\Football3D.cs" />
+    <Compile Include="Shapes\Isocahedron3D.cs" />
     <Compile Include="Controls\Knob3D.cs" />
-    <Compile Include="Polygon3D.cs" />
+    <Compile Include="Shapes\Polygon3D.cs" />
     <Compile Include="Primitives\AxisDirection.cs" />
     <Compile Include="Primitives\ButtonBase3D.cs" />
     <Compile Include="Primitives\ContentControl3D.cs" />
@@ -89,13 +89,13 @@
     <Compile Include="Primitives\Sculptor.cs" />
     <Compile Include="Sculptors\TruncatedIsocahedronSculptor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Ring3D.cs" />
+    <Compile Include="Shapes\Ring3D.cs" />
     <Compile Include="Controls\Fader3D.cs" />
-    <Compile Include="Spherical3D.cs" />
+    <Compile Include="Shapes\Spherical3D.cs" />
     <Compile Include="Sculptors\XyzAxisSculptor.cs" />
-    <Compile Include="Square3D.cs" />
+    <Compile Include="Shapes\Square3D.cs" />
     <Compile Include="SkinManager.cs" />
-    <Compile Include="XyzAxis3D.cs" />
+    <Compile Include="Shapes\XyzAxis3D.cs" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="Skins\PsycheRock\Resources.xaml">

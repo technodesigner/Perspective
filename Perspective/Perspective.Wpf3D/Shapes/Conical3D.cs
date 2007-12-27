@@ -14,7 +14,7 @@ using System.Windows.Media.Media3D;
 using Perspective.Wpf3D.Primitives;
 using Perspective.Wpf3D.Sculptors;
 
-namespace Perspective.Wpf3D
+namespace Perspective.Wpf3D.Shapes
 {
     /// <summary>
     /// A 3D conical model.

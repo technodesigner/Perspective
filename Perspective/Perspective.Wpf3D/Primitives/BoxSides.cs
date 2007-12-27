@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Perspective.Wpf3D
+namespace Perspective.Wpf3D.Primitives
 {
     /// <summary>
     /// A Flags enumeration to identify the sides od a cube 
