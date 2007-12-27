@@ -21,7 +21,7 @@ using Perspective.Core.Primitives;
 using System.Windows.Media;
 using System.Windows.Controls;
 
-namespace Perspective.Wpf3D
+namespace Perspective.Wpf3D.Controls
 {
     /// <summary>
     /// A 3D knob (rotative button) class, compatible with range element multiselection.

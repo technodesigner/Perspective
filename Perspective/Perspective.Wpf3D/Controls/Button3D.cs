@@ -2,7 +2,7 @@
 using Perspective.Wpf3D.Primitives;
 
 
-namespace Perspective.Wpf3D
+namespace Perspective.Wpf3D.Controls
 {
     /// <summary>
     /// A push button 3D control.

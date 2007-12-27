@@ -15,7 +15,7 @@ using System.Windows;
 using System.Windows.Media;
 using System.Windows.Input;
 
-namespace Perspective.Wpf3D
+namespace Perspective.Wpf3D.Controls
 {
     /// <summary>
     /// A 3D slider class compatible with range element multiselection.
