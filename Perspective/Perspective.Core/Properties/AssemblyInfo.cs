@@ -39,6 +39,10 @@ using System.Windows.Markup;
 
 [assembly: CLSCompliant(true)]
 
+#if DN35
+    [assembly:XmlnsDefinition("Dn35", "Perspective.Core")]
+#endif
+
 [assembly: XmlnsDefinition(Perspective.Core.LibraryInfo.XmlNamespace, "Perspective.Core")]
 
 namespace Perspective.Core

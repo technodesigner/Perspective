@@ -99,6 +99,16 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Perspective.Core\Perspective.Core-dn3.0.csproj">
+      <Project>{303B131F-113B-4DF2-881E-9233DCBBEFDA}</Project>
+      <Name>Perspective.Core-dn3.0</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Perspective.Wpf\Perspective.Wpf-dn3.0.csproj">
+      <Project>{0E9C5AEB-A826-42FE-8C96-D27E5070AC2F}</Project>
+      <Name>Perspective.Wpf-dn3.0</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
     <Folder Include="Pages\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
