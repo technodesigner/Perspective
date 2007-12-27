@@ -16,6 +16,7 @@ using System.Collections.ObjectModel;
 using Perspective.Wpf3D;
 using System.Windows.Media.Media3D;
 using System.Windows.Data;
+using Perspective.Wpf3D.Controls;
 
 namespace Perspective.Pages
 {

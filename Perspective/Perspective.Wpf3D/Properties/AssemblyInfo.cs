@@ -41,4 +41,5 @@ using System.Windows.Markup;
 
 [assembly: CLSCompliant(true)]
 
+[assembly: XmlnsDefinition(Perspective.Core.LibraryInfo.XmlNamespace, "Perspective.Wpf3D.Controls")]
 [assembly: XmlnsDefinition(Perspective.Core.LibraryInfo.XmlNamespace, "Perspective.Wpf3D")]

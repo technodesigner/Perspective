@@ -1,6 +1,7 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:p3D="clr-namespace:Perspective.Wpf3D">
+    xmlns:p3D="clr-namespace:Perspective.Wpf3D"
+    xmlns:p3DControls="clr-namespace:Perspective.Wpf3D.Controls">
 
     <!--Button3D Resources-->
 
@@ -9,7 +10,7 @@
         x:Shared="false">
         <ContainerUIElement3D.Transform>
             <Transform3DGroup>
-                <TranslateTransform3D OffsetZ="{Binding RelativeSource={RelativeSource AncestorType={x:Type p3D:Button3D}}, Path=PressEffect}"/>
+                <TranslateTransform3D OffsetZ="{Binding RelativeSource={RelativeSource AncestorType={x:Type p3DControls:Button3D}}, Path=PressEffect}"/>
                 <ScaleTransform3D ScaleX="0.8" ScaleY="0.5" ScaleZ="0.2"/>
                 <TranslateTransform3D OffsetX="0.1" OffsetY="0.1" OffsetZ="0.01"/>
             </Transform3DGroup>

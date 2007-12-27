@@ -109,24 +109,24 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Skins\Fader3D.xaml">
-      <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Skins\Knob3D.xaml">
-      <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Skins\Resources.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Page Include="Skins\LaMoisson\Fader3D.xaml">
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Skins\LaMoisson\Resources.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Skins\LaMoisson\Fader3D.xaml">
-      <Generator>MSBuild:Compile</Generator>
+    <Page Include="Skins\Resources.xaml">
       <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
