@@ -3,6 +3,7 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System;
 using System.Windows;
+using System.Windows.Markup;
 
 
 // General Information about an assembly is controlled through the following 
@@ -39,3 +40,5 @@ using System.Windows;
 [assembly: AssemblyFileVersion("0.5.0.0")]
 
 [assembly: CLSCompliant(true)]
+
+[assembly: XmlnsDefinition(Perspective.Core.LibraryInfo.XmlNamespace, "Perspective.Wpf3D")]

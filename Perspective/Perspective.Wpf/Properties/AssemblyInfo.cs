@@ -61,4 +61,4 @@ using System.Windows.Markup;
 
 [assembly: CLSCompliant(true)]
 
-[assembly: XmlnsDefinition("http://www.codeplex.com/perspective", "Perspective.Wpf")]
+[assembly: XmlnsDefinition(Perspective.Core.LibraryInfo.XmlNamespace, "Perspective.Wpf")]

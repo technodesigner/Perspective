@@ -2,6 +2,7 @@
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System;
+using System.Windows.Markup;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
@@ -37,3 +38,13 @@ using System;
 [assembly: AssemblyFileVersion("0.5.0.0")]
 
 [assembly: CLSCompliant(true)]
+
+[assembly: XmlnsDefinition(Perspective.Core.LibraryInfo.XmlNamespace, "Perspective.Core")]
+
+namespace Perspective.Core
+{
+    public class LibraryInfo
+    {
+        public const string XmlNamespace = "http://www.codeplex.com/perspective";
+    }
+}

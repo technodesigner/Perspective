@@ -1,8 +1,7 @@
 ﻿<Page x:Class="Perspective.Pages.Base3D"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:p="clr-namespace:Perspective.Wpf;assembly=Perspective.Wpf"
-    xmlns:p3D="clr-namespace:Perspective.Wpf3D;assembly=Perspective.Wpf3D"
+    xmlns:p="http://www.codeplex.com/perspective"
     Title="Easy 3D programming with WPF" >
     <Page.Resources>
         <Transform3DGroup x:Key="modelTransform">
@@ -164,7 +163,7 @@
                 </ModelVisual3D.Content>
             </ModelVisual3D>
 
-            <!--<p3D:XyzAxis3D Length="5.0" />-->
+            <!--<p:XyzAxis3D Length="5.0" />-->
 
             <!--An electronic device-->
             <ContainerUIElement3D>
@@ -174,63 +173,63 @@
                         <ScaleTransform3D ScaleX="0.5" ScaleY="0.5" ScaleZ="0.5" />
                     </Transform3DGroup>
                 </ContainerUIElement3D.Transform>
-                <p3D:Box3D Material="{DynamicResource FrontMaterial}">
-                    <p3D:Box3D.Transform >
+                <p:Box3D Material="{DynamicResource FrontMaterial}">
+                    <p:Box3D.Transform >
                         <Transform3DGroup>
                             <ScaleTransform3D ScaleX="8.0" ScaleY="4.0" />
                             <TranslateTransform3D OffsetZ="-1.001" />
                         </Transform3DGroup>
-                    </p3D:Box3D.Transform>
-                </p3D:Box3D>
-                <p3D:Knob3D Minimum="-180.0" Value="0.0" Maximum="180.0">
-                    <p3D:Knob3D.Transform >
+                    </p:Box3D.Transform>
+                </p:Box3D>
+                <p:Knob3D Minimum="-180.0" Value="0.0" Maximum="180.0">
+                    <p:Knob3D.Transform >
                         <Transform3DGroup>
                             <TranslateTransform3D OffsetX="1.5" OffsetY="1.5"/>
                         </Transform3DGroup>
-                    </p3D:Knob3D.Transform>
-                </p3D:Knob3D>
-                <p3D:Knob3D Minimum="-180.0" Value="0.0" Maximum="180.0">
-                    <p3D:Knob3D.Transform >
+                    </p:Knob3D.Transform>
+                </p:Knob3D>
+                <p:Knob3D Minimum="-180.0" Value="0.0" Maximum="180.0">
+                    <p:Knob3D.Transform >
                         <Transform3DGroup>
                             <TranslateTransform3D OffsetX="3.0" OffsetY="1.5"/>
                         </Transform3DGroup>
-                    </p3D:Knob3D.Transform>
-                </p3D:Knob3D>
-                <p3D:Fader3D Minimum="-180.0" Value="0.0" Maximum="180.0">
-                    <p3D:Fader3D.Transform >
+                    </p:Knob3D.Transform>
+                </p:Knob3D>
+                <p:Fader3D Minimum="-180.0" Value="0.0" Maximum="180.0">
+                    <p:Fader3D.Transform >
                         <Transform3DGroup>
                             <TranslateTransform3D OffsetX="5.0" OffsetY="1.0"/>
                         </Transform3DGroup>
-                    </p3D:Fader3D.Transform>
-                </p3D:Fader3D>
-                <p3D:Fader3D Minimum="-180.0" Value="0.0" Maximum="180.0">
-                    <p3D:Fader3D.Transform >
+                    </p:Fader3D.Transform>
+                </p:Fader3D>
+                <p:Fader3D Minimum="-180.0" Value="0.0" Maximum="180.0">
+                    <p:Fader3D.Transform >
                         <Transform3DGroup>
                             <TranslateTransform3D OffsetX="6.0" OffsetY="1.0"/>
                         </Transform3DGroup>
-                    </p3D:Fader3D.Transform>
-                </p3D:Fader3D>
-                <p3D:Fader3D Minimum="-180.0" Value="0.0" Maximum="180.0">
-                    <p3D:Fader3D.Transform >
+                    </p:Fader3D.Transform>
+                </p:Fader3D>
+                <p:Fader3D Minimum="-180.0" Value="0.0" Maximum="180.0">
+                    <p:Fader3D.Transform >
                         <Transform3DGroup>
                             <TranslateTransform3D OffsetX="7.0" OffsetY="1.0"/>
                         </Transform3DGroup>
-                    </p3D:Fader3D.Transform>
-                </p3D:Fader3D>
-                <p3D:Button3D>
-                    <p3D:Button3D.Transform >
+                    </p:Fader3D.Transform>
+                </p:Fader3D>
+                <p:Button3D>
+                    <p:Button3D.Transform >
                         <Transform3DGroup>
                             <TranslateTransform3D OffsetX="1.0" OffsetY="2.5" />
                         </Transform3DGroup>
-                    </p3D:Button3D.Transform>
-                </p3D:Button3D>
-                <p3D:Button3D>
-                    <p3D:Button3D.Transform >
+                    </p:Button3D.Transform>
+                </p:Button3D>
+                <p:Button3D>
+                    <p:Button3D.Transform >
                         <Transform3DGroup>
                             <TranslateTransform3D OffsetX="2.5" OffsetY="2.5" />
                         </Transform3DGroup>
-                    </p3D:Button3D.Transform>
-                </p3D:Button3D>
+                    </p:Button3D.Transform>
+                </p:Button3D>
             </ContainerUIElement3D>
 
             <!--An other electronic device-->
@@ -241,46 +240,46 @@
                         <ScaleTransform3D ScaleX="0.5" ScaleY="0.5" ScaleZ="0.5" />
                     </Transform3DGroup>
                 </ContainerUIElement3D.Transform>
-                <p3D:Box3D Material="{DynamicResource FrontMaterial}">
-                    <p3D:Box3D.Transform >
+                <p:Box3D Material="{DynamicResource FrontMaterial}">
+                    <p:Box3D.Transform >
                         <Transform3DGroup>
                             <ScaleTransform3D ScaleX="5.0" ScaleY="3.0" />
                             <TranslateTransform3D OffsetZ="-1.001" />
                         </Transform3DGroup>
-                    </p3D:Box3D.Transform>
-                </p3D:Box3D>
-                <p3D:Button3D>
-                    <p3D:Button3D.Transform>
+                    </p:Box3D.Transform>
+                </p:Box3D>
+                <p:Button3D>
+                    <p:Button3D.Transform>
                         <Transform3DGroup>
                             <TranslateTransform3D OffsetX="0.5" OffsetY="1.0" />
                         </Transform3DGroup>
-                    </p3D:Button3D.Transform>
-                </p3D:Button3D>
-                <p3D:Fader3D>
-                    <p3D:Fader3D.Transform>
+                    </p:Button3D.Transform>
+                </p:Button3D>
+                <p:Fader3D>
+                    <p:Fader3D.Transform>
                         <Transform3DGroup>
                             <TranslateTransform3D OffsetX="2.0" OffsetY="0.5"/>
                         </Transform3DGroup>
-                    </p3D:Fader3D.Transform>
-                </p3D:Fader3D>
-                <p3D:Knob3D>
-                    <p3D:Knob3D.Transform>
+                    </p:Fader3D.Transform>
+                </p:Fader3D>
+                <p:Knob3D>
+                    <p:Knob3D.Transform>
                         <Transform3DGroup>
                             <TranslateTransform3D OffsetX="4.0" OffsetY="1.5"/>
                         </Transform3DGroup>
-                    </p3D:Knob3D.Transform>
-                </p3D:Knob3D>
+                    </p:Knob3D.Transform>
+                </p:Knob3D>
             </ContainerUIElement3D>-->
 
             <!--An open box-->
-            <!--<p3D:Box3D SideLayout="Down,Back,Front" BackMaterial="{StaticResource InsideMaterial}"/>-->
+            <!--<p:Box3D SideLayout="Down,Back,Front" BackMaterial="{StaticResource InsideMaterial}"/>-->
 
             <!--A custom 3D Knob-->
-            <!--<p3D:Knob3D 
+            <!--<p:Knob3D 
                 x:Name="myKnob" 
                 Minimum="0.0" Maximum="360.0"
                 OverridesDefaultSkin="True">
-                <p3D:Knob3D.Transform >
+                <p:Knob3D.Transform >
                     <RotateTransform3D>
                         <RotateTransform3D.Rotation>
                             <AxisAngleRotation3D 
@@ -288,20 +287,20 @@
                     Axis="0.0, 0.0, 1.0"/>
                         </RotateTransform3D.Rotation>
                     </RotateTransform3D>
-                </p3D:Knob3D.Transform>
-                <p3D:Knob3D.Content>
+                </p:Knob3D.Transform>
+                <p:Knob3D.Content>
                     <ContainerUIElement3D>
-                        <p3D:Bar3D 
+                        <p:Bar3D 
                             SideCount="3" 
                             RoundingRate="0.15"
                             Material="{DynamicResource ControlMaterial}" />
                     </ContainerUIElement3D>
-                </p3D:Knob3D.Content>
-            </p3D:Knob3D>-->
+                </p:Knob3D.Content>
+            </p:Knob3D>-->
 
             <!--A box3D bound to myKnob-->
-            <!--<p3D:Box3D >
-                <p3D:Box3D.Transform >
+            <!--<p:Box3D >
+                <p:Box3D.Transform >
                     <Transform3DGroup>
                         <RotateTransform3D CenterX="0.5" CenterZ="0.5">
                             <RotateTransform3D.Rotation>
@@ -312,55 +311,55 @@
                         </RotateTransform3D>
                         <TranslateTransform3D OffsetX="3.0" OffsetY="1.0" OffsetZ="0.5" />
                     </Transform3DGroup>
-                </p3D:Box3D.Transform>
-            </p3D:Box3D>-->
+                </p:Box3D.Transform>
+            </p:Box3D>-->
 
             <!--Some Perspective 3D models-->
 
-            <!--<p3D:Square3D>
-                <p3D:Square3D.Material>
+            <!--<p:Square3D>
+                <p:Square3D.Material>
                     <DiffuseMaterial>
                         <DiffuseMaterial.Brush>
                             <ImageBrush ImageSource="C:\Users\Public\Pictures\Sample Pictures\Tree.jpg" TileMode="None" Stretch="Fill"/>
                         </DiffuseMaterial.Brush>
                     </DiffuseMaterial>
-                </p3D:Square3D.Material>
-            </p3D:Square3D>-->
+                </p:Square3D.Material>
+            </p:Square3D>-->
 
-            <!--<p3D:Polygon3D SideCount="6" InitialAngle="30.0" RoundingRate="0.15"
+            <!--<p:Polygon3D SideCount="6" InitialAngle="30.0" RoundingRate="0.15"
                            MouseEnter="Knob3D_MouseEnter"
                            MouseLeftButtonDown="Knob3D_MouseLeftButtonDown"/>-->
 
-            <!--<p3D:Bar3D SideCount="6" InitialAngle="30.0" RoundingRate="0.15"
+            <!--<p:Bar3D SideCount="6" InitialAngle="30.0" RoundingRate="0.15"
                 Transform="{StaticResource modelTransform}" 
                 Material="{StaticResource GlossyMaterial}" />-->
 
-            <!--<p3D:Bar3D SideCount="100"
+            <!--<p:Bar3D SideCount="100"
                 Material="{StaticResource GlossyMaterial}" />-->
 
-            <!--<p3D:Conical3D SideCount="6" InitialAngle="30.0" RoundingRate="0.15"
+            <!--<p:Conical3D SideCount="6" InitialAngle="30.0" RoundingRate="0.15"
                 Transform="{StaticResource modelTransform}" 
                 Material="{StaticResource GlossyMaterial}" />-->
 
-            <!--<p3D:Ring3D 
+            <!--<p:Ring3D 
                 Radius="10.0" SegmentCount="100"
                 SideCount="6" InitialAngle="30.0" RoundingRate="0.15"
                 Material="{StaticResource GlossyMaterial}" />-->
 
-            <!--<p3D:Spherical3D ParallelCount="100" 
+            <!--<p:Spherical3D ParallelCount="100" 
                 Material="{StaticResource GlossyMaterial}"/>-->
 
-            <!--<p3D:Spherical3D ParallelCount="100" 
+            <!--<p:Spherical3D ParallelCount="100" 
                 Material="{StaticResource GlossyMaterial}"
                 Transform="{StaticResource modelTransform}"/>-->
 
-            <!--<p3D:Isocahedron3D Material="{StaticResource GlossyMaterial}" />-->
+            <!--<p:Isocahedron3D Material="{StaticResource GlossyMaterial}" />-->
 
-            <!--<p3D:Isocahedron3D Truncated="True" Material="{StaticResource GlossyMaterial}" />-->
+            <!--<p:Isocahedron3D Truncated="True" Material="{StaticResource GlossyMaterial}" />-->
 
-            <!--<p3D:Football3D MouseEnter="Knob3D_MouseEnter" MouseLeftButtonDown="Knob3D_MouseLeftButtonDown"/>-->
+            <!--<p:Football3D MouseEnter="Knob3D_MouseEnter" MouseLeftButtonDown="Knob3D_MouseLeftButtonDown"/>-->
 
-            <!--<p3D:Arrow3D Material="{StaticResource GlossyMaterial}" />-->
+            <!--<p:Arrow3D Material="{StaticResource GlossyMaterial}" />-->
         </Viewport3D>
     </DockPanel>
 </Page>
