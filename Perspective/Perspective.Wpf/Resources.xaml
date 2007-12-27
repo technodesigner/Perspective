@@ -1,6 +1,7 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:p="clr-namespace:Perspective.Wpf">
+    xmlns:p="clr-namespace:Perspective.Wpf"
+    xmlns:pControls="clr-namespace:Perspective.Wpf.Controls">
 
     <!--Fader-->
 
@@ -63,7 +64,7 @@
         </Setter>
     </Style>
 
-    <ControlTemplate x:Key="HorizontalFader" TargetType="{x:Type p:Fader}">
+    <ControlTemplate x:Key="HorizontalFader" TargetType="{x:Type pControls:Fader}">
         <Grid>
             <Rectangle 
                 x:Name="SelectionMarker" 
@@ -73,7 +74,7 @@
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto" MinHeight="{TemplateBinding p:Fader.MinHeight}"/>
+                    <RowDefinition Height="Auto" MinHeight="{TemplateBinding pControls:Fader.MinHeight}"/>
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
                 <TickBar 
@@ -145,7 +146,7 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
-    <ControlTemplate x:Key="VerticalFader" TargetType="{x:Type p:Fader}">
+    <ControlTemplate x:Key="VerticalFader" TargetType="{x:Type pControls:Fader}">
         <Grid>
             <Rectangle 
                 x:Name="SelectionMarker" 
@@ -155,7 +156,7 @@
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="Auto" MinWidth="{TemplateBinding p:Fader.MinWidth}"/>
+                    <ColumnDefinition Width="Auto" MinWidth="{TemplateBinding pControls:Fader.MinWidth}"/>
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
                 <TickBar 
@@ -227,7 +228,7 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
 
-    <Style x:Key="FaderStyle" TargetType="{x:Type p:Fader}">
+    <Style x:Key="FaderStyle" TargetType="{x:Type pControls:Fader}">
         <Setter Property="SnapsToDevicePixels" Value="True"/>
         <Style.Triggers>
             <Trigger Property="Orientation" Value="Horizontal">
@@ -245,10 +246,10 @@
 
     <!--Knob-->
 
-    <Style x:Key="KnobStyle" TargetType="{x:Type p:Knob}">
+    <Style x:Key="KnobStyle" TargetType="{x:Type pControls:Knob}">
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type p:Knob}">
+                <ControlTemplate TargetType="{x:Type pControls:Knob}">
                     <Border Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}"

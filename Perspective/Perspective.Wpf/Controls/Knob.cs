@@ -23,7 +23,7 @@ using System.Windows.Controls.Primitives;
 using System.Runtime.InteropServices;
 using Perspective.Core.Primitives;
 
-namespace Perspective.Wpf
+namespace Perspective.Wpf.Controls
 {
     /// <summary>
     /// A knob (rotative button) class, compatible with range element multiselection.

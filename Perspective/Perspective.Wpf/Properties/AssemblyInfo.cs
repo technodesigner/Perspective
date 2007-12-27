@@ -62,3 +62,4 @@ using System.Windows.Markup;
 [assembly: CLSCompliant(true)]
 
 [assembly: XmlnsDefinition(Perspective.Core.LibraryInfo.XmlNamespace, "Perspective.Wpf")]
+[assembly: XmlnsDefinition(Perspective.Core.LibraryInfo.XmlNamespace, "Perspective.Wpf.Controls")]

@@ -80,7 +80,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Knob.cs" />
+    <Compile Include="Controls\Knob.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -96,7 +96,7 @@
     </Compile>
     <Compile Include="ResourceKeys.cs" />
     <Compile Include="SkinManager.cs" />
-    <Compile Include="Fader.cs" />
+    <Compile Include="Controls\Fader.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

@@ -14,7 +14,7 @@ using System.Windows;
 using System.Windows.Input;
 using Perspective.Core.Primitives;
 
-namespace Perspective.Wpf
+namespace Perspective.Wpf.Controls
 {
     /// <summary>
     /// A slider class compatible with range element multiselection.
