@@ -58,6 +58,7 @@
     <Compile Include="Primitives\IRangeElement.cs" />
     <Compile Include="Primitives\RangeElementSelectionManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RenderingHelper.cs" />
     <Compile Include="SkinManagerBase.cs" />
     <Compile Include="SkinPartAttribute.cs" />
   </ItemGroup>
