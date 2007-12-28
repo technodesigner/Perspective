@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perspective.Wpf3D-dn3.5", "Perspective.Wpf3D\Perspective.Wpf3D-dn3.5.csproj", "{F1121E62-AE79-4460-9419-E74F19C011F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApplication1", "WpfApplication1\WpfApplication1.csproj", "{F09C87FA-351D-4778-93AF-15D2859FE3D2}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perspective.Wpf-dn3.5", "Perspective.Wpf\Perspective.Wpf-dn3.5.csproj", "{34860E9C-F566-4F14-BFB9-45F6B37503F9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perspective.Core-dn3.5", "Perspective.Core\Perspective.Core-dn3.5.csproj", "{19FC4939-5269-4B1E-93BF-569D3E14A9B0}"
@@ -19,7 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perspective-dn3.0", "Perspe
 EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 9
+		SccNumberOfProjects = 8
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = https://tfs03.codeplex.com/
 		SccLocalPath0 = .
@@ -38,15 +36,12 @@ Global
 		SccProjectUniqueName5 = Perspective.Wpf\\Perspective.Wpf-dn3.5.csproj
 		SccProjectName5 = Perspective.Wpf
 		SccLocalPath5 = Perspective.Wpf
-		SccProjectUniqueName6 = WpfApplication1\\WpfApplication1.csproj
-		SccProjectName6 = WpfApplication1
-		SccLocalPath6 = WpfApplication1
-		SccProjectUniqueName7 = Perspective\\Perspective-dn3.5.csproj
+		SccProjectUniqueName6 = Perspective\\Perspective-dn3.5.csproj
+		SccProjectName6 = Perspective
+		SccLocalPath6 = Perspective
+		SccProjectUniqueName7 = Perspective\\Perspective-dn3.0.csproj
 		SccProjectName7 = Perspective
 		SccLocalPath7 = Perspective
-		SccProjectUniqueName8 = Perspective\\Perspective-dn3.0.csproj
-		SccProjectName8 = Perspective
-		SccLocalPath8 = Perspective
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,10 +52,6 @@ Global
 		{F1121E62-AE79-4460-9419-E74F19C011F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1121E62-AE79-4460-9419-E74F19C011F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F1121E62-AE79-4460-9419-E74F19C011F7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F09C87FA-351D-4778-93AF-15D2859FE3D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F09C87FA-351D-4778-93AF-15D2859FE3D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F09C87FA-351D-4778-93AF-15D2859FE3D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F09C87FA-351D-4778-93AF-15D2859FE3D2}.Release|Any CPU.Build.0 = Release|Any CPU
 		{34860E9C-F566-4F14-BFB9-45F6B37503F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{34860E9C-F566-4F14-BFB9-45F6B37503F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{34860E9C-F566-4F14-BFB9-45F6B37503F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
