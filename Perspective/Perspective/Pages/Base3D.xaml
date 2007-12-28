@@ -151,9 +151,11 @@
             </ModelVisual3D>
 
             <!--<p:XyzAxis3D Length="5.0" />-->
+            
+            <p:Gyroscope3D />
 
             <!--An electronic device-->
-            <ContainerUIElement3D>
+            <!--<ContainerUIElement3D>
                 <ContainerUIElement3D.Transform>
                     <Transform3DGroup>
                         <TranslateTransform3D OffsetX="-4.0" />
@@ -217,7 +219,7 @@
                         </Transform3DGroup>
                     </p:Button3D.Transform>
                 </p:Button3D>
-            </ContainerUIElement3D>
+            </ContainerUIElement3D>-->
 
             <!--An other electronic device-->
             <!--<ContainerUIElement3D>

@@ -34,6 +34,9 @@ namespace Perspective.Pages
         private void bDynamicKnob_Click(object sender, RoutedEventArgs e)
         {
             GenerateCustomKnob();
+
+            //Gyroscope3D g = new Gyroscope3D();
+            //vMain.Children.Add(g);
         }
 
         private void GenerateCustomKnob()

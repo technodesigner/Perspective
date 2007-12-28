@@ -145,16 +145,23 @@ namespace Perspective.Wpf3D.Primitives
         {
             String contentFileRelativeName;
             Hashtable h = (Hashtable)Application.Current.TryFindResource("ContentFiles");
-            if (h != null)
+            // if (h != null)
+            if ((h != null) && (h[ContentFileName] != null))
             {
+                //contentFileRelativeName = System.IO.Path.Combine(
+                //    SkinManager.Current.DefaultSkinBaseFolder,
+                //    (string)h[ContentFileName]);
                 contentFileRelativeName = System.IO.Path.Combine(
-                    SkinManager.Current.DefaultSkinBaseFolder,
+                    SkinManager.Current.SkinFolder,
                     (string)h[ContentFileName]);
             }
             else
             {
+                //contentFileRelativeName = System.IO.Path.Combine(
+                //    SkinManager.Current.SkinFolder,
+                //    ContentFileName);
                 contentFileRelativeName = System.IO.Path.Combine(
-                    SkinManager.Current.SkinFolder,
+                    SkinManager.Current.DefaultSkinBaseFolder,
                     ContentFileName);
             }
             //System.Uri uri = new System.Uri(

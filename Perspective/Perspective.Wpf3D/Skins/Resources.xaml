@@ -123,4 +123,8 @@
         <TranslateTransform3D OffsetX="0.15625" OffsetY="0.125" OffsetZ="0.1"/>
     </Transform3DGroup>
 
+    <!--Gyroscope3D Resources-->
+
+    <AxisAngleRotation3D x:Key="RotationX90Transform" Axis="1.0, 0.0, 0.0" Angle="90.0" />
+
 </ResourceDictionary>

@@ -9,12 +9,10 @@
         <ResourceDictionary Source="/Perspective.Wpf3D;component/Skins/Resources.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
-    <!--Content files : path relative to Skins directory - no .xaml extension-->
+    <!--Custom Content files : path relative to current skin directory - no .xaml extension-->
 
     <col:Hashtable x:Key="ContentFiles">
-        <sys:String x:Key="Button3D">Button3D</sys:String>
-        <sys:String x:Key="Fader3D">LaMoisson/Fader3D</sys:String>
-        <sys:String x:Key="Knob3D">Knob3D</sys:String>
+        <sys:String x:Key="Fader3D">Fader3D</sys:String>
     </col:Hashtable>
 
     <!--Skin specific resources-->

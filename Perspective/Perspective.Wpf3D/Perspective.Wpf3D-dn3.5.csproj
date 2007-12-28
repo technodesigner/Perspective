@@ -58,6 +58,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\Gyroscope3D.cs" />
     <Compile Include="Shapes\Arrow3D.cs" />
     <Compile Include="Shapes\Bar3D.cs" />
     <Compile Include="Shapes\Box3D.cs" />
@@ -109,6 +110,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Skins\Button3D.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Skins\Gyroscope3D.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

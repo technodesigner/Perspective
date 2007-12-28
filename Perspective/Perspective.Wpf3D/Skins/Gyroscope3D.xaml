@@ -1,0 +1,119 @@
+﻿<ContainerUIElement3D
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:p3D="clr-namespace:Perspective.Wpf3D.Shapes"
+    xmlns:p3DControls="clr-namespace:Perspective.Wpf3D.Controls"
+    >
+    <ContainerUIElement3D.Transform>
+        <ScaleTransform3D ScaleX="0.1" ScaleY="0.1" ScaleZ="0.1" />
+    </ContainerUIElement3D.Transform>
+    
+    <!-- Rotor and spin axis -->
+    <ContainerUIElement3D>
+
+        <ContainerUIElement3D.Transform>
+            <RotateTransform3D>
+                <RotateTransform3D.Rotation>
+                    <AxisAngleRotation3D 
+                        x:Name="PART_RotorRotation" 
+                        Axis="0,1,0" />
+                </RotateTransform3D.Rotation>
+            </RotateTransform3D>
+        </ContainerUIElement3D.Transform>
+
+        <!-- Spin Axis -->
+        <p3D:Bar3D SideCount="20" Material="{DynamicResource ControlMaterial}" >
+            <p3D:Bar3D.Transform>
+                <Transform3DGroup>
+                    <RotateTransform3D Rotation="{StaticResource RotationX90Transform}"/>
+                    <TranslateTransform3D OffsetX="0" OffsetY="0.5" OffsetZ="0"/>
+                    <ScaleTransform3D ScaleX="0.2" ScaleY="26" ScaleZ="0.2" CenterX="0" CenterY="0" CenterZ="0" />
+                </Transform3DGroup>
+            </p3D:Bar3D.Transform>
+        </p3D:Bar3D>
+
+        <!-- Rotor -->
+        <p3D:Bar3D SideCount="120" Material="{DynamicResource ControlColorMaterial}" >
+            <p3D:Bar3D.Transform>
+                <Transform3DGroup>
+                    <RotateTransform3D Rotation="{StaticResource RotationX90Transform}"/>
+                    <TranslateTransform3D OffsetX="0" OffsetY="0.5" OffsetZ="0"/>
+                    <ScaleTransform3D ScaleX="10" ScaleY="4" ScaleZ="10" CenterX="0" CenterY="0" CenterZ="0" />
+                </Transform3DGroup>
+            </p3D:Bar3D.Transform>
+        </p3D:Bar3D>
+
+    </ContainerUIElement3D>
+
+    <p3D:Ring3D 
+        SegmentCount="800" 
+        Radius="13" 
+        SideCount="4" 
+        InitialAngle="45.0" 
+        RoundingRate="0.15" 
+        Material="{DynamicResource ControlMaterial}">
+        <p3D:Ring3D.Transform>
+            <Transform3DGroup>
+                <RotateTransform3D Rotation="{StaticResource RotationX90Transform}"/>
+                <ScaleTransform3D ScaleX="1" ScaleY="1" ScaleZ="2" CenterX="0" CenterY="0" CenterZ="0" />
+                <RotateTransform3D>
+                    <RotateTransform3D.Rotation>
+                        <AxisAngleRotation3D Axis="0,1,0" Angle="90.0" />
+                    </RotateTransform3D.Rotation>
+                </RotateTransform3D>
+            </Transform3DGroup>
+        </p3D:Ring3D.Transform>
+    </p3D:Ring3D>
+
+    <!-- 2 external rings model -->
+    <ContainerUIElement3D>
+        <ContainerUIElement3D.Transform>
+            <!-- 2 rings model rotation -->
+            <RotateTransform3D>
+                <RotateTransform3D.Rotation>
+                    <AxisAngleRotation3D 
+                        x:Name="PART_RingModelRotation" 
+                        Axis="0,0,1" />
+                </RotateTransform3D.Rotation>
+            </RotateTransform3D>
+        </ContainerUIElement3D.Transform>
+
+        <!-- Frame ring -->
+        <p3D:Ring3D 
+            SegmentCount="800" 
+            Radius="16" 
+            SideCount="4" 
+            InitialAngle="45.0" 
+            RoundingRate="0.15" 
+            Material="{DynamicResource ControlMaterial}">
+            <p3D:Ring3D.Transform>
+                <Transform3DGroup>
+                    <RotateTransform3D 
+                        Rotation="{StaticResource RotationX90Transform}"/>
+                    <ScaleTransform3D ScaleX="1" ScaleY="1" ScaleZ="2" CenterX="0" CenterY="0" CenterZ="0" />
+                    <RotateTransform3D>
+                        <RotateTransform3D.Rotation>
+                            <AxisAngleRotation3D 
+                                x:Name="PART_FrameRingRotation" 
+                                Axis="1,0,0" />
+                        </RotateTransform3D.Rotation>
+                    </RotateTransform3D>
+                </Transform3DGroup>
+            </p3D:Ring3D.Transform>
+        </p3D:Ring3D>
+
+        <!-- Second ring -->
+        <p3D:Ring3D 
+            SegmentCount="800" 
+            Radius="14.5" 
+            SideCount="4" 
+            InitialAngle="45.0" 
+            RoundingRate="0.15" 
+            Material="{DynamicResource ControlMaterial}">
+            <p3D:Ring3D.Transform>
+                <ScaleTransform3D ScaleX="1" ScaleY="2" ScaleZ="1" CenterX="0" CenterY="0" CenterZ="0" />
+            </p3D:Ring3D.Transform>
+        </p3D:Ring3D>
+    </ContainerUIElement3D>
+
+</ContainerUIElement3D>
