@@ -1,4 +1,4 @@
-﻿<Application x:Uid="Application_1" x:Class="Perspective.App"
+﻿<Application x:Uid="Application_1" x:Class="PerspectiveDemo.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     StartupUri="MainWindow.xaml">

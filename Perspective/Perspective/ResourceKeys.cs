@@ -11,7 +11,7 @@
 //------------------------------------------------------------------
 using System;
 
-namespace Perspective
+namespace PerspectiveDemo
 {
     /// <summary>
     /// A class to handle ressource keys with ComponentResourceKey XAML extension.

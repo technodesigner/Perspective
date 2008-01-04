@@ -19,7 +19,7 @@ using System.Windows.Data;
 using Perspective.Wpf3D.Controls;
 using Perspective.Wpf3D.Shapes;
 
-namespace Perspective.Pages
+namespace PerspectiveDemo.Pages
 {
     /// <summary>
     /// Interaction logic for Base3D.xaml

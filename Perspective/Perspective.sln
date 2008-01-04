@@ -11,9 +11,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perspective.Core-dn3.0", "P
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perspective.Wpf-dn3.0", "Perspective.Wpf\Perspective.Wpf-dn3.0.csproj", "{0E9C5AEB-A826-42FE-8C96-D27E5070AC2F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perspective-dn3.5", "Perspective\Perspective-dn3.5.csproj", "{B232E0E2-024B-4B79-87B9-297C87B0D9A7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PerspectiveDemo-dn3.5", "Perspective\PerspectiveDemo-dn3.5.csproj", "{B232E0E2-024B-4B79-87B9-297C87B0D9A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perspective-dn3.0", "Perspective\Perspective-dn3.0.csproj", "{E56CEFA5-D712-46A1-A433-C9AAC1098225}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PerspectiveDemo-dn3.0", "Perspective\PerspectiveDemo-dn3.0.csproj", "{E56CEFA5-D712-46A1-A433-C9AAC1098225}"
 EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
@@ -36,10 +36,10 @@ Global
 		SccProjectUniqueName5 = Perspective.Wpf\\Perspective.Wpf-dn3.5.csproj
 		SccProjectName5 = Perspective.Wpf
 		SccLocalPath5 = Perspective.Wpf
-		SccProjectUniqueName6 = Perspective\\Perspective-dn3.5.csproj
+		SccProjectUniqueName6 = Perspective\\PerspectiveDemo-dn3.5.csproj
 		SccProjectName6 = Perspective
 		SccLocalPath6 = Perspective
-		SccProjectUniqueName7 = Perspective\\Perspective-dn3.0.csproj
+		SccProjectUniqueName7 = Perspective\\PerspectiveDemo-dn3.0.csproj
 		SccProjectName7 = Perspective
 		SccLocalPath7 = Perspective
 	EndGlobalSection

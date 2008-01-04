@@ -13,7 +13,7 @@ using System;
 using System.Collections.Generic;
 using System.Windows.Input;
 
-namespace Perspective
+namespace PerspectiveDemo
 {
     public class AppCommands
     {

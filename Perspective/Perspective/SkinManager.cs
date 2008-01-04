@@ -12,7 +12,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Perspective
+namespace PerspectiveDemo
 {
     /// <summary>
     /// A class for skin handling of Perspective application UI
