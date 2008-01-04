@@ -28,7 +28,7 @@ namespace PerspectiveDemo
 
         private const string _defaultSkin = "PsycheRock";
         // private const string _defaultDictionary = "Resources";
-        private const string _assemblyName = "Perspective";
+        private const string _assemblyName = "PerspectiveDemo";
         private SkinManager()
         {
         }

@@ -3,7 +3,7 @@
     xmlns:local="clr-namespace:PerspectiveDemo">
 
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/Perspective;component/Resources.xaml" />
+        <ResourceDictionary Source="/PerspectiveDemo;component/Resources.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
     <!--Specific resources-->
