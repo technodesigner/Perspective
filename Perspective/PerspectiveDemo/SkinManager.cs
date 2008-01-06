@@ -37,7 +37,7 @@ namespace PerspectiveDemo
         private static readonly object _lock = new object();
 
         /// <summary>
-        /// Gets a signleton instance of SkinManager.
+        /// Gets a singleton instance of SkinManager.
         /// </summary>
         public static SkinManager Current
         {
