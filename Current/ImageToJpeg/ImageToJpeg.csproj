@@ -53,6 +53,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\Perspective.Core\Wpf\Imaging\BitmapConverter.cs">
+      <Link>BitmapConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\Perspective.Core\Wpf\Imaging\BitmapConverterEventArgs.cs">
+      <Link>BitmapConverterEventArgs.cs</Link>
+    </Compile>
+    <Compile Include="..\Perspective.Core\Wpf\Imaging\BitmapToJpegConverter.cs">
+      <Link>BitmapToJpegConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\Perspective.Core\Wpf\Imaging\BitmapToPngConverter.cs">
+      <Link>BitmapToPngConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\Perspective.Core\Wpf\Imaging\IBitmapConverter.cs">
+      <Link>IBitmapConverter.cs</Link>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
