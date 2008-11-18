@@ -1,0 +1,191 @@
+﻿<UserControl x:Class="PerspectiveDemo.UI.UserControls.MainControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:PerspectiveDemo.UI"
+    xmlns:p="http://www.codeplex.com/perspective"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:dn35="Dn35"             
+    Loaded="UserControl_Loaded"
+    >
+    <UserControl.CommandBindings>
+        <CommandBinding Command="local:AppCommands.OpenPageCommand" Executed="OpenPageCommand_Executed" />
+        <CommandBinding Command="local:AppCommands.LoadSkinCommand" Executed="LoadSkinCommand_Executed" />
+        <CommandBinding Command="local:AppCommands.SetCultureCommand" Executed="SetCulture_Executed" />
+    </UserControl.CommandBindings>
+    <p:ResourceStringDecorator 
+        Name="rsd1" 
+        AssemblyName="PerspectiveDemo.UI"
+        BaseName="UserControls.Strings.MainControl">
+        <DockPanel Name="dockPanel1">
+            <TabControl Background="White"
+                DockPanel.Dock="Left"
+                Name="tabControl1" 
+                Width="200" 
+                >
+                <TabItem Header="{p:ResourceString Content}" >
+                    <TreeView 
+                        Name="treeView1" >
+                        <TreeViewItem Header="{p:ResourceString PerspectiveDemo}" IsExpanded="True">
+                            <!--<TreeViewItem Header="{p:ResourceString Drawing}" IsExpanded="True">-->
+                                <Hyperlink x:Name="hlDpiScaling" Command="local:AppCommands.OpenPageCommand" CommandParameter="pWpf/DpiScaling.xaml">
+                                    <Run Text="{p:ResourceString DpiScaling}"/>
+                                </Hyperlink>
+                            <!--</TreeViewItem>
+                            <TreeViewItem Header="{p:ResourceString Controls}" IsExpanded="True">-->
+                                <Hyperlink x:Name="hlKnob" Command="local:AppCommands.OpenPageCommand" CommandParameter="pWpf/RangeControls.xaml">
+                                    <Run Text="{p:ResourceString RangeControls}"/>
+                                </Hyperlink>
+                            <!--</TreeViewItem>-->
+                            <mc:AlternateContent>
+                                <mc:Choice Requires="dn35">
+                                    <TreeViewItem Header="3D" IsExpanded="True">
+                                        <TreeViewItem Header="{p:ResourceString ThreeDShapes}" IsExpanded="False">
+                                            <Hyperlink Command="local:AppCommands.OpenPageCommand" CommandParameter="pWpf3D/XyzAxis3DDemo.xaml">
+                                                <Run Text="XyzAxis3D"/>
+                                            </Hyperlink>
+                                            <Hyperlink Command="local:AppCommands.OpenPageCommand" CommandParameter="pWpf3D/Box3DDemo.xaml">
+                                                <Run Text="Box3D"/>
+                                            </Hyperlink>
+                                            <Hyperlink Command="local:AppCommands.OpenPageCommand" CommandParameter="pWpf3D/Box3DOpen.xaml">
+                                                <Run Text="{p:ResourceString OpenBox}"/>
+                                            </Hyperlink>
+                                            <Hyperlink Command="local:AppCommands.OpenPageCommand" CommandParameter="pWpf3D/Box3DTransform.xaml">
+                                                <Run Text="Box3D + transformation"/>
+                                            </Hyperlink>
+                                            <Hyperlink Command="local:AppCommands.OpenPageCommand" CommandParameter="pWpf3D/Box3DImage.xaml">
+                                                <Run Text="Box3D + image"/>
+                                            </Hyperlink>
+                                            <Hyperlink Command="local:AppCommands.OpenPageCommand" CommandParameter="pWpf3D/Interactivity.xaml">
+                                                <Run Text="{p:ResourceString Interactivity}"/>
+                                            </Hyperlink>
+                                            <Hyperlink Command="local:AppCommands.OpenPageCommand" CommandParameter="pWpf3D/Square3DDemo.xaml">
+                                                <Run Text="Square3D"/>
+                                            </Hyperlink>
+                                            <Hyperlink Command="local:AppCommands.OpenPageCommand" CommandParameter="pWpf3D/Square3DImage.xaml">
+                                                <Run Text="Square3D + image"/>
+                                            </Hyperlink>
+                                            <Hyperlink Command="local:AppCommands.OpenPageCommand" CommandParameter="pWpf3D/Square3DAnimation.xaml">
+                                                <Run Text="Square3D + animation"/>
+                                            </Hyperlink>
+                                            <Hyperlink Command="local:AppCommands.OpenPageCommand" CommandParameter="pWpf3D/Polygon3DDemo.xaml">
+                                                <Run Text="Polygon3D"/>
+                                            </Hyperlink>
+                                            <Hyperlink Command="local:AppCommands.OpenPageCommand" CommandParameter="pWpf3D/Polygon3DImage.xaml">
+                                                <Run Text="Polygon3D + image"/>
+                                            </Hyperlink>
+                                            <Hyperlink Command="local:AppCommands.OpenPageCommand" CommandParameter="pWpf3D/Bar3DDemo.xaml">
+                                                <Run Text="Bar3D"/>
+                                            </Hyperlink>
+                                            <Hyperlink Command="local:AppCommands.OpenPageCommand" CommandParameter="pWpf3D/Bar3DImage.xaml">
+                                                <Run Text="Bar3D + image"/>
+                                            </Hyperlink>
+                                            <Hyperlink Command="local:AppCommands.OpenPageCommand" CommandParameter="pWpf3D/Cylinder.xaml">
+                                                <Run Text="{p:ResourceString Cylinder}"/>
+                                            </Hyperlink>
+                                            <Hyperlink Command="local:AppCommands.OpenPageCommand" CommandParameter="pWpf3D/Conical3DDemo.xaml">
+                                                <Run Text="Conical3D"/>
+                                            </Hyperlink>
+                                            <Hyperlink Command="local:AppCommands.OpenPageCommand" CommandParameter="pWpf3D/Conical3DImage.xaml">
+                                                <Run Text="Conical3D + Image"/>
+                                            </Hyperlink>
+                                            <Hyperlink Command="local:AppCommands.OpenPageCommand" CommandParameter="pWpf3D/Ring3DDemo.xaml">
+                                                <Run Text="Ring3D"/>
+                                            </Hyperlink>
+                                            <Hyperlink Command="local:AppCommands.OpenPageCommand" CommandParameter="pWpf3D/Spherical3DDemo.xaml">
+                                                <Run Text="Spherical3D"/>
+                                            </Hyperlink>
+                                            <Hyperlink Command="local:AppCommands.OpenPageCommand" CommandParameter="pWpf3D/Spherical3DTransform.xaml">
+                                                <Run Text="Spherical3D + transformation"/>
+                                            </Hyperlink>
+                                            <Hyperlink Command="local:AppCommands.OpenPageCommand" CommandParameter="pWpf3D/Spherical3DImage.xaml">
+                                                <Run Text="Spherical3D + image"/>
+                                            </Hyperlink>
+                                            <Hyperlink Command="local:AppCommands.OpenPageCommand" CommandParameter="pWpf3D/Isocahedron3DDemo.xaml">
+                                                <Run Text="Isocahedron3D"/>
+                                            </Hyperlink>
+                                            <Hyperlink Command="local:AppCommands.OpenPageCommand" CommandParameter="pWpf3D/TruncatedIsocahedron3DDemo.xaml">
+                                                <Run Text="Truncated Isocahedron3D"/>
+                                            </Hyperlink>
+                                            <Hyperlink Command="local:AppCommands.OpenPageCommand" CommandParameter="pWpf3D/Football3DDemo.xaml">
+                                                <Run Text="Football3D"/>
+                                            </Hyperlink>
+                                            <Hyperlink Command="local:AppCommands.OpenPageCommand" CommandParameter="pWpf3D/Arrow3DDemo.xaml">
+                                                <Run Text="Arrow3D"/>
+                                            </Hyperlink>
+                                            <Hyperlink Command="local:AppCommands.OpenPageCommand" CommandParameter="pWpf3D/PieSlice.xaml">
+                                                <Run Text="PieSlice3D"/>
+                                            </Hyperlink>
+                                            <Hyperlink Command="local:AppCommands.OpenPageCommand" CommandParameter="pWpf3D/BubbleChart.xaml">
+                                                <Run Text="{p:ResourceString BubbleChart}"/>
+                                            </Hyperlink>
+                                        </TreeViewItem>
+                                        <TreeViewItem Header="{p:ResourceString ThreeDControls}" IsExpanded="False">
+                                            <Hyperlink Command="local:AppCommands.OpenPageCommand" CommandParameter="pWpf3D/Gyroscope3DDemo.xaml">
+                                                <Run Text="Gyroscope3D"/>
+                                            </Hyperlink>
+                                            <Hyperlink Command="local:AppCommands.OpenPageCommand" CommandParameter="pWpf3D/ButtonFaderKnob3DDemo.xaml">
+                                                <Run Text="Button3D Fader3D Knob3D"/>
+                                            </Hyperlink>
+                                            <Hyperlink Command="local:AppCommands.OpenPageCommand" CommandParameter="pWpf3D/Mixer.xaml">
+                                                <Run Text="{p:ResourceString Mixer}"/>
+                                            </Hyperlink>
+                                            <Hyperlink Command="local:AppCommands.OpenPageCommand" CommandParameter="pWpf3D/CustomKnob3DDemo.xaml">
+                                                <Run Text="{p:ResourceString CustomKnob}"/>
+                                            </Hyperlink>
+                                        </TreeViewItem>
+                                    </TreeViewItem>
+                                </mc:Choice>
+                            </mc:AlternateContent>
+                        </TreeViewItem>
+                    </TreeView>
+                </TabItem>
+                <TabItem Header="{p:ResourceString Config}" >
+                    <StackPanel Style="{DynamicResource ColoredPanelStyle}">
+                        <GroupBox Header="{p:ResourceString Skin}">
+                            <StackPanel>
+                                <RadioButton 
+                                    x:Name="rbLaMoisson"
+                                    Command="local:AppCommands.LoadSkinCommand" 
+                                    CommandParameter="LaMoisson">LaMoisson</RadioButton>
+                                <RadioButton 
+                                    x:Name="rbPsycheRock"
+                                    IsChecked="True"
+                                    Command="local:AppCommands.LoadSkinCommand" 
+                                    CommandParameter="PsycheRock">PsycheRock</RadioButton>
+                                <RadioButton 
+                                    x:Name="rbBlackAndWhite"
+                                    Command="local:AppCommands.LoadSkinCommand" 
+                                    CommandParameter="BlackAndWhite">BlackAndWhite</RadioButton>
+                            </StackPanel>
+                        </GroupBox>
+                        <GroupBox Header="{p:ResourceString Language}">
+                            <StackPanel>
+                                <RadioButton 
+                                    x:Name="rbEnglish"
+                                    Content="{p:ResourceString English}"
+                                    Command="local:AppCommands.SetCultureCommand"
+                                    CommandParameter="en-US"
+                                    />
+                                <RadioButton 
+                                    x:Name="rbFrench"
+                                    Content="{p:ResourceString French}"
+                                    Command="local:AppCommands.SetCultureCommand"
+                                    CommandParameter="fr-FR"
+                                    />
+                            </StackPanel>
+                        </GroupBox>
+                    </StackPanel>
+                    <!--ResourceStringCoordinator test-->
+                    <!--<TabItem.ContextMenu>
+                        <ContextMenu>
+                            <MenuItem Header="{p:ResourceString Name=English, AssemblyName=PerspectiveDemo.UI, BaseName=UserControls.Strings.MainControl}" />
+                            <MenuItem Header="{p:ResourceString Name=French, AssemblyName=PerspectiveDemo.UI, BaseName=UserControls.Strings.MainControl}" />
+                            <MenuItem Header="{p:ResourceString Name=BubbleChart, AssemblyName=PerspectiveDemo.UI, BaseName=UserControls.Strings.MainControl}" />
+                        </ContextMenu>
+                    </TabItem.ContextMenu>-->
+                </TabItem>
+            </TabControl>
+            <Frame Name="frame1" Focusable="False"/>
+        </DockPanel>
+    </p:ResourceStringDecorator>
+</UserControl>

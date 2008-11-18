@@ -1,0 +1,10 @@
+﻿<Page x:Class="PerspectiveDemo.UI.Pages.pWpf3D.Gyroscope3DDemo"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:p="http://www.codeplex.com/perspective"
+    Title="Gyroscope3D"
+    Style="{StaticResource PageStyle}">
+    <p:Workshop3D>
+        <p:Gyroscope3D />
+    </p:Workshop3D>
+</Page>

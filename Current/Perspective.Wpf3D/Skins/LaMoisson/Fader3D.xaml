@@ -1,0 +1,22 @@
+﻿<ContainerUIElement3D
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:p3D="clr-namespace:Perspective.Wpf3D.Shapes"
+    xmlns:p3DControls="clr-namespace:Perspective.Wpf3D.Controls"
+    Transform="{StaticResource FaderGlobalTransform}">
+    <StaticResource ResourceKey="FaderFront"/>
+    <ContainerUIElement3D>
+        <ContainerUIElement3D.Transform>
+            <Transform3DGroup>
+                <StaticResource ResourceKey="SphericalFaderControlTransform"/>
+                <TranslateTransform3D 
+                    OffsetY="{Binding RelativeSource={RelativeSource AncestorType={x:Type p3DControls:Fader3D}}, Path=Rate}"/>
+            </Transform3DGroup>
+        </ContainerUIElement3D.Transform>
+        <p3D:Spherical3D 
+            Material="{StaticResource ControlColorMaterial}" />
+        <p3D:Spherical3D 
+            x:Name="PART_SelectionIndicator"
+            Material="{StaticResource SelectionIndicatorMaterial}"/>
+    </ContainerUIElement3D>
+</ContainerUIElement3D>

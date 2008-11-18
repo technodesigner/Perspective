@@ -1,0 +1,7 @@
+﻿<Window x:Class="PerspectiveDemo.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:demo="http://www.codeplex.com/perspective/demo"        
+    Title="Perspective" WindowState="Maximized">
+    <demo:MainControl />
+</Window>

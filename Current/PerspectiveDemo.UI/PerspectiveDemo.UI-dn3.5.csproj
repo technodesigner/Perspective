@@ -1,0 +1,394 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2ECD5099-80B2-469B-BAD3-3A34C1506170}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PerspectiveDemo.UI</RootNamespace>
+    <AssemblyName>PerspectiveDemo.UI</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\dn3.5\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;DN35</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\dn3.5\</OutputPath>
+    <DefineConstants>TRACE;DN35</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppCommands.cs" />
+    <Compile Include="Converters\ScreenSizeToScaleFactorConverter.cs" />
+    <Compile Include="Pages\pWpf3D\Box3DImage.xaml.cs">
+      <DependentUpon>Box3DImage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\pWpf3D\Bar3DImage.xaml.cs">
+      <DependentUpon>Bar3DImage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\pWpf3D\BubbleChart.xaml.cs">
+      <DependentUpon>BubbleChart.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\pWpf3D\Conical3DImage.xaml.cs">
+      <DependentUpon>Conical3DImage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\pWpf3D\Polygon3DImage.xaml.cs">
+      <DependentUpon>Polygon3DImage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\pWpf3D\Spherical3DImage.xaml.cs">
+      <DependentUpon>Spherical3DImage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\pWpf3D\PieSlice.xaml.cs">
+      <DependentUpon>PieSlice.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\pWpf\DpiScaling.xaml.cs">
+      <DependentUpon>DpiScaling.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\pWpf\RangeControls.xaml.cs">
+      <DependentUpon>RangeControls.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\pWpf3D\Arrow3DDemo.xaml.cs">
+      <DependentUpon>Arrow3DDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\pWpf3D\Bar3DDemo.xaml.cs">
+      <DependentUpon>Bar3DDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\pWpf3D\Box3DDemo.xaml.cs">
+      <DependentUpon>Box3DDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\pWpf3D\Box3DOpen.xaml.cs">
+      <DependentUpon>Box3DOpen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\pWpf3D\ButtonFaderKnob3DDemo.xaml.cs">
+      <DependentUpon>ButtonFaderKnob3DDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\pWpf3D\Conical3DDemo.xaml.cs">
+      <DependentUpon>Conical3DDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\pWpf3D\CustomKnob3DDemo.xaml.cs">
+      <DependentUpon>CustomKnob3DDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\pWpf3D\Cylinder.xaml.cs">
+      <DependentUpon>Cylinder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\pWpf3D\Football3DDemo.xaml.cs">
+      <DependentUpon>Football3DDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\pWpf3D\Gyroscope3DDemo.xaml.cs">
+      <DependentUpon>Gyroscope3DDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\pWpf3D\Interactivity.xaml.cs">
+      <DependentUpon>Interactivity.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\pWpf3D\Isocahedron3DDemo.xaml.cs">
+      <DependentUpon>Isocahedron3DDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\pWpf3D\Mixer.xaml.cs">
+      <DependentUpon>Mixer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\pWpf3D\Polygon3DDemo.xaml.cs">
+      <DependentUpon>Polygon3DDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\pWpf3D\Ring3DDemo.xaml.cs">
+      <DependentUpon>Ring3DDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\pWpf3D\Spherical3DDemo.xaml.cs">
+      <DependentUpon>Spherical3DDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\pWpf3D\Spherical3DTransform.xaml.cs">
+      <DependentUpon>Spherical3DTransform.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\pWpf3D\Square3DDemo.xaml.cs">
+      <DependentUpon>Square3DDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\pWpf3D\Box3DTransform.xaml.cs">
+      <DependentUpon>Box3DTransform.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\pWpf3D\Square3DAnimation.xaml.cs">
+      <DependentUpon>Square3DAnimation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\pWpf3D\Square3DImage.xaml.cs">
+      <DependentUpon>Square3DImage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\pWpf3D\TruncatedIsocahedron3DDemo.xaml.cs">
+      <DependentUpon>TruncatedIsocahedron3DDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\pWpf3D\XyzAxis3DDemo.xaml.cs">
+      <DependentUpon>XyzAxis3DDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ResourceAssembly.cs" />
+    <Compile Include="ResourceKeys.cs" />
+    <Compile Include="SkinManager.cs" />
+    <Compile Include="UserControls\MainControl.xaml.cs">
+      <DependentUpon>MainControl.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Pages\pWpf\Strings\RangeControls.fr.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\pWpf\Strings\DpiScaling.fr.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\pWpf\Strings\DpiScaling.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\pWpf\Strings\RangeControls.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Strings\MainControl.fr.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\Strings\MainControl.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Perspective.Core\Perspective.Core-dn3.5.csproj">
+      <Project>{19FC4939-5269-4B1E-93BF-569D3E14A9B0}</Project>
+      <Name>Perspective.Core-dn3.5</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Perspective.Wpf3D\Perspective.Wpf3D-dn3.5.csproj">
+      <Project>{F1121E62-AE79-4460-9419-E74F19C011F7}</Project>
+      <Name>Perspective.Wpf3D-dn3.5</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Perspective.Wpf\Perspective.Wpf-dn3.5.csproj">
+      <Project>{34860E9C-F566-4F14-BFB9-45F6B37503F9}</Project>
+      <Name>Perspective.Wpf-dn3.5</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Pages\pWpf\DpiScaling.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\pWpf\RangeControls.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Pages\pWpf3D\Arrow3DDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\pWpf3D\Bar3DDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\pWpf3D\Box3DDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\pWpf3D\Box3DOpen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\pWpf3D\BubbleChart.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\pWpf3D\ButtonFaderKnob3DDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\pWpf3D\Conical3DDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\pWpf3D\Box3DImage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\pWpf3D\Bar3DImage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\pWpf3D\Conical3DImage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\pWpf3D\Polygon3DImage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\pWpf3D\Spherical3DImage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Pages\pWpf3D\CustomKnob3DDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\pWpf3D\Cylinder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\pWpf3D\Football3DDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\pWpf3D\Gyroscope3DDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\pWpf3D\Interactivity.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\pWpf3D\Isocahedron3DDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\pWpf3D\Mixer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\pWpf3D\PieSlice.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\pWpf3D\Polygon3DDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\pWpf3D\Ring3DDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\pWpf3D\Spherical3DDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\pWpf3D\Spherical3DTransform.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\pWpf3D\Square3DDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\pWpf3D\Box3DTransform.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\pWpf3D\Square3DAnimation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\pWpf3D\Square3DImage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\pWpf3D\TruncatedIsocahedron3DDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\pWpf3D\Wpf3DResources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\pWpf3D\XyzAxis3DDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Skins\PsycheRock.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Skins\LaMoisson.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Skins\BlackAndWhite.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="UserControls\MainControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pages\pWpf3D\BubbleChartData.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

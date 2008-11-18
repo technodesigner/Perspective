@@ -1,0 +1,43 @@
+﻿<Page x:Class="PerspectiveDemo.UI.Pages.pWpf3D.CustomKnob3DDemo"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:p="http://www.codeplex.com/perspective"
+    Title="CustomKnob3D"
+    Style="{StaticResource PageStyle}">
+    <Page.Resources>
+        <ResourceDictionary Source="Wpf3DResources.xaml" />
+    </Page.Resources>
+    <p:Workshop3D Name="workshop">
+        <p:Knob3D 
+            x:Name="myKnob" 
+            Minimum="0.0" Maximum="360.0"
+            OverridesDefaultSkin="True"
+            MouseRightButtonDown="myKnob_MouseRightButtonDown"
+            >
+            <p:Knob3D.Transform >
+                <RotateTransform3D>
+                    <RotateTransform3D.Rotation>
+                        <AxisAngleRotation3D 
+                        Angle="{Binding RelativeSource={RelativeSource AncestorType={x:Type p:Knob3D}}, Path=Angle}"    
+                        Axis="0.0, 0.0, 1.0"/>
+                    </RotateTransform3D.Rotation>
+                    <!-- 
+                        Remark : Binding between elements using ElementName is not supported in a Workshop3D, 
+                        because it is not possible to get an inheritance context pointer. 
+                        Use the Source or RelativeSource property. 
+                        See http://blogs.msdn.com/nickkramer/archive/2006/08/18/705116.aspx
+                        -->
+                    <!--Angle="{Binding ElementName=myKnob, Path=Angle}"-->
+                </RotateTransform3D>
+            </p:Knob3D.Transform>
+            <p:Knob3D.Content>
+                <ContainerUIElement3D>
+                    <p:Bar3D 
+                        SideCount="3" 
+                        RoundingRate="0.15"
+                        Material="{DynamicResource ControlMaterial}" />
+                </ContainerUIElement3D>
+            </p:Knob3D.Content>
+        </p:Knob3D>
+    </p:Workshop3D>
+</Page>
