@@ -1,0 +1,537 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:p="clr-namespace:Perspective.Wpf"
+    xmlns:pControls="clr-namespace:Perspective.Wpf.Controls"
+    >
+
+    <!--Fader-->
+
+    <Style x:Key="FaderButtonStyle" TargetType="{x:Type RepeatButton}">
+        <Setter Property="SnapsToDevicePixels" Value="True"/>
+        <Setter Property="IsTabStop" Value="False"/>
+        <Setter Property="Focusable" Value="False"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RepeatButton}">
+                    <Rectangle Fill="#00FFFFFF" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="FaderThumbStyle" TargetType="{x:Type Thumb}">
+        <Setter Property="SnapsToDevicePixels" Value="True"/>
+        <Setter Property="Height" Value="15.0" />
+        <Setter Property="Width" Value="15.0"/>
+        <Setter Property="Focusable" Value="True"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Thumb}">
+
+                    <Ellipse 
+                        Name="Ellipse" 
+                        Stroke="{DynamicResource {ComponentResourceKey {x:Type p:ResourceKeys}, ControlStroke}}"
+                        StrokeThickness="1.0" 
+                        Fill="{DynamicResource {ComponentResourceKey {x:Type p:ResourceKeys}, ControlBrush}}">
+                    </Ellipse>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsKeyboardFocused" Value="True">
+                            <Setter 
+                                TargetName="Ellipse" 
+                                Property="Fill" 
+                                Value="{DynamicResource {ComponentResourceKey {x:Type p:ResourceKeys}, MouseOverControlBrush}}" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter 
+                                TargetName="Ellipse" 
+                                Property="Fill" 
+                                Value="{DynamicResource {ComponentResourceKey {x:Type p:ResourceKeys}, MouseOverControlBrush}}" />
+                        </Trigger>
+                        <Trigger Property="IsDragging" Value="True">
+                            <Setter 
+                                TargetName="Ellipse" 
+                                Property="Fill" 
+                                Value="{DynamicResource {ComponentResourceKey {x:Type p:ResourceKeys}, DraggingControlBrush}}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter 
+                                TargetName="Ellipse" 
+                                Property="Fill" 
+                                Value="{DynamicResource {ComponentResourceKey {x:Type p:ResourceKeys}, NotEnabledBrush}}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <ControlTemplate x:Key="HorizontalFader" TargetType="{x:Type pControls:Fader}">
+        <Grid>
+            <Rectangle 
+                x:Name="SelectionMarker" 
+                Stroke="SteelBlue" 
+                ClipToBounds="True" 
+                SnapsToDevicePixels="True"/>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto" MinHeight="{TemplateBinding pControls:Fader.MinHeight}"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <TickBar 
+                    Name="TopTick"
+                    SnapsToDevicePixels="True" 
+                    Placement="Top"
+                    Fill="Black"
+                    Height="4"
+                    Visibility="Collapsed" />
+                <Border 
+                    Name="TrackBackground"
+                    Margin="0"
+                    CornerRadius="2" 
+                    Height="4"
+                    Grid.Row="1"
+                    Background="White"
+                    BorderBrush="{DynamicResource {ComponentResourceKey {x:Type p:ResourceKeys}, ControlStroke}}"
+                    BorderThickness="1.0" />
+                <Track Grid.Row="1" Name="PART_Track">
+                    <Track.DecreaseRepeatButton>
+                        <RepeatButton 
+                            Style="{StaticResource FaderButtonStyle}"
+                            Command="Slider.DecreaseLarge" />
+                    </Track.DecreaseRepeatButton>
+                    <Track.Thumb>
+                        <Thumb Style="{StaticResource FaderThumbStyle}" />
+                    </Track.Thumb>
+                    <Track.IncreaseRepeatButton>
+                        <RepeatButton 
+                            Style="{StaticResource FaderButtonStyle}"
+                            Command="Slider.IncreaseLarge" />
+                    </Track.IncreaseRepeatButton>
+                </Track>
+                <TickBar 
+                    Name="BottomTick"
+                    SnapsToDevicePixels="True" 
+                    Grid.Row="2"
+                    Fill="Black"
+                    Placement="Bottom"
+                    Height="4"
+                    Visibility="Collapsed" />
+            </Grid>
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="TickPlacement" Value="TopLeft">
+                <Setter TargetName="TopTick" Property="Visibility" Value="Visible"/>
+            </Trigger>
+            <Trigger Property="TickPlacement" Value="BottomRight">
+                <Setter TargetName="BottomTick" Property="Visibility" Value="Visible"/>
+            </Trigger>
+            <Trigger Property="TickPlacement" Value="Both">
+                <Setter TargetName="TopTick" Property="Visibility" Value="Visible"/>
+                <Setter TargetName="BottomTick" Property="Visibility" Value="Visible"/>
+            </Trigger>
+            <Trigger Property="IsFocused" Value="True">
+                <Setter TargetName="SelectionMarker" Property="Visibility" Value="Visible" />
+                <Setter TargetName="SelectionMarker" Property="StrokeThickness" Value="1.0" />
+            </Trigger>
+            <Trigger Property="IsFocused" Value="False">
+                <Setter TargetName="SelectionMarker" Property="Visibility" Value="Hidden" />
+                <Setter TargetName="SelectionMarker" Property="StrokeThickness" Value="0.5" />
+            </Trigger>
+            <Trigger Property="IsSelected" Value="True">
+                <Setter TargetName="SelectionMarker" Property="Visibility" Value="Visible" />
+            </Trigger>
+            <Trigger Property="IsSelected" Value="False">
+                <Setter TargetName="SelectionMarker" Property="Visibility" Value="Hidden" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="VerticalFader" TargetType="{x:Type pControls:Fader}">
+        <Grid>
+            <Rectangle 
+                x:Name="SelectionMarker" 
+                Stroke="SteelBlue" 
+                ClipToBounds="True" 
+                SnapsToDevicePixels="True"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto" MinWidth="{TemplateBinding pControls:Fader.MinWidth}"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <TickBar 
+                    Name="TopTick"
+                    SnapsToDevicePixels="True" 
+                    Placement="Left"
+                    Fill="Black"
+                    Width="4"
+                    Visibility="Collapsed" />
+                <Border 
+                    Name="TrackBackground"
+                    Margin="0"
+                    CornerRadius="2" 
+                    Width="4"
+                    Grid.Column="1"
+                    Background="White" 
+                    BorderBrush="{DynamicResource {ComponentResourceKey {x:Type p:ResourceKeys}, ControlStroke}}"
+                    BorderThickness="1" />
+                <Track Grid.Column="1" Name="PART_Track">
+                    <Track.DecreaseRepeatButton>
+                        <RepeatButton 
+                            Style="{StaticResource FaderButtonStyle}"
+                            Command="Slider.DecreaseLarge" />
+                    </Track.DecreaseRepeatButton>
+                    <Track.Thumb>
+                        <Thumb Style="{StaticResource FaderThumbStyle}" />
+                    </Track.Thumb>
+                    <Track.IncreaseRepeatButton>
+                        <RepeatButton 
+                            Style="{StaticResource FaderButtonStyle}"
+                            Command="Slider.IncreaseLarge" />
+                    </Track.IncreaseRepeatButton>
+                </Track>
+                <TickBar 
+                    Name="BottomTick"
+                    SnapsToDevicePixels="True" 
+                    Grid.Column="2"
+                    Fill="Black"
+                    Placement="Right"
+                    Width="4"
+                    Visibility="Collapsed" />
+            </Grid>
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="TickPlacement" Value="TopLeft">
+                <Setter TargetName="TopTick" Property="Visibility" Value="Visible"/>
+            </Trigger>
+            <Trigger Property="TickPlacement" Value="BottomRight">
+                <Setter TargetName="BottomTick" Property="Visibility" Value="Visible"/>
+            </Trigger>
+            <Trigger Property="TickPlacement" Value="Both">
+                <Setter TargetName="TopTick" Property="Visibility" Value="Visible"/>
+                <Setter TargetName="BottomTick" Property="Visibility" Value="Visible"/>
+            </Trigger>
+            <Trigger Property="IsFocused" Value="True">
+                <Setter TargetName="SelectionMarker" Property="Visibility" Value="Visible" />
+                <Setter TargetName="SelectionMarker" Property="StrokeThickness" Value="1.0" />
+            </Trigger>
+            <Trigger Property="IsFocused" Value="False">
+                <Setter TargetName="SelectionMarker" Property="Visibility" Value="Hidden" />
+                <Setter TargetName="SelectionMarker" Property="StrokeThickness" Value="0.5" />
+            </Trigger>
+            <Trigger Property="IsSelected" Value="True">
+                <Setter TargetName="SelectionMarker" Property="Visibility" Value="Visible" />
+            </Trigger>
+            <Trigger Property="IsSelected" Value="False">
+                <Setter TargetName="SelectionMarker" Property="Visibility" Value="Hidden" />
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <Style x:Key="FaderStyle" TargetType="{x:Type pControls:Fader}">
+        <Setter Property="SnapsToDevicePixels" Value="True"/>
+        <Style.Triggers>
+            <Trigger Property="Orientation" Value="Horizontal">
+                <Setter Property="MinWidth" Value="104" />
+                <Setter Property="MinHeight" Value="21" />
+                <Setter Property="Template" Value="{StaticResource HorizontalFader}" />
+            </Trigger>
+            <Trigger Property="Orientation" Value="Vertical">
+                <Setter Property="MinWidth" Value="21" />
+                <Setter Property="MinHeight" Value="104" />
+                <Setter Property="Template" Value="{StaticResource VerticalFader}" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <!--Knob-->
+
+    <Style x:Key="KnobStyle" TargetType="{x:Type pControls:Knob}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type pControls:Knob}">
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            Height="30.0" Width="30.0">
+                        <Grid>
+                            <Rectangle 
+                                x:Name="SelectionMarker" 
+                                Stroke="SteelBlue" 
+                                ClipToBounds="True" 
+                                SnapsToDevicePixels="True"/>
+                            <FrameworkElement x:Name="angleElement" Tag="{TemplateBinding Angle}"/>
+                            <Ellipse 
+                                x:Name="Ellipse"
+                                ClipToBounds="True" 
+                                Stroke="{DynamicResource {ComponentResourceKey {x:Type p:ResourceKeys}, ControlStroke}}" 
+                                StrokeThickness="1.8" 
+                                Fill="{DynamicResource {ComponentResourceKey {x:Type p:ResourceKeys}, ControlBrush}}"/>
+                            <Line X1="15.0" Y1="30.0" X2="15.0" Y2="20.0" 
+                                Stroke="{DynamicResource {ComponentResourceKey {x:Type p:ResourceKeys}, ControlStroke}}" 
+                                StrokeThickness="2.0">
+                                <Line.RenderTransform>
+                                    <RotateTransform 
+                                        CenterX="15.0" 
+                                        CenterY="15.0" 
+                                        Angle="{Binding ElementName=angleElement, Path=Tag}"
+                                         />
+                                </Line.RenderTransform>
+                            </Line>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsKeyboardFocused" Value="True">
+                            <Setter TargetName="Ellipse" Property="Fill" Value="{DynamicResource {ComponentResourceKey {x:Type p:ResourceKeys}, MouseOverControlBrush}}" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="Ellipse" Property="Fill" Value="{DynamicResource {ComponentResourceKey {x:Type p:ResourceKeys}, MouseOverControlBrush}}" />
+                        </Trigger>
+                        <Trigger Property="IsDragging" Value="True">
+                            <Setter TargetName="Ellipse" Property="Fill" Value="{DynamicResource {ComponentResourceKey {x:Type p:ResourceKeys}, DraggingControlBrush}}"/>
+                        </Trigger>
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter TargetName="SelectionMarker" Property="Visibility" Value="Visible" />
+                            <Setter TargetName="SelectionMarker" Property="StrokeThickness" Value="1.5" />
+                        </Trigger>
+                        <Trigger Property="IsFocused" Value="False">
+                            <Setter TargetName="SelectionMarker" Property="Visibility" Value="Hidden" />
+                            <Setter TargetName="SelectionMarker" Property="StrokeThickness" Value="0.75" />
+                        </Trigger>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter TargetName="SelectionMarker" Property="Visibility" Value="Visible" />
+                        </Trigger>
+                        <Trigger Property="IsSelected" Value="False">
+                            <Setter TargetName="SelectionMarker" Property="Visibility" Value="Hidden" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!--Joystick-->
+    
+    <Style x:Key="JoystickButtonStyle" TargetType="{x:Type Button}">
+        <Setter Property="SnapsToDevicePixels" Value="True"/>
+        <Setter Property="IsTabStop" Value="False"/>
+        <Setter Property="Focusable" Value="False"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Ellipse 
+                        Name="Ellipse" 
+                        Stroke="{DynamicResource {ComponentResourceKey {x:Type p:ResourceKeys}, ControlStroke}}"
+                        StrokeThickness="1.5" 
+                        Fill="{DynamicResource {ComponentResourceKey {x:Type p:ResourceKeys}, ControlBrush}}">
+                    </Ellipse>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Opacity" Value="0.8"/>
+                            <Setter 
+                                TargetName="Ellipse" 
+                                Property="Fill" 
+                                Value="{DynamicResource {ComponentResourceKey {x:Type p:ResourceKeys}, MouseOverControlBrush}}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style 
+        x:Key="JoystickBigButtonStyle"
+        BasedOn="{StaticResource JoystickButtonStyle}" 
+        TargetType="{x:Type Button}">
+        <Setter Property="Width" Value="29.0"/>
+        <Setter Property="Height" Value="29.0"/>
+    </Style>
+    
+    <Style 
+        x:Key="JoystickLittleButtonStyle"
+        BasedOn="{StaticResource JoystickButtonStyle}" 
+        TargetType="{x:Type Button}" >
+        <Setter Property="Width" Value="19.0"/>
+        <Setter Property="Height" Value="19.0"/>
+    </Style>
+
+    <Style x:Key="JoystickBackgroundEllipseStyle" TargetType="{x:Type Ellipse}">
+        <Setter Property="Stroke" Value="Black"/>
+        <Setter Property="StrokeThickness" Value="2.0"/>
+        <Setter Property="Fill" Value="DarkGray"/>
+    </Style>
+
+    <Style 
+        x:Key="JoystickBackgroundEllipse2D3DStyle"
+        BasedOn="{StaticResource JoystickBackgroundEllipseStyle}" 
+        TargetType="{x:Type Ellipse}">
+        <Setter Property="Width" Value="94.0"/>
+        <Setter Property="Height" Value="94.0"/>
+    </Style>
+
+    <Style 
+        x:Key="JoystickBackgroundBorder1DStyle"
+        TargetType="{x:Type Border}">
+        <Setter Property="SnapsToDevicePixels" Value="True"/>
+        <Setter Property="Background" Value="DarkGray"/>
+        <Setter Property="BorderBrush" Value="Black"/>
+        <Setter Property="BorderThickness" Value="2.0"/>
+        <Setter Property="Padding" Value="2.0"/>
+        <Setter Property="CornerRadius" Value="18.0"/>
+        <Setter Property="Width" Value="37.0"/>
+    </Style>
+
+    <Style 
+        x:Key="JoystickGridColumnStyle"
+        TargetType="{x:Type ColumnDefinition}">
+        <Setter Property="Width" Value="29.0"/>
+    </Style>
+
+    <Style 
+        x:Key="JoystickGridRowStyle"
+        TargetType="{x:Type RowDefinition}">
+        <Setter Property="Height" Value="29.0"/>
+    </Style>
+
+    <Style 
+        x:Key="JoystickGridStyle"
+        TargetType="{x:Type Grid}">
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+    
+    <ControlTemplate x:Key="Joystick2D3DTemplate" TargetType="{x:Type pControls:Joystick}">
+        <Grid>
+            <Ellipse Name="BackgroundEllipse" Style="{StaticResource JoystickBackgroundEllipse2D3DStyle}"/>
+            <Grid Style="{StaticResource JoystickGridStyle}">
+                <Grid.RowDefinitions>
+                    <RowDefinition Style="{StaticResource JoystickGridRowStyle}"/>
+                    <RowDefinition Style="{StaticResource JoystickGridRowStyle}"/>
+                    <RowDefinition Style="{StaticResource JoystickGridRowStyle}"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Style="{StaticResource JoystickGridColumnStyle}"/>
+                    <ColumnDefinition Style="{StaticResource JoystickGridColumnStyle}"/>
+                    <ColumnDefinition Style="{StaticResource JoystickGridColumnStyle}"/>
+                </Grid.ColumnDefinitions>
+                <Button Name="PART_GoForward" 
+                                    Grid.Row="0" Grid.Column="1" 
+                                    Style="{StaticResource JoystickBigButtonStyle}"/>
+                <Button Name="PART_GoForwardLeft" 
+                                    Grid.Row="0" Grid.Column="0" 
+                                    Style="{StaticResource JoystickLittleButtonStyle}"
+                                    HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+                <Button Name="PART_GoLeft" 
+                                    Grid.Row="1" Grid.Column="0" 
+                                    Style="{StaticResource JoystickBigButtonStyle}"/>
+                <Button Name="PART_GoBackLeft" 
+                                    Grid.Row="2" Grid.Column="0" 
+                                    Style="{StaticResource JoystickLittleButtonStyle}"
+                                    HorizontalAlignment="Right" VerticalAlignment="Top"/>
+                <Button Name="PART_GoBack" 
+                                    Grid.Row="2" Grid.Column="1" 
+                                    Style="{StaticResource JoystickBigButtonStyle}"/>
+                <Button Name="PART_GoBackRight" 
+                                    Grid.Row="2" Grid.Column="2" 
+                                    Style="{StaticResource JoystickLittleButtonStyle}"
+                                    HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <Button Name="PART_GoRight" 
+                                    Grid.Row="1" Grid.Column="2" 
+                                    Style="{StaticResource JoystickBigButtonStyle}"/>
+                <Button Name="PART_GoForwardRight" 
+                                    Grid.Row="0" Grid.Column="2" 
+                                    Style="{StaticResource JoystickLittleButtonStyle}"
+                                    HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+                <Grid Grid.Row="1" Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Button Name="PART_GoUp" Grid.Row="0" Grid.Column="0" Style="{StaticResource JoystickButtonStyle}" Width="29.0" Height="14.0"/>
+                    <Button Name="PART_GoDown" Grid.Row="1" Grid.Column="0" Style="{StaticResource JoystickButtonStyle}" Width="29.0" Height="14.0"/>
+                </Grid>
+            </Grid>
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="Dimensions" Value="Two">
+                <Setter TargetName="PART_GoUp" Property="Visibility" Value="Collapsed"/>
+                <Setter TargetName="PART_GoDown" Property="Visibility" Value="Collapsed"/>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="Joystick1DTemplate" TargetType="{x:Type pControls:Joystick}">
+        <Grid>
+            <Border Style="{StaticResource JoystickBackgroundBorder1DStyle}">
+                <Grid Style="{StaticResource JoystickGridStyle}">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Style="{StaticResource JoystickGridRowStyle}"/>
+                        <RowDefinition Style="{StaticResource JoystickGridRowStyle}"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Style="{StaticResource JoystickGridColumnStyle}"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Name="PART_GoForward" 
+                        Grid.Row="0" Grid.Column="1" 
+                        Style="{StaticResource JoystickBigButtonStyle}"/>
+                    <Button Name="PART_GoBack" 
+                        Grid.Row="2" Grid.Column="1" 
+                        Style="{StaticResource JoystickBigButtonStyle}"/>
+                </Grid>
+            </Border>
+        </Grid>
+    </ControlTemplate>
+
+    <Style x:Key="JoystickStyle" TargetType="{x:Type pControls:Joystick}">
+        <Setter Property="Background" 
+            Value="{DynamicResource {ComponentResourceKey {x:Type p:ResourceKeys}, ControlBrush}}" />
+        <Style.Triggers>
+            <Trigger Property="Dimensions" Value="One">
+                <Setter Property="Template" Value="{StaticResource Joystick1DTemplate}"/>
+            </Trigger>
+            <Trigger Property="Dimensions" Value="Two">
+                <Setter Property="Template" Value="{StaticResource Joystick2D3DTemplate}"/>
+            </Trigger>
+            <Trigger Property="Dimensions" Value="Three">
+                <Setter Property="Template" Value="{StaticResource Joystick2D3DTemplate}"/>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="{ComponentResourceKey {x:Type p:ResourceKeys}, GroupBoxStyle}"
+           TargetType="{x:Type GroupBox}">
+        <Setter Property="Margin" Value="4.0" />
+        <Setter 
+            Property="Foreground" 
+            Value="{DynamicResource {ComponentResourceKey {x:Type p:ResourceKeys}, PanelForegroundBrush}}" />
+    </Style>
+
+    <Style x:Key="{ComponentResourceKey {x:Type p:ResourceKeys}, PanelStyle}">
+        <Setter 
+            Property="Panel.Background" 
+            Value="{DynamicResource {ComponentResourceKey {x:Type p:ResourceKeys}, PanelBackgroundBrush}}" />
+    </Style>
+
+  
+    <!--Main styles-->
+
+    <Style 
+        BasedOn="{StaticResource FaderStyle}" 
+        TargetType="{x:Type pControls:Fader}" 
+        />
+
+    <Style 
+        BasedOn="{StaticResource KnobStyle}" 
+        TargetType="{x:Type pControls:Knob}" 
+        />
+
+    <Style 
+        BasedOn="{StaticResource JoystickStyle}" 
+        TargetType="{x:Type pControls:Joystick}" 
+        />
+
+</ResourceDictionary>

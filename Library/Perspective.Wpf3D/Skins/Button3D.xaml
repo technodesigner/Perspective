@@ -1,0 +1,7 @@
+﻿<ContainerUIElement3D
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    x:Name="PART_Button"
+    >
+    <StaticResource ResourceKey="ButtonControl"/>
+</ContainerUIElement3D>

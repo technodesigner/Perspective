@@ -1,0 +1,28 @@
+﻿<ContainerUIElement3D
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:p3D="clr-namespace:Perspective.Wpf3D.Shapes"
+    xmlns:p3DControls="clr-namespace:Perspective.Wpf3D.Controls"
+    Transform="{StaticResource FaderGlobalTransform}">
+    <StaticResource ResourceKey="FaderFront"/>
+    <ContainerUIElement3D>
+        <ContainerUIElement3D.Transform>
+            <Transform3DGroup>
+                <StaticResource ResourceKey="FaderControlTransform"/>
+                <TranslateTransform3D 
+                    OffsetY="{Binding RelativeSource={RelativeSource AncestorType={x:Type p3DControls:Fader3D}}, Path=Rate}"/>
+            </Transform3DGroup>
+        </ContainerUIElement3D.Transform>
+        <StaticResource ResourceKey="FaderThumbControl"/>
+        <ContainerUIElement3D x:Name="PART_SelectionIndicator">
+            <p3D:Box3D 
+                Material="{DynamicResource SelectionIndicatorMaterial}"/>
+            <p3D:Box3D 
+                Material="{DynamicResource SelectionIndicatorMaterial}">
+                <p3D:Box3D.Transform>
+                    <TranslateTransform3D OffsetY="2.0" />
+                </p3D:Box3D.Transform>
+            </p3D:Box3D>
+        </ContainerUIElement3D>
+    </ContainerUIElement3D>
+</ContainerUIElement3D>
