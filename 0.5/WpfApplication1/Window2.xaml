@@ -1,9 +1,0 @@
-﻿<Window x:Class="WpfApplication1.Window2"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="clr-namespace:WpfApplication1.UserControls"    
-    Title="Perspective : Gyroscope 3D WPF Model" Height="300" Width="300">
-    <Grid>
-        <local:Gyroscope />
-    </Grid>
-</Window>
