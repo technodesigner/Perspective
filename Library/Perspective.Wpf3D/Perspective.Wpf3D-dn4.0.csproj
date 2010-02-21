@@ -109,7 +109,7 @@
     <Compile Include="Shapes\Square3D.cs" />
     <Compile Include="SkinManager.cs" />
     <Compile Include="Shapes\XyzAxis3D.cs" />
-    <Compile Include="Transformer3D.cs" />
+    <Compile Include="RelativeTransformer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="Skins\PsycheRock\Resources.xaml">

@@ -24,7 +24,7 @@ namespace Perspective.Wpf3D
     /// <remarks>
     /// The successive transformation operations (translation, scaling or rotation) are cumulative (the last one is relative to its previous one).
     /// </remarks>
-    public class Transformer3D
+    public class RelativeTransformer
     {
         #region Position readonly attached dependency property
 
@@ -45,7 +45,7 @@ namespace Perspective.Wpf3D
             DependencyProperty.RegisterAttachedReadOnly(
                 "Position", 
                 typeof(Point3D), 
-                typeof(Transformer3D), 
+                typeof(RelativeTransformer), 
                 new PropertyMetadata(new Point3D(0, 0, 0)));
 
         /// <summary>
@@ -72,7 +72,7 @@ namespace Perspective.Wpf3D
             DependencyProperty.RegisterAttachedReadOnly(
                 "MatrixTransform", 
                 typeof(MatrixTransform3D), 
-                typeof(Transformer3D), 
+                typeof(RelativeTransformer), 
                 new PropertyMetadata(null));
 
         /// <summary>
@@ -99,7 +99,7 @@ namespace Perspective.Wpf3D
             DependencyProperty.RegisterAttachedReadOnly(
                 "Matrix", 
                 typeof(Matrix3D), 
-                typeof(Transformer3D), 
+                typeof(RelativeTransformer), 
                 new PropertyMetadata(
                     new Matrix3D()));
 
@@ -117,7 +117,7 @@ namespace Perspective.Wpf3D
             DependencyProperty.RegisterAttachedReadOnly(
                 "PreviousMatrixTransform", 
                 typeof(MatrixTransform3D), 
-                typeof(Transformer3D), 
+                typeof(RelativeTransformer), 
                 new PropertyMetadata(null));
 
         /// <summary>
