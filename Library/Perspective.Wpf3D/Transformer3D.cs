@@ -22,7 +22,7 @@ namespace Perspective.Wpf3D
     /// A class to manage by code the transformations and the current position of a Visual3D.
     /// </summary>
     /// <remarks>
-    /// The successive transformation operations (translation, scaling or rotation) are cumulative.
+    /// The successive transformation operations (translation, scaling or rotation) are cumulative (the last one is relative to its previous one).
     /// </remarks>
     public class Transformer3D
     {
@@ -172,7 +172,7 @@ namespace Perspective.Wpf3D
         /// Scales a Visual3D object.
         /// </summary>
         /// <remarks>
-        /// The successive transformation operations (translation, scaling or rotation) are cumulative.
+        /// The successive transformation operations (translation, scaling or rotation) are cumulative (the last one is relative to its previous one).
         /// </remarks>
         /// <param name="visual">A Visual3D object to scale.</param>
         /// <param name="v">A vector containing the x-, y- and z-axis scale factors.</param>
@@ -190,7 +190,7 @@ namespace Perspective.Wpf3D
         /// Scales a Visual3D object.
         /// </summary>
         /// <remarks>
-        /// The successive transformation operations (translation, scaling or rotation) are cumulative.
+        /// The successive transformation operations (translation, scaling or rotation) are cumulative (the last one is relative to its previous one).
         /// </remarks>
         /// <param name="visual">A Visual3D object to scale.</param>
         /// <param name="scaleX">The x-axis scale factor.</param>
@@ -205,7 +205,7 @@ namespace Perspective.Wpf3D
         /// Scales a Visual3D object, using the same factor for the x-, y- and z-axis.
         /// </summary>
         /// <remarks>
-        /// The successive transformation operations (translation, scaling or rotation) are cumulative.
+        /// The successive transformation operations (translation, scaling or rotation) are cumulative (the last one is relative to its previous one).
         /// </remarks>
         /// <param name="visual">A Visual3D object to scale.</param>
         /// <param name="scale">The scale factor.</param>
@@ -218,7 +218,7 @@ namespace Perspective.Wpf3D
         /// Translates a Visual3D object.
         /// </summary>
         /// <remarks>
-        /// The successive transformation operations (translation, scaling or rotation) are cumulative.
+        /// The successive transformation operations (translation, scaling or rotation) are cumulative (the last one is relative to its previous one).
         /// </remarks>
         /// <param name="visual">A Visual3D object to scale.</param>
         /// <param name="v">A vector containing the x-, y- and z-axis offsets.</param>
@@ -238,7 +238,7 @@ namespace Perspective.Wpf3D
         /// Translates a Visual3D object. It updates the Position property.
         /// </summary>
         /// <remarks>
-        /// The successive transformation operations (translation, scaling or rotation) are cumulative.
+        /// The successive transformation operations (translation, scaling or rotation) are cumulative (the last one is relative to its previous one).
         /// </remarks>
         /// <param name="visual">A Visual3D object to move.</param>
         /// <param name="offsetX">The X-axis value of the translation's offset.</param>
@@ -253,7 +253,7 @@ namespace Perspective.Wpf3D
         /// Moves a Visual3D object to a new position. It updates the Position property.
         /// </summary>
         /// <remarks>
-        /// The successive transformation operations (translation, scaling or rotation) are cumulative.
+        /// The successive transformation operations (translation, scaling or rotation) are cumulative (the last one is relative to its previous one).
         /// </remarks>
         /// <param name="visual">A Visual3D object to move.</param>
         /// <param name="p">A Point3D object designing the new position.</param>
@@ -274,7 +274,7 @@ namespace Perspective.Wpf3D
         /// Moves a Visual3D object to a new position. It updates the Position property.
         /// </summary>
         /// <remarks>
-        /// The successive transformation operations (translation, scaling or rotation) are cumulative.
+        /// The successive transformation operations (translation, scaling or rotation) are cumulative (the last one is relative to its previous one).
         /// </remarks>
         /// <param name="visual">A Visual3D object to move.</param>
         /// <param name="x">The x-coordinate of the new position.</param>
@@ -289,7 +289,7 @@ namespace Perspective.Wpf3D
         /// Rotates a Visual3D object around the x-axis.
         /// </summary>
         /// <remarks>
-        /// The successive transformation operations (translation, scaling or rotation) are cumulative.
+        /// The successive transformation operations (translation, scaling or rotation) are cumulative (the last one is relative to its previous one).
         /// </remarks>
         /// <param name="visual">A Visual3D object to rotate.</param>
         /// <param name="angle">The angle of the x-axis rotation, in degrees.</param>
@@ -306,7 +306,7 @@ namespace Perspective.Wpf3D
         /// Rotates a Visual3D object around the y-axis.
         /// </summary>
         /// <remarks>
-        /// The successive transformation operations (translation, scaling or rotation) are cumulative.
+        /// The successive transformation operations (translation, scaling or rotation) are cumulative (the last one is relative to its previous one).
         /// </remarks>
         /// <param name="visual">A Visual3D object to rotate.</param>
         /// <param name="angle">The angle of the y-axis rotation, in degrees.</param>
@@ -323,7 +323,7 @@ namespace Perspective.Wpf3D
         /// Rotates a Visual3D object around the z-axis.
         /// </summary>
         /// <remarks>
-        /// The successive transformation operations (translation, scaling or rotation) are cumulative.
+        /// The successive transformation operations (translation, scaling or rotation) are cumulative (the last one is relative to its previous one).
         /// </remarks>
         /// <param name="visual">A Visual3D object to rotate.</param>
         /// <param name="angle">The angle of the z-axis rotation, in degrees.</param>
@@ -340,7 +340,7 @@ namespace Perspective.Wpf3D
         /// Rotates a Visual3D object around the x-, y- and then z-axis.
         /// </summary>
         /// <remarks>
-        /// The successive transformation operations (translation, scaling or rotation) are cumulative.
+        /// The successive transformation operations (translation, scaling or rotation) are cumulative (the last one is relative to its previous one).
         /// </remarks>
         /// <param name="visual">A Visual3D object to rotate.</param>
         /// <param name="angleX">The angle of the x-axis rotation, in degrees.</param>
@@ -361,7 +361,7 @@ namespace Perspective.Wpf3D
         /// Rotates a Visual3D object around the z-, y- and then x-axis.
         /// </summary>
         /// <remarks>
-        /// The successive transformation operations (translation, scaling or rotation) are cumulative.
+        /// The successive transformation operations (translation, scaling or rotation) are cumulative (the last one is relative to its previous one).
         /// </remarks>
         /// <param name="visual">A Visual3D object to rotate.</param>
         /// <param name="angleX">The angle of the x-axis rotation, in degrees.</param>
