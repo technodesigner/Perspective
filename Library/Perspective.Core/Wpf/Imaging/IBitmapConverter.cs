@@ -21,9 +21,9 @@ namespace Perspective.Core.Wpf.Imaging
         /// <summary>
         /// Converts a bitmap file (whatever format, i.e. RAW or BMP) into a file which format depends of the instanciated class.
         /// </summary>
-        /// <param name="originalFilename">The original image file name, without path.</param>
         /// <param name="originalPath">The path of the original file.</param>
         /// <param name="convertedPath">The path of the converted file.</param>
+        /// <param name="recursive">Indicates if the subdirectories should be processed.</param>
         /// <param name="overwriteExistingFiles">Indicates if the existing converted files should be overwritten.</param>
         void ConvertFiles(
             string originalPath,

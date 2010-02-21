@@ -22,6 +22,9 @@ namespace Perspective.Core.Wpf.Imaging
     {
         BitmapConverter _converter = new BitmapConverter();
 
+        /// <summary>
+        /// Constructor.
+        /// </summary>
         public BitmapToJpegConverter()
         {
             _converter.Encoding += new EventHandler<BitmapConverterEventArgs>(_converter_Encoding);
@@ -29,6 +32,9 @@ namespace Perspective.Core.Wpf.Imaging
 
         private int _qualityLevel;
 
+        /// <summary>
+        /// Jpeg quality level.
+        /// </summary>
         public int QualityLevel
         {
             get { return _qualityLevel; }
