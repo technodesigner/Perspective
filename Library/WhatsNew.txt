@@ -10,4 +10,4 @@ Wpf3D
 -----
 - RelativeTransformer : A class to manage by code the transformations and the current position of a Visual3D. 
 The successive transformation operations (translation, scaling or rotation) are cumulative 
-(the last one is relative to its previous one).
+(the last one is relative to its previous one). Tutorial : http://www.odewit.net/ArticleContent.aspx?id=Wpf3DRelativeTransformer&format=html

@@ -7,6 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perspective.Wpf-dn3.5", "Pe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perspective.Wpf3D-dn3.5", "Perspective.Wpf3D\Perspective.Wpf3D-dn3.5.csproj", "{F1121E62-AE79-4460-9419-E74F19C011F7}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BDB8E80E-66F6-4FBD-B20C-69640929EA94}"
+	ProjectSection(SolutionItems) = preProject
+		WhatsNew.txt = WhatsNew.txt
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
 		SccNumberOfProjects = 4
