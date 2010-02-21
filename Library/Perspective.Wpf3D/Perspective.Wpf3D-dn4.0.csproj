@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F1121E62-AE79-4460-9419-E74F19C011F7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Perspective.Wpf3D</RootNamespace>
+    <AssemblyName>Perspective.Wpf3D</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\dn4.0\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <CodeAnalysisRules>
+    </CodeAnalysisRules>
+    <DocumentationFile>bin\Debug\dn4.0\Perspective.Wpf3D.xml</DocumentationFile>
+    <CodeAnalysisRuleSet>Migrated rules for Perspective.Wpf3D-dn4.0.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\dn4.0\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\dn4.0\Perspective.Wpf3D.xml</DocumentationFile>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controls\Gyroscope3D.cs" />
+    <Compile Include="Primitives\MeshBuiltEventArgs.cs" />
+    <Compile Include="Sculptors\PieSliceSculptor.cs" />
+    <Compile Include="Sculptors\SliceSculptor.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Shapes\Arrow3D.cs" />
+    <Compile Include="Shapes\Bar3D.cs" />
+    <Compile Include="Shapes\Box3D.cs" />
+    <Compile Include="Primitives\BoxSides.cs" />
+    <Compile Include="Controls\Button3D.cs" />
+    <Compile Include="Shapes\Conical3D.cs" />
+    <Compile Include="Shapes\Football3D.cs" />
+    <Compile Include="Shapes\Isocahedron3D.cs" />
+    <Compile Include="Controls\Knob3D.cs" />
+    <Compile Include="Shapes\PieSlice3D.cs" />
+    <Compile Include="Shapes\Polygon3D.cs" />
+    <Compile Include="Primitives\ButtonBase3D.cs" />
+    <Compile Include="Primitives\ContentControl3D.cs" />
+    <Compile Include="Primitives\RangeBase3D.cs" />
+    <Compile Include="Primitives\TriangleSideKind.cs" />
+    <Compile Include="Sculptors\ArrowSculptor.cs" />
+    <Compile Include="Sculptors\BarSculptor.cs" />
+    <Compile Include="Sculptors\BoxSculptor.cs" />
+    <Compile Include="Sculptors\ConicalSculptor.cs" />
+    <Compile Include="Primitives\GeometryElement3D.cs" />
+    <Compile Include="Sculptors\IsocahedronSculptor.cs" />
+    <Compile Include="Primitives\Point3DTriplet.cs" />
+    <Compile Include="Primitives\PolygonalElement3D.cs" />
+    <Compile Include="Sculptors\PolygonSculptor.cs" />
+    <Compile Include="Sculptors\RingSculptor.cs" />
+    <Compile Include="Sculptors\SphericalSculptor.cs" />
+    <Compile Include="Sculptors\SquareSculptor.cs" />
+    <Compile Include="Primitives\Sculptor.cs" />
+    <Compile Include="Sculptors\TruncatedIsocahedronSculptor.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Shapes\Ring3D.cs" />
+    <Compile Include="Controls\Fader3D.cs" />
+    <Compile Include="Shapes\Spherical3D.cs" />
+    <Compile Include="Sculptors\XyzAxisSculptor.cs" />
+    <Compile Include="Shapes\Square3D.cs" />
+    <Compile Include="SkinManager.cs" />
+    <Compile Include="Shapes\XyzAxis3D.cs" />
+    <Compile Include="Transformer3D.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Skins\PsycheRock\Resources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Skins\BlackAndWhite\Resources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Skins\Button3D.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Skins\Gyroscope3D.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Skins\Fader3D.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Skins\Knob3D.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Skins\LaMoisson\Fader3D.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Skins\LaMoisson\Resources.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Skins\Resources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Perspective.Core\Perspective.Core-dn4.0.csproj">
+      <Project>{19FC4939-5269-4B1E-93BF-569D3E14A9B0}</Project>
+      <Name>Perspective.Core-dn4.0</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Migrated rules for Perspective.Wpf3D-dn4.0.ruleset" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
