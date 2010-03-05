@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Media3D;
 using Perspective.Wpf3D.Primitives;
 using Perspective.Core.Primitives;
+using Perspective.Core.Wpf;
 
 namespace Perspective.Wpf3D.Sculptors
 {
@@ -114,7 +115,7 @@ namespace Perspective.Wpf3D.Sculptors
             TranslateTransform3D explosionTransform = null;
             if (_isExploded)
             {
-                double angleRad = Helper3D.DegreeToRadian(InitialAngle + AngleValue / 2.0);
+                double angleRad = GeometryHelper.DegreeToRadian(InitialAngle + AngleValue / 2.0);
                 double offsetX = Math.Cos(angleRad) * _explosionOffset;
                 double offsetY = Math.Sin(angleRad) * _explosionOffset;
                 explosionTransform = new TranslateTransform3D(offsetX, offsetY, 0.0);
@@ -136,8 +137,8 @@ namespace Perspective.Wpf3D.Sculptors
             Centered = true;
             double angle1 = 2 * Math.PI / CircumferenceSideCount;
             double angle = 0.0;
-            double initialAngleRad = Helper3D.DegreeToRadian(InitialAngle);
-            double angleValueRad = Helper3D.DegreeToRadian(AngleValue);
+            double initialAngleRad = GeometryHelper.DegreeToRadian(InitialAngle);
+            double angleValueRad = GeometryHelper.DegreeToRadian(AngleValue);
             for (int i = 0; i <= CircumferenceSideCount; i++)
             {
                 angle = (angle1 * i) + initialAngleRad; // odewit

@@ -6,8 +6,27 @@ Now Perspective 2.0 is under construction :
 - .NET 4.0 and .NET 3.5 SP1 support
 - new functionalities coming soon, some of them being specific to .NET 4.0 (multitouch, etc.)
 
-Wpf3D
------
-- RelativeTransformer : A class to manage by code the transformations and the current position of a Visual3D. 
+Perspective.Core.Wpf
+--------------------
+GeometryHelper : a new helper class with static methods 
+	- DegreeToRadian.
+	- RadianToDegree.
+DPHelper : An helper class for dependency properties, with static functions to validate values.
+Helper3D : static methods DegreeToRadian and RadianToDegree are now deprecated.
+
+Perspective.Wpf.Panels
+------------------------
+BeePanel : a honeycomb layout wrap panel.
+BeeGrid : a honeycomb layout grid panel.
+
+Perspective.Wpf.Shapes
+------------------------
+RegularPolygon : draws a regular polygon.
+Star : draws a n-branch star.
+Arrow : draws an arrow.
+
+Perspective.Wpf3D
+-----------------
+RelativeTransformer : a new class to manage by code the transformations and the current position of a Visual3D. 
 The successive transformation operations (translation, scaling or rotation) are cumulative 
-(the last one is relative to its previous one). Tutorial : http://www.odewit.net/ArticleContent.aspx?id=Wpf3DRelativeTransformer&format=html
+(the last one is relative to its previous one).

@@ -10,11 +10,12 @@
 //
 //------------------------------------------------------------------
 using System;
+using System.Windows;
 using System.Windows.Media;
 using System.Windows.Media.Media3D;
 using Perspective.Wpf3D.Primitives;
 using Perspective.Core.Primitives;
-using System.Windows;
+using Perspective.Core.Wpf;
 
 namespace Perspective.Wpf3D.Sculptors
 {
@@ -194,7 +195,7 @@ namespace Perspective.Wpf3D.Sculptors
             for (int i = 1; i <= _circumferenceSideCount; i++)
             {
                 // angle = (angle1 * i);
-                angle = (angle1 * i) + Helper3D.DegreeToRadian(_initialAngle);
+                angle = (angle1 * i) + GeometryHelper.DegreeToRadian(_initialAngle);
                 Point3D p = new Point3D();
                 p.X = Math.Cos(angle);
                 p.Y = Math.Sin(angle);

@@ -90,11 +90,20 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Drawers\ArrowDrawer.cs" />
+    <Compile Include="Panels\BeeGrid.cs" />
+    <Compile Include="Panels\BeePanel.cs" />
     <Compile Include="Controls\Joystick.cs" />
     <Compile Include="Controls\Knob.cs" />
+    <Compile Include="Drawers\RegularPolygonDrawer.cs" />
+    <Compile Include="Shapes\Arrow.cs" />
+    <Compile Include="Shapes\RegularPolygon.cs" />
     <Compile Include="Controls\Workshop3D.cs" />
     <Compile Include="DipHelper.cs" />
+    <Compile Include="Drawers\StarDrawer.cs" />
     <Compile Include="DrawingHelper.cs" />
+    <Compile Include="Primitives\CustomShape.cs" />
+    <Compile Include="Primitives\Drawer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -107,6 +116,7 @@
     <Compile Include="ResourceStrings\ResourceLink.cs" />
     <Compile Include="ResourceStrings\ResourceSetManager.cs" />
     <Compile Include="ResourceStrings\ResourceStringCoordinator.cs" />
+    <Compile Include="Shapes\Star.cs" />
     <Compile Include="SkinManager.cs" />
     <Compile Include="Controls\Fader.cs" />
     <Compile Include="ResourceStrings\ResourceStringDecorator.cs" />
@@ -125,6 +135,7 @@
       <Name>Perspective.Core-dn4.0</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -14,6 +14,7 @@ using System.Windows;
 using System.Windows.Media;
 using System.Windows.Media.Media3D;
 using System.Windows.Controls;
+using Perspective.Core.Wpf;
 
 namespace Perspective.Core.Primitives
 {
@@ -65,6 +66,9 @@ namespace Perspective.Core.Primitives
         /// <summary>
         /// Convert a degree angle value in radian.
         /// </summary>
+        /// <remarks>
+        /// DEPRECATED. Use GeometryHelper.DegreeToRadian() instead.
+        /// </remarks>
         /// <param name="degree">Angle value in degree.</param>
         /// <returns>Angle value in radian.</returns>
         public static double DegreeToRadian(double degree)
@@ -75,6 +79,9 @@ namespace Perspective.Core.Primitives
         /// <summary>
         /// Convert a radian angle value in degree.
         /// </summary>
+        /// <remarks>
+        /// DEPRECATED. Use GeometryHelper.RadianToDegree() instead.
+        /// </remarks>
         /// <param name="radian">Angle value in radian.</param>
         /// <returns>Angle value in degree.</returns>
         public static double RadianToDegree(double radian)
@@ -171,7 +178,7 @@ namespace Perspective.Core.Primitives
 
             // angle of the arc between p1 and p2
             // 360 - 180 - Vector3D.AngleBetween(v1, v2)
-            double angleArc = Helper3D.DegreeToRadian(180 - Vector3D.AngleBetween(v1, v2));
+            double angleArc = GeometryHelper.DegreeToRadian(180 - Vector3D.AngleBetween(v1, v2));
 
             // angle of each part
             double angleStep = angleArc / roundingDefinition;
@@ -184,7 +191,7 @@ namespace Perspective.Core.Primitives
             {
                 angleBaseDeg = 360 - angleBaseDeg;
             }
-            double angleBase = Helper3D.DegreeToRadian(angleBaseDeg);
+            double angleBase = GeometryHelper.DegreeToRadian(angleBaseDeg);
 
             points.Add(p1);
             // points of the arc
@@ -327,7 +334,7 @@ namespace Perspective.Core.Primitives
         /// <param name="source">Source point.</param>
         /// <param name="angle">Rotation angle (in degree).</param>
         /// <param name="axis">Axis vector.</param>
-        /// <returns>A new Vector3D object corresponding to the rotation</returns>
+        /// <returns>A new Point3D object corresponding to the rotation.</returns>
         public static Point3D RotatePoint(Point3D source, double angle, Vector3D axis)
         {
             AxisAngleRotation3D rotation = new AxisAngleRotation3D();
