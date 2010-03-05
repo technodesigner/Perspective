@@ -18,7 +18,7 @@ using Perspective.Core.Primitives;
 namespace Perspective.Wpf3D.Primitives
 {
     /// <summary>
-    /// A class to handle points and triangles of a 3D model.
+    /// A class to generate points and triangles of a 3D model.
     /// </summary>
     public class Sculptor
     {
@@ -73,7 +73,7 @@ namespace Perspective.Wpf3D.Primitives
         }
 
         /// <summary>
-        /// Clear the triangles and points collections.
+        /// Clears the triangles and points collections.
         /// </summary>
         public void Clear()
         {
@@ -150,7 +150,7 @@ namespace Perspective.Wpf3D.Primitives
         }
 
         /// <summary>
-        /// Create the triangles of a side.
+        /// Creates the triangles of a side.
         /// </summary>
         /// <param name="points">Collection of Point3D (may be an other collection than Points (i.e. a side collection).</param>
         /// <param name="tsk">TriangleSideKind Value.</param>
@@ -170,7 +170,7 @@ namespace Perspective.Wpf3D.Primitives
         }
 
         /// <summary>
-        /// Copy the points and triangles from a Sculptor object
+        /// Copies the points and triangles from a Sculptor object
         /// </summary>
         /// <param name="s"></param>
         protected void CopyFrom(Sculptor s)
