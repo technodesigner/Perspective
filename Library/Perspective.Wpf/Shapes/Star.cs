@@ -45,7 +45,9 @@ namespace Perspective.Wpf.Shapes
                 "BranchCount", 
                 typeof(int), 
                 typeof(Star), 
-                new UIPropertyMetadata(6, CustomShape.DependencyPropertyChangedAndForceRebuild),
+                new FrameworkPropertyMetadata(
+                    6,
+                    FrameworkPropertyMetadataOptions.AffectsRender),
                 DPHelper.IsIntValueGreaterThan2);
 
         /// <summary>
@@ -65,7 +67,9 @@ namespace Perspective.Wpf.Shapes
                 "BranchWidth", 
                 typeof(double), 
                 typeof(Star), 
-                new UIPropertyMetadata(0.2, CustomShape.DependencyPropertyChangedAndForceRebuild),
+                new FrameworkPropertyMetadata(
+                    0.2,
+                    FrameworkPropertyMetadataOptions.AffectsRender), 
                 DPHelper.IsDoubleValuePositive);
 
         /// <summary>
@@ -85,7 +89,9 @@ namespace Perspective.Wpf.Shapes
                 "InitialAngle",
                 typeof(double),
                 typeof(Star),
-                new PropertyMetadata(0.0, CustomShape.DependencyPropertyChangedAndForceRebuild));
+                new FrameworkPropertyMetadata(
+                    0.0, 
+                    FrameworkPropertyMetadataOptions.AffectsRender));
 
         /// <summary>
         /// Gets or sets the initial angle (first point), in degrees.

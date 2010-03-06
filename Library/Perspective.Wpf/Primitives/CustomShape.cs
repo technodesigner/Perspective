@@ -26,7 +26,6 @@ namespace Perspective.Wpf.Primitives
     {
         private PathGeometry _geometry = new PathGeometry();
         private Drawer _drawer;
-        private bool _forceGeometryBuilding = false;
 
         /// <summary>
         /// Gets the shape's geometry object.
@@ -34,30 +33,6 @@ namespace Perspective.Wpf.Primitives
         protected PathGeometry Geometry
         {
             get { return _geometry; }
-        }
-
-        /// <summary>
-        /// A property changed callback to indicate that the geometry building is required.
-        /// </summary>
-        /// <param name="d"></param>
-        /// <param name="e"></param>
-        protected static void DependencyPropertyChangedAndForceRebuild(DependencyObject d, DependencyPropertyChangedEventArgs e)
-        {
-            (d as CustomShape)._forceGeometryBuilding = true;
-        }
-
-        /// <summary>
-        /// Creates the Geometry object through the Drawer object.
-        /// </summary>
-        private void EnsureGeometry()
-        {
-            _drawer = CreateDrawer();
-            if (_drawer != null)
-            {
-                _drawer.BuildFigure();
-                _geometry.Figures.Add(_drawer.Figure);
-            }
-            _forceGeometryBuilding = false;          
         }
 
         /// <summary>
@@ -73,12 +48,13 @@ namespace Perspective.Wpf.Primitives
         {
             get
             {
-                if ( _forceGeometryBuilding ||
-                    (_drawer == null) ||
-                    (_drawer.Figure.Segments.Count == 0))
+                _drawer = CreateDrawer();
+                if (_drawer != null)
                 {
-                    EnsureGeometry();
-                }             
+                    _drawer.BuildFigure();
+                    _geometry.Figures.Clear();
+                    _geometry.Figures.Add(_drawer.Figure);
+                }
                 return _geometry;
             }
         }

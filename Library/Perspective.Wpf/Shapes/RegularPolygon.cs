@@ -45,7 +45,9 @@ namespace Perspective.Wpf.Shapes
                 "InitialAngle",
                 typeof(double),
                 typeof(RegularPolygon),
-                new PropertyMetadata(0.0, CustomShape.DependencyPropertyChangedAndForceRebuild));
+                new FrameworkPropertyMetadata(
+                    0.0, 
+                    FrameworkPropertyMetadataOptions.AffectsRender));
 
         /// <summary>
         /// Gets or sets the initial angle (first point), in degrees.
@@ -70,7 +72,9 @@ namespace Perspective.Wpf.Shapes
                 "SideCount",
                 typeof(int),
                 typeof(RegularPolygon),
-                new PropertyMetadata(6, CustomShape.DependencyPropertyChangedAndForceRebuild),
+                new FrameworkPropertyMetadata(
+                    6, 
+                    FrameworkPropertyMetadataOptions.AffectsRender),
                 DPHelper.IsIntValueGreaterThan3);
 
         /// <summary>
@@ -96,7 +100,9 @@ namespace Perspective.Wpf.Shapes
                 "RoundingRate",
                 typeof(double),
                 typeof(RegularPolygon),
-                new PropertyMetadata(0.0, CustomShape.DependencyPropertyChangedAndForceRebuild),
+                new FrameworkPropertyMetadata(
+                    0.0, 
+                    FrameworkPropertyMetadataOptions.AffectsRender),
                 DPHelper.IsDoubleValueBetween0AndDot5);
 
         /// <summary>
@@ -118,9 +124,9 @@ namespace Perspective.Wpf.Shapes
                 "StretchLikeUnrounded", 
                 typeof(bool), 
                 typeof(RegularPolygon), 
-                new UIPropertyMetadata(
+                new FrameworkPropertyMetadata(
                     true, 
-                    CustomShape.DependencyPropertyChangedAndForceRebuild));
+                    FrameworkPropertyMetadataOptions.AffectsRender));
 
         /// <summary>
         /// For a rounded shape, gets or sets a value indicating if the figure stretches in the same space than the unrounded one.

@@ -45,8 +45,9 @@ namespace Perspective.Wpf.Shapes
                 "FormatRatio", 
                 typeof(double), 
                 typeof(Arrow), 
-                new UIPropertyMetadata(
-                    2.5, CustomShape.DependencyPropertyChangedAndForceRebuild),
+                new FrameworkPropertyMetadata(
+                    2.5, 
+                    FrameworkPropertyMetadataOptions.AffectsRender),
                 DPHelper.IsDoubleValuePositive);
 
         /// <summary>
@@ -67,7 +68,9 @@ namespace Perspective.Wpf.Shapes
                 "HeadLengthRatio", 
                 typeof(double), 
                 typeof(Arrow), 
-                new UIPropertyMetadata(0.2, CustomShape.DependencyPropertyChangedAndForceRebuild),
+                new FrameworkPropertyMetadata(
+                    0.2, 
+                    FrameworkPropertyMetadataOptions.AffectsRender),
                 DPHelper.IsDoubleValuePositive);
 
         /// <summary>
@@ -88,7 +91,9 @@ namespace Perspective.Wpf.Shapes
                 "HeadWidthRatio", 
                 typeof(double), 
                 typeof(Arrow), 
-                new UIPropertyMetadata(2.0, CustomShape.DependencyPropertyChangedAndForceRebuild),
+                new FrameworkPropertyMetadata(
+                    2.0, 
+                    FrameworkPropertyMetadataOptions.AffectsRender),
                 DPHelper.IsDoubleValuePositive);
 
         /// <summary>
