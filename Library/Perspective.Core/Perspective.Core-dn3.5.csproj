@@ -69,6 +69,8 @@
     <Compile Include="Wpf\Data\SignalBinding.cs" />
     <Compile Include="Wpf\Dimensions.cs" />
     <Compile Include="Wpf\Direction.cs" />
+    <Compile Include="Wpf\DPHelper.cs" />
+    <Compile Include="Wpf\GeometryHelper.cs" />
     <Compile Include="Wpf\Helper3D.cs" />
     <Compile Include="Wpf\Imaging\BitmapConverter.cs" />
     <Compile Include="Wpf\Imaging\BitmapConverterEventArgs.cs" />
