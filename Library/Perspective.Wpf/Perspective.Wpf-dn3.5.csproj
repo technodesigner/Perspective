@@ -44,6 +44,7 @@
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Xml" />
     <Reference Include="WindowsBase">
@@ -96,6 +97,16 @@
     <Compile Include="Controls\Fader.cs" />
     <Compile Include="ResourceStrings\ResourceStringDecorator.cs" />
     <Compile Include="ResourceStrings\ResourceStringExtension.cs" />
+    <Compile Include="Primitives\Drawer.cs" />
+    <Compile Include="Primitives\CustomShape.cs" />
+    <Compile Include="Drawers\ArrowDrawer.cs" />
+    <Compile Include="Drawers\RegularPolygonDrawer.cs" />
+    <Compile Include="Shapes\Arrow.cs" />
+    <Compile Include="Shapes\RegularPolygon.cs" />
+    <Compile Include="Shapes\Star.cs" />
+    <Compile Include="Drawers\StarDrawer.cs" />
+    <Compile Include="Panels\BeePanel.cs" />
+    <Compile Include="Panels\BeeGrid.cs" />
     <EmbeddedResource Include="Controls\Strings\Workshop3D.fr.resx">
       <SubType>Designer</SubType>
     </EmbeddedResource>
