@@ -58,7 +58,7 @@ namespace Perspective.Wpf.Primitives
         {
             get
             {
-                // _drawer = CreateDrawer();
+                InitializeDrawer();
                 if (_drawer != null)
                 {
                     _drawer.BuildFigure();
