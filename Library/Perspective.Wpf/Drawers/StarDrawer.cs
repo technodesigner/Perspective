@@ -32,6 +32,14 @@ namespace Perspective.Wpf.Drawers
         /// <summary>
         /// Initializes a new instance of StarDrawer.
         /// </summary>
+        public StarDrawer()
+            : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of StarDrawer.
+        /// </summary>
         /// <param name="branchCount">The branch count of the star.</param>
         /// <param name="branchWidth">The width of a star branch.</param>
         /// <param name="initialAngle">Angle between the axis [origin - first point] and the X-axis, in degrees.</param>
@@ -44,7 +52,28 @@ namespace Perspective.Wpf.Drawers
             double initialAngle,
             double width,
             double height,
-            double strokeThickness) : base(width, height, strokeThickness)
+            double strokeThickness)
+            : base()
+        {
+            Initialize(branchCount, branchWidth, initialAngle, width, height, strokeThickness);
+        }
+
+        /// <summary>
+        /// Initializes a StarDrawer object.
+        /// </summary>
+        /// <param name="branchCount">The branch count of the star.</param>
+        /// <param name="branchWidth">The width of a star branch.</param>
+        /// <param name="initialAngle">Angle between the axis [origin - first point] and the X-axis, in degrees.</param>
+        /// <param name="width">The width of the drawing area.</param>
+        /// <param name="height">The height of the drawing area.</param>
+        /// <param name="strokeThickness">The stroke thickness of the drawing.</param>
+        public void Initialize(
+            int branchCount,
+            double branchWidth,
+            double initialAngle,
+            double width,
+            double height,
+            double strokeThickness)
         {
             if (branchCount < 2)
             {
@@ -53,6 +82,7 @@ namespace Perspective.Wpf.Drawers
             _branchCount = branchCount;
             _branchWidth = branchWidth;
             _initialAngle = initialAngle;
+            base.Initialize(width, height, strokeThickness);
         }
 
         /// <summary>

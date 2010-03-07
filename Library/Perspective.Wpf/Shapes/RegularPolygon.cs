@@ -137,13 +137,24 @@ namespace Perspective.Wpf.Shapes
             set { SetValue(StretchLikeUnroundedProperty, value); }
         }
 
+        private RegularPolygonDrawer _regularPolygonDrawer;
+
         /// <summary>
         /// Creates a RegularPolygonDrawer object.
         /// </summary>
         /// <returns>A RegularPolygonDrawer object.</returns>
         protected override Drawer CreateDrawer()
         {
-            return new RegularPolygonDrawer(
+            _regularPolygonDrawer = new RegularPolygonDrawer();
+            return _regularPolygonDrawer;
+        }
+
+        /// <summary>
+        /// Initializes the RegularPolygonDrawer object.
+        /// </summary>
+        protected override void InitializeDrawer()
+        {
+            _regularPolygonDrawer.Initialize(
                 InitialAngle,
                 SideCount,
                 RoundingRate,

@@ -108,13 +108,24 @@ namespace Perspective.Wpf.Shapes
             }
         }
 
+        private StarDrawer _starDrawer;
+
         /// <summary>
         /// Creates a StarDrawer object.
         /// </summary>
         /// <returns>A StarDrawer object.</returns>
         protected override Drawer CreateDrawer()
         {
-            return new StarDrawer(
+            _starDrawer = new StarDrawer();
+            return _starDrawer;
+        }
+
+        /// <summary>
+        /// Initializes the StarDrawer object.
+        /// </summary>
+        protected override void InitializeDrawer()
+        {
+            _starDrawer.Initialize(
                 BranchCount,
                 BranchWidth,
                 InitialAngle,

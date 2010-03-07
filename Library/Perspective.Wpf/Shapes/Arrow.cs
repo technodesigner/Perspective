@@ -105,13 +105,24 @@ namespace Perspective.Wpf.Shapes
             set { SetValue(HeadWidthRatioProperty, value); }
         }
 
+        private ArrowDrawer _arrowDrawer;
+
         /// <summary>
         /// Creates an ArrowDrawer object.
         /// </summary>
         /// <returns>An ArrowDrawer object.</returns>
         protected override Drawer CreateDrawer()
         {
-            return new ArrowDrawer(
+            _arrowDrawer = new ArrowDrawer();
+            return _arrowDrawer;
+        }
+
+        /// <summary>
+        /// Initializes the ArrowDrawer object.
+        /// </summary>
+        protected override void InitializeDrawer()
+        {
+            _arrowDrawer.Initialize(
                 FormatRatio,
                 HeadLengthRatio,
                 HeadWidthRatio,

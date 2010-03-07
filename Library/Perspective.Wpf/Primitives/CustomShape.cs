@@ -27,6 +27,11 @@ namespace Perspective.Wpf.Primitives
         private PathGeometry _geometry = new PathGeometry();
         private Drawer _drawer;
 
+        public CustomShape()
+        {
+            _drawer = CreateDrawer();
+        }
+
         /// <summary>
         /// Gets the shape's geometry object.
         /// </summary>
@@ -42,13 +47,18 @@ namespace Perspective.Wpf.Primitives
         protected abstract Drawer CreateDrawer();
 
         /// <summary>
+        /// A method to override to initialize the existing Drawer object.
+        /// </summary>
+        protected abstract void InitializeDrawer();
+
+        /// <summary>
         /// Gets a value that represents the Geometry of the Shape.
         /// </summary>
         protected override System.Windows.Media.Geometry DefiningGeometry
         {
             get
             {
-                _drawer = CreateDrawer();
+                // _drawer = CreateDrawer();
                 if (_drawer != null)
                 {
                     _drawer.BuildFigure();

@@ -33,6 +33,14 @@ namespace Perspective.Wpf.Drawers
         /// <summary>
         /// Initializes a new instance of RegularPolygonDrawer.
         /// </summary>
+        public RegularPolygonDrawer()
+            : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of RegularPolygonDrawer.
+        /// </summary>
         /// <param name="initialAngle">The initial angle (first point), in degrees.</param>
         /// <param name="sideCount">The side count of the circumference.</param>
         /// <param name="roundingRate">The shape's angle rounding rate. The value must be comprized between 0.0 and 0.5.</param>
@@ -47,7 +55,29 @@ namespace Perspective.Wpf.Drawers
             bool stretchLikeUnrounded,
             double width,
             double height,
-            double strokeThickness) : base(width, height, strokeThickness)
+            double strokeThickness) : base()
+        {
+            Initialize(initialAngle, sideCount, roundingRate, stretchLikeUnrounded, width, height, strokeThickness);
+        }
+
+        /// <summary>
+        /// Initializes a RegularPolygonDrawer object.
+        /// </summary>
+        /// <param name="initialAngle">The initial angle (first point), in degrees.</param>
+        /// <param name="sideCount">The side count of the circumference.</param>
+        /// <param name="roundingRate">The shape's angle rounding rate. The value must be comprized between 0.0 and 0.5.</param>
+        /// <param name="stretchLikeUnrounded">For a rounded figure, indicates if the figure stretches in the same space than the unrounded one.</param>
+        /// <param name="width">The width of the drawing area.</param>
+        /// <param name="height">The height of the drawing area.</param>
+        /// <param name="strokeThickness">The stroke thickness of the drawing.</param>
+        public void Initialize(
+            double initialAngle,
+            int sideCount,
+            double roundingRate,
+            bool stretchLikeUnrounded,
+            double width,
+            double height,
+            double strokeThickness)
         {
             if ((roundingRate < 0.0) || (roundingRate > 0.5))
             {
@@ -61,6 +91,7 @@ namespace Perspective.Wpf.Drawers
             _sideCount = sideCount;
             _roundingRate = roundingRate;
             _stretchLikeUnrounded = stretchLikeUnrounded;
+            base.Initialize(width, height, strokeThickness);
         }
 
         /// <summary>

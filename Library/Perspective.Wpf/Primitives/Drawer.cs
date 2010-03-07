@@ -75,25 +75,25 @@ namespace Perspective.Wpf.Primitives
         /// <summary>
         /// Initializes a new instance of Drawer.
         /// </summary>
-        private Drawer()
+        protected Drawer()
         {
             _figure.IsClosed = true;
         }
 
         /// <summary>
-        /// Initializes a new instance of Drawer.
+        /// Initializes a Drawer object.
         /// </summary>
         /// <param name="width">The width of the drawing area.</param>
         /// <param name="height">The height of the drawing area.</param>
         /// <param name="strokeThickness">The stroke thickness of the drawing.</param>
-        public Drawer(
+        protected void Initialize(
             double width,
             double height,
-            double strokeThickness) : this()
+            double strokeThickness)
         {
             _width = width;
             _height = height;
-            _strokeThickness = strokeThickness;            
+            _strokeThickness = strokeThickness;
         }
 
         /// <summary>

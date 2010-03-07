@@ -31,6 +31,14 @@ namespace Perspective.Wpf.Drawers
         /// <summary>
         /// Initializes a new instance of ArrowDrawer.
         /// </summary>
+        public ArrowDrawer()
+            : base()
+        {
+        }
+
+        /// <summary>
+        /// Initializes a new instance of ArrowDrawer.
+        /// </summary>
         /// <param name="formatRatio">A value indicating the width/height ratio (the figure's format).</param>
         /// <param name="headLengthRatio">A value indicating the "head length/total length" ratio.</param>
         /// <param name="headWidthRatio">A value indicating the "head width/body width" ratio.</param>
@@ -43,7 +51,28 @@ namespace Perspective.Wpf.Drawers
             double headWidthRatio,
             double width,
             double height,
-            double strokeThickness) : base(width, height, strokeThickness)
+            double strokeThickness)
+            : base()
+        {
+            Initialize(formatRatio, headLengthRatio, headWidthRatio, width, height, strokeThickness);
+        }
+
+        /// <summary>
+        /// Initializes an ArrowDrawer object.
+        /// </summary>
+        /// <param name="formatRatio">A value indicating the width/height ratio (the figure's format).</param>
+        /// <param name="headLengthRatio">A value indicating the "head length/total length" ratio.</param>
+        /// <param name="headWidthRatio">A value indicating the "head width/body width" ratio.</param>
+        /// <param name="width">The width of the drawing area.</param>
+        /// <param name="height">The height of the drawing area.</param>
+        /// <param name="strokeThickness">The stroke thickness of the drawing.</param>
+        public void Initialize(
+            double formatRatio,
+            double headLengthRatio,
+            double headWidthRatio,
+            double width,
+            double height,
+            double strokeThickness)
         {
             if (formatRatio <= 0.0)
             {
@@ -60,6 +89,7 @@ namespace Perspective.Wpf.Drawers
             _formatRatio = formatRatio;
             _headLengthRatio = headLengthRatio;
             _headWidthRatio = headWidthRatio;
+            base.Initialize(width, height, strokeThickness);
         }
 
         /// <summary>
