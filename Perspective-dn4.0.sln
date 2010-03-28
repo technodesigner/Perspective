@@ -1,16 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perspective.Core-dn4.0", "Perspective.Core\Perspective.Core-dn4.0.csproj", "{19FC4939-5269-4B1E-93BF-569D3E14A9B0}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perspective.Wpf-dn4.0", "Perspective.Wpf\Perspective.Wpf-dn4.0.csproj", "{34860E9C-F566-4F14-BFB9-45F6B37503F9}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perspective.Wpf3D-dn4.0", "Perspective.Wpf3D\Perspective.Wpf3D-dn4.0.csproj", "{F1121E62-AE79-4460-9419-E74F19C011F7}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{AA6D5E3F-45FA-4C57-B2F0-D7E0BCB4A681}"
 	ProjectSection(SolutionItems) = preProject
-		WhatsNew.txt = WhatsNew.txt
+		Library\WhatsNew.txt = Library\WhatsNew.txt
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perspective.Core-dn4.0", "Library\Perspective.Core\Perspective.Core-dn4.0.csproj", "{19FC4939-5269-4B1E-93BF-569D3E14A9B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perspective.Wpf-dn4.0", "Library\Perspective.Wpf\Perspective.Wpf-dn4.0.csproj", "{34860E9C-F566-4F14-BFB9-45F6B37503F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perspective.Wpf3D-dn4.0", "Library\Perspective.Wpf3D\Perspective.Wpf3D-dn4.0.csproj", "{F1121E62-AE79-4460-9419-E74F19C011F7}"
 EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
@@ -18,15 +18,15 @@ Global
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = https://tfs03.codeplex.com/
 		SccLocalPath0 = .
-		SccProjectUniqueName1 = Perspective.Core\\Perspective.Core-dn4.0.csproj
-		SccProjectName1 = Perspective.Core
-		SccLocalPath1 = Perspective.Core
-		SccProjectUniqueName2 = Perspective.Wpf\\Perspective.Wpf-dn4.0.csproj
-		SccProjectName2 = Perspective.Wpf
-		SccLocalPath2 = Perspective.Wpf
-		SccProjectUniqueName3 = Perspective.Wpf3D\\Perspective.Wpf3D-dn4.0.csproj
-		SccProjectName3 = Perspective.Wpf3D
-		SccLocalPath3 = Perspective.Wpf3D
+		SccProjectUniqueName1 = Library\\Perspective.Core\\Perspective.Core-dn4.0.csproj
+		SccProjectName1 = Library/Perspective.Core
+		SccLocalPath1 = Library\\Perspective.Core
+		SccProjectUniqueName2 = Library\\Perspective.Wpf\\Perspective.Wpf-dn4.0.csproj
+		SccProjectName2 = Library/Perspective.Wpf
+		SccLocalPath2 = Library\\Perspective.Wpf
+		SccProjectUniqueName3 = Library\\Perspective.Wpf3D\\Perspective.Wpf3D-dn4.0.csproj
+		SccProjectName3 = Library/Perspective.Wpf3D
+		SccLocalPath3 = Library\\Perspective.Wpf3D
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
