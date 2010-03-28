@@ -41,10 +41,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.Xml" />
-    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.ComponentModel.Composition" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
@@ -61,6 +59,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Model\MainModel.cs" />
+    <Compile Include="ViewModel\MainViewModel.cs" />
     <Compile Include="View\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
@@ -100,7 +100,12 @@
       <Project>{19FC4939-5269-4B1E-93BF-569D3E14A9B0}</Project>
       <Name>Perspective.Core-dn4.0</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Library\Perspective.Hosting\Perspective.Hosting-dn4.0.csproj">
+      <Project>{C7D8AFA7-84EC-40B0-8308-BAB376B31CDD}</Project>
+      <Name>Perspective.Hosting-dn4.0</Name>
+    </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
