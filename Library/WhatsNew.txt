@@ -19,6 +19,10 @@ GeometryHelper : a new helper class with static methods
 DPHelper : An helper class for dependency properties, with static functions to validate values.
 Helper3D : static methods DegreeToRadian and RadianToDegree are now deprecated.
 
+Perspective.Core.Wpf.Data
+-------------------------
+SignalCommand : A Command implementation for the MVVM pattern using events.
+
 Perspective.Wpf.Panels
 ------------------------
 BeePanel : a honeycomb layout wrap panel.

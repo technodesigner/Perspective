@@ -15,7 +15,7 @@ using System.Windows.Input;
 namespace Perspective.Core.Wpf.Data
 {
     /// <summary>
-    /// A Command implementation for the MVVM pattern using events (instead of simple delegates).
+    /// A Command implementation for the MVVM pattern using events.
     /// </summary>
     public class SignalCommand : ICommand
     {
