@@ -14,9 +14,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perspective.Wpf3D-dn4.0", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perspective-dn4.0", "App\Perspective\Perspective-dn4.0.csproj", "{82B9A7F7-6D87-4770-B525-D3F0935BFFDC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perspective.Hosting-dn4.0", "Library\Perspective.Hosting\Perspective.Hosting-dn4.0.csproj", "{C7D8AFA7-84EC-40B0-8308-BAB376B31CDD}"
+EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 5
+		SccNumberOfProjects = 6
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = https://tfs03.codeplex.com/
 		SccLocalPath0 = .
@@ -32,6 +34,9 @@ Global
 		SccProjectUniqueName4 = App\\Perspective\\Perspective-dn4.0.csproj
 		SccProjectName4 = App/Perspective
 		SccLocalPath4 = App\\Perspective
+		SccProjectUniqueName5 = Library\\Perspective.Hosting\\Perspective.Hosting-dn4.0.csproj
+		SccProjectName5 = Library/Perspective.Hosting
+		SccLocalPath5 = Library\\Perspective.Hosting
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -82,6 +87,16 @@ Global
 		{82B9A7F7-6D87-4770-B525-D3F0935BFFDC}.Release|Mixed Platforms.Build.0 = Release|x86
 		{82B9A7F7-6D87-4770-B525-D3F0935BFFDC}.Release|x86.ActiveCfg = Release|x86
 		{82B9A7F7-6D87-4770-B525-D3F0935BFFDC}.Release|x86.Build.0 = Release|x86
+		{C7D8AFA7-84EC-40B0-8308-BAB376B31CDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7D8AFA7-84EC-40B0-8308-BAB376B31CDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7D8AFA7-84EC-40B0-8308-BAB376B31CDD}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{C7D8AFA7-84EC-40B0-8308-BAB376B31CDD}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{C7D8AFA7-84EC-40B0-8308-BAB376B31CDD}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C7D8AFA7-84EC-40B0-8308-BAB376B31CDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7D8AFA7-84EC-40B0-8308-BAB376B31CDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7D8AFA7-84EC-40B0-8308-BAB376B31CDD}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{C7D8AFA7-84EC-40B0-8308-BAB376B31CDD}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{C7D8AFA7-84EC-40B0-8308-BAB376B31CDD}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -40,7 +40,14 @@ RelativeTransformer : a new class to manage by code the transformations and the 
 The successive transformation operations (translation, scaling or rotation) are cumulative 
 (the last one is relative to its previous one).
 
-Perspective
------------
+Perspective application project
+-------------------------------
 A new WPF 4 application which can dynamically load pages from extension assemblies using MEF. 
 This application is used as demo of Perspective library.
+
+Perspective.Hosting
+-------------------
+A new .NET 4 project to manage MEF parts of the Perspective application project. 
+The classes are used by the entension assemblies.
+Extension : Represents an extension for the Perspective.exe application.
+PageInfo : Represents the metadata associated with a WPF page of an extension assembly.
