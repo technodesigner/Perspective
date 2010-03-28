@@ -6,6 +6,11 @@ Now Perspective 2.0 is under construction :
 - .NET 4.0 and .NET 3.5 SP1 support
 - new functionalities coming soon, some of them being specific to .NET 4.0 (multitouch, etc.)
 
+Perspective.Core
+----------------
+EventArgs<T> : A generic class to manage an event argument with one parameter.
+CancelEventArgs<T> : A generic class to manage a CancelEventArgs argument with one parameter.
+
 Perspective.Core.Wpf
 --------------------
 GeometryHelper : a new helper class with static methods 
@@ -30,3 +35,8 @@ Perspective.Wpf3D
 RelativeTransformer : a new class to manage by code the transformations and the current position of a Visual3D. 
 The successive transformation operations (translation, scaling or rotation) are cumulative 
 (the last one is relative to its previous one).
+
+Perspective
+-----------
+A new WPF 4 application which can dynamically load pages from extension assemblies using MEF. 
+This application is used as demo of Perspective library.

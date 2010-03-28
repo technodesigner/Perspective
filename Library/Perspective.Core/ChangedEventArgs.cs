@@ -14,11 +14,11 @@ using System;
 namespace Perspective.Core
 {
     /// <summary>
-    /// A generic class to manage one event argument
+    /// A generic class to manage an event argument
     /// with 2 values (OldValue and NewValue), 
     /// corresponding to the values of a property before and after a change.
     /// </summary>
-    /// <typeparam name="T">The type of the argument.</typeparam>
+    /// <typeparam name="T">The type of the 2 values.</typeparam>
     public class ChangedEventArgs<T> : EventArgs
     {
         /// <summary>
