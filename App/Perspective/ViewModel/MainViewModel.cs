@@ -31,7 +31,7 @@ namespace Perspective.ViewModel
         public SignalCommand SetCurrentPageInfoCommand { get; private set; }
 
         /// <summary>
-        /// Initializes a new instance of HostViewModel.
+        /// Initializes a new instance of MainViewModel.
         /// </summary>
         public MainViewModel()
         {

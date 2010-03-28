@@ -26,7 +26,7 @@ namespace Perspective.Model
         public IEnumerable<Extension> Extensions { get; set; }
 
         /// <summary>
-        /// Initializes a new instance of HostModel.
+        /// Initializes a new instance of MainModel.
         /// </summary>
         public MainModel()
         {
