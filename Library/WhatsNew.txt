@@ -44,6 +44,7 @@ Perspective application project
 -------------------------------
 A new WPF 4 application which can dynamically load pages from extension assemblies using MEF. 
 This application is used as demo of Perspective library.
+UNDER CONSTRUCTION !
 
 Perspective.Hosting
 -------------------
@@ -51,3 +52,4 @@ A new .NET 4 project to manage MEF parts of the Perspective application project.
 The classes are used by the entension assemblies.
 Extension : Represents an extension for the Perspective.exe application.
 PageInfo : Represents the metadata associated with a WPF page of an extension assembly.
+UNDER CONSTRUCTION !

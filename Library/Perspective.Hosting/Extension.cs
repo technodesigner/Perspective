@@ -21,7 +21,7 @@ namespace Perspective.Hosting
     /// Represents an extension for the Perspective.exe application.
     /// </summary>
     [InheritedExport]
-    public abstract class Extension
+    public abstract class Extension : ItemBase
     {
         public Extension()
         {
@@ -55,7 +55,7 @@ namespace Perspective.Hosting
         }
 
         /// <summary>
-        /// Gets the children PageInfos collection.
+        /// Property to override to get the children PageInfos collection.
         /// </summary>
         public abstract List<PageInfo> PageInfos
         {

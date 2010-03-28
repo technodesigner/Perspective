@@ -9,20 +9,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Perspective.ViewModel;
 
-namespace Perspective.View
+namespace PerspectiveDemo.Wpf3D.View
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Bar3DDemo.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Bar3DDemo : Page
     {
-        public MainWindow()
+        public Bar3DDemo()
         {
             InitializeComponent();
-            this.DataContext = new MainViewModel();
         }
     }
 }
