@@ -3,115 +3,147 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="300" Width="300">
     <Window.Resources>
-        <!--<Style TargetType="Separator">
+        <ControlTemplate 
+            x:Key="ListBoxTemplate"
+            TargetType="ItemsControl">
+            <Border 
+                BorderBrush="Black" 
+                BorderThickness="2" 
+                CornerRadius="5"
+                Padding="5">
+                <ItemsPresenter />
+            </Border>
+        </ControlTemplate>
+
+        <ItemsPanelTemplate x:Key="ExtensionsPanelTemplate">
+            <StackPanel Orientation="Horizontal"/>
+        </ItemsPanelTemplate>
+
+        <ItemsPanelTemplate x:Key="PageInfosPanelTemplate">
+            <WrapPanel />
+        </ItemsPanelTemplate>
+
+        <DataTemplate x:Key="ExtensionTemplate">
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Image 
+                    Grid.Row="0"
+                    Source="{Binding Icon}" />
+                <TextBlock
+                    Grid.Row="1"
+                    FontSize="12"
+                    Margin="0,2,0,0"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Text="{Binding Path=Title}"/>
+            </Grid>
+        </DataTemplate>
+
+        <DataTemplate x:Key="PageInfoTemplate">
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Image 
+                    Grid.Row="0"
+                    Source="{Binding Icon}" />
+                <TextBlock
+                    Grid.Row="1"
+                    FontSize="12"
+                    Margin="0,2,0,0"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    Text="{Binding Path=Title}"/>
+            </Grid>
+        </DataTemplate>
+
+        <Style 
+            x:Key="ItemContainerStyle"
+            TargetType="ListBoxItem">
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Height" Value="200"/>
             <Setter Property="Template">
                 <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type Separator}">
-                        <Border Width="2" Height="12" Margin="4" Background="Gray"/>
+                    <ControlTemplate TargetType="ListBoxItem">
+                        <Grid >
+                            <Rectangle 
+                                Name="rectangle" 
+                                Fill="Transparent"/>
+                            <ContentPresenter 
+                                Margin="5"/>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal" />
+                                    <VisualState x:Name="Disabled" />
+                                    <VisualState x:Name="MouseOver">
+                                        <Storyboard>
+                                            <ColorAnimation
+                                                Storyboard.TargetName="rectangle"
+                                                Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)"
+                                                Duration="0"
+                                                To="Red"/>
+                                        </Storyboard>
+                                    </VisualState>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="SelectionStates">
+                                    <VisualState x:Name="Selected">
+                                        <!--<Storyboard>
+                                            <ColorAnimation
+                                                Storyboard.TargetName="rectangle"
+                                                Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)"
+                                                Duration="0"
+                                                To="Green"/>
+                                        </Storyboard>-->
+                                    </VisualState>
+                                    <VisualState x:Name="SelectedUnfocused" />
+                                    <VisualState x:Name="Unselected">
+                                        <!--<Storyboard>
+                                            <ColorAnimation
+                                                Storyboard.TargetName="rectangle"
+                                                Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)"
+                                                Duration="0"
+                                                To="Blue"/>
+                                        </Storyboard>-->
+                                    </VisualState>
+                                </VisualStateGroup>
+                                <VisualStateGroup x:Name="FocusStates">
+                                    <VisualState x:Name="Focused" />
+                                    <VisualState x:Name="Unfocused" />
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+                        </Grid>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
         </Style>
 
-        <Style TargetType="ListBox">
-            <Setter Property="ItemsPanel">
-                <Setter.Value>
-                    <ItemsPanelTemplate>
-                        <StackPanel Orientation="Horizontal"
-                      VerticalAlignment="Center"
-                      HorizontalAlignment="Center"/>
-                    </ItemsPanelTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>-->
+        <DataTemplate x:Key="DetailTemplate">
+            <ListBox Margin="10"
+                ItemsSource="{Binding Path=PageInfos}"
+                Template="{StaticResource ListBoxTemplate}"
+                ItemsPanel="{StaticResource PageInfosPanelTemplate}"
+                ItemTemplate="{StaticResource PageInfoTemplate}"
+                ItemContainerStyle="{StaticResource ItemContainerStyle}" />
+        </DataTemplate>
 
     </Window.Resources>
     <Grid>
         <StackPanel>
             <ListBox Margin="10"
-              ItemsSource="{Binding Extensions}">
-                <ListBox.Template>
-                    <ControlTemplate TargetType="ItemsControl">
-                        <Border BorderBrush="Red" BorderThickness="2" CornerRadius="20">
-                            <ItemsPresenter Margin="20"/>
-                        </Border>
-                    </ControlTemplate>
-                </ListBox.Template>
-                <ListBox.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <!--<WrapPanel />-->
-                        <StackPanel Orientation="Horizontal"/>
-                    </ItemsPanelTemplate>
-                </ListBox.ItemsPanel>
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                        <StackPanel>
-                            <Image Source="{Binding Icon}" />
-                            <TextBlock
-                                FontSize="14"
-                                Text="{Binding Path=Title}"/>
-                        </StackPanel>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
-                <ListBox.ItemContainerStyle>
-                    <Style TargetType="ListBoxItem">
-                        <Setter Property="Width" Value="100"/>
-                        <Setter Property="Height" Value="100"/>
-                        <Setter Property="Template">
-                            <Setter.Value>
-                                <ControlTemplate >
-                                    <Grid>
-                                        <Rectangle 
-                                            Name="rectangle" 
-                                            Opacity="0.5"
-                                            Fill="Gray"/>
-                                        <VisualStateManager.VisualStateGroups>
-                                            <VisualStateGroup x:Name="CommonStates">
-                                                <VisualState x:Name="Normal" />
-                                                <VisualState x:Name="Disabled" />
-                                                <VisualState x:Name="MouseOver">
-                                                    <Storyboard>
-                                                        <ColorAnimation
-                                                            Storyboard.TargetName="rectangle"
-                                                            Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)"
-                                                            Duration="0"
-                                                            To="Red"/>
-                                                    </Storyboard>
-                                                </VisualState>
-                                            </VisualStateGroup>
-                                            <VisualStateGroup x:Name="SelectionStates">
-                                                <VisualState x:Name="Selected">
-                                                    <Storyboard>
-                                                        <ColorAnimation
-                                                            Storyboard.TargetName="rectangle"
-                                                            Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)"
-                                                            Duration="0"
-                                                            To="Green"/>
-                                                    </Storyboard>
-                                                </VisualState>
-                                                <VisualState x:Name="SelectedUnfocused" />
-                                                <VisualState x:Name="Unselected">
-                                                    <Storyboard>
-                                                        <ColorAnimation
-                                                            Storyboard.TargetName="rectangle"
-                                                            Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)"
-                                                            Duration="0"
-                                                            To="Blue"/>
-                                                    </Storyboard>
-                                                </VisualState>
-                                            </VisualStateGroup>
-                                            <VisualStateGroup x:Name="FocusStates">
-                                                <VisualState x:Name="Focused" />
-                                                <VisualState x:Name="Unfocused" />
-                                            </VisualStateGroup>
-                                        </VisualStateManager.VisualStateGroups>
-                                    </Grid>
-                                </ControlTemplate>
-                            </Setter.Value>
-                        </Setter>
-                    </Style>
-                </ListBox.ItemContainerStyle>
-            </ListBox>
+                IsSynchronizedWithCurrentItem="True"
+                ItemsSource="{Binding Path=Extensions}"
+                Template="{StaticResource ListBoxTemplate}"
+                ItemsPanel="{StaticResource ExtensionsPanelTemplate}"
+                ItemTemplate="{StaticResource ExtensionTemplate}"
+                ItemContainerStyle="{StaticResource ItemContainerStyle}" />
+            <ContentControl 
+                Name="detailContainer"
+                ContentTemplate="{StaticResource DetailTemplate}"
+                Content="{Binding Path=Extensions}"/>
         </StackPanel>
     </Grid>
 </Window>
