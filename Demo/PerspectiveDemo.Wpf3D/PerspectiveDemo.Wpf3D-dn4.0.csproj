@@ -43,12 +43,15 @@
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
+    <Reference Include="System.XML" />
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Bubble.cs" />
     <Compile Include="Extension.cs" />
+    <Compile Include="Model\BubbleModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -62,11 +65,96 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="ViewModel\BubbleViewModel.cs" />
+    <Compile Include="View\Arrow3DDemo.xaml.cs">
+      <DependentUpon>Arrow3DDemo.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Bar3DDemo.xaml.cs">
       <DependentUpon>Bar3DDemo.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Bar3DImageDemo.xaml.cs">
+      <DependentUpon>Bar3DImageDemo.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Box3DDemo.xaml.cs">
       <DependentUpon>Box3DDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Box3DImageDemo.xaml.cs">
+      <DependentUpon>Box3DImageDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Box3DOpenDemo.xaml.cs">
+      <DependentUpon>Box3DOpenDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Box3DTransformDemo.xaml.cs">
+      <DependentUpon>Box3DTransformDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\BubbleChartDemo.xaml.cs">
+      <DependentUpon>BubbleChartDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ButtonFaderKnob3DDemo.xaml.cs">
+      <DependentUpon>ButtonFaderKnob3DDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Conical3DDemo.xaml.cs">
+      <DependentUpon>Conical3DDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Conical3DImageDemo.xaml.cs">
+      <DependentUpon>Conical3DImageDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CustomKnob3DDemo.xaml.cs">
+      <DependentUpon>CustomKnob3DDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\CylinderDemo.xaml.cs">
+      <DependentUpon>CylinderDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Football3DDemo.xaml.cs">
+      <DependentUpon>Football3DDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Gyroscope3DDemo.xaml.cs">
+      <DependentUpon>Gyroscope3DDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\InteractivityDemo.xaml.cs">
+      <DependentUpon>InteractivityDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Isocahedron3DDemo.xaml.cs">
+      <DependentUpon>Isocahedron3DDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MixerDemo.xaml.cs">
+      <DependentUpon>MixerDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\PieSliceDemo.xaml.cs">
+      <DependentUpon>PieSliceDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Polygon3DDemo.xaml.cs">
+      <DependentUpon>Polygon3DDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Polygon3DImageDemo.xaml.cs">
+      <DependentUpon>Polygon3DImageDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Ring3DDemo.xaml.cs">
+      <DependentUpon>Ring3DDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Spherical3DDemo.xaml.cs">
+      <DependentUpon>Spherical3DDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Spherical3DImageDemo.xaml.cs">
+      <DependentUpon>Spherical3DImageDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Spherical3DTransformDemo.xaml.cs">
+      <DependentUpon>Spherical3DTransformDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Square3DAnimationDemo.xaml.cs">
+      <DependentUpon>Square3DAnimationDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Square3DDemo.xaml.cs">
+      <DependentUpon>Square3DDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Square3DImageDemo.xaml.cs">
+      <DependentUpon>Square3DImageDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\TruncatedIsocahedron3DDemo.xaml.cs">
+      <DependentUpon>TruncatedIsocahedron3DDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\XyzAxis3DDemo.xaml.cs">
+      <DependentUpon>XyzAxis3DDemo.xaml</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -78,8 +166,15 @@
     </None>
     <AppDesigner Include="Properties\" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
+    <Resource Include="Model\BubbleChartData.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Library\Perspective.Core\Perspective.Core-dn4.0.csproj">
+      <Project>{19FC4939-5269-4B1E-93BF-569D3E14A9B0}</Project>
+      <Name>Perspective.Core-dn4.0</Name>
+      <Private>False</Private>
+    </ProjectReference>
     <ProjectReference Include="..\..\Library\Perspective.Hosting\Perspective.Hosting-dn4.0.csproj">
       <Project>{C7D8AFA7-84EC-40B0-8308-BAB376B31CDD}</Project>
       <Name>Perspective.Hosting-dn4.0</Name>
@@ -101,7 +196,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\Arrow3DDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Bar3DDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Bar3DImageDemo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -109,11 +212,116 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\Box3DImageDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Box3DOpenDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Box3DTransformDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\BubbleChartDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ButtonFaderKnob3DDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Conical3DDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Conical3DImageDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CustomKnob3DDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CylinderDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Football3DDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Gyroscope3DDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\InteractivityDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Isocahedron3DDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MixerDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\PieSliceDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Polygon3DDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Polygon3DImageDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Ring3DDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Spherical3DDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Spherical3DImageDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Spherical3DTransformDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Square3DAnimationDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Square3DDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Square3DImageDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\TruncatedIsocahedron3DDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Wpf3DResources.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\XyzAxis3DDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

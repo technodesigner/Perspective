@@ -19,8 +19,9 @@ using System.Windows;
 namespace Perspective.Wpf.ResourceStrings
 {
     /// <summary>
-    /// A class to manage the localization process of elements without inheritance context (i.e. ContextMenu).
-    /// Used by ResourceString markup extension.
+    /// A class to manage the localization process of elements without inheritance context (i.e. ContextMenu),
+    /// or to manage localization by code.
+    /// Used by ResourceString markup extension, and by ResourceStringManager.
     /// </summary>
     internal static class ResourceStringCoordinator
     {
@@ -86,6 +87,22 @@ namespace Perspective.Wpf.ResourceStrings
                 rsm.LocalizedObjects.Add(cprl);
             }
             return value;
+        }
+
+        /// <summary>
+        /// Returns a resource string value (without any registration).
+        /// </summary>
+        /// <param name="assemblyName">The name of the assembly containing the baseName resx file for localization.</param>
+        /// <param name="baseName">The resx file base name for localization.</param>
+        /// <param name="resourceName">The name of the resource.</param>
+        /// <returns>The resource string value.</returns>
+        internal static string GetString(
+            string assemblyName,
+            string baseName,
+            string resourceName)
+        {
+            ResourceSetManager rsm = GetManager(assemblyName, baseName);
+            return rsm.ResourceManager.GetString(resourceName);
         }
     }
 }

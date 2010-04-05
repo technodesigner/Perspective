@@ -39,6 +39,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Perspective.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />
@@ -104,8 +107,18 @@
       <Project>{C7D8AFA7-84EC-40B0-8308-BAB376B31CDD}</Project>
       <Name>Perspective.Hosting-dn4.0</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Library\Perspective.Wpf3D\Perspective.Wpf3D-dn4.0.csproj">
+      <Project>{F1121E62-AE79-4460-9419-E74F19C011F7}</Project>
+      <Name>Perspective.Wpf3D-dn4.0</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Library\Perspective.Wpf\Perspective.Wpf-dn4.0.csproj">
+      <Project>{34860E9C-F566-4F14-BFB9-45F6B37503F9}</Project>
+      <Name>Perspective.Wpf-dn4.0</Name>
+    </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Perspective.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

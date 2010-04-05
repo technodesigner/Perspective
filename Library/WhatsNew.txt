@@ -3,8 +3,10 @@ What's new in Perspective library ?
 This file describes the main new functionalities since the last offical release (1.0).
 
 Now Perspective 2.0 is under construction :
-- .NET 4.0 and .NET 3.5 SP1 support
-- new functionalities coming soon, some of them being specific to .NET 4.0 (multitouch, etc.)
+- .NET 4.0 support (but not fully compatible with previous .NET versions),
+- new functionalities coming soon.
+
+Note : the localization features doesn't work with the RC version of .NET 4
 
 Perspective.Core
 ----------------
@@ -27,6 +29,10 @@ Perspective.Wpf.Panels
 ------------------------
 BeePanel : a honeycomb layout wrap panel.
 BeeGrid : a honeycomb layout grid panel.
+
+Perspective.Wpf.ResourceStrings
+-------------------------------
+ResourceStringManager : A class to load string resources by code.
 
 Perspective.Wpf.Shapes
 ------------------------

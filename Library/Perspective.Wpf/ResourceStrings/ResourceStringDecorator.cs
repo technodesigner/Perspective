@@ -214,6 +214,7 @@ namespace Perspective.Wpf.ResourceStrings
             ResourceManager rm = ResourceStringDecorator.GetResourceManager(d);
             if (rm != null)
             {
+                // Console.WriteLine("RSD : CurrentUICulture {0}.", System.Globalization.CultureInfo.CurrentUICulture.Name);
                 value = rm.GetString(resourceName);
 
                 // Register (links) the property value to the ResourceStringDecorator.LocalizedChildren dictionary

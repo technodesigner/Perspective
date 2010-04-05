@@ -4,13 +4,14 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:p="http://www.codeplex.com/perspective"
-      FontSize="14" Style="{StaticResource PageStyle}"      
       mc:Ignorable="d" 
+      FontSize="14" Style="{StaticResource PageStyle}"
       d:DesignHeight="300" d:DesignWidth="300"
 	Title="RangeControlDemo">
+
     <p:ResourceStringDecorator 
-        AssemblyName="PerspectiveDemo.UI"
-        BaseName="Pages.pWpf.Strings.RangeControls">
+        AssemblyName="PerspectiveDemo.Wpf"
+        BaseName="View.Strings.RangeControls">
         <StackPanel VerticalAlignment="Center">
             <StackPanel.LayoutTransform>
                 <ScaleTransform ScaleX="1.5" ScaleY="1.5" />

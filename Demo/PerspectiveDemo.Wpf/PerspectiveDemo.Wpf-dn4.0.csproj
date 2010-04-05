@@ -49,6 +49,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Extension.cs" />
+    <Compile Include="Entities\LocaleInfo.cs" />
+    <Compile Include="Model\LocalizationModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -62,17 +64,30 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="ResourceAssembly.cs" />
+    <Compile Include="ResourceKeys.cs" />
+    <Compile Include="SkinManager.cs" />
+    <Compile Include="ViewModel\LocalizationViewModel.cs" />
     <Compile Include="ViewModel\ScreenSizeToScaleFactorConverter.cs" />
     <Compile Include="View\DpiScalingDemo.xaml.cs">
       <DependentUpon>DpiScalingDemo.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\LocalizationDemo.xaml.cs">
+      <DependentUpon>LocalizationDemo.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\RangeControlDemo.xaml.cs">
       <DependentUpon>RangeControlDemo.xaml</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Model\Strings\LocalizationModel.fr.resx" />
+    <EmbeddedResource Include="Model\Strings\LocalizationModel.resx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Strings\DpiScaling.fr.resx" />
+    <EmbeddedResource Include="View\Strings\DpiScaling.resx" />
+    <EmbeddedResource Include="View\Strings\RangeControls.fr.resx" />
+    <EmbeddedResource Include="View\Strings\RangeControls.resx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -102,7 +117,27 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Resources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Skins\BlackAndWhite.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Skins\LaMoisson.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Skins\PsycheRock.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\DpiScalingDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\LocalizationDemo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

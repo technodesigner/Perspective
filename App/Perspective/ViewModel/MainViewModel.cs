@@ -15,6 +15,7 @@ using Perspective.Model;
 using Perspective.Core.Wpf.Data;
 using Perspective.Hosting;
 using System.Collections.Generic;
+using System.Windows.Media.Imaging;
 
 namespace Perspective.ViewModel
 {
@@ -72,6 +73,14 @@ namespace Perspective.ViewModel
             {
                 _currentPageInfo = value;
                 NotifyPropertyChanged("CurrentPageInfo");
+            }
+        }
+
+        public BitmapImage RandomImage
+        {
+            get
+            {
+                return _model.RandomImage;
             }
         }
 

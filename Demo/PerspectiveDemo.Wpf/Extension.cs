@@ -37,17 +37,25 @@ namespace PerspectiveDemo.Wpf
             {
                 new PageInfo(this)
                 {
+                    Title = "Localization",
+                    IconKey = "PencilIcon",
+                    PartialClassName = "View/LocalizationDemo.xaml"
+                },
+                new PageInfo(this)
+                {
                     Title = "DPI scaling",
                     IconKey = "PencilIcon",
                     PartialClassName = "View/DpiScalingDemo.xaml"
                 },
                 new PageInfo(this)
                 {
-                    Title = "Page 2",
+                    Title = "Range controls",
                     IconKey = "PencilBlueIcon",
                     PartialClassName = "View/RangeControlDemo.xaml"
                 }
             };
+            ResourceAssembly.Register();
+            SkinManager.Current.LoadDefaultSkin();
         }
 
         /// <summary>

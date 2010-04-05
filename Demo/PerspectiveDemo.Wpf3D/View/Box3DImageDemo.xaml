@@ -1,0 +1,19 @@
+﻿<Page 
+    x:Class="PerspectiveDemo.Wpf3D.View.Box3DImageDemo"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:p="http://www.codeplex.com/perspective"
+    Title="Box3D + image"
+    Style="{StaticResource PageStyle}">
+    <p:Workshop3D>
+        <p:Box3D>
+            <p:Box3D.Material>
+                <DiffuseMaterial>
+                    <DiffuseMaterial.Brush>
+                        <ImageBrush ImageSource="http://www.odewit.net/Perspective/Images/Tree.jpg" TileMode="None" Stretch="Fill"/>
+                    </DiffuseMaterial.Brush>
+                </DiffuseMaterial>
+            </p:Box3D.Material>
+        </p:Box3D>
+    </p:Workshop3D>
+</Page>

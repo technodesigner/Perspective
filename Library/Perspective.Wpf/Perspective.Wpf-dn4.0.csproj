@@ -96,6 +96,7 @@
     <Compile Include="Controls\Joystick.cs" />
     <Compile Include="Controls\Knob.cs" />
     <Compile Include="Drawers\RegularPolygonDrawer.cs" />
+    <Compile Include="ResourceStrings\ResourceStringManager.cs" />
     <Compile Include="Shapes\Arrow.cs" />
     <Compile Include="Shapes\RegularPolygon.cs" />
     <Compile Include="Controls\Workshop3D.cs" />
