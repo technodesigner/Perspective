@@ -1,0 +1,152 @@
+﻿<Page 
+    x:Class="PerspectiveDemo.Wpf.View.ShapeDemo"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:p="http://www.codeplex.com/perspective"
+    Style="{StaticResource PageStyle}"
+	Title="ShapeDemo">
+    <Page.Resources>
+        <Style TargetType="{x:Type Shape}">
+            <Setter Property="Stroke" Value="{StaticResource BasicShapeStroke}" />
+            <Setter Property="StrokeThickness" Value="2.0" />
+            <Setter Property="Fill" Value="{StaticResource BasicShapeFill}" />
+            <Setter Property="Margin" Value="20" />
+        </Style>
+        <Style TargetType="{x:Type p:Arrow}" BasedOn="{StaticResource {x:Type Shape}}"/>
+        <Style x:Key="SizedShape" TargetType="{x:Type Shape}" BasedOn="{StaticResource {x:Type Shape}}">
+            <Setter Property="Width" Value="300" />
+            <Setter Property="Height" Value="300" />
+        </Style>
+        <Style TargetType="{x:Type p:RegularPolygon}" BasedOn="{StaticResource SizedShape}"/>
+        <Style TargetType="{x:Type p:Star}" BasedOn="{StaticResource SizedShape}"/>
+    </Page.Resources>
+    <TabControl >
+        <TabItem
+            Header="RegularPolygon">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <p:RegularPolygon
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    />
+                <p:RegularPolygon
+                    Grid.Column="1"
+                    Grid.Row="0"
+                    InitialAngle="30"
+                    />
+                <p:RegularPolygon
+                    Grid.Column="2"
+                    Grid.Row="0"
+                    InitialAngle="30"
+                    RoundingRate="0.15"
+                    />
+                <p:RegularPolygon
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    SideCount="3"
+                    />
+                <p:RegularPolygon
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    SideCount="3"
+                    InitialAngle="30"
+                    RoundingRate="0.15"
+                    />
+                <p:RegularPolygon
+                    Grid.Column="2"
+                    Grid.Row="1"
+                    SideCount="12"
+                    />
+            </Grid>
+        </TabItem>
+        <TabItem
+            Header="Star">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <p:Star
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    />
+                <p:Star
+                    Grid.Column="1"
+                    Grid.Row="0"
+                    BranchCount="5"
+                    />
+                <p:Star
+                    Grid.Column="2"
+                    Grid.Row="0"
+                    BranchCount="5"
+                    BranchWidth="0.4"
+                    />
+                <p:Star
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    BranchCount="4"
+                    InitialAngle="90"
+                    />
+                <p:Star
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    BranchCount="8"
+                    BranchWidth="0.35"
+                    InitialAngle="22.5"
+                    />
+                <p:Star
+                    Grid.Column="2"
+                    Grid.Row="1"
+                    BranchCount="12"
+                    BranchWidth="0.4"
+                    />
+            </Grid>
+        </TabItem>
+        <TabItem
+            Header="Arrow">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <p:Arrow
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    />
+                <p:Arrow
+                    Grid.Column="1"
+                    Grid.Row="0"
+                    FormatRatio="10"
+                    />
+                <p:Arrow
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    HeadLengthRatio="0.5"
+                    />
+                <p:Arrow
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    HeadWidthRatio="4"
+                    />
+
+            </Grid>
+        </TabItem>        
+    </TabControl>
+</Page>

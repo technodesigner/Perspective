@@ -55,9 +55,21 @@ namespace PerspectiveDemo.Wpf
                 },
                 new PageInfo(this)
                 {
+                    Title = "Shapes",
+                    IconKey = "PencilBlueIcon",
+                    PartialClassName = "View/ShapeDemo.xaml"
+                },
+                new PageInfo(this)
+                {
                     Title = "Range controls",
                     IconKey = "PencilBlueIcon",
                     PartialClassName = "View/RangeControlDemo.xaml"
+                },
+                new PageInfo(this)
+                {
+                    Title = "BeePanel / BeeGrid",
+                    IconKey = "PencilBlueIcon",
+                    PartialClassName = "View/BeePanelDemo.xaml"
                 }
             };
             ResourceAssembly.Register();

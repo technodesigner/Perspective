@@ -33,5 +33,13 @@
             <SolidColorBrush x:Key="{x:Static SystemColors.ControlBrushKey}" Color="LightBlue"/>
         </Style.Resources>
     </Style>
+
+    <SolidColorBrush
+        x:Key="BasicShapeStroke"
+        Color="Black" />
     
+    <SolidColorBrush
+        x:Key="BasicShapeFill" 
+        Color="#FFFFDE46" />
+
 </ResourceDictionary>

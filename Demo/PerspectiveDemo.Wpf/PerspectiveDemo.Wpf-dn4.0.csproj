@@ -71,6 +71,9 @@
     <Compile Include="ViewModel\LocalizationViewModel.cs" />
     <Compile Include="ViewModel\ScreenSizeToScaleFactorConverter.cs" />
     <Compile Include="ViewModel\SkinViewModel.cs" />
+    <Compile Include="View\BeePanelDemo.xaml.cs">
+      <DependentUpon>BeePanelDemo.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\DpiScalingDemo.xaml.cs">
       <DependentUpon>DpiScalingDemo.xaml</DependentUpon>
     </Compile>
@@ -79,6 +82,9 @@
     </Compile>
     <Compile Include="View\RangeControlDemo.xaml.cs">
       <DependentUpon>RangeControlDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ShapeDemo.xaml.cs">
+      <DependentUpon>ShapeDemo.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\SkinDemo.xaml.cs">
       <DependentUpon>SkinDemo.xaml</DependentUpon>
@@ -142,6 +148,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\BeePanelDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\DpiScalingDemo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -151,6 +161,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\RangeControlDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ShapeDemo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

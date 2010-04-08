@@ -1,0 +1,147 @@
+﻿<Page 
+    x:Class="PerspectiveDemo.Wpf.View.BeePanelDemo"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:p="http://www.codeplex.com/perspective"
+    Style="{StaticResource PageStyle}"
+	Title="BeePanelDemo">
+    <Page.Resources>
+        <Color x:Key="Color2">LightBlue</Color>
+        <Color x:Key="Color1">White</Color>
+        <RadialGradientBrush x:Key="RadialBrush" >
+            <GradientStop Color="{StaticResource Color1}" Offset="0"/>
+            <GradientStop Color="{StaticResource Color2}" Offset="1"/>
+        </RadialGradientBrush>
+        <Style TargetType="Button">
+            <Setter Property="Width" Value="80" />
+            <Setter Property="Height" Value="30" />
+        </Style>
+        <Style TargetType="p:RegularPolygon">
+            <Setter Property="Fill" Value="{StaticResource RadialBrush}" />
+            <Setter Property="Panel.Opacity" Value="0.8" />
+            <Setter Property="Panel.Width" Value="116" />
+            <Setter Property="Panel.Height" Value="116" />
+        </Style>
+    </Page.Resources>
+    <TabControl >
+        <TabItem
+            Header="BeePanel">
+            <Grid>
+                <Image 
+                    Source="http://www.odewit.net/Images/Livres/Silverlight/191.jpg" 
+                    Stretch="UniformToFill"/>
+                <p:BeePanel 
+                    ColumnCount="3" RowCount="3" 
+                    SideLength="60"
+                    Margin="10"
+                    HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <Grid>
+                        <p:RegularPolygon />
+                        <Button 
+                            Content="0"/>
+                    </Grid>
+                    <Grid>
+                        <p:RegularPolygon />
+                        <Button 
+                            Content="1"/>
+                    </Grid>
+                    <Grid>
+                        <p:RegularPolygon />
+                        <Button 
+                            Content="2"/>
+                    </Grid>
+                    <Grid>
+                        <p:RegularPolygon />
+                        <Button 
+                            Content="3"/>
+                    </Grid>
+                    <Grid>
+                        <p:RegularPolygon />
+                        <Button 
+                            Content="4"/>
+                    </Grid>
+                    <Grid>
+                        <p:RegularPolygon />
+                        <Button 
+                            Content="5"/>
+                    </Grid>
+                    <Grid>
+                        <p:RegularPolygon />
+                        <Button Content="6"/>
+                    </Grid>
+                    <Grid>
+                        <p:RegularPolygon />
+                        <Button 
+                            Content="7"/>
+                    </Grid>
+                    <Grid>
+                        <p:RegularPolygon />
+                        <Button Content="8"/>
+                    </Grid>
+                </p:BeePanel>
+            </Grid>
+        </TabItem>
+        <TabItem
+            Header="BeeGrid">
+            <Grid>
+                <Image 
+                    Source="http://www.odewit.net/Images/Livres/Silverlight/217.jpg" 
+                    Stretch="UniformToFill"/>
+                <p:BeeGrid 
+                    Name="beeGrid"
+                    ColumnCount="3" RowCount="3" 
+                    Margin="10"
+                    SideLength="60"
+                    HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <p:RegularPolygon 
+                        p:BeeGrid.Row="0"
+                        p:BeeGrid.Column="0"/>
+                    <p:RegularPolygon 
+                        p:BeeGrid.Row="0"
+                        p:BeeGrid.Column="1"/>
+                    <p:RegularPolygon 
+                        p:BeeGrid.Row="0"
+                        p:BeeGrid.Column="2"/>
+                    <p:RegularPolygon 
+                        p:BeeGrid.Row="1"
+                        p:BeeGrid.Column="0"/>
+                    <p:RegularPolygon 
+                        p:BeeGrid.Row="1"
+                        p:BeeGrid.Column="1"/>
+                    <p:RegularPolygon 
+                        p:BeeGrid.Row="1"
+                        p:BeeGrid.Column="2"/>
+                    <p:RegularPolygon 
+                        p:BeeGrid.Row="2"
+                        p:BeeGrid.Column="0"/>
+                    <p:RegularPolygon 
+                        p:BeeGrid.Row="2"
+                        p:BeeGrid.Column="1"/>
+                    <p:RegularPolygon 
+                        p:BeeGrid.Row="2"
+                        p:BeeGrid.Column="2"/>
+                    <Button 
+                        p:BeeGrid.Row="0"
+                        p:BeeGrid.Column="0"
+                        Content="0-0"/>
+                    <Button 
+                        p:BeeGrid.Row="0"
+                        p:BeeGrid.Column="1"
+                        Content="0-1"/>
+                    <Button 
+                        p:BeeGrid.Row="1"
+                        p:BeeGrid.Column="1"
+                        Content="1-1"/>
+                    <Button 
+                        p:BeeGrid.Row="1"
+                        p:BeeGrid.Column="2"
+                        Content="1-2"/>
+                    <Button 
+                        p:BeeGrid.Row="2"
+                        p:BeeGrid.Column="2"
+                        Content="2-2"/>
+                </p:BeeGrid>
+            </Grid>
+        </TabItem>
+    </TabControl>
+</Page>
