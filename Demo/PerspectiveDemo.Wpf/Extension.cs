@@ -37,6 +37,12 @@ namespace PerspectiveDemo.Wpf
             {
                 new PageInfo(this)
                 {
+                    Title = "Skin",
+                    IconKey = "PencilIcon",
+                    PartialClassName = "View/SkinDemo.xaml"
+                },
+                new PageInfo(this)
+                {
                     Title = "Localization",
                     IconKey = "PencilIcon",
                     PartialClassName = "View/LocalizationDemo.xaml"
@@ -55,7 +61,7 @@ namespace PerspectiveDemo.Wpf
                 }
             };
             ResourceAssembly.Register();
-            SkinManager.Current.LoadDefaultSkin();
+            SkinManager.Current.LoadCurrentSkin();
         }
 
         /// <summary>

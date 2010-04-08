@@ -47,5 +47,11 @@ namespace PerspectiveDemo.Wpf.View
             diagonal = Math.Round(diagonal, 2, MidpointRounding.ToEven);
             e.ConvertedValue = diagonal;
         }
+
+        private void diagonalScreenSizeBinding_ConvertingBack(object sender, Perspective.Core.Wpf.Converters.ConverterEventArgs e)
+        {
+            string diagonal = (string)e.Value;
+            e.ConvertedValue = Convert.ToDouble(diagonal);
+        }
     }
 }

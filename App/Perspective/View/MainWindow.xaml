@@ -24,6 +24,83 @@
             <WrapPanel />
         </ItemsPanelTemplate>
 
+        <Style x:Key="RectangleStyle" TargetType="Rectangle">
+            <Setter Property="RadiusX" Value="8" />
+            <Setter Property="RadiusY" Value="8" />
+        </Style>
+
+        <Style x:Key="DesktopButtonStyle" TargetType="Button">
+            <!--<Setter Property="Margin" Value="2" />-->
+            <Setter Property="Padding" Value="10" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="Background" Value="White" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <VisualStateManager.VisualStateGroups>
+                                <VisualStateGroup Name="CommonStates">
+                                    <VisualState Name="Normal"/>
+                                    <VisualState Name="MouseOver">
+                                        <Storyboard>
+                                            <DoubleAnimationUsingKeyFrames 
+                                                    Storyboard.TargetName="backgroundRectangle" 
+                                                    Storyboard.TargetProperty="Opacity" 
+                                                    Duration="0">
+                                                <DiscreteDoubleKeyFrame KeyTime="0" Value="0.4"/>
+                                            </DoubleAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                </VisualStateGroup>
+                                <VisualStateGroup Name="FocusStates">
+                                    <VisualState Name="Focused">
+                                        <Storyboard>
+                                            <ObjectAnimationUsingKeyFrames 
+                                                    Storyboard.TargetName="focusRectangle" 
+                                                    Storyboard.TargetProperty="Visibility" 
+                                                    Duration="0">
+                                                <DiscreteObjectKeyFrame KeyTime="0">
+                                                    <DiscreteObjectKeyFrame.Value>
+                                                        <Visibility>Visible</Visibility>
+                                                    </DiscreteObjectKeyFrame.Value>
+                                                </DiscreteObjectKeyFrame>
+                                            </ObjectAnimationUsingKeyFrames>
+                                            <DoubleAnimationUsingKeyFrames 
+                                                    Storyboard.TargetName="backgroundRectangle" 
+                                                    Storyboard.TargetProperty="Opacity" 
+                                                    Duration="0">
+                                                <DiscreteDoubleKeyFrame KeyTime="0" Value="0.4"/>
+                                            </DoubleAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualState>
+                                    <VisualState Name="Unfocused"/>
+                                </VisualStateGroup>
+                            </VisualStateManager.VisualStateGroups>
+
+                            <Rectangle 
+                                Name="backgroundRectangle"
+                                Opacity="0.2"
+                                Style="{StaticResource RectangleStyle}"
+                                Fill="{TemplateBinding Background}"/>
+                            <ContentPresenter
+                                Content="{TemplateBinding Content}"
+                                ContentTemplate="{TemplateBinding ContentTemplate}"
+                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                Margin="{TemplateBinding Padding}"/>
+                            <Rectangle 
+                                Name="focusRectangle"
+                                Opacity="0.6"
+                                Style="{StaticResource RectangleStyle}"
+                                Visibility="Collapsed"
+                                Stroke="{TemplateBinding Foreground}"
+                                StrokeThickness="3"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
         <Style 
             TargetType="TextBlock">
             <!--<Setter Property="Height" Value="36"/>-->
@@ -189,83 +266,6 @@
                 ItemTemplate="{StaticResource PageInfoTemplate}"
                 ItemContainerStyle="{StaticResource PageInfoItemContainerStyle}" />
         </DataTemplate>
-
-        <Style x:Key="RectangleStyle" TargetType="Rectangle">
-            <Setter Property="RadiusX" Value="8" />
-            <Setter Property="RadiusY" Value="8" />
-        </Style>
-
-        <Style x:Key="DesktopButtonStyle" TargetType="Button">
-            <!--<Setter Property="Margin" Value="2" />-->
-            <Setter Property="Padding" Value="10" />
-            <Setter Property="Foreground" Value="White" />
-            <Setter Property="Background" Value="White" />
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="Button">
-                        <Grid>
-                            <VisualStateManager.VisualStateGroups>
-                                <VisualStateGroup Name="CommonStates">
-                                    <VisualState Name="Normal"/>
-                                    <VisualState Name="MouseOver">
-                                        <Storyboard>
-                                            <DoubleAnimationUsingKeyFrames 
-                                                    Storyboard.TargetName="backgroundRectangle" 
-                                                    Storyboard.TargetProperty="Opacity" 
-                                                    Duration="0">
-                                                <DiscreteDoubleKeyFrame KeyTime="0" Value="0.4"/>
-                                            </DoubleAnimationUsingKeyFrames>
-                                        </Storyboard>
-                                    </VisualState>
-                                </VisualStateGroup>
-                                <VisualStateGroup Name="FocusStates">
-                                    <VisualState Name="Focused">
-                                        <Storyboard>
-                                            <ObjectAnimationUsingKeyFrames 
-                                                    Storyboard.TargetName="focusRectangle" 
-                                                    Storyboard.TargetProperty="Visibility" 
-                                                    Duration="0">
-                                                <DiscreteObjectKeyFrame KeyTime="0">
-                                                    <DiscreteObjectKeyFrame.Value>
-                                                        <Visibility>Visible</Visibility>
-                                                    </DiscreteObjectKeyFrame.Value>
-                                                </DiscreteObjectKeyFrame>
-                                            </ObjectAnimationUsingKeyFrames>
-                                            <DoubleAnimationUsingKeyFrames 
-                                                    Storyboard.TargetName="backgroundRectangle" 
-                                                    Storyboard.TargetProperty="Opacity" 
-                                                    Duration="0">
-                                                <DiscreteDoubleKeyFrame KeyTime="0" Value="0.4"/>
-                                            </DoubleAnimationUsingKeyFrames>                                            
-                                        </Storyboard>
-                                    </VisualState>
-                                    <VisualState Name="Unfocused"/>
-                                </VisualStateGroup>
-                            </VisualStateManager.VisualStateGroups>
-
-                            <Rectangle 
-                                Name="backgroundRectangle"
-                                Opacity="0.2"
-                                Style="{StaticResource RectangleStyle}"
-                                Fill="{TemplateBinding Background}"/>
-                            <ContentPresenter
-                                Content="{TemplateBinding Content}"
-                                ContentTemplate="{TemplateBinding ContentTemplate}"
-                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
-                                Margin="{TemplateBinding Padding}"/>
-                            <Rectangle 
-                                Name="focusRectangle"
-                                Opacity="0.6"
-                                Style="{StaticResource RectangleStyle}"
-                                Visibility="Collapsed"
-                                Stroke="{TemplateBinding Foreground}"
-                                StrokeThickness="3"/>
-                        </Grid>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
 
         <!--<Storyboard x:Key="FrameOpacityStoryboard">
             <DoubleAnimation

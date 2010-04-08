@@ -48,9 +48,10 @@ The successive transformation operations (translation, scaling or rotation) are 
 
 Perspective application project
 -------------------------------
-A new WPF 4 application which can dynamically load pages from extension assemblies using MEF. 
-This application is used as demo of Perspective library.
 UNDER CONSTRUCTION !
+A new WPF 4 application which can dynamically load pages from extension assemblies using MEF. 
+This application is used here as demo of Perspective library.
+The background image is loaded randomly from a PerspectiveAlbum subdirectory in the application directory or in the system Images directories.
 
 Perspective.Hosting
 -------------------
@@ -59,3 +60,9 @@ The classes are used by the entension assemblies.
 Extension : Represents an extension for the Perspective.exe application.
 PageInfo : Represents the metadata associated with a WPF page of an extension assembly.
 UNDER CONSTRUCTION !
+
+PerspectiveDemo.Wpf
+-------------------
+View/DpiScalingDemo : fixed a bug (a change to the diagonal size TextBox now persists between sessions, with a scope for the Perspective.Core assembly, when the bSaveScale button is clicked)
+View/SkinDemo : a new page to change the current skin
+SkinManager : now handles a CurrentSkin property

@@ -9,6 +9,7 @@
       d:DesignHeight="300" d:DesignWidth="300"
       Style="{StaticResource PageStyle}"
       FontSize="14" 
+      Loaded="Page_Loaded"
 	  Title="DpiScalingDemo">
 
     <Page.Resources>
@@ -38,7 +39,8 @@
                             <p:SignalBinding 
                                 x:Name="diagonalScreenSizeBinding"
                                 ElementName="sScreenSize" Path="Value" 
-                                Converting="diagonalScreenSizeBinding_Converting"/>
+                                Converting="diagonalScreenSizeBinding_Converting"
+                                ConvertingBack="diagonalScreenSizeBinding_ConvertingBack"/>
                         </TextBox.Text>
                     </TextBox>
                 </StackPanel>

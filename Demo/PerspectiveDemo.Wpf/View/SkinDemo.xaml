@@ -1,7 +1,6 @@
-﻿<Page 
-    x:Class="PerspectiveDemo.Wpf.View.LocalizationDemo"
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+﻿<Page x:Class="PerspectiveDemo.Wpf.View.SkinDemo"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:p="http://www.codeplex.com/perspective"
     Style="{StaticResource PageStyle}"
     FontSize="14"
@@ -9,7 +8,7 @@
     <ListView
         HorizontalAlignment="Center"
         VerticalAlignment="Center"
-        ItemsSource="{Binding LocaleInfos}">
+        ItemsSource="{Binding Skins}">
         <ListView.Template>
             <ControlTemplate 
                 TargetType="ItemsControl">
@@ -31,16 +30,16 @@
         <ListView.ItemTemplate>
             <DataTemplate>
                 <RadioButton 
-                    GroupName="LocaleInfo"
-                    Content="{Binding Title}"
+                    GroupName="SkinInfo"
+                    Content="{Binding}"
+                    
                     Command="{Binding 
                         RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Page}}, 
-                        Path=DataContext.SetCurrentLocaleInfoCommand}"
+                        Path=DataContext.SetCurrentSkinCommand}"
                     CommandParameter="{Binding}">
                     <RadioButton.IsChecked>
                         <p:SignalBinding 
                             x:Name="radioButtonIsCheckedBinding"
-                            Path="CultureName"
                             Mode="OneWay"
                             Converting="radioButtonIsCheckedBinding_Converting"/>
                     </RadioButton.IsChecked>
@@ -48,4 +47,5 @@
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>
+
 </Page>

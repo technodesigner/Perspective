@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Perspective.Core;
+using System.Windows;
 
 namespace PerspectiveDemo.Wpf
 {
@@ -84,6 +86,46 @@ namespace PerspectiveDemo.Wpf
         {
             // LoadSkin(_defaultSkinBaseFolder, skinName, _defaultDictionary);
             LoadSkin(_defaultSkinBaseFolder, skinName);
+        }
+
+        private static string _currentSkinKey = "CurrentSkin";
+
+        /// <summary>
+        /// Gets the current skin.
+        /// </summary>
+        public string CurrentSkin
+        {
+            get
+            {
+                return (string)Application.Current.Properties[_currentSkinKey];
+            }
+            internal set
+            {
+                Application.Current.Properties[_currentSkinKey] = value;
+                LoadCurrentSkin();
+                AssemblyConfigManager.SaveSettings();
+            }
+        }
+
+        private void LoadApplicationSkin(string skin)
+        {
+            LoadSkin(skin);
+            Perspective.Wpf.SkinManager.Current.LoadSkin(skin);
+            Perspective.Wpf3D.SkinManager.Current.LoadSkin(skin);
+        }
+
+        public void LoadCurrentSkin()
+        {
+            if (!String.IsNullOrEmpty(CurrentSkin))
+            {
+                LoadApplicationSkin(CurrentSkin);
+            }
+            else
+            {
+                SkinManager.Current.LoadDefaultSkin();
+                Perspective.Wpf.SkinManager.Current.LoadDefaultSkin();
+                Perspective.Wpf3D.SkinManager.Current.LoadDefaultSkin();
+            }
         }
     }
 }

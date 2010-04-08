@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
 using System.Windows;
+using Perspective.Core;
 
 namespace Perspective
 {
@@ -30,6 +31,21 @@ namespace Perspective
             // Skins
             Perspective.Wpf.SkinManager.Current.LoadDefaultSkin();
             Perspective.Wpf3D.SkinManager.Current.LoadDefaultSkin();
+        }
+
+        private const string _configFilename = "Perspective.dat";
+
+        private void Application_Startup(object sender, StartupEventArgs e)
+        {
+            IsolatedStorageHelper.LoadFromUserStoreForDomain(this.Properties, _configFilename);
+
+            Perspective.View.MainWindow mw = new Perspective.View.MainWindow();
+            mw.Show();
+        }
+
+        private void Application_Exit(object sender, ExitEventArgs e)
+        {
+            IsolatedStorageHelper.SaveToUserStoreForDomain(this.Properties, _configFilename);
         }
     }
 }

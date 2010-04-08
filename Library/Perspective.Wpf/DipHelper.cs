@@ -48,12 +48,7 @@ namespace Perspective.Wpf
             else
             {
                 ScreenIndependentScaleTransform.ScaleY = (double)AssemblyConfigManager.Settings[_screenIndependentScaleYKey];
-            }
-
-            if (AssemblyConfigManager.Settings[_screenSizeKey] == null)
-            {
-                AssemblyConfigManager.Settings[_screenSizeKey] = 17.0;
-            }            
+            }           
         }
 
         /// <summary>

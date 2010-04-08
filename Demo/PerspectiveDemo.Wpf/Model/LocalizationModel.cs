@@ -43,7 +43,6 @@ namespace PerspectiveDemo.Wpf.Model
                     Title = _resourceStringManager.GetString("French"),
                     CultureName = "fr-FR"
                 });
-            // Console.WriteLine(_resourceStringManager.GetString("French"));
         }
     }
 }

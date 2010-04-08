@@ -51,6 +51,7 @@
     <Compile Include="Extension.cs" />
     <Compile Include="Entities\LocaleInfo.cs" />
     <Compile Include="Model\LocalizationModel.cs" />
+    <Compile Include="Model\SkinModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -69,6 +70,7 @@
     <Compile Include="SkinManager.cs" />
     <Compile Include="ViewModel\LocalizationViewModel.cs" />
     <Compile Include="ViewModel\ScreenSizeToScaleFactorConverter.cs" />
+    <Compile Include="ViewModel\SkinViewModel.cs" />
     <Compile Include="View\DpiScalingDemo.xaml.cs">
       <DependentUpon>DpiScalingDemo.xaml</DependentUpon>
     </Compile>
@@ -77,6 +79,9 @@
     </Compile>
     <Compile Include="View\RangeControlDemo.xaml.cs">
       <DependentUpon>RangeControlDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\SkinDemo.xaml.cs">
+      <DependentUpon>SkinDemo.xaml</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Model\Strings\LocalizationModel.fr.resx" />
     <EmbeddedResource Include="Model\Strings\LocalizationModel.resx" />
@@ -105,6 +110,10 @@
       <Project>{C7D8AFA7-84EC-40B0-8308-BAB376B31CDD}</Project>
       <Name>Perspective.Hosting-dn4.0</Name>
       <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Library\Perspective.Wpf3D\Perspective.Wpf3D-dn4.0.csproj">
+      <Project>{F1121E62-AE79-4460-9419-E74F19C011F7}</Project>
+      <Name>Perspective.Wpf3D-dn4.0</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Library\Perspective.Wpf\Perspective.Wpf-dn4.0.csproj">
       <Project>{34860E9C-F566-4F14-BFB9-45F6B37503F9}</Project>
@@ -142,6 +151,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\RangeControlDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\SkinDemo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

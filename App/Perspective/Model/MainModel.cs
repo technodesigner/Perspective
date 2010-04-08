@@ -42,6 +42,20 @@ namespace Perspective.Model
             container.ComposeParts(this);
         }
 
+        private BitmapImage GetRandomImage(string dirName)
+        {
+            BitmapImage randomImage = null;
+            DirectoryInfo di = new DirectoryInfo(dirName);
+            FileInfo[] files = di.GetFiles("*.jpg");
+            if (files.GetLength(0) > 0)
+            {
+                Random r = new Random();
+                string fileName = files[r.Next(0, files.GetUpperBound(0))].FullName;
+                randomImage = new BitmapImage(new Uri(fileName));
+            }
+            return randomImage;
+        }
+
         private BitmapImage _randomImage = null;
 
         public BitmapImage RandomImage
@@ -50,16 +64,20 @@ namespace Perspective.Model
             {
                 if (_randomImage == null)
                 {
-                    var di = new DirectoryInfo(
-                        Path.Combine(
-                            Environment.GetFolderPath(Environment.SpecialFolder.MyPictures),
-                                "Perspective"));
-                    FileInfo[] files = di.GetFiles("*.jpg");
-                    if (files.GetLength(0) > 0)
+                    const string folderName = "PerspectiveAlbum";
+                    if (Directory.Exists(folderName))
                     {
-                        Random r = new Random();
-                        string fileName = files[r.Next(0, files.GetUpperBound(0))].FullName;
-                        _randomImage = new BitmapImage(new Uri(fileName));
+                        _randomImage = GetRandomImage(folderName);
+                    }
+                    else
+                    {
+                        string dirName = Path.Combine(
+                            Environment.GetFolderPath(Environment.SpecialFolder.MyPictures),
+                                folderName);
+                        if (Directory.Exists(dirName))
+                        {
+                            _randomImage = GetRandomImage(dirName);
+                        }
                     }
                 }
                 return _randomImage;
