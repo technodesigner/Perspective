@@ -15,7 +15,7 @@ using System.Text;
 using System.Windows.Media.Animation;
 using System.Windows.Controls;
 
-namespace Perspective.Core.Wpf
+namespace Perspective.Core.Wpf.Animation
 {
     /// <summary>
     /// A helper class for animation.

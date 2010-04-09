@@ -70,6 +70,12 @@ namespace PerspectiveDemo.Wpf
                     Title = "BeePanel / BeeGrid",
                     IconKey = "PencilBlueIcon",
                     PartialClassName = "View/BeePanelDemo.xaml"
+                },
+                new PageInfo(this)
+                {
+                    Title = "MayaEase animation",
+                    IconKey = "PencilBlueIcon",
+                    PartialClassName = "View/MayaEaseDemo.xaml"
                 }
             };
             ResourceAssembly.Register();

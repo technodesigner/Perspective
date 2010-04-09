@@ -87,18 +87,20 @@
                     Grid.Column="1"
                     Grid.Row="0"
                     BranchCount="5"
+                    InitialAngle="18"
                     />
                 <p:Star
                     Grid.Column="2"
                     Grid.Row="0"
                     BranchCount="5"
                     BranchWidth="0.4"
+                    InitialAngle="18"
                     />
                 <p:Star
                     Grid.Column="0"
                     Grid.Row="1"
                     BranchCount="4"
-                    InitialAngle="90"
+                    InitialAngle="45"
                     />
                 <p:Star
                     Grid.Column="1"
@@ -112,6 +114,7 @@
                     Grid.Row="1"
                     BranchCount="12"
                     BranchWidth="0.4"
+                    InitialAngle="15"
                     />
             </Grid>
         </TabItem>

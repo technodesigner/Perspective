@@ -71,7 +71,8 @@
     <Compile Include="EventArgs.cs" />
     <Compile Include="IsolatedStorageHelper.cs" />
     <Compile Include="StorableDictionary.cs" />
-    <Compile Include="Wpf\AnimationHelper.cs" />
+    <Compile Include="Wpf\Animation\AnimationHelper.cs" />
+    <Compile Include="Wpf\Animation\MayaEase.cs" />
     <Compile Include="Wpf\AxisDirection.cs" />
     <Compile Include="Wpf\Converters\ConverterEventArgs.cs" />
     <Compile Include="Wpf\Converters\SignalConverter.cs" />

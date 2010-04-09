@@ -80,6 +80,9 @@
     <Compile Include="View\LocalizationDemo.xaml.cs">
       <DependentUpon>LocalizationDemo.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\MayaEaseDemo.xaml.cs">
+      <DependentUpon>MayaEaseDemo.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\RangeControlDemo.xaml.cs">
       <DependentUpon>RangeControlDemo.xaml</DependentUpon>
     </Compile>
@@ -157,6 +160,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\LocalizationDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MayaEaseDemo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

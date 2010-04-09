@@ -15,6 +15,7 @@ CancelEventArgs<T> : A generic class to manage a CancelEventArgs argument with o
 
 Perspective.Core.Wpf
 --------------------
+AnimationHelper's namespace has moved from Perspective.Core.Wpf to Perspective.Core.Wpf.Animation
 GeometryHelper : a new helper class with static methods 
 	- DegreeToRadian.
 	- RadianToDegree.
