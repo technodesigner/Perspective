@@ -14,8 +14,8 @@
         </Style>
         <Style TargetType="{x:Type p:Arrow}" BasedOn="{StaticResource {x:Type Shape}}"/>
         <Style x:Key="SizedShape" TargetType="{x:Type Shape}" BasedOn="{StaticResource {x:Type Shape}}">
-            <Setter Property="Width" Value="300" />
-            <Setter Property="Height" Value="300" />
+            <Setter Property="Width" Value="280" />
+            <Setter Property="Height" Value="280" />
         </Style>
         <Style TargetType="{x:Type p:RegularPolygon}" BasedOn="{StaticResource SizedShape}"/>
         <Style TargetType="{x:Type p:Star}" BasedOn="{StaticResource SizedShape}"/>

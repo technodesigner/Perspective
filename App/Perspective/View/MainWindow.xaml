@@ -103,34 +103,26 @@
 
         <Style 
             TargetType="TextBlock">
-            <!--<Setter Property="Height" Value="36"/>-->
             <Setter Property="FontSize" Value="12" />
             <Setter Property="Margin" Value="0,2,0,0" />
-            <!--<Setter Property="HorizontalAlignment" Value="Center" />
-            <Setter Property="VerticalAlignment" Value="Bottom" />-->
-            <!--<Setter Property="TextTrimming" Value="CharacterEllipsis" />
-            <Setter Property="TextWrapping" Value="Wrap" />-->
         </Style>
         
         <DataTemplate x:Key="ExtensionTemplate">
-            <!--<Button 
-                Style="{StaticResource DesktopButtonStyle}">-->
-                <Grid 
-                    Margin="6">
-                    <Grid.RowDefinitions>
-                        <RowDefinition />
-                        <RowDefinition Height="Auto"/>
-                    </Grid.RowDefinitions>
-                    <Image 
-                        Grid.Row="0"
-                        Source="{Binding Icon}" />
-                    <TextBlock
-                        Grid.Row="1"
-                        HorizontalAlignment="Center"
-                        TextTrimming="CharacterEllipsis"
-                        Text="{Binding Path=Title}"/>
+            <Grid 
+                Margin="6">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Image 
+                    Grid.Row="0"
+                    Source="{Binding Icon}" />
+                <TextBlock
+                    Grid.Row="1"
+                    HorizontalAlignment="Center"
+                    TextTrimming="CharacterEllipsis"
+                    Text="{Binding Path=Title}"/>
             </Grid>
-            <!--</Button>-->
         </DataTemplate>
 
         <DataTemplate x:Key="PageInfoTemplate">
@@ -153,7 +145,6 @@
                         HorizontalAlignment="Center"
                         TextTrimming="CharacterEllipsis"
                         Text="{Binding Path=Title}"/>
-                    <!--HorizontalAlignment="Center"-->
                 </Grid>
             </Button>
         </DataTemplate>
@@ -257,7 +248,6 @@
                 </Setter.Value>
             </Setter>
         </Style>
-
         <DataTemplate x:Key="DetailTemplate">
             <ListBox Margin="10"
                 ItemsSource="{Binding Path=PageInfos}"
@@ -266,15 +256,6 @@
                 ItemTemplate="{StaticResource PageInfoTemplate}"
                 ItemContainerStyle="{StaticResource PageInfoItemContainerStyle}" />
         </DataTemplate>
-
-        <!--<Storyboard x:Key="FrameOpacityStoryboard">
-            <DoubleAnimation
-                Storyboard.TargetName="frame"
-                Storyboard.TargetProperty="Opacity"
-                Duration="0:0:0.2"
-                To="1"/>
-        </Storyboard>-->
-
     </Window.Resources>
     <Window.TaskbarItemInfo>
         <TaskbarItemInfo 
@@ -298,9 +279,6 @@
         </TaskbarItemInfo>
     </Window.TaskbarItemInfo>
     <Grid Background="MediumSlateBlue">
-        <!--<Image 
-            Source="/View/PerspectiveBackground.JPG"
-            Stretch="UniformToFill"/>-->
         <Image 
             Source="{Binding RandomImage}"
             Stretch="UniformToFill"/>
@@ -316,41 +294,19 @@
                 ItemTemplate="{StaticResource ExtensionTemplate}"
                 ItemContainerStyle="{StaticResource ExtensionItemContainerStyle}" 
                 GotKeyboardFocus="extensionListBox_GotKeyboardFocus"/>
-            <Grid>
+            <Grid 
+                Name="detailGrid"
+                SizeChanged="detailGrid_SizeChanged">
                 <ContentControl 
                     Name="detailContainer"
                     ContentTemplate="{StaticResource DetailTemplate}"
                     Content="{Binding Path=Extensions}"/>
                 <Frame 
                     Name="frame" 
-                    Background="Black"
-                    Visibility="Collapsed"
                     Source="{Binding Path=CurrentPageInfo.Uri}"
                     Navigated="frame_Navigated"
                     />
             </Grid>
         </DockPanel>
-        <!--<Frame 
-            Name="frame" 
-            Background="Black"
-            Visibility="Collapsed"
-            Width="400"
-            Height="400"
-            Source="{Binding Path=CurrentPageInfo.Uri}"
-            Navigated="frame_Navigated"/>-->
-            <!--<Frame.Triggers>
-                <EventTrigger RoutedEvent="Frame.Navigated">
-                    <EventTrigger.Actions>
-                        <BeginStoryboard>
-                            <Storyboard>
-                                <DoubleAnimation
-                                    Storyboard.TargetProperty="Opacity"
-                                    Duration="0:0:0.2"
-                                    To="1"/>
-                            </Storyboard>
-                        </BeginStoryboard>
-                    </EventTrigger.Actions>
-                </EventTrigger>
-            </Frame.Triggers>-->
     </Grid>
 </Window>
