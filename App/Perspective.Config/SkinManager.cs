@@ -5,7 +5,7 @@ using System.Text;
 using Perspective.Core;
 using System.Windows;
 
-namespace PerspectiveDemo.Wpf
+namespace Perspective.Config
 {
     /// <summary>
     /// A class for skin handling of Perspective application UI
@@ -21,7 +21,7 @@ namespace PerspectiveDemo.Wpf
 
         private const string _defaultSkin = "PsycheRock";
 
-        private const string _assemblyName = "PerspectiveDemo.Wpf";
+        //private const string _assemblyName = "Perspective.Config";
         private SkinManager()
         {
         }
@@ -54,7 +54,8 @@ namespace PerspectiveDemo.Wpf
         {
             get
             {
-                return _assemblyName;
+                // return _assemblyName;
+                return Extension.AssemblyNameConst;
             }
         }
 

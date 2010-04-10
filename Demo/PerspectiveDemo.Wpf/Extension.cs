@@ -20,10 +20,42 @@ namespace PerspectiveDemo.Wpf
     /// </summary>
     public class Extension : Perspective.Hosting.Extension
     {
-        private const string _assemblyName = "PerspectiveDemo.Wpf";
         private const string _title = "Démo Perspective WPF";
         private const string _iconKey = "PencilIcon";
+
+        private static string _assemblyName = "PerspectiveDemo.Wpf";
+
+        /// <summary>
+        /// Gets the assembly name.
+        /// </summary>
+        public static string AssemblyNameConst
+        {
+            get { return Extension._assemblyName; }
+        }
+
+        /// <summary>
+        /// Gets the assembly name.
+        /// </summary>
+        public override string AssemblyName
+        {
+            get
+            {
+                return _assemblyName;
+            }
+        }
+
         private List<PageInfo> _pageInfos;
+
+        /// <summary>
+        /// Gets the children PageInfos collection.
+        /// </summary>
+        public override List<PageInfo> PageInfos
+        {
+            get
+            {
+                return _pageInfos;
+            }
+        }
 
         /// <summary>
         /// Initializes a new instance of Extension.
@@ -35,18 +67,6 @@ namespace PerspectiveDemo.Wpf
             IconKey = _iconKey;
             _pageInfos = new List<PageInfo>
             {
-                new PageInfo(this)
-                {
-                    Title = "Skin",
-                    IconKey = "PencilIcon",
-                    PartialClassName = "View/SkinDemo.xaml"
-                },
-                new PageInfo(this)
-                {
-                    Title = "Localization",
-                    IconKey = "PencilIcon",
-                    PartialClassName = "View/LocalizationDemo.xaml"
-                },
                 new PageInfo(this)
                 {
                     Title = "DPI scaling",
@@ -79,29 +99,6 @@ namespace PerspectiveDemo.Wpf
                 }
             };
             ResourceAssembly.Register();
-            SkinManager.Current.LoadCurrentSkin();
-        }
-
-        /// <summary>
-        /// Gets the children PageInfos collection.
-        /// </summary>
-        public override List<PageInfo> PageInfos
-        {
-            get
-            {
-                return _pageInfos;
-            }
-        }
-
-        /// <summary>
-        /// Gets the assembly name.
-        /// </summary>
-        public override string AssemblyName
-        {
-            get
-            {
-                return _assemblyName;
-            }
         }
     }
 }

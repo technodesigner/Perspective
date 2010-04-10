@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using PerspectiveDemo.Wpf.Model;
+using Perspective.Config.Model;
 using Perspective.Core.Wpf.Data;
 using System.ComponentModel;
 using System.Windows;
 using Perspective.Core;
 
-namespace PerspectiveDemo.Wpf.ViewModel
+namespace Perspective.Config.ViewModel
 {
     public class SkinViewModel : INotifyPropertyChanged
     {

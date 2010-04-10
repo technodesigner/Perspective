@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace PerspectiveDemo.Wpf.Entities
+namespace Perspective.Config.Entities
 {
     public class LocaleInfo
     {

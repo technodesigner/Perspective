@@ -11,18 +11,18 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using PerspectiveDemo.Wpf.ViewModel;
+using Perspective.Config.ViewModel;
 
-namespace PerspectiveDemo.Wpf.View
+namespace Perspective.Config.View
 {
     /// <summary>
     /// Interaction logic for SkinDemo.xaml
     /// </summary>
-    public partial class SkinDemo : Page
+    public partial class SkinConfig : Page
     {
         private SkinViewModel _skinViewModel = new SkinViewModel();
 
-        public SkinDemo()
+        public SkinConfig()
         {
             InitializeComponent();
             this.DataContext = _skinViewModel;

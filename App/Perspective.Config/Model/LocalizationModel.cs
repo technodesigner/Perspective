@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using PerspectiveDemo.Wpf.Entities;
+using Perspective.Config.Entities;
 using Perspective.Wpf.ResourceStrings;
 using System.Collections.ObjectModel;
 
-namespace PerspectiveDemo.Wpf.Model
+namespace Perspective.Config.Model
 {
     public class LocalizationModel
     {
@@ -17,7 +17,7 @@ namespace PerspectiveDemo.Wpf.Model
         public LocalizationModel()
         {
             _resourceStringManager = new ResourceStringManager(
-                "PerspectiveDemo.Wpf",
+                Extension.AssemblyNameConst,
                 "Model.Strings.LocalizationModel");
             _localeInfos = new ObservableCollection<LocaleInfo>();
             Refresh();

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace PerspectiveDemo.Wpf.Model
+namespace Perspective.Config.Model
 {
     public class SkinModel
     {

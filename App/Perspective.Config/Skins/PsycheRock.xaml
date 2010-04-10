@@ -1,25 +1,25 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:pWpf="clr-namespace:Perspective.Wpf;assembly=Perspective.Wpf"                    
-    xmlns:local="clr-namespace:PerspectiveDemo.Wpf">
+    xmlns:pWpf="clr-namespace:Perspective.Wpf;assembly=Perspective.Wpf"
+    xmlns:local="clr-namespace:Perspective.Config">
 
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/PerspectiveDemo.Wpf;component/Resources.xaml" />
+        <ResourceDictionary Source="/Perspective.Config;component/Resources.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
     <!--Specific resources-->
 
     <SolidColorBrush
         x:Key="{ComponentResourceKey {x:Type local:ResourceKeys}, PageForegroundBrush}" 
-        Color="Blue" />
+        Color="Black" />
 
     <SolidColorBrush
         x:Key="{ComponentResourceKey {x:Type local:ResourceKeys}, PageBackgroundBrush}" 
-        Color="YellowGreen" />
+        Color="White" />
 
     <SolidColorBrush
         x:Key="{ComponentResourceKey {x:Type local:ResourceKeys}, ViewBackgroundBrush}" 
-        Color="White" />
+        Color="LightCyan" />
 
     <Style 
         BasedOn="{StaticResource {ComponentResourceKey {x:Type pWpf:ResourceKeys}, GroupBoxStyle}}" 
@@ -36,5 +36,4 @@
         BasedOn="{StaticResource ViewStyle}" 
         TargetType="{x:Type TreeView}" 
         />
-
 </ResourceDictionary>

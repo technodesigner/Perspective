@@ -20,11 +20,42 @@ namespace PerspectiveDemo.Wpf3D
     /// </summary>
     public class Extension : Perspective.Hosting.Extension
     {
-        private const string _assemblyName = "PerspectiveDemo.Wpf3D";
         private const string _title = "Démo 3D";
         private const string _iconKey = "PencilIcon";
 
+        private static string _assemblyName = "PerspectiveDemo.Wpf3D";
+
+        /// <summary>
+        /// Gets the assembly name.
+        /// </summary>
+        public static string AssemblyNameConst
+        {
+            get { return Extension._assemblyName; }
+        }
+
+        /// <summary>
+        /// Gets the assembly name.
+        /// </summary>
+        public override string AssemblyName
+        {
+            get
+            {
+                return _assemblyName;
+            }
+        }
+
         private List<PageInfo> _pageInfos;
+
+        /// <summary>
+        /// Gets the children PageInfos collection.
+        /// </summary>
+        public override List<PageInfo> PageInfos
+        {
+            get
+            {
+                return _pageInfos;
+            }
+        }
 
         /// <summary>
         /// Initializes a new instance of Extension.
@@ -217,28 +248,6 @@ namespace PerspectiveDemo.Wpf3D
                     PartialClassName = "View/CustomKnob3DDemo.xaml"
                 }
             };
-        }
-
-        /// <summary>
-        /// Gets the children PageInfos collection.
-        /// </summary>
-        public override List<PageInfo> PageInfos
-        {
-            get
-            {
-                return _pageInfos;
-            }
-        }
-
-        /// <summary>
-        /// Gets the assembly name.
-        /// </summary>
-        public override string AssemblyName
-        {
-            get
-            {
-                return _assemblyName;
-            }
         }
     }
 }

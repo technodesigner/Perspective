@@ -2,10 +2,10 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:pWpf="clr-namespace:Perspective.Wpf;assembly=Perspective.Wpf"                    
-    xmlns:local="clr-namespace:PerspectiveDemo.Wpf">
+    xmlns:local="clr-namespace:Perspective.Config">
 
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/PerspectiveDemo.Wpf;component/Resources.xaml" />
+        <ResourceDictionary Source="/Perspective.Config;component/Resources.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
     <!--Specific resources-->

@@ -5,7 +5,7 @@ using System.Text;
 using System.Reflection;
 using Perspective.Wpf.ResourceStrings;
 
-namespace PerspectiveDemo.Wpf
+namespace Perspective.Config
 {
     public static class ResourceAssembly
     {
@@ -17,6 +17,7 @@ namespace PerspectiveDemo.Wpf
             {
                 Assembly assembly = Assembly.GetExecutingAssembly();
                 CultureManager.Current.ResourceAssemblies.Add(
+                    //"Perspective.Config",
                     Extension.AssemblyNameConst,
                     assembly);
                 _registered = true;

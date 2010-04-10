@@ -11,18 +11,18 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using PerspectiveDemo.Wpf.ViewModel;
+using Perspective.Config.ViewModel;
 
-namespace PerspectiveDemo.Wpf.View
+namespace Perspective.Config.View
 {
     /// <summary>
     /// Interaction logic for LocalizationDemo.xaml
     /// </summary>
-    public partial class LocalizationDemo : Page
+    public partial class LocalizationConfig : Page
     {
         private LocalizationViewModel _localizationViewModel;
 
-        public LocalizationDemo()
+        public LocalizationConfig()
         {
             InitializeComponent();
 

@@ -60,10 +60,18 @@ A new .NET 4 project to manage MEF parts of the Perspective application project.
 The classes are used by the entension assemblies.
 Extension : Represents an extension for the Perspective.exe application.
 PageInfo : Represents the metadata associated with a WPF page of an extension assembly.
-UNDER CONSTRUCTION !
+
+Perspective.Config
+------------------
+An extension assembly to manage the skins and cultures for the Perspective application.
+View/SkinDemo : a new page to change the current skin
+SkinManager : now handles a CurrentSkin property
 
 PerspectiveDemo.Wpf
 -------------------
+An extension assembly which is a demo of WPF 2D Perspective library features.
 View/DpiScalingDemo : fixed a bug (a change to the diagonal size TextBox now persists between sessions, with a scope for the Perspective.Core assembly, when the bSaveScale button is clicked)
-View/SkinDemo : a new page to change the current skin
-SkinManager : now handles a CurrentSkin property
+
+PerspectiveDemo.Wpf3D
+---------------------
+An extension assembly which is a demo of WPF 3D Perspective library features.

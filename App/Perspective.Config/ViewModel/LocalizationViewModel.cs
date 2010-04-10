@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using Perspective.Core.Wpf.Data;
 using Perspective.Wpf.ResourceStrings;
-using PerspectiveDemo.Wpf.Model;
-using PerspectiveDemo.Wpf.Entities;
+using Perspective.Config.Model;
+using Perspective.Config.Entities;
 using System.ComponentModel;
 using System.Collections.ObjectModel;
 using System.Threading;
 
-namespace PerspectiveDemo.Wpf.ViewModel
+namespace Perspective.Config.ViewModel
 {
     public class LocalizationViewModel : INotifyPropertyChanged
     {
