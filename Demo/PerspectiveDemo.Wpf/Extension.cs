@@ -20,7 +20,7 @@ namespace PerspectiveDemo.Wpf
     /// </summary>
     public class Extension : Perspective.Hosting.Extension
     {
-        private const string _title = "Démo Perspective WPF";
+        private const string _title = "Perspective WPF";
         private const string _iconKey = "PencilIcon";
 
         private static string _assemblyName = "PerspectiveDemo.Wpf";

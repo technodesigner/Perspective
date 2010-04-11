@@ -20,7 +20,7 @@ namespace PerspectiveDemo.Wpf3D
     /// </summary>
     public class Extension : Perspective.Hosting.Extension
     {
-        private const string _title = "Démo 3D";
+        private const string _title = "Perspective 3D";
         private const string _iconKey = "PencilIcon";
 
         private static string _assemblyName = "PerspectiveDemo.Wpf3D";
