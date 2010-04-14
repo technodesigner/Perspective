@@ -12,6 +12,7 @@
             <GradientStop Color="{StaticResource Color1}" Offset="0"/>
             <GradientStop Color="{StaticResource Color2}" Offset="1"/>
         </RadialGradientBrush>
+        
         <Style TargetType="Button">
             <Setter Property="Width" Value="80" />
             <Setter Property="Height" Value="30" />
