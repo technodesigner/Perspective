@@ -22,6 +22,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PerspectiveDemo.Wpf3D-dn4.0
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Perspective.Config-dn4.0", "App\Perspective.Config\Perspective.Config-dn4.0.csproj", "{6DF4F863-0898-4513-A0CF-83806C63228F}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Library", "Library", "{35088BBA-D9A2-4420-98E4-F1523B479E1C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demo", "Demo", "{DBE0F7EA-C13E-4B44-9264-761FA8FB834E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "App", "App", "{62ADF4F4-8273-4693-BA65-336033C45829}"
+EndProject
 Global
 	GlobalSection(TeamFoundationVersionControl) = preSolution
 		SccNumberOfProjects = 9
@@ -29,27 +35,35 @@ Global
 		SccTeamFoundationServer = https://tfs03.codeplex.com/
 		SccLocalPath0 = .
 		SccProjectUniqueName1 = Library\\Perspective.Core\\Perspective.Core-dn4.0.csproj
+		SccProjectTopLevelParentUniqueName1 = Perspective-dn4.0.sln
 		SccProjectName1 = Library/Perspective.Core
 		SccLocalPath1 = Library\\Perspective.Core
 		SccProjectUniqueName2 = Library\\Perspective.Wpf\\Perspective.Wpf-dn4.0.csproj
+		SccProjectTopLevelParentUniqueName2 = Perspective-dn4.0.sln
 		SccProjectName2 = Library/Perspective.Wpf
 		SccLocalPath2 = Library\\Perspective.Wpf
 		SccProjectUniqueName3 = Library\\Perspective.Wpf3D\\Perspective.Wpf3D-dn4.0.csproj
+		SccProjectTopLevelParentUniqueName3 = Perspective-dn4.0.sln
 		SccProjectName3 = Library/Perspective.Wpf3D
 		SccLocalPath3 = Library\\Perspective.Wpf3D
 		SccProjectUniqueName4 = App\\Perspective\\Perspective-dn4.0.csproj
+		SccProjectTopLevelParentUniqueName4 = Perspective-dn4.0.sln
 		SccProjectName4 = App/Perspective
 		SccLocalPath4 = App\\Perspective
 		SccProjectUniqueName5 = Library\\Perspective.Hosting\\Perspective.Hosting-dn4.0.csproj
+		SccProjectTopLevelParentUniqueName5 = Perspective-dn4.0.sln
 		SccProjectName5 = Library/Perspective.Hosting
 		SccLocalPath5 = Library\\Perspective.Hosting
 		SccProjectUniqueName6 = Demo\\PerspectiveDemo.Wpf\\PerspectiveDemo.Wpf-dn4.0.csproj
+		SccProjectTopLevelParentUniqueName6 = Perspective-dn4.0.sln
 		SccProjectName6 = Demo/PerspectiveDemo.Wpf
 		SccLocalPath6 = Demo\\PerspectiveDemo.Wpf
 		SccProjectUniqueName7 = Demo\\PerspectiveDemo.Wpf3D\\PerspectiveDemo.Wpf3D-dn4.0.csproj
+		SccProjectTopLevelParentUniqueName7 = Perspective-dn4.0.sln
 		SccProjectName7 = Demo/PerspectiveDemo.Wpf3D
 		SccLocalPath7 = Demo\\PerspectiveDemo.Wpf3D
 		SccProjectUniqueName8 = App\\Perspective.Config\\Perspective.Config-dn4.0.csproj
+		SccProjectTopLevelParentUniqueName8 = Perspective-dn4.0.sln
 		SccProjectName8 = App/Perspective.Config
 		SccLocalPath8 = App\\Perspective.Config
 	EndGlobalSection
@@ -145,5 +159,15 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{19FC4939-5269-4B1E-93BF-569D3E14A9B0} = {35088BBA-D9A2-4420-98E4-F1523B479E1C}
+		{34860E9C-F566-4F14-BFB9-45F6B37503F9} = {35088BBA-D9A2-4420-98E4-F1523B479E1C}
+		{C7D8AFA7-84EC-40B0-8308-BAB376B31CDD} = {35088BBA-D9A2-4420-98E4-F1523B479E1C}
+		{F1121E62-AE79-4460-9419-E74F19C011F7} = {35088BBA-D9A2-4420-98E4-F1523B479E1C}
+		{6D237C99-F57D-4938-913D-7255BF9953FA} = {DBE0F7EA-C13E-4B44-9264-761FA8FB834E}
+		{B5CC56B5-F053-43D9-A95B-B9EF92FF78DB} = {DBE0F7EA-C13E-4B44-9264-761FA8FB834E}
+		{82B9A7F7-6D87-4770-B525-D3F0935BFFDC} = {62ADF4F4-8273-4693-BA65-336033C45829}
+		{6DF4F863-0898-4513-A0CF-83806C63228F} = {62ADF4F4-8273-4693-BA65-336033C45829}
 	EndGlobalSection
 EndGlobal
