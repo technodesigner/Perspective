@@ -236,6 +236,7 @@
             TargetType="ListBoxItem">
             <Setter Property="Width" Value="160"/>
             <Setter Property="Height" Value="120"/>
+            <Setter Property="Focusable" Value="False"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="ListBoxItem">
@@ -299,11 +300,13 @@
                 <ContentControl 
                     Name="detailContainer"
                     ContentTemplate="{StaticResource DetailTemplate}"
-                    Content="{Binding Path=Extensions}"/>
+                    Content="{Binding Path=Extensions}"
+                    Focusable="False"/>
                 <Frame 
                     Name="frame" 
                     Source="{Binding Path=CurrentPageInfo.Uri}"
                     Navigated="frame_Navigated"
+                    Visibility="Collapsed"
                     />
             </Grid>
         </DockPanel>

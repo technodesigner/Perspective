@@ -114,6 +114,7 @@ namespace Perspective.View
             if (!_frameVisible)
             {
                 _frameVisible = true;
+                frame.Visibility = System.Windows.Visibility.Visible;
                 _frameShowStoryboard.Begin();
             }
         }
@@ -123,6 +124,8 @@ namespace Perspective.View
             if (_frameVisible)
             {
                 _frameHideStoryboard.Begin();
+                // frame is collapsed so the current page can't get the focus
+                frame.Visibility = System.Windows.Visibility.Collapsed;
                 _frameVisible = false;
             }
         }

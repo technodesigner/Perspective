@@ -33,13 +33,166 @@
             <SolidColorBrush x:Key="{x:Static SystemColors.ControlBrushKey}" Color="LightBlue"/>
         </Style.Resources>
     </Style>
+    
+    <!--TODO : skin these resources-->
+
+    <Color x:Key="GrayColor1">#D3D3D3</Color>
+    <Color x:Key="Color1">#00000000</Color>
+    <Color x:Key="Color2">#FFFFFFFF</Color>
+    <Color x:Key="Color3">#60FFFFFF</Color>
+    <Color x:Key="BlueColor1">#2B9AD9</Color>
+    <Color x:Key="BlueColor2">#1F80B7</Color>
+    <Color x:Key="BlueColor3">#13577F</Color>
+    <Color x:Key="BlueColor4">#063260</Color>
+    <Color x:Key="GreenColor1">#65AF45</Color>
+    <Color x:Key="GreenColor2">#767D30</Color>
+    <Color x:Key="OrangeColor1">#E49020</Color>
+    <SolidColorBrush x:Key="GreenBrush1" Color="{StaticResource GreenColor1}"/>
+    <SolidColorBrush x:Key="GreenBrush2" Color="{StaticResource GreenColor2}"/>
+    <SolidColorBrush x:Key="BlueBrush1" Color="{StaticResource BlueColor1}"/>
+    <SolidColorBrush x:Key="BlueBrush2" Color="{StaticResource BlueColor2}"/>
+    <SolidColorBrush x:Key="BlueBrush4" Color="{StaticResource BlueColor4}"/>
+    <SolidColorBrush x:Key="OrangeBrush1" Color="{StaticResource OrangeColor1}"/>
 
     <SolidColorBrush
-        x:Key="BasicShapeStroke"
-        Color="Black" />
-    
+            x:Key="BasicShapeStroke"
+            Color="Black" />
     <SolidColorBrush
-        x:Key="BasicShapeFill" 
-        Color="#FFFFDE46" />
+            x:Key="BasicShapeFill" 
+            Color="#FFFFDE46" />
+
+    <Style x:Key="BasicShapeStyle" TargetType="Shape">
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="Stroke" Value="{StaticResource BasicShapeStroke}" />
+        <Setter Property="StrokeThickness" Value="2.0" />
+        <Setter Property="Fill" Value="{StaticResource BasicShapeFill}" />
+    </Style>
+
+    <Style x:Key="PanelStyle" TargetType="FrameworkElement">
+        <Setter Property="Width" Value="400" />
+        <Setter Property="Height" Value="300" />
+    </Style>
+
+    <Style x:Key="BorderStyle" TargetType="Border">
+        <Setter Property="BorderBrush" Value="Gray" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Margin" Value="4" />
+    </Style>
+
+    <Style x:Key="PaddedBorderStyle" TargetType="Border">
+        <Setter Property="BorderBrush" Value="Black" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Padding" Value="20" />
+        <Setter Property="CornerRadius" Value="5" />
+    </Style>
+
+    <Style x:Key="SurroundedPanelBorderStyle" TargetType="{x:Type Border}">
+        <Setter Property="BorderBrush" Value="Gray" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Margin" Value="-1" />
+    </Style>
+
+    <LinearGradientBrush x:Key="RefractionBrush" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource Color1}" Offset="0.6"/>
+        <GradientStop Color="{StaticResource Color2}" Offset="0.9"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="ReflectionBrush" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="{StaticResource Color2}" Offset="0"/>
+        <GradientStop Color="{StaticResource Color2}" Offset="0.2"/>
+        <GradientStop Color="{StaticResource Color3}" Offset="1"/>
+    </LinearGradientBrush>
+    <Style x:Key="RectangleStyle" TargetType="Rectangle">
+        <Setter Property="RadiusX" Value="8" />
+        <Setter Property="RadiusY" Value="8" />
+    </Style>
+    <Style x:Key="GlassButtonStyle" TargetType="Button">
+        <Setter Property="Margin" Value="2" />
+        <Setter Property="Padding" Value="10" />
+        <Setter Property="Foreground" Value="White" />
+        <Setter Property="Background" Value="{StaticResource BlueBrush1}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Grid>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup Name="CommonStates">
+                                <VisualStateGroup.Transitions>
+                                    <VisualTransition GeneratedDuration="0:0:0.2" To="MouseOver"/>
+                                    <VisualTransition GeneratedDuration="0:0:0.2" To="Pressed"/>
+                                </VisualStateGroup.Transitions>
+                                <VisualState Name="Normal"/>
+                                <VisualState Name="MouseOver">
+                                    <Storyboard>
+                                        <ColorAnimation 
+                                                Storyboard.TargetName="backgroundRectangle" 
+                                                Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" 
+                                                Duration="0"
+                                                To="{StaticResource BlueColor2}"/>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState Name="Pressed">
+                                    <Storyboard>
+                                        <ColorAnimation 
+                                                Storyboard.TargetName="backgroundRectangle" 
+                                                Storyboard.TargetProperty="(Shape.Fill).(SolidColorBrush.Color)" 
+                                                Duration="0"
+                                                To="{StaticResource BlueColor3}"/>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                            <VisualStateGroup Name="FocusStates">
+                                <VisualState Name="Focused">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames 
+                                                Storyboard.TargetName="focusRectangle" 
+                                                Storyboard.TargetProperty="Visibility" 
+                                                Duration="0">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Visible</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState Name="Unfocused"/>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+
+                        <Rectangle 
+                                Name="backgroundRectangle"
+                                Style="{StaticResource RectangleStyle}"
+                                Fill="{TemplateBinding Background}"/>
+                        <Rectangle 
+                                Style="{StaticResource RectangleStyle}"
+                                Stroke="{TemplateBinding BorderBrush}"
+                                StrokeThickness="{TemplateBinding BorderThickness}"
+                                Fill="White"
+                                OpacityMask="{StaticResource RefractionBrush}"/>
+                        <Rectangle 
+                                Fill="White"
+                                OpacityMask="{StaticResource ReflectionBrush}"
+                                Height="8"
+                                RadiusX="5"
+                                RadiusY="5"
+                                Margin="2"
+                                VerticalAlignment="Top"/>
+                        <ContentPresenter
+                                Content="{TemplateBinding Content}"
+                                ContentTemplate="{TemplateBinding ContentTemplate}"
+                                VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                Margin="{TemplateBinding Padding}"/>
+                        <Rectangle 
+                                Name="focusRectangle"
+                                Style="{StaticResource RectangleStyle}"
+                                Visibility="Collapsed"
+                                Stroke="{StaticResource BlueBrush4}"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 
 </ResourceDictionary>
