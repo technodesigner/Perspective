@@ -29,7 +29,7 @@ namespace Perspective.Hosting
         }
 
         /// <summary>
-        /// Property to override to specify the assembly name of the inherited class (i.e. "Perspective.Wpf3D")
+        /// Property to override to specify the assembly name of the inherited class (i.e. "PerspectiveDemo.Wpf3D")
         /// </summary>
         /// <returns></returns>
         public abstract string AssemblyName { get; }

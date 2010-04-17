@@ -26,6 +26,7 @@ namespace Perspective.Model
     {
         [ImportMany(AllowRecomposition = true)]
         public IEnumerable<Extension> Extensions { get; set; }
+            // public Lazy
 
         /// <summary>
         /// Initializes a new instance of MainModel.
