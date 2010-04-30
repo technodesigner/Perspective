@@ -81,9 +81,10 @@ namespace Perspective.Wpf3D.Primitives
         static GeometryElement3D()
         {
             SolidColorBrush solidColorBrush = new SolidColorBrush();
-            solidColorBrush.Color = Colors.Goldenrod;
+            // solidColorBrush.Color = Colors.Goldenrod;
             // solidColorBrush.Color = Colors.LightGray;
-            solidColorBrush.Opacity = 1.0;
+            // solidColorBrush.Opacity = 1.0;
+            solidColorBrush.Color = Color.FromArgb(0xFF, 0xFF, 0xDE, 0x46);
         
             Material defaultMaterial = new DiffuseMaterial(solidColorBrush);
 

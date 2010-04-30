@@ -3,7 +3,7 @@ What's new in Perspective library ?
 This file describes the main new functionalities since the last offical release (1.0).
 
 Now Perspective 2.0 is under construction :
-- .NET 4.0 support (but not fully compatible with previous .NET versions),
+- .NET 4.0 support (but Perspective 2.0 is not fully compatible with previous .NET versions),
 - new functionalities coming soon.
 
 Note : the localization features doesn't work with the RC version of .NET 4
@@ -24,7 +24,7 @@ Helper3D : static methods DegreeToRadian and RadianToDegree are now deprecated.
 
 Perspective.Core.Wpf.Data
 -------------------------
-SignalCommand : A Command implementation for the MVVM pattern using events.
+SignalCommand : A Command implementation for the MVVM pattern using events (inspired by Josh Smith work about RelayCommand and MVVM).
 
 Perspective.Wpf.Panels
 ------------------------
@@ -40,6 +40,11 @@ Perspective.Wpf.Shapes
 RegularPolygon : draws a regular polygon.
 Star : draws a n-branch star.
 Arrow : draws an arrow.
+
+Perspective.Wpf.Controls
+------------------------
+Workshop3D : new property ShowCommandPanel
+Checkerboard : a new class to display a checkerboard
 
 Perspective.Wpf3D
 -----------------

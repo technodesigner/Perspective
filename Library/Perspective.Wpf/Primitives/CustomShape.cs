@@ -27,6 +27,9 @@ namespace Perspective.Wpf.Primitives
         private PathGeometry _geometry = new PathGeometry();
         private Drawer _drawer;
 
+        /// <summary>
+        /// Initializes a new instance of CustomShape.
+        /// </summary>
         public CustomShape()
         {
             _drawer = CreateDrawer();

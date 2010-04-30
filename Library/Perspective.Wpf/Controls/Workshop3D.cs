@@ -276,10 +276,48 @@ namespace Perspective.Wpf.Controls
             camera.FieldOfView = _initialCameraFieldOfView;
         }
 
+        /// <summary>
+        /// Indicates if the command panel is visible.
+        /// The default value is true.
+        /// </summary>
+        public bool ShowCommandPanel
+        {
+            get { return (bool)GetValue(ShowCommandPanelProperty); }
+            set { SetValue(ShowCommandPanelProperty, value); }
+        }
+
+        /// <summary>
+        /// Identifies the ShowCommandPanel dependency property.
+        /// </summary>
+        public static readonly DependencyProperty ShowCommandPanelProperty =
+            DependencyProperty.Register(
+                "ShowCommandPanel", 
+                typeof(bool), 
+                typeof(Workshop3D), 
+                new FrameworkPropertyMetadata(true, ShowCommandPanelPropertyChanged));
+        
+        /// <summary>
+        /// Callback called when the ShowCommandPanel property's value has changed.
+        /// </summary>
+        /// <param name="d">Sender object</param>
+        /// <param name="e">Callback arguments</param>
+        private static void ShowCommandPanelPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            bool b = (bool)e.NewValue;
+            Workshop3D w = (Workshop3D)d;
+            if (b)
+            {
+                w._commandPanel.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                w._commandPanel.Visibility = Visibility.Collapsed;
+            }
+        }
 
         /// <summary>
         /// Indicates if the default lights should be used.
-        /// The defaukt value is true.
+        /// The default value is true.
         /// </summary>
         public bool DefaultLighting
         {

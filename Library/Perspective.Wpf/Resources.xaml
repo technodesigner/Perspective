@@ -510,13 +510,19 @@
             Value="{DynamicResource {ComponentResourceKey {x:Type p:ResourceKeys}, PanelForegroundBrush}}" />
     </Style>
 
+    <Style x:Key="{ComponentResourceKey {x:Type p:ResourceKeys}, CheckBoxStyle}"
+           TargetType="{x:Type CheckBox}">
+        <Setter 
+            Property="Foreground" 
+            Value="{DynamicResource {ComponentResourceKey {x:Type p:ResourceKeys}, PanelForegroundBrush}}" />
+    </Style>
+
     <Style x:Key="{ComponentResourceKey {x:Type p:ResourceKeys}, PanelStyle}">
         <Setter 
             Property="Panel.Background" 
             Value="{DynamicResource {ComponentResourceKey {x:Type p:ResourceKeys}, PanelBackgroundBrush}}" />
     </Style>
 
-  
     <!--Main styles-->
 
     <Style 

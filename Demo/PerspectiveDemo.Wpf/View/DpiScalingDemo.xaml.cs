@@ -13,6 +13,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Perspective.Wpf;
 using Perspective.Core;
+using System.Globalization;
 
 namespace PerspectiveDemo.Wpf.View
 {
@@ -51,7 +52,7 @@ namespace PerspectiveDemo.Wpf.View
         private void diagonalScreenSizeBinding_ConvertingBack(object sender, Perspective.Core.Wpf.Converters.ConverterEventArgs e)
         {
             string diagonal = (string)e.Value;
-            e.ConvertedValue = Convert.ToDouble(diagonal);
+            e.ConvertedValue = Convert.ToDouble(diagonal, CultureInfo.InvariantCulture);
         }
     }
 }

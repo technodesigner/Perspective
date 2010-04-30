@@ -90,6 +90,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\Checkerboard.cs" />
     <Compile Include="Drawers\ArrowDrawer.cs" />
     <Compile Include="Panels\BeeGrid.cs" />
     <Compile Include="Panels\BeePanel.cs" />

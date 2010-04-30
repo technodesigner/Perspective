@@ -33,7 +33,14 @@
             <SolidColorBrush x:Key="{x:Static SystemColors.ControlBrushKey}" Color="LightBlue"/>
         </Style.Resources>
     </Style>
-    
+
+    <!--This style should not be applied systematically-->
+    <Style 
+        BasedOn="{StaticResource {ComponentResourceKey {x:Type pWpf:ResourceKeys}, CheckBoxStyle}}" 
+        TargetType="{x:Type CheckBox}" 
+        x:Key="ColoredPanelCheckBoxStyle"
+        />
+
     <!--TODO : skin these resources-->
 
     <Color x:Key="GrayColor1">#D3D3D3</Color>
@@ -55,11 +62,20 @@
     <SolidColorBrush x:Key="OrangeBrush1" Color="{StaticResource OrangeColor1}"/>
 
     <SolidColorBrush
-            x:Key="BasicShapeStroke"
-            Color="Black" />
+        x:Key="PanelBackgroundBrush" 
+        Color="PaleGoldenrod" />
     <SolidColorBrush
-            x:Key="BasicShapeFill" 
-            Color="#FFFFDE46" />
+        x:Key="BasicShapeStroke"
+        Color="Black" />
+    <SolidColorBrush
+        x:Key="BasicShapeFill" 
+        Color="#FFFFDE46" />
+
+    <Style x:Key="VisualContainerStyle" TargetType="Panel">
+        <Setter 
+            Property="Background" 
+            Value="{DynamicResource PanelBackgroundBrush}" />
+    </Style>
 
     <Style x:Key="BasicShapeStyle" TargetType="Shape">
         <Setter Property="HorizontalAlignment" Value="Center" />
@@ -69,12 +85,19 @@
         <Setter Property="Fill" Value="{StaticResource BasicShapeFill}" />
     </Style>
 
+    <Style x:Key="GrayedShapeStyle" TargetType="Shape" BasedOn="{StaticResource BasicShapeStyle}">
+        <Setter Property="Stroke" Value="Gray" />
+        <Setter Property="Fill" Value="White" />
+    </Style>
+
     <Style x:Key="PanelStyle" TargetType="FrameworkElement">
         <Setter Property="Width" Value="400" />
         <Setter Property="Height" Value="300" />
     </Style>
 
+    <!--This style should not be applied systematically (i.e. because the GroupBox template uses Border-->
     <Style x:Key="BorderStyle" TargetType="Border">
+    <!--<Style TargetType="Border">-->
         <Setter Property="BorderBrush" Value="Gray" />
         <Setter Property="BorderThickness" Value="1" />
         <Setter Property="Margin" Value="4" />
@@ -195,4 +218,10 @@
         </Setter>
     </Style>
 
+    <!--For screenshots-->
+    <!--<Style TargetType="TabItem">
+        <Setter 
+            Property="Background" 
+            Value="White" />
+    </Style>-->
 </ResourceDictionary>

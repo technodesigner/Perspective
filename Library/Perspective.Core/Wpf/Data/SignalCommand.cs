@@ -15,7 +15,8 @@ using System.Windows.Input;
 namespace Perspective.Core.Wpf.Data
 {
     /// <summary>
-    /// A Command implementation for the MVVM pattern using events.
+    /// A Command implementation for the MVVM pattern using events
+    /// (inspired by Josh Smith work about RelayCommand and MVVM).
     /// </summary>
     public class SignalCommand : ICommand
     {
@@ -82,11 +83,19 @@ namespace Perspective.Core.Wpf.Data
 
         #region ICommand Members
 
+        /// <summary>
+        /// Defines the method that determines whether the command can execute in its current state.
+        /// </summary>
+        /// <param name="parameter">Data used by the command. If the command does not require data to be passed, this object can be set to null.</param>
+        /// <returns>true if this command can be executed; otherwise, false.</returns>
         public bool CanExecute(object parameter)
         {
             return OnCanExecuteChecking(parameter);
         }
 
+        /// <summary>
+        /// Occurs when changes occur that affect whether or not the command should execute.
+        /// </summary>
         public event EventHandler CanExecuteChanged
         {
             add
@@ -99,6 +108,10 @@ namespace Perspective.Core.Wpf.Data
             }
         }
 
+        /// <summary>
+        /// Defines the method to be called when the command is invoked.
+        /// </summary>
+        /// <param name="parameter">Data used by the command. If the command does not require data to be passed, this object can be set to null.</param>
         public void Execute(object parameter)
         {
             OnExecuting(parameter);
