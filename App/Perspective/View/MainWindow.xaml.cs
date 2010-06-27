@@ -34,13 +34,50 @@ namespace Perspective.View
         private IEasingFunction _easeIn = new ExponentialEase();
         private IEasingFunction _easeOut = new ExponentialEase();
 
+        private MainViewModel _mainViewModel = new MainViewModel();
+
         public MainWindow()
         {
             InitializeComponent();
-            this.DataContext = new MainViewModel();
+            this.DataContext = _mainViewModel;
 
+            const string category = "Perspective";
             _jumpList = new JumpList();
             JumpList.SetJumpList(Application.Current, _jumpList);
+
+            // _jumpList.JumpItemsRejected += new EventHandler<JumpItemsRejectedEventArgs>(_jumpList_JumpItemsRejected);
+
+            _jumpList.ShowFrequentCategory = true;
+            _jumpList.ShowRecentCategory = true;
+            //JumpPath jumpath = new JumpPath();
+            //jumpath.Path = @"test.per";
+            //_jumpList.JumpItems.Add(jumpath);
+
+            JumpTask jumpTask = new JumpTask();
+            jumpTask.Title = "Perspective";
+            jumpTask.CustomCategory = category;
+            jumpTask.ApplicationPath = "http://perspective.codeplex.com";
+            jumpTask.IconResourcePath = @"C:\Program Files\Internet Explorer\iexplore.exe";
+            jumpTask.IconResourceIndex = 0;
+            _jumpList.JumpItems.Add(jumpTask);
+
+            jumpTask = new JumpTask();
+            jumpTask.Title = "Perspective FX";
+            jumpTask.CustomCategory = category;
+            jumpTask.ApplicationPath = "http://perspectivefx.codeplex.com";
+            jumpTask.IconResourcePath = @"C:\Program Files\Internet Explorer\iexplore.exe";
+            jumpTask.IconResourceIndex = 0;
+            _jumpList.JumpItems.Add(jumpTask);
+
+            jumpTask = new JumpTask();
+            jumpTask.Title = "odewit.net";
+            jumpTask.CustomCategory = category;
+            jumpTask.ApplicationPath = "http://www.odewit.net";
+            jumpTask.IconResourcePath = @"C:\Program Files\Internet Explorer\iexplore.exe";
+            jumpTask.IconResourceIndex = 0;
+
+            _jumpList.JumpItems.Add(jumpTask);
+            _jumpList.Apply();
 
             //(_easeIn as PowerEase).Power = 5;
             //(_easeOut as PowerEase).Power = 5;
@@ -49,9 +86,17 @@ namespace Perspective.View
             (_easeOut as ExponentialEase).EasingMode = EasingMode.EaseOut;
         }
 
+        //void _jumpList_JumpItemsRejected(object sender, JumpItemsRejectedEventArgs e)
+        //{
+        //    MessageBox.Show(e.RejectionReasons[0].ToString());
+        //}
+
         private void frame_Navigated(object sender, System.Windows.Navigation.NavigationEventArgs e)
         {
             ShowFrameWithAnimation();
+            this.TaskbarItemInfo.Overlay = this.Resources["NotificationImage"] as ImageSource;
+
+            // TaskbarItemInfo.
 
             //const string category = "Perspective";
             //if (frame.CanGoBack)

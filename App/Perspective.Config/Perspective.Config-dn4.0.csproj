@@ -70,9 +70,16 @@
     <Compile Include="ResourceKeys.cs" />
     <Compile Include="SkinManager.cs" />
     <Compile Include="ViewModel\LocalizationViewModel.cs" />
+    <Compile Include="ViewModel\ScreenSizeToScaleFactorConverter.cs" />
     <Compile Include="ViewModel\SkinViewModel.cs" />
+    <Compile Include="View\DpiScaling.xaml.cs">
+      <DependentUpon>DpiScaling.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\LocalizationConfig.xaml.cs">
       <DependentUpon>LocalizationConfig.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\RenderingConfig.xaml.cs">
+      <DependentUpon>RenderingConfig.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\SkinConfig.xaml.cs">
       <DependentUpon>SkinConfig.xaml</DependentUpon>
@@ -83,6 +90,8 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\Strings\DpiScaling.fr.resx" />
+    <EmbeddedResource Include="View\Strings\DpiScaling.resx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -116,7 +125,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Resources.xaml">
+    <Page Include="SkinBase.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -132,9 +141,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="View\DpiScaling.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\LocalizationConfig.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\RenderingConfig.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\SkinConfig.xaml">
       <Generator>MSBuild:Compile</Generator>

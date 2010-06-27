@@ -5,7 +5,7 @@
     xmlns:local="clr-namespace:Perspective.Config">
 
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/Perspective.Config;component/Resources.xaml" />
+        <ResourceDictionary Source="/Perspective.Config;component/SkinBase.xaml" />
     </ResourceDictionary.MergedDictionaries>
 
     <!--Specific resources-->

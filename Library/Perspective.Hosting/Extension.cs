@@ -28,6 +28,8 @@ namespace Perspective.Hosting
             LoadIconsDictionary();
         }
 
+        public int SortOrder { get; set; }
+
         /// <summary>
         /// Property to override to specify the assembly name of the inherited class (i.e. "PerspectiveDemo.Wpf3D")
         /// </summary>

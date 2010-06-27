@@ -15,14 +15,14 @@ using Perspective.Wpf;
 using Perspective.Core;
 using System.Globalization;
 
-namespace PerspectiveDemo.Wpf.View
+namespace Perspective.Config.View
 {
     /// <summary>
-    /// Interaction logic for DpiScalingDemo.xaml
+    /// Logique d'interaction pour DpiScaling.xaml
     /// </summary>
-    public partial class DpiScalingDemo : Page
+    public partial class DpiScaling : Page
     {
-        public DpiScalingDemo()
+        public DpiScaling()
         {
             InitializeComponent();
         }

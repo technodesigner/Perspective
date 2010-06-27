@@ -54,7 +54,9 @@ namespace Perspective.Wpf.Controls
         //private bool _cameraZooming;
         private Point3D _initialCameraPosition = new Point3D(10.0, 3.0, 10.0);
         private Vector3D _initialCameraLookDirection = new Vector3D(-10.0, -1.0, -10.0);
+        //private Vector3D _initialCameraLookDirection = new Vector3D(-10.0, -2.0, -10.0);
         private readonly double _initialCameraFieldOfView = 50.0;
+        //private readonly double _initialCameraFieldOfView = 15.0;
         private readonly double _opacity = 0.5;
         private readonly ResourceStringDecorator _rsd;
         private readonly ModelVisual3D _defaultLightingModel = new ModelVisual3D();
@@ -957,5 +959,35 @@ namespace Perspective.Wpf.Controls
             rtb.Render(_viewport);
             return rtb;
         }
+
+
+        //public PerspectiveCamera Camera
+        //{
+        //    get { return _viewport.Camera as PerspectiveCamera; }
+        //}
+
+
+        //public double FieldOfView
+        //{
+        //    get { return (double)GetValue(FieldOfViewProperty); }
+        //    set { SetValue(FieldOfViewProperty, value); }
+        //}
+
+        //public static readonly DependencyProperty FieldOfViewProperty =
+        //    DependencyProperty.Register(
+        //        "FieldOfView", 
+        //        typeof(double), 
+        //        typeof(Workshop3D), 
+        //        new PropertyMetadata(
+        //            50.0,
+        //            FieldOfViewPropertyChanged));
+
+        //private static void FieldOfViewPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        //{
+        //    Workshop3D workshop = (Workshop3D)d;
+        //    (workshop._viewport.Camera as PerspectiveCamera).FieldOfView = e.NewValue as double;
+        //}
+
+        
     }
 }

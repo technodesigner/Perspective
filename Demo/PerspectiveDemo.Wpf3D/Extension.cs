@@ -21,7 +21,7 @@ namespace PerspectiveDemo.Wpf3D
     public class Extension : Perspective.Hosting.Extension
     {
         private const string _title = "Perspective 3D";
-        private const string _iconKey = "PencilIcon";
+        private const string _iconKey = "Perspective3DIcon";
 
         private static string _assemblyName = "PerspectiveDemo.Wpf3D";
 
@@ -65,186 +65,187 @@ namespace PerspectiveDemo.Wpf3D
         {
             Title = _title;
             IconKey = _iconKey;
+            SortOrder = 110;
             _pageInfos = new List<PageInfo>
             {
                 new PageInfo(this)
                 {
                     Title = "XyzAxis3D",
-                    IconKey = "PencilGreenIcon",
+                    IconKey = _iconKey,
                     PartialClassName = "View/XyzAxis3DDemo.xaml"
                 },
                 new PageInfo(this)
                 {
                     Title = "Box3D",
-                    IconKey = "PencilPurpleIcon",
+                    IconKey = _iconKey,
                     PartialClassName = "View/Box3DDemo.xaml"
                 },
                 new PageInfo(this)
                 {
                     Title = "Box3D + image",
-                    IconKey = "PencilPurpleIcon",
+                    IconKey = _iconKey,
                     PartialClassName = "View/Box3DImageDemo.xaml"
                 },
                 new PageInfo(this)
                 {
                     Title = "Open Box3D",
-                    IconKey = "PencilPurpleIcon",
+                    IconKey = _iconKey,
                     PartialClassName = "View/Box3DOpenDemo.xaml"
                 },            
                 new PageInfo(this)
                 {
                     Title = "Box3D + Transform3D",
-                    IconKey = "PencilPurpleIcon",
+                    IconKey = _iconKey,
                     PartialClassName = "View/Box3DTransformDemo.xaml"
                 },
                 new PageInfo(this)
                 {
                     Title = "Interactivity",
-                    IconKey = "PencilPurpleIcon",
+                    IconKey = _iconKey,
                     PartialClassName = "View/InteractivityDemo.xaml"
                 },
                 new PageInfo(this)
                 {
                     Title = "Square3D",
-                    IconKey = "PencilPurpleIcon",
+                    IconKey = _iconKey,
                     PartialClassName = "View/Square3DDemo.xaml"
                 },
                 new PageInfo(this)
                 {
                     Title = "Square3D + animation",
-                    IconKey = "PencilPurpleIcon",
+                    IconKey = _iconKey,
                     PartialClassName = "View/Square3DAnimationDemo.xaml"
                 },
                 new PageInfo(this)
                 {
                     Title = "Square3D + image",
-                    IconKey = "PencilPurpleIcon",
+                    IconKey = _iconKey,
                     PartialClassName = "View/Square3DImageDemo.xaml"
                 },                
                 new PageInfo(this)
                 {
                     Title = "Polygon3D",
-                    IconKey = "PencilPurpleIcon",
+                    IconKey = _iconKey,
                     PartialClassName = "View/Polygon3DDemo.xaml"
                 },
                 new PageInfo(this)
                 {
                     Title = "Polygon3D + image",
-                    IconKey = "PencilPurpleIcon",
+                    IconKey = _iconKey,
                     PartialClassName = "View/Polygon3DImageDemo.xaml"
                 },
                 new PageInfo(this)
                 {
                     Title = "Bar3D",
-                    IconKey = "PencilGreenIcon",
+                    IconKey = _iconKey,
                     PartialClassName = "View/Bar3DDemo.xaml"
                 },
                 new PageInfo(this)
                 {
                     Title = "Cylinder",
-                    IconKey = "PencilGreenIcon",
+                    IconKey = _iconKey,
                     PartialClassName = "View/CylinderDemo.xaml"
                 },
                 new PageInfo(this)
                 {
                     Title = "Bar3D + image",
-                    IconKey = "PencilGreenIcon",
+                    IconKey = _iconKey,
                     PartialClassName = "View/Bar3DImageDemo.xaml"
                 },
                 new PageInfo(this)
                 {
                     Title = "Conical3D",
-                    IconKey = "PencilPurpleIcon",
+                    IconKey = _iconKey,
                     PartialClassName = "View/Conical3DDemo.xaml"
                 },
                 new PageInfo(this)
                 {
                     Title = "Conical3D + image",
-                    IconKey = "PencilPurpleIcon",
+                    IconKey = _iconKey,
                     PartialClassName = "View/Conical3DImageDemo.xaml"
                 },
                 new PageInfo(this)
                 {
                     Title = "Ring3D",
-                    IconKey = "PencilPurpleIcon",
+                    IconKey = _iconKey,
                     PartialClassName = "View/Ring3DDemo.xaml"
                 },
                 new PageInfo(this)
                 {
                     Title = "Spherical3D",
-                    IconKey = "PencilPurpleIcon",
+                    IconKey = _iconKey,
                     PartialClassName = "View/Spherical3DDemo.xaml"
                 },
                 new PageInfo(this)
                 {
                     Title = "Spherical3D + image",
-                    IconKey = "PencilPurpleIcon",
+                    IconKey = _iconKey,
                     PartialClassName = "View/Spherical3DImageDemo.xaml"
                 },
                 new PageInfo(this)
                 {
                     Title = "Spherical3D + Transform3D",
-                    IconKey = "PencilPurpleIcon",
+                    IconKey = _iconKey,
                     PartialClassName = "View/Spherical3DTransformDemo.xaml"
                 },
                 new PageInfo(this)
                 {
                     Title = "Bubble chart",
-                    IconKey = "PencilPurpleIcon",
+                    IconKey = _iconKey,
                     PartialClassName = "View/BubbleChartDemo.xaml"
                 },
                 new PageInfo(this)
                 {
                     Title = "Isocahedron3D",
-                    IconKey = "PencilPurpleIcon",
+                    IconKey = _iconKey,
                     PartialClassName = "View/Isocahedron3DDemo.xaml"
                 },
                 new PageInfo(this)
                 {
                     Title = "TruncatedIsocahedron3D",
-                    IconKey = "PencilPurpleIcon",
+                    IconKey = _iconKey,
                     PartialClassName = "View/TruncatedIsocahedron3DDemo.xaml"
                 },
                 new PageInfo(this)
                 {
                     Title = "Football3D",
-                    IconKey = "PencilPurpleIcon",
+                    IconKey = _iconKey,
                     PartialClassName = "View/Football3DDemo.xaml"
                 },
                 new PageInfo(this)
                 {
                     Title = "PieSlice",
-                    IconKey = "PencilPurpleIcon",
+                    IconKey = _iconKey,
                     PartialClassName = "View/PieSliceDemo.xaml"
                 },
                 new PageInfo(this)
                 {
                     Title = "Gyroscope3D.xaml",
-                    IconKey = "PencilPurpleIcon",
+                    IconKey = _iconKey,
                     PartialClassName = "View/Gyroscope3DDemo.xaml"
                 },
                 new PageInfo(this)
                 {
                     Title = "Arrow3D",
-                    IconKey = "PencilGreenIcon",
+                    IconKey = _iconKey,
                     PartialClassName = "View/Arrow3DDemo.xaml"
                 },
                 new PageInfo(this)
                 {
                     Title = "Range3D controls",
-                    IconKey = "PencilPurpleIcon",
+                    IconKey = _iconKey,
                     PartialClassName = "View/ButtonFaderKnob3DDemo.xaml"
                 },
                 new PageInfo(this)
                 {
                     Title = "Mixer device",
-                    IconKey = "PencilPurpleIcon",
+                    IconKey = _iconKey,
                     PartialClassName = "View/MixerDemo.xaml"
                 },
                 new PageInfo(this)
                 {
                     Title = "Custom Knob3D",
-                    IconKey = "PencilPurpleIcon",
+                    IconKey = _iconKey,
                     PartialClassName = "View/CustomKnob3DDemo.xaml"
                 }
             };

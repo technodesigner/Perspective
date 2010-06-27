@@ -21,7 +21,7 @@ namespace PerspectiveDemo.Wpf
     public class Extension : Perspective.Hosting.Extension
     {
         private const string _title = "Perspective WPF";
-        private const string _iconKey = "PencilIcon";
+        private const string _iconKey = "Perspective2DIcon";
 
         private static string _assemblyName = "PerspectiveDemo.Wpf";
 
@@ -65,36 +65,37 @@ namespace PerspectiveDemo.Wpf
         {
             Title = _title;
             IconKey = _iconKey;
+            SortOrder = 100;
             _pageInfos = new List<PageInfo>
             {
                 new PageInfo(this)
                 {
-                    Title = "DPI scaling",
-                    IconKey = "PencilIcon",
-                    PartialClassName = "View/DpiScalingDemo.xaml"
-                },
-                new PageInfo(this)
-                {
                     Title = "Shapes",
-                    IconKey = "PencilBlueIcon",
+                    IconKey = _iconKey,
                     PartialClassName = "View/ShapeDemo.xaml"
                 },
                 new PageInfo(this)
                 {
+                    Title = "Matrix",
+                    IconKey = _iconKey,
+                    PartialClassName = "View/MatrixDemo.xaml"
+                },
+                new PageInfo(this)
+                {
                     Title = "Range controls",
-                    IconKey = "PencilBlueIcon",
+                    IconKey = _iconKey,
                     PartialClassName = "View/RangeControlDemo.xaml"
                 },
                 new PageInfo(this)
                 {
                     Title = "BeePanel / BeeGrid",
-                    IconKey = "PencilBlueIcon",
+                    IconKey = _iconKey,
                     PartialClassName = "View/BeePanelDemo.xaml"
                 },
                 new PageInfo(this)
                 {
                     Title = "MayaEase animation",
-                    IconKey = "PencilBlueIcon",
+                    IconKey = _iconKey,
                     PartialClassName = "View/MayaEaseDemo.xaml"
                 }
             };

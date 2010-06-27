@@ -24,9 +24,13 @@ namespace Perspective.Model
     /// </summary>
     public class MainModel
     {
+        //[ImportMany(AllowRecomposition = true)]
+        //public IEnumerable<Extension> Extensions { get; set; }
+
         [ImportMany(AllowRecomposition = true)]
-        public IEnumerable<Extension> Extensions { get; set; }
-            // public Lazy
+        private IEnumerable<Extension> _mefExtensions;
+
+        public List<Extension> Extensions { get; private set; }
 
         /// <summary>
         /// Initializes a new instance of MainModel.
@@ -34,6 +38,13 @@ namespace Perspective.Model
         public MainModel()
         {
             Compose();
+
+            Extensions = new List<Extension>();
+            foreach (var extension in _mefExtensions)
+            {
+                Extensions.Add(extension);
+            }
+            Extensions.Sort(CompareExtensions);
         }
 
         private void Compose()
@@ -84,5 +95,11 @@ namespace Perspective.Model
                 return _randomImage;
             }
         }
+
+        private static int CompareExtensions(Extension e1, Extension e2)
+        {
+            return e1.SortOrder.CompareTo(e2.SortOrder);
+        }
+   
     }
 }

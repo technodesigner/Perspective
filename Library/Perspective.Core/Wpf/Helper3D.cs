@@ -281,29 +281,6 @@ namespace Perspective.Core.Primitives
         /// <returns>A new Point3D object corresponding to the rotation</returns>
         public static Point3D RotatePoint(Point3D point, double angle, AxisDirection rotationAxis)
         {
-            //Point3D pResult = new Point3D(0, 0, 0);
-            //switch (rotationAxis)
-            //{
-            //    case AxisDirection.X:
-            //        pResult = new Point3D(
-            //            point.X,
-            //            point.Y * Math.Cos(angle) + point.Z * Math.Sin(angle),
-            //            point.Y * Math.Sin(angle) + point.Z * Math.Cos(angle));
-            //        break;
-            //    case AxisDirection.Y:
-            //        pResult = new Point3D(
-            //            point.Z * Math.Sin(angle) + point.X * Math.Cos(angle),
-            //            point.Y,
-            //            point.Z * Math.Cos(angle) + point.X * Math.Sin(angle));
-            //        break;
-            //    case AxisDirection.Z:
-            //        pResult = new Point3D(
-            //            point.X * Math.Cos(angle) + point.Y * Math.Sin(angle),
-            //            point.X * Math.Sin(angle) + point.Y * Math.Cos(angle),
-            //            point.Z);
-            //        break;
-            //}
-            //return pResult;
             Vector3D axis = new Vector3D();
             switch (rotationAxis)
             {

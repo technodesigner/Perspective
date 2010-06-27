@@ -29,7 +29,7 @@
             Header="BeePanel">
             <Grid>
                 <Image 
-                    Source="http://www.odewit.net/Images/Livres/Silverlight/191.jpg" 
+                    Source="http://www.odewit.net/Images/Demo/Vegas01-s800.jpg" 
                     Stretch="UniformToFill"/>
                 <p:BeePanel 
                     ColumnCount="3" RowCount="3" 
@@ -86,7 +86,7 @@
             Header="BeeGrid">
             <Grid>
                 <Image 
-                    Source="http://www.odewit.net/Images/Livres/Silverlight/217.jpg" 
+                    Source="http://www.odewit.net/Images/Demo/Vegas01-s800.jpg" 
                     Stretch="UniformToFill"/>
                 <p:BeeGrid 
                     Name="beeGrid"

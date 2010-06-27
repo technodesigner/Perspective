@@ -67,8 +67,8 @@
     <Compile Include="View\BeePanelDemo.xaml.cs">
       <DependentUpon>BeePanelDemo.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\DpiScalingDemo.xaml.cs">
-      <DependentUpon>DpiScalingDemo.xaml</DependentUpon>
+    <Compile Include="View\MatrixDemo.xaml.cs">
+      <DependentUpon>MatrixDemo.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\MayaEaseDemo.xaml.cs">
       <DependentUpon>MayaEaseDemo.xaml</DependentUpon>
@@ -83,8 +83,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\Strings\DpiScaling.fr.resx" />
-    <EmbeddedResource Include="View\Strings\DpiScaling.resx" />
     <EmbeddedResource Include="View\Strings\RangeControls.fr.resx" />
     <EmbeddedResource Include="View\Strings\RangeControls.resx" />
     <None Include="Properties\Settings.settings">
@@ -124,7 +122,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\DpiScalingDemo.xaml">
+    <Page Include="View\MatrixDemo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

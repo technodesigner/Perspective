@@ -138,7 +138,8 @@ namespace Perspective.Wpf.Controls
                 new PropertyMetadata(
                     300.0, 
                     WalkAnglePropertyChanged,
-                    WalkAngleCoerceValue));
+                    WalkAngleCoerceValue),
+                WalkAngleValidateValue);
 
         private static void WalkAnglePropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
@@ -149,15 +150,32 @@ namespace Perspective.Wpf.Controls
         private static object WalkAngleCoerceValue(DependencyObject d, object value)
         {
             double walkAngle = (double)value;
-            if (walkAngle < 0.0)
+            //if (walkAngle < 0.0)
+            //{
+            //    walkAngle = 0.0;
+            //}
+            //if (walkAngle > 360.0)
+            //{
+            //    walkAngle = 360.0;
+            //}
+            Knob k = ((Knob)d);
+            if ((k.Angle * 2 + walkAngle) > 360.0)
             {
-                walkAngle = 0.0;
-            }
-            if (walkAngle > 360.0)
-            {
-                walkAngle = 360.0;
+                walkAngle = 360.0 - k.Angle * 2;
             }
             return walkAngle;
+        }
+
+        /// <summary>
+        /// Validation of the WalkAngle value.
+        /// </summary>
+        /// <param name="value">Value to test.</param>
+        /// <returns>Boolean value.</returns>
+        private static bool WalkAngleValidateValue(object value)
+        {
+            double d = (double)value;
+            return (d > 0.0) && (d < 360.0) && 
+                (!double.IsNaN(d)) && (!double.IsInfinity(d));
         }
 
         /// <summary>

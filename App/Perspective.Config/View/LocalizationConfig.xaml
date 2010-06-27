@@ -6,46 +6,49 @@
     Style="{StaticResource PageStyle}"
     FontSize="14"
 	Title="LocalizationDemo">
-    <ListView
-        HorizontalAlignment="Center"
-        VerticalAlignment="Center"
-        ItemsSource="{Binding LocaleInfos}">
-        <ListView.Template>
-            <ControlTemplate 
-                TargetType="ItemsControl">
-                <Border 
-                    BorderBrush="Black" 
-                    BorderThickness="2" 
-                    CornerRadius="5"
-                    Padding="5">
-                    <ItemsPresenter />
-                </Border>
-            </ControlTemplate>
-        </ListView.Template>
-        <ListView.ItemsPanel>
-            <ItemsPanelTemplate>
-                <StackPanel 
-                    Style="{DynamicResource ColoredPanelStyle}"/>
-            </ItemsPanelTemplate>
-        </ListView.ItemsPanel>
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <RadioButton 
-                    GroupName="LocaleInfo"
-                    Content="{Binding Title}"
-                    Command="{Binding 
-                        RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Page}}, 
-                        Path=DataContext.SetCurrentLocaleInfoCommand}"
-                    CommandParameter="{Binding}">
-                    <RadioButton.IsChecked>
-                        <p:SignalBinding 
-                            x:Name="radioButtonIsCheckedBinding"
-                            Path="CultureName"
-                            Mode="OneWay"
-                            Converting="radioButtonIsCheckedBinding_Converting"/>
-                    </RadioButton.IsChecked>
-                </RadioButton>
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
+    <Viewbox>
+        <ListView
+            Margin="5"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            ItemsSource="{Binding LocaleInfos}">
+            <ListView.Template>
+                <ControlTemplate 
+                    TargetType="ItemsControl">
+                    <Border 
+                        BorderBrush="Black" 
+                        BorderThickness="2" 
+                        CornerRadius="5"
+                        Padding="5">
+                        <ItemsPresenter />
+                    </Border>
+                </ControlTemplate>
+            </ListView.Template>
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel 
+                        Style="{DynamicResource ColoredPanelStyle}"/>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <RadioButton 
+                        GroupName="LocaleInfo"
+                        Content="{Binding Title}"
+                        Command="{Binding 
+                            RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Page}}, 
+                            Path=DataContext.SetCurrentLocaleInfoCommand}"
+                        CommandParameter="{Binding}">
+                        <RadioButton.IsChecked>
+                            <p:SignalBinding 
+                                x:Name="radioButtonIsCheckedBinding"
+                                Path="CultureName"
+                                Mode="OneWay"
+                                Converting="radioButtonIsCheckedBinding_Converting"/>
+                        </RadioButton.IsChecked>
+                    </RadioButton>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>        
+    </Viewbox>
 </Page>

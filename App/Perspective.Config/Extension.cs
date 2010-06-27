@@ -12,7 +12,7 @@ namespace Perspective.Config
     public class Extension : Perspective.Hosting.Extension
     {
         private const string _title = "Configuration";
-        private const string _iconKey = "PencilIcon";
+        private const string _iconKey = "ConfigIcon";
 
         private static string _assemblyName = "Perspective.Config";
 
@@ -56,20 +56,33 @@ namespace Perspective.Config
         {
             Title = _title;
             IconKey = _iconKey;
+            SortOrder = 90;
             _pageInfos = new List<PageInfo>
             {
                 new PageInfo(this)
                 {
                     Title = "Skin",
-                    IconKey = "PencilIcon",
+                    IconKey = _iconKey,
                     PartialClassName = "View/SkinConfig.xaml"
                 },
                 new PageInfo(this)
                 {
                     Title = "Localization",
-                    IconKey = "PencilIcon",
+                    IconKey = _iconKey,
                     PartialClassName = "View/LocalizationConfig.xaml"
-                }
+                },
+                new PageInfo(this)
+                {
+                    Title = "DPI",
+                    IconKey = _iconKey,
+                    PartialClassName = "View/DpiScaling.xaml"
+                },
+                new PageInfo(this)
+                {
+                    Title = "Rendering",
+                    IconKey = _iconKey,
+                    PartialClassName = "View/RenderingConfig.xaml"
+                },
             };
             ResourceAssembly.Register();
             SkinManager.Current.LoadCurrentSkin();

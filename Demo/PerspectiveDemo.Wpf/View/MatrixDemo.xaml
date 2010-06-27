@@ -1,0 +1,147 @@
+﻿<Page 
+    x:Class="PerspectiveDemo.Wpf.View.MatrixDemo"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    Style="{StaticResource PageStyle}"
+    Loaded="Page_Loaded"
+    mc:Ignorable="d" 
+    d:DesignHeight="300" d:DesignWidth="300"
+	Title="MatrixDemo">
+    <Page.Resources>
+        <Style 
+            TargetType="Button" BasedOn="{StaticResource GlassButtonStyle}">
+        </Style>
+        <Style 
+            TargetType="Ellipse">
+            <Setter Property="Stroke" Value="Gray" />
+            <Setter Property="StrokeThickness" Value="1" />
+            <Setter Property="Width" Value="4" />
+            <Setter Property="Height" Value="4" />
+        </Style>
+        <Style 
+            TargetType="Line">
+            <Setter Property="Stroke" Value="Gray" />
+            <Setter Property="StrokeThickness" Value="1" />
+            <Setter Property="StrokeEndLineCap" Value="Triangle" />
+        </Style>
+        <Style 
+            x:Key="ArrowCapStyle" 
+            TargetType="Polygon">
+            <Setter Property="Stroke" Value="Gray" />
+            <Setter Property="StrokeThickness" Value="1" />
+            <Setter Property="Fill" Value="Gray" />
+        </Style>
+        <Style 
+            x:Key="DownArrowCapStyle" 
+            TargetType="Polygon"
+            BasedOn="{StaticResource ArrowCapStyle}">
+            <Setter Property="Shape.RenderTransform">
+                <Setter.Value>
+                    <TransformGroup>
+                        <RotateTransform CenterX="1.5" CenterY="1.5" Angle="315" />
+                        <TranslateTransform X="-1.5" Y="-1.5" />
+                    </TransformGroup>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style 
+            x:Key="RightArrowCapStyle" 
+            TargetType="Polygon"
+            BasedOn="{StaticResource ArrowCapStyle}">
+            <Setter Property="RenderTransform">
+                <Setter.Value>
+                    <TransformGroup>
+                        <RotateTransform CenterX="1.5" CenterY="1.5" Angle="225" />
+                        <TranslateTransform X="-1.5" Y="-1.5" />
+                        <!--<ScaleTransform ScaleX="2" ScaleY="2" />-->
+                    </TransformGroup>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>    
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Viewbox Grid.Row="0">
+            <Canvas
+                Height="250"
+                Width="250">
+                <Ellipse 
+                    Canvas.Left="75"
+                    Canvas.Top="75"
+                    Width="100" Height="100"/>
+                <Canvas 
+                    Name="canvas"
+                    Width="120"
+                    Height="120"
+                    Canvas.Left="125"
+                    Canvas.Top="125"
+                    VerticalAlignment="Bottom">
+                    <Ellipse 
+                        Fill="LightGray"
+                        Canvas.Left="-1"
+                        Canvas.Top="-1"
+                        Width="2"
+                        Height="2"/>
+                    <Line 
+                        X1="0" Y1="0" X2="75" Y2="0" />
+                    <Polygon
+                        Style="{StaticResource RightArrowCapStyle}"
+                        Canvas.Top="0"
+                        Canvas.Left="75"
+                        Points="
+                            0, 0 
+                            0, 3 
+                            3, 3"/>
+                    <TextBlock 
+                        Canvas.Top="-10" Canvas.Left="65" 
+                        FontSize="6"
+                        Text="X"/>
+                    <Line 
+                        X1="0" Y1="0" X2="0" Y2="75" />
+                    <Polygon
+                        Style="{StaticResource DownArrowCapStyle}"
+                        Canvas.Top="75"
+                        Points="
+                        0, 0 
+                        0, 3 
+                        3, 3"/>
+                    <TextBlock 
+                        Canvas.Top="65" Canvas.Left="-10" 
+                        FontSize="6"
+                        Text="Y"/>
+                </Canvas>
+            </Canvas>
+        </Viewbox>
+        <StackPanel 
+            Height="50"
+            Grid.Row="1"
+            HorizontalAlignment="Center"
+            Orientation="Horizontal">
+            <Button 
+                Name="initializePointButton" 
+                Content="Init" 
+                Click="initializePointButton_Click" />
+            <Button 
+                Name="rotatePointButton" 
+                Content="Rotation" 
+                Click="rotatePointButton_Click" />
+            <Button 
+                Name="rotatePointByTransformButton" 
+                Content="RotateTransform" 
+                Click="rotatePointByTransformButton_Click" />
+            <Button 
+                Name="rotatePointByMatrixButton" 
+                Content="MatrixTransform" 
+                Click="rotatePointByMatrixButton_Click"/>
+            <Button 
+                Name="matrixOperationButton" 
+                Content="Matrix operations"
+                Click="matrixOperationButton_Click"/> 
+        </StackPanel>
+    </Grid>
+</Page>

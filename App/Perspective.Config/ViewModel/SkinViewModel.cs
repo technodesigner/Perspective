@@ -43,7 +43,7 @@ namespace Perspective.Config.ViewModel
             //}
 
             SetCurrentSkinCommand = new SignalCommand();
-            SetCurrentSkinCommand.Executing += (sender, e) =>
+            SetCurrentSkinCommand.Executed += (sender, e) =>
             {
                 if ((e.Parameter != null) && (e.Parameter is string))
                 {

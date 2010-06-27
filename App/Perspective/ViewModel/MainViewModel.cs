@@ -38,7 +38,7 @@ namespace Perspective.ViewModel
         {
             _model = new MainModel();
             SetCurrentPageInfoCommand = new SignalCommand();
-            SetCurrentPageInfoCommand.Executing += (sender, e) =>
+            SetCurrentPageInfoCommand.Executed += (sender, e) =>
             {
                 if ((e.Parameter != null) && (e.Parameter is PageInfo))
                 {

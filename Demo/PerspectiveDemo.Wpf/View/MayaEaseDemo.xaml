@@ -194,7 +194,7 @@
                         <DiffuseMaterial>
                             <DiffuseMaterial.Brush>
                                 <ImageBrush 
-                                    ImageSource="http://www.odewit.net/Images/Livres/Silverlight/s400/DSC_0832.jpg" 
+                                    ImageSource="http://www.odewit.net/Images/Demo/LA01-s400.jpg" 
                                     TileMode="None" 
                                     Stretch="Fill"/>
                             </DiffuseMaterial.Brush>
@@ -216,7 +216,7 @@
                         <DiffuseMaterial>
                             <DiffuseMaterial.Brush>
                                 <ImageBrush 
-                                    ImageSource="http://www.odewit.net/Images/Livres/Silverlight/s400/DSC_0640.jpg" 
+                                    ImageSource="http://www.odewit.net/Images/Demo/Vegas03-s400.jpg" 
                                     TileMode="None" 
                                     Stretch="Fill"/>
                             </DiffuseMaterial.Brush>
@@ -230,7 +230,7 @@
                         <DiffuseMaterial>
                             <DiffuseMaterial.Brush>
                                 <ImageBrush 
-                                    ImageSource="http://www.odewit.net/Images/Livres/Silverlight/s400/DSC_0115.jpg" 
+                                    ImageSource="http://www.odewit.net/Images/Demo/Colorado01-s400.jpg" 
                                     TileMode="None" 
                                     Stretch="Fill"/>
                             </DiffuseMaterial.Brush>
@@ -244,7 +244,7 @@
                         <DiffuseMaterial>
                             <DiffuseMaterial.Brush>
                                 <ImageBrush 
-                                    ImageSource="http://www.odewit.net/Images/Livres/Silverlight/s400/DSC_0605.jpg" 
+                                    ImageSource="http://www.odewit.net/Images/Demo/Colorado02-s400.jpg" 
                                     TileMode="None" 
                                     Stretch="Fill"/>
                             </DiffuseMaterial.Brush>

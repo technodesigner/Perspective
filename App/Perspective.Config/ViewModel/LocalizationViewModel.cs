@@ -40,7 +40,7 @@ namespace Perspective.Config.ViewModel
             CultureManager.Current.UICultureChanged += new EventHandler<Perspective.Core.ChangedEventArgs<string>>(Current_UICultureChanged);
 
             SetCurrentLocaleInfoCommand = new SignalCommand();
-            SetCurrentLocaleInfoCommand.Executing += (sender, e) =>
+            SetCurrentLocaleInfoCommand.Executed += (sender, e) =>
             {
                 if ((e.Parameter != null) && (e.Parameter is LocaleInfo))
                 {

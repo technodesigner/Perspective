@@ -20,32 +20,32 @@ namespace Perspective.Core.Wpf.Data
     /// </summary>
     public class SignalCommand : ICommand
     {
-        private event EventHandler<EventArgs<object>> _executing;
+        private event EventHandler<EventArgs<object>> _executed;
 
         /// <summary>
         /// Event fired when the execution occurs.
         /// </summary>
-        public event EventHandler<EventArgs<object>> Executing
+        public event EventHandler<EventArgs<object>> Executed
         {
             add
             {
-                _executing += value;
+                _executed += value;
             }
             remove
             {
-                _executing -= value;
+                _executed -= value;
             }
         }
 
         /// <summary>
         /// Fires the Executing event.
         /// </summary>
-        protected void OnExecuting(object parameter)
+        protected void OnExecuted(object parameter)
         {
-            if (_executing != null)
+            if (_executed != null)
             {
                 EventArgs<object> e = new EventArgs<object>(parameter);
-                _executing(this, e);
+                _executed(this, e);
             }
         }
 
@@ -114,7 +114,7 @@ namespace Perspective.Core.Wpf.Data
         /// <param name="parameter">Data used by the command. If the command does not require data to be passed, this object can be set to null.</param>
         public void Execute(object parameter)
         {
-            OnExecuting(parameter);
+            OnExecuted(parameter);
         }
 
         #endregion

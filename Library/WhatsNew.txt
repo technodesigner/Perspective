@@ -6,7 +6,14 @@ Now Perspective 2.0 is under construction :
 - .NET 4.0 support (but Perspective 2.0 is not fully compatible with previous .NET versions),
 - new functionalities coming soon.
 
-Note : the localization features doesn't work with the RC version of .NET 4
+What's new since version 2.0 beta :
+- Perspective.Core.Wpf
+RenderingHelper : new property IsHWAccelerationDisabled, which enables to turn off/on global hardware acceleration. New method SetHwndHWAcceleration to to turn off/on hardware acceleration for a window.
+GeometryHelper : new methods GetRotationMatrix, GetTranslationMatrix, GetScaleMatrix, GetSkewMatrix and RotatePoint
+- Perspective.Hosting
+Extension : new property SortOrder
+
+What's new since version 1.0 and 2.0 beta :
 
 Perspective.Core
 ----------------
@@ -16,10 +23,9 @@ CancelEventArgs<T> : A generic class to manage a CancelEventArgs argument with o
 Perspective.Core.Wpf
 --------------------
 AnimationHelper's namespace has moved from Perspective.Core.Wpf to Perspective.Core.Wpf.Animation
-GeometryHelper : a new helper class with static methods 
-	- DegreeToRadian.
-	- RadianToDegree.
+GeometryHelper : a new helper class with static methods : DegreeToRadian, RadianToDegree, GetRotationMatrix, GetTranslationMatrix, GetScaleMatrix, GetSkewMatrix and RotatePoint
 DPHelper : An helper class for dependency properties, with static functions to validate values.
+RenderingHelper : new property IsHWAccelerationDisabled, which enables to turn off hardware acceleration for debugging and test purposes.
 Helper3D : static methods DegreeToRadian and RadianToDegree are now deprecated.
 
 Perspective.Core.Wpf.Data
