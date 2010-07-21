@@ -16,6 +16,7 @@ using System.Windows;
 using Perspective.Core.Primitives;
 using System.Windows.Input;
 using System.Windows.Controls;
+using Perspective.Core.Wpf;
 
 namespace Perspective.Wpf3D.Primitives
 {

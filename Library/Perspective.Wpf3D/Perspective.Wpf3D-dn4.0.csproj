@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controls\Gyroscope3D.cs" />
+    <Compile Include="Primitives\CoordinateSystemKind.cs" />
     <Compile Include="Primitives\MeshBuiltEventArgs.cs" />
     <Compile Include="Sculptors\PieSliceSculptor.cs" />
     <Compile Include="Sculptors\SliceSculptor.cs">

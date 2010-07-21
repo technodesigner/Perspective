@@ -18,6 +18,7 @@ using System.Windows.Media.Media3D;
 using Perspective.Wpf3D.Primitives;
 using Perspective.Wpf3D.Sculptors;
 using Perspective.Core.Primitives;
+using Perspective.Core.Wpf;
 
 namespace Perspective.Wpf3D.Shapes
 {
@@ -88,7 +89,10 @@ namespace Perspective.Wpf3D.Shapes
                         new RotateTransform3D(
                             new AxisAngleRotation3D(new Vector3D(0, 1, 0), 180)));
                     // The 0.001 X translation prevents flickering when displaying another surface on the Y-Z axis
-                    tg.Children.Add(new TranslateTransform3D(-0.001, -(xyLength + Radius / 2.0), 0.8));
+                    // tg.Children.Add(new TranslateTransform3D(-0.001, -(xyLength + Radius / 2.0), 0.8));
+                    double zTranslation = 
+                        (this.CoordinateSystemKind == Primitives.CoordinateSystemKind.RightHanded) ? 0.8 : -0.8;
+                    tg.Children.Add(new TranslateTransform3D(-0.001, -(xyLength + Radius / 2.0), zTranslation));
                     break;
             }
             sculptor.Transform(tg);
@@ -137,7 +141,7 @@ namespace Perspective.Wpf3D.Shapes
         /// </summary>
         protected override void OnUpdateModel()
         {
-            _sculptor.Initialize(Length, Radius, Signed);
+            _sculptor.Initialize(Length, Radius, Signed, CoordinateSystemKind);
             _sculptor.BuildMesh();
             _arrowsModel.Geometry = _sculptor.Mesh;
             _arrowsModel.Material = _arrowsMaterial;
@@ -291,5 +295,27 @@ namespace Perspective.Wpf3D.Shapes
             element._arrowsMaterial = new DiffuseMaterial(solidColorBrush);
             element.InvalidateModel();
         }
+
+        /// <summary>
+        /// Gets or sets the kind of coordinate system.
+        /// The default value is CoordinateSystemKind.RightHanded.
+        /// </summary>
+        public CoordinateSystemKind CoordinateSystemKind
+        {
+            get { return (CoordinateSystemKind)GetValue(CoordinateSystemKindProperty); }
+            set { SetValue(CoordinateSystemKindProperty, value); }
+        }
+
+        /// <summary>
+        /// Identifies the CoordinateSystemKind dependency property.
+        /// </summary>
+        public static readonly DependencyProperty CoordinateSystemKindProperty =
+            DependencyProperty.Register(
+                "CoordinateSystemKind", 
+                typeof(CoordinateSystemKind), 
+                typeof(XyzAxis3D), 
+                new PropertyMetadata(
+                    CoordinateSystemKind.RightHanded,
+                    VisualPropertyChanged));
     }
 }

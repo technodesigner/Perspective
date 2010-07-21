@@ -117,6 +117,9 @@
     <Compile Include="View\Isocahedron3DDemo.xaml.cs">
       <DependentUpon>Isocahedron3DDemo.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Matrix3DDemo.xaml.cs">
+      <DependentUpon>Matrix3DDemo.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\MixerDemo.xaml.cs">
       <DependentUpon>MixerDemo.xaml</DependentUpon>
     </Compile>
@@ -261,6 +264,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Isocahedron3DDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Matrix3DDemo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

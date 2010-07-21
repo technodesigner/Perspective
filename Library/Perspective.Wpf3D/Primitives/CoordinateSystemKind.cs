@@ -11,24 +11,20 @@
 //------------------------------------------------------------------
 using System;
 
-namespace Perspective.Core.Wpf
+namespace Perspective.Wpf3D.Primitives
 {
     /// <summary>
-    /// An enum type to handle axis directions.
+    /// An enum type to handle the kind of coordinate system.
     /// </summary>
-    public enum AxisDirection
+    public enum CoordinateSystemKind
     {
         /// <summary>
-        /// The X axis.
+        /// A right-handed coordinate system.
         /// </summary>
-        X,
+        RightHanded,
         /// <summary>
-        /// The Y axis.
+        /// A left-handed coordinate system.
         /// </summary>
-        Y,
-        /// <summary>
-        /// The Z axis.
-        /// </summary>
-        Z
+        LeftHanded
     }
 }

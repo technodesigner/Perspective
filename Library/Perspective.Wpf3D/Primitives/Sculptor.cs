@@ -14,6 +14,7 @@ using System.Collections.ObjectModel;
 using System.Windows.Media;
 using System.Windows.Media.Media3D;
 using Perspective.Core.Primitives;
+using Perspective.Core.Wpf;
 
 namespace Perspective.Wpf3D.Primitives
 {

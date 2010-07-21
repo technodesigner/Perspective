@@ -247,6 +247,12 @@ namespace PerspectiveDemo.Wpf3D
                     Title = "Custom Knob3D",
                     IconKey = _iconKey,
                     PartialClassName = "View/CustomKnob3DDemo.xaml"
+                },
+                new PageInfo(this)
+                {
+                    Title = "Matrix3D",
+                    IconKey = _iconKey,
+                    PartialClassName = "View/Matrix3DDemo.xaml"
                 }
             };
         }

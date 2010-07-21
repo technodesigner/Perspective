@@ -30,6 +30,7 @@ namespace Perspective.Wpf3D.Sculptors
         private double _length = DefaultLength;
         private double _radius = DefaultRadius;
         private bool _signed;
+        private CoordinateSystemKind _coordinateSystemKind;
 
         /// <summary>
         /// Initializes an existing instance of XyzAxisSculptor.
@@ -37,11 +38,17 @@ namespace Perspective.Wpf3D.Sculptors
         /// <param name="length">Length of each axis.</param>
         /// <param name="radius">Radius of each axis.</param>
         /// <param name="signed">Axis signed characteristic.</param>
-        public void Initialize(double length, double radius, bool signed)
+        /// <param name="coordinateSystemKind">The kind of coordinate system.</param>
+        public void Initialize(
+            double length, 
+            double radius, 
+            bool signed, 
+            CoordinateSystemKind coordinateSystemKind)
         {
             _length = length;
             _radius = radius;
             _signed = signed;
+            _coordinateSystemKind = coordinateSystemKind;
         }
 
         /// <summary>
@@ -79,7 +86,9 @@ namespace Perspective.Wpf3D.Sculptors
             asZ.BuildMesh();
             Transform3DGroup tgZ = new Transform3DGroup();
             tgZ.Children.Add(arrowScaling);
-            if (s != Sign.Positive)
+            // if (s != Sign.Positive)
+            if (((s == Sign.Negative) && (_coordinateSystemKind == CoordinateSystemKind.RightHanded))
+                ||((s == Sign.Positive) && (_coordinateSystemKind == CoordinateSystemKind.LeftHanded)))
             {
                 AxisAngleRotation3D rZ = new AxisAngleRotation3D(
                     new Vector3D(0.0, 1.0, 0.0),
@@ -126,6 +135,10 @@ namespace Perspective.Wpf3D.Sculptors
                 for (int i = 0; i < sep; i++)
                 {
                     int offset = (s == Sign.Positive ? i + 1 : -i - 1);
+                    int offsetZ = (
+                        (((s == Sign.Positive) && (_coordinateSystemKind == CoordinateSystemKind.RightHanded))
+                            || ((s == Sign.Negative) && (_coordinateSystemKind == CoordinateSystemKind.LeftHanded))) ? 
+                            i + 1 : -i - 1);
                     bars[i] = new BarSculptor[3];
                     for (int j = 0; j < 3; j++)
                     {
@@ -141,7 +154,7 @@ namespace Perspective.Wpf3D.Sculptors
                         tg.Children.Add(new TranslateTransform3D(
                             j == 0 ? offset : 0.0,
                             j == 1 ? offset : 0.0,
-                            j == 2 ? offset : 0.0));
+                            j == 2 ? offsetZ : 0.0));
                         bars[i][j].Transform(tg);
                         CopyFrom(bars[i][j]);
                     }

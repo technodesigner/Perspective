@@ -77,7 +77,7 @@ namespace Perspective.Core.Wpf
         /// Creates a 2D translation matrix.
         /// </summary>
         /// <param name="offsetX">The distance to translate along the x-axis.</param>
-        /// <param name="offsetY">The distance to translate along the x-axis.</param>
+        /// <param name="offsetY">The distance to translate along the y-axis.</param>
         /// <returns>A Matrix object.</returns>
         public static Matrix GetTranslationMatrix(double offsetX, double offsetY)
         {

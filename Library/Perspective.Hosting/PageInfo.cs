@@ -16,7 +16,7 @@ using System.Windows;
 namespace Perspective.Hosting
 {
     /// <summary>
-    /// Represents the metadata associated with a WPF page of an extension assembly.
+    /// Represents the metadata associated with a page of an extension assembly.
     /// </summary>
     public class PageInfo : ItemBase
     // public class PageInfo : INotifyPropertyChanged

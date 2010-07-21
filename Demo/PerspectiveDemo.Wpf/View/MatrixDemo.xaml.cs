@@ -55,30 +55,28 @@ namespace PerspectiveDemo.Wpf.View
         private void initializePointButton_Click(object sender, RoutedEventArgs e)
         {
             _currentPoint = InitializePoint(_initialAngle, _radius);
-            DisplayPoint();
+            DisplayPoints();
         }
 
         private void rotatePointButton_Click(object sender, RoutedEventArgs e)
         {
             CheckCurrentPoint();
             _currentPoint = RotatePoint(_currentPoint, _angle);
-            DisplayPoint();
+            DisplayPoints();
         }
 
         private void rotatePointByTransformButton_Click(object sender, RoutedEventArgs e)
         {
             CheckCurrentPoint();
             _currentPoint = RotatePointByTransformation(_currentPoint, _angle);
-            DisplayPoint();
+            DisplayPoints();
         }
 
         private void rotatePointByMatrixButton_Click(object sender, RoutedEventArgs e)
         {
             CheckCurrentPoint();
-            // _currentPoint = RotatePointByMatrix(_currentPoint, _angle);
-            // _currentPoint = GeometryHelper.RotatePoint(_currentPoint, _angle);
             _currentPoint *= GeometryHelper.GetRotationMatrix(_angle);
-            DisplayPoint();
+            DisplayPoints();
         }
 
         private void matrixOperationButton_Click(object sender, RoutedEventArgs e)
@@ -87,10 +85,10 @@ namespace PerspectiveDemo.Wpf.View
             Matrix m1 = GeometryHelper.GetRotationMatrix(45.0);
             Matrix m2 = GeometryHelper.GetTranslationMatrix(50.0, 0.0);
             _currentPoint *= m1 * m2;
-            DisplayPoint();
+            DisplayPoints();
         }
 
-        private void DisplayPoint()
+        private void DisplayPoints()
         {
             double x = Canvas.GetLeft(_ellipse2);
             if (!double.IsNaN(x))
@@ -111,7 +109,6 @@ namespace PerspectiveDemo.Wpf.View
             Canvas.SetTop(_ellipse2, _currentPoint.Y - _ellipse2.Height / 2.0);
             _line2.X2 = Canvas.GetLeft(_ellipse2) + _ellipse2.Width / 2.0;
             _line2.Y2 = Canvas.GetTop(_ellipse2) + _ellipse2.Height / 2.0;
-
         }
 
         private Point InitializePoint(double angle, double radius)
@@ -133,18 +130,5 @@ namespace PerspectiveDemo.Wpf.View
             var rotation = new RotateTransform(angle);
             return rotation.Transform(p);
         }
-
-        //private Point RotatePointByMatrix(Point p, double angle)
-        //{
-        //    //var radianAngle = GeometryHelper.DegreeToRadian(angle);
-        //    //Matrix m = new Matrix
-        //    //{
-        //    //    M11 = Math.Cos(radianAngle), M21 = -Math.Sin(radianAngle),
-        //    //    M12 = Math.Sin(radianAngle), M22 = Math.Cos(radianAngle)
-        //    //};
-        //    //MatrixTransform transform = new MatrixTransform(m);
-        //    //return transform.Transform(p);
-        //    return GeometryHelper.RotatePoint(p, angle);
-        //}
     }
 }
