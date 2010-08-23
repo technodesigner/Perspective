@@ -4,80 +4,80 @@
         <DrawingBrush.Drawing>
             <DrawingGroup>
                 <DrawingGroup.Children>
-                    <GeometryDrawing Geometry="F1 M 34.8579,26.2845L 36.1897,18.0049L 50.9434,18.0419L 52.3196,26.2992L 61.6646,30.2059L 68.3903,25.182L 78.7341,35.6349L 73.836,42.7379L 77.9054,51.9813L 86.222,53.0763L 86.0296,67.8448L 77.9795,69.2136L 73.9322,78.7805L 78.8969,85.3563L 68.3607,95.6059L 62.2859,91.0481L 52.2604,95.0732L 50.899,103.005L 36.2193,103.005L 34.9763,95.0732L 25.3872,90.9889L 18.6393,95.6651L 8.36938,85.3563L 13.312,78.2533L 8.96133,69.2654L 1.05917,68.0224L 0.999969,53.2243L 9.34607,51.7445L 13.2528,42.7379L 8.22144,35.6349L 18.5801,25.108L 25.4464,30.2799L 34.8579,26.2845 Z ">
+                    <GeometryDrawing Geometry="F1 M 34.8579,26.2845L 36.1898,18.0049L 50.9434,18.0419L 52.3196,26.2992L 61.6646,30.2059L 68.3904,25.182L 78.7342,35.6349L 73.836,42.7379L 77.9055,51.9812L 86.222,53.0763L 86.0296,67.8448L 77.9795,69.2136L 73.9322,78.7805L 78.8969,85.3563L 68.3607,95.6059L 62.2859,91.0481L 52.2605,95.0732L 50.899,103.005L 36.2194,103.005L 34.9763,95.0732L 25.3872,90.9889L 18.6393,95.6651L 8.36942,85.3563L 13.312,78.2533L 8.96133,69.2654L 1.05917,68.0224L 1,53.2243L 9.3461,51.7445L 13.2528,42.7379L 8.22144,35.6349L 18.5801,25.108L 25.4464,30.2799L 34.8579,26.2845 Z ">
                         <GeometryDrawing.Pen>
                             <Pen Thickness="2" LineJoin="Round" Brush="#FF000000"/>
                         </GeometryDrawing.Pen>
                         <GeometryDrawing.Brush>
                             <LinearGradientBrush StartPoint="-0.0117341,0.5" EndPoint="1.01173,0.5">
                                 <LinearGradientBrush.GradientStops>
-                                    <GradientStop Color="#FF3A3F41" Offset="0"/>
-                                    <GradientStop Color="#FFC2D9E2" Offset="0.990952"/>
+                                    <GradientStop Color="#FFFFE36D" Offset="0.344186"/>
+                                    <GradientStop Color="#FFE74554" Offset="1"/>
                                 </LinearGradientBrush.GradientStops>
                             </LinearGradientBrush>
                         </GeometryDrawing.Brush>
                     </GeometryDrawing>
-                    <GeometryDrawing Geometry="F1 M 43.5522,31.3605C 59.8447,31.3605 73.0522,44.568 73.0522,60.8605C 73.0522,77.1529 59.8446,90.3605 43.5522,90.3605C 27.2599,90.3605 14.0522,77.1529 14.0522,60.8605C 14.0522,44.568 27.2598,31.3605 43.5522,31.3605 Z ">
+                    <GeometryDrawing Geometry="F1 M 43.5522,31.3605C 59.8447,31.3605 73.0522,44.568 73.0522,60.8605C 73.0522,77.1529 59.8446,90.3605 43.5522,90.3605C 27.2599,90.3605 14.0522,77.1529 14.0522,60.8605C 14.0522,44.568 27.2599,31.3605 43.5522,31.3605 Z ">
                         <GeometryDrawing.Pen>
-                            <Pen Thickness="2" LineJoin="Round" Brush="#FF738291"/>
+                            <Pen Thickness="2" LineJoin="Round" Brush="#FFF7A55F"/>
                         </GeometryDrawing.Pen>
                         <GeometryDrawing.Brush>
-                            <LinearGradientBrush StartPoint="-0.0169497,0.5" EndPoint="1.01695,0.5">
+                            <LinearGradientBrush StartPoint="-0.0169492,0.5" EndPoint="1.01695,0.5">
                                 <LinearGradientBrush.GradientStops>
-                                    <GradientStop Color="#FF3A3F41" Offset="0"/>
-                                    <GradientStop Color="#FFC2D9E2" Offset="0.990952"/>
+                                    <GradientStop Color="#FFFFE36D" Offset="0.344186"/>
+                                    <GradientStop Color="#FFE74554" Offset="1"/>
                                 </LinearGradientBrush.GradientStops>
                             </LinearGradientBrush>
                         </GeometryDrawing.Brush>
                     </GeometryDrawing>
-                    <GeometryDrawing Geometry="F1 M 43.4993,56.5518C 45.6826,56.5518 47.4525,58.3217 47.4525,60.505C 47.4525,62.6883 45.6826,64.4582 43.4993,64.4582C 41.316,64.4582 39.5461,62.6883 39.5461,60.505C 39.5461,58.3217 41.316,56.5518 43.4993,56.5518 Z ">
+                    <GeometryDrawing Geometry="F1 M 43.4994,56.5518C 45.6826,56.5518 47.4525,58.3217 47.4525,60.505C 47.4525,62.6883 45.6826,64.4582 43.4994,64.4582C 41.316,64.4582 39.5461,62.6883 39.5461,60.505C 39.5461,58.3217 41.316,56.5518 43.4994,56.5518 Z ">
                         <GeometryDrawing.Pen>
-                            <Pen Thickness="2" LineJoin="Round" Brush="#FF738291"/>
+                            <Pen Thickness="2" LineJoin="Round" Brush="#FFF7A55F"/>
                         </GeometryDrawing.Pen>
                         <GeometryDrawing.Brush>
-                            <LinearGradientBrush StartPoint="-0.126487,0.499996" EndPoint="1.12647,0.499996">
+                            <LinearGradientBrush StartPoint="-0.126479,0.500004" EndPoint="1.12648,0.500004">
                                 <LinearGradientBrush.GradientStops>
-                                    <GradientStop Color="#FF3A3F41" Offset="0"/>
-                                    <GradientStop Color="#FFC2D9E2" Offset="0.990952"/>
+                                    <GradientStop Color="#FFFFE36D" Offset="0.344186"/>
+                                    <GradientStop Color="#FFE74554" Offset="1"/>
                                 </LinearGradientBrush.GradientStops>
                             </LinearGradientBrush>
                         </GeometryDrawing.Brush>
                     </GeometryDrawing>
-                    <GeometryDrawing Geometry="F1 M 90.3644,12.1732L 88.7311,5.95078L 99.0947,1.401L 102.621,6.7681L 110.39,6.61105L 113.551,1L 124.051,5.12637L 122.817,11.6295L 128.539,16.8531L 134.714,15.0422L 139.159,25.4644L 133.935,28.9215L 134.063,36.8896L 139.586,39.9638L 135.372,50.4233L 129.696,49.1093L 123.909,55.0429L 125.414,61.0305L 115.114,65.5833L 111.782,60.4034L 103.787,60.5116L 100.502,65.8855L 90.0988,61.8372L 91.3639,55.3203L 85.5237,50.3632L 79.5935,51.9417L 74.9625,41.5768L 80.3598,37.95L 80.3076,30.4187L 74.5744,26.9952L 78.5779,16.3962L 84.9998,17.8957L 90.3644,12.1732 Z ">
+                    <GeometryDrawing Geometry="F1 M 90.3645,12.1733L 88.7312,5.95074L 99.0948,1.401L 102.621,6.7681L 110.39,6.61102L 113.551,0.999969L 124.051,5.12637L 122.817,11.6295L 128.539,16.8531L 134.714,15.0422L 139.159,25.4644L 133.935,28.9215L 134.063,36.8896L 139.586,39.9638L 135.372,50.4233L 129.696,49.1093L 123.909,55.0429L 125.414,61.0305L 115.114,65.5833L 111.782,60.4034L 103.787,60.5116L 100.502,65.8855L 90.0989,61.8372L 91.3639,55.3203L 85.5238,50.3632L 79.5935,51.9417L 74.9626,41.5768L 80.3598,37.95L 80.3077,30.4187L 74.5744,26.9952L 78.578,16.3962L 84.9998,17.8957L 90.3645,12.1733 Z ">
                         <GeometryDrawing.Pen>
                             <Pen Thickness="2" LineJoin="Round" Brush="#FF000000"/>
                         </GeometryDrawing.Pen>
                         <GeometryDrawing.Brush>
-                            <LinearGradientBrush StartPoint="-0.0153819,0.5" EndPoint="1.01538,0.499999">
+                            <LinearGradientBrush StartPoint="-0.0153819,0.499999" EndPoint="1.01538,0.499999">
                                 <LinearGradientBrush.GradientStops>
-                                    <GradientStop Color="#FF3A3F41" Offset="0"/>
-                                    <GradientStop Color="#FFC2D9E2" Offset="0.990952"/>
+                                    <GradientStop Color="#FFFFE36D" Offset="0.344186"/>
+                                    <GradientStop Color="#FFE74554" Offset="1"/>
                                 </LinearGradientBrush.GradientStops>
                             </LinearGradientBrush>
                         </GeometryDrawing.Brush>
                     </GeometryDrawing>
-                    <GeometryDrawing Geometry="F1 M 98.0384,13.0374C 109.47,7.98447 122.834,13.1555 127.887,24.5874C 132.94,36.0193 127.769,49.3828 116.337,54.4358C 104.905,59.4887 91.5414,54.3177 86.4884,42.8858C 81.4354,31.4539 86.6065,18.0904 98.0384,13.0374 Z ">
+                    <GeometryDrawing Geometry="F1 M 98.0384,13.0374C 109.47,7.98444 122.834,13.1555 127.887,24.5874C 132.94,36.0193 127.769,49.3828 116.337,54.4358C 104.905,59.4887 91.5414,54.3177 86.4884,42.8858C 81.4354,31.4539 86.6065,18.0904 98.0384,13.0374 Z ">
                         <GeometryDrawing.Pen>
-                            <Pen Thickness="2" LineJoin="Round" Brush="#FF738291"/>
+                            <Pen Thickness="2" LineJoin="Round" Brush="#FFF7A55F"/>
                         </GeometryDrawing.Pen>
                         <GeometryDrawing.Brush>
-                            <LinearGradientBrush StartPoint="-0.0909003,0.5" EndPoint="1.0909,0.5">
+                            <LinearGradientBrush StartPoint="-0.0909012,0.5" EndPoint="1.0909,0.5">
                                 <LinearGradientBrush.GradientStops>
-                                    <GradientStop Color="#FF3A3F41" Offset="0"/>
-                                    <GradientStop Color="#FFC2D9E2" Offset="0.990952"/>
+                                    <GradientStop Color="#FFFFE36D" Offset="0.344186"/>
+                                    <GradientStop Color="#FFE74554" Offset="1"/>
                                 </LinearGradientBrush.GradientStops>
                             </LinearGradientBrush>
                         </GeometryDrawing.Brush>
                     </GeometryDrawing>
                     <GeometryDrawing Geometry="F1 M 105.815,30.7308C 107.347,30.0537 109.138,30.7467 109.815,32.2786C 110.492,33.8105 109.799,35.6013 108.267,36.2784C 106.735,36.9556 104.944,36.2626 104.267,34.7307C 103.59,33.1988 104.283,31.4079 105.815,30.7308 Z ">
                         <GeometryDrawing.Pen>
-                            <Pen Thickness="2" LineJoin="Round" Brush="#FF738291"/>
+                            <Pen Thickness="2" LineJoin="Round" Brush="#FFF7A55F"/>
                         </GeometryDrawing.Pen>
                         <GeometryDrawing.Brush>
-                            <LinearGradientBrush StartPoint="-0.233636,0.499997" EndPoint="1.23365,0.499997">
+                            <LinearGradientBrush StartPoint="-0.233637,0.499997" EndPoint="1.23364,0.499997">
                                 <LinearGradientBrush.GradientStops>
-                                    <GradientStop Color="#FF3A3F41" Offset="0"/>
-                                    <GradientStop Color="#FFC2D9E2" Offset="0.990952"/>
+                                    <GradientStop Color="#FFFFE36D" Offset="0.344186"/>
+                                    <GradientStop Color="#FFE74554" Offset="1"/>
                                 </LinearGradientBrush.GradientStops>
                             </LinearGradientBrush>
                         </GeometryDrawing.Brush>

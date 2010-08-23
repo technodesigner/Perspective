@@ -74,15 +74,17 @@
             </p:Conical3D>
         </ContainerUIElement3D>
     </Page.Resources>
-    <TabControl>
-        <TabItem Header="Right-handed">
+    <TabControl Style="{StaticResource SkinedTabControl}">
+        <TabItem 
+            Header="Right-handed">
             <p:Workshop3D>
                 <p:XyzAxis3D 
                     Length="3.0"/>
                 <StaticResource ResourceKey="Ring"/>
             </p:Workshop3D>
         </TabItem>
-        <TabItem Header="Left-handed">
+        <TabItem 
+            Header="Left-handed">
             <p:Workshop3D>
                 <p:XyzAxis3D 
                     Length="3.0"
@@ -99,7 +101,8 @@
                 </ContainerUIElement3D>
             </p:Workshop3D>
         </TabItem>
-        <TabItem Header="Rotation X">
+        <TabItem 
+            Header="Rotation X">
             <p:Workshop3D
                 Name="xWorkshop">
                 <p:XyzAxis3D Length="3.0"/>
@@ -115,14 +118,16 @@
                 </ContainerUIElement3D>
             </p:Workshop3D>
         </TabItem>        
-        <TabItem Header="Rotation Y">
+        <TabItem 
+            Header="Rotation Y">
             <p:Workshop3D
                 Name="yWorkshop">
                 <p:XyzAxis3D Length="3.0"/>
                 <StaticResource ResourceKey="Ring"/>
             </p:Workshop3D>
         </TabItem>
-        <TabItem Header="Rotation Z">
+        <TabItem 
+            Header="Rotation Z">
             <p:Workshop3D
                 Name="zWorkshop">
                 <p:XyzAxis3D Length="3.0"/>

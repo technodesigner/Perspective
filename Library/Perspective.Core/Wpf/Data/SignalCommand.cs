@@ -38,7 +38,7 @@ namespace Perspective.Core.Wpf.Data
         }
 
         /// <summary>
-        /// Fires the Executing event.
+        /// Fires the Executed event.
         /// </summary>
         protected void OnExecuted(object parameter)
         {
@@ -67,7 +67,7 @@ namespace Perspective.Core.Wpf.Data
         }
 
         /// <summary>
-        /// Fires the Executing event. If not assigned, a value of true is returned.
+        /// Fires the CanExecuteChecking event. If not assigned, a value of true is returned.
         /// </summary>
         protected bool OnCanExecuteChecking(object parameter)
         {

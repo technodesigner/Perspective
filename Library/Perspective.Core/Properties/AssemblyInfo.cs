@@ -10,9 +10,9 @@ using System.Windows.Markup;
 [assembly: AssemblyTitle("Perspective.Core")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany(Perspective.Core.LibraryInfo.Company)]
 [assembly: AssemblyProduct("Perspective.Core")]
-[assembly: AssemblyCopyright("Copyright © 2008-2010")]
+[assembly: AssemblyCopyright(Perspective.Core.LibraryInfo.Copyright)]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -67,5 +67,15 @@ namespace Perspective.Core
         /// 2.0.0.2 : beta 2
         /// </summary>
         public const string GlobalVersion = "2.0.0.3";
+
+        /// <summary>
+        /// Global company name.
+        /// </summary>
+        public const string Company = "www.odewit.net";
+
+        /// <summary>
+        /// Global copyright information.
+        /// </summary>
+        public const string Copyright = "Copyright © http://perspective.codeplex.com 2008-2010";
     }
 }

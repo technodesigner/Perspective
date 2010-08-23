@@ -12,9 +12,9 @@ using System.Windows.Markup;
 [assembly: AssemblyTitle("Perspective.Wpf")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany(Perspective.Core.LibraryInfo.Company)]
 [assembly: AssemblyProduct("Perspective.Wpf")]
-[assembly: AssemblyCopyright("Copyright © 2008-2010")]
+[assembly: AssemblyCopyright(Perspective.Core.LibraryInfo.Copyright)]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

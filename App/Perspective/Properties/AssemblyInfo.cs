@@ -10,9 +10,9 @@ using System.Windows;
 [assembly: AssemblyTitle("Perspective")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany(Perspective.Core.LibraryInfo.Company)]
 [assembly: AssemblyProduct("Perspective")]
-[assembly: AssemblyCopyright("Copyright © 2010")]
+[assembly: AssemblyCopyright(Perspective.Core.LibraryInfo.Copyright)]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

@@ -225,4 +225,10 @@
             Property="Background" 
             Value="White" />
     </Style>
+
+    <Style x:Key="SkinedTabControl" TargetType="TabControl" BasedOn="{StaticResource {x:Type TabControl}}">
+        <Setter 
+            Property="Background" 
+            Value="{DynamicResource {ComponentResourceKey {x:Type local:ResourceKeys}, PageBackgroundBrush}}" />
+    </Style>
 </ResourceDictionary>

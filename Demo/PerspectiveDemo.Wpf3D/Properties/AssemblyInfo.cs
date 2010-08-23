@@ -10,9 +10,9 @@ using System.Windows;
 [assembly: AssemblyTitle("PerspectiveDemo.Wpf3D")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Microsoft")]
+[assembly: AssemblyCompany(Perspective.Core.LibraryInfo.Company)]
 [assembly: AssemblyProduct("PerspectiveDemo.Wpf3D")]
-[assembly: AssemblyCopyright("Copyright © Microsoft 2010")]
+[assembly: AssemblyCopyright(Perspective.Core.LibraryInfo.Copyright)]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -52,4 +52,4 @@ using System.Windows;
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+// [assembly: AssemblyFileVersion("1.0.0.0")]
