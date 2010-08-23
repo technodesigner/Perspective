@@ -437,16 +437,26 @@ namespace Perspective.Core.Wpf
         /// <summary>
         /// Creates a 3D X-rotation matrix.
         /// </summary>
-        /// <remarks>Because WPF is a right-handed 3D system, a positive angle value results in a counter-clockwise rotation around the axis.</remarks>
+        /// <remarks>For a right-handed 3D system (like WPF), a positive angle value results in a counter-clockwise rotation around the axis. For a left-handed 3D system, a positive angle value results in a clockwise rotation around the axis.</remarks>
         /// <param name="angle">Angle value in degree.</param>
+        /// <param name="handedness">The handedness of the coordinate system (optional). Under WPF, the defaut value is Right-handed.</param>
         /// <returns>A Matrix3D object.</returns>
-        public static Matrix3D GetXRotationMatrix(double angle)
+        public static Matrix3D GetXRotationMatrix(double angle, Handedness3D handedness = Handedness3D.RightHanded)
         {
             //var m = new Matrix3D();
             //m.Rotate(new Quaternion(new Vector3D(1, 0, 0), angle));
             //return m;
 
-            var radianAngle = GeometryHelper.DegreeToRadian(angle);
+            // var radianAngle = GeometryHelper.DegreeToRadian(angle);
+            double radianAngle = 0.0;
+            if (handedness == Handedness3D.LeftHanded)
+            {
+                radianAngle = (2 * Math.PI) - GeometryHelper.DegreeToRadian(angle);
+            }
+            else
+            {
+                radianAngle = GeometryHelper.DegreeToRadian(angle);
+            }
             return new Matrix3D
             {
                 M22 = Math.Cos(radianAngle), M32 = -Math.Sin(radianAngle),
@@ -457,17 +467,27 @@ namespace Perspective.Core.Wpf
         /// <summary>
         /// Creates a 3D Y-rotation matrix.
         /// </summary>
-        /// <remarks>Because WPF is a right-handed 3D system, a positive angle value results in a counter-clockwise rotation around the axis.</remarks>
+        /// <remarks>For a right-handed 3D system (like WPF), a positive angle value results in a counter-clockwise rotation around the axis. For a left-handed 3D system, a positive angle value results in a clockwise rotation around the axis.</remarks>
         /// <param name="angle">Angle value in degree.</param>
+        /// <param name="handedness">The handedness of the coordinate system (optional). Under WPF, the defaut value is Right-handed.</param>
         /// <returns>A Matrix3D object.</returns>
-        public static Matrix3D GetYRotationMatrix(double angle)
+        public static Matrix3D GetYRotationMatrix(double angle, Handedness3D handedness = Handedness3D.RightHanded)
         {
             //var m = new Matrix3D();
             //m.Rotate(new Quaternion(new Vector3D(0, 1, 0), angle));
             //return m;
 
+            double radianAngle = 0.0;
             // angle inverted in respect to the relative orientation of Z to X
-            var radianAngle = (2 * Math.PI) - GeometryHelper.DegreeToRadian(angle);
+            // var radianAngle = (2 * Math.PI) - GeometryHelper.DegreeToRadian(angle);
+            if (handedness == Handedness3D.LeftHanded)
+            {
+                radianAngle = GeometryHelper.DegreeToRadian(angle);
+            }
+            else
+            {
+                radianAngle = (2 * Math.PI) - GeometryHelper.DegreeToRadian(angle);
+            }
             return new Matrix3D
             {
                 M11 = Math.Cos(radianAngle), M31 = -Math.Sin(radianAngle),
@@ -478,40 +498,31 @@ namespace Perspective.Core.Wpf
         /// <summary>
         /// Creates a 3D Z-rotation matrix.
         /// </summary>
-        /// <remarks>Because WPF is a right-handed 3D system, a positive angle value results in a counter-clockwise rotation around the axis.</remarks>
+        /// <remarks>For a right-handed 3D system (like WPF), a positive angle value results in a counter-clockwise rotation around the axis. For a left-handed 3D system, a positive angle value results in a clockwise rotation around the axis.</remarks>
         /// <param name="angle">Angle value in degree.</param>
+        /// <param name="handedness">The handedness of the coordinate system (optional). Under WPF, the defaut value is Right-handed.</param>
         /// <returns>A Matrix3D object.</returns>
-        public static Matrix3D GetZRotationMatrix(double angle)
+        public static Matrix3D GetZRotationMatrix(double angle, Handedness3D handedness = Handedness3D.RightHanded)
         {
             //var m = new Matrix3D();
             //m.Rotate(new Quaternion(new Vector3D(0, 0, 1), angle));
             //return m;
 
-            var radianAngle = GeometryHelper.DegreeToRadian(angle);
+            // var radianAngle = GeometryHelper.DegreeToRadian(angle);
+            double radianAngle = 0.0;
+            if (handedness == Handedness3D.LeftHanded)
+            {
+                radianAngle = (2 * Math.PI) - GeometryHelper.DegreeToRadian(angle);
+            }
+            else
+            {
+                radianAngle = GeometryHelper.DegreeToRadian(angle);
+            }
             return new Matrix3D
             {
                 M11 = Math.Cos(radianAngle), M21 = -Math.Sin(radianAngle),
                 M12 = Math.Sin(radianAngle), M22 = Math.Cos(radianAngle)
             };
         }
-
-        //public static Matrix3D GetPerspectiveMatrix(
-        //    double fieldOfView,
-        //    double imageFormat,
-        //    double nearPlaneDistance,
-        //    double farPlaneDistance)
-        //{
-        //    var radianField = GeometryHelper.DegreeToRadian(fieldOfView);
-        //    double scaleY = 1.0 / Math.Tan(radianField / 2.0);
-        //    double scaleX = scaleY / imageFormat;
-        //    double distance = nearPlaneDistance - farPlaneDistance;
-        //    return new Matrix3D
-        //    {
-        //        M11 = scaleX,
-        //        M22 = scaleY,
-        //        M33 = farPlaneDistance / distance, M34 = -1,
-        //        OffsetZ = nearPlaneDistance * farPlaneDistance / distance
-        //    };
-        //}
     }
 }

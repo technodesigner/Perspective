@@ -48,6 +48,12 @@
     <Compile Include="PageInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Perspective.Core\Perspective.Core-dn4.0.csproj">
+      <Project>{19FC4939-5269-4B1E-93BF-569D3E14A9B0}</Project>
+      <Name>Perspective.Core-dn4.0</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
