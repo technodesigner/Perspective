@@ -57,24 +57,10 @@ namespace PerspectiveDemo.Wpf3D.View
             p3 *= Helper3D.GetZRotationMatrix(angle);
             DisplayPoint(p3, zWorkshop);
 
-            //MatrixTransform3D mt = new MatrixTransform3D(
-            //    Helper3D.GetPerspectiveMatrix(
-            //        90.0,
-            //        1.6,
-            //        1.0,
-            //        10.0));
-            //box.Transform = mt;
-
-            //MatrixTransform3D mt = new MatrixTransform3D(
-            //    Helper3D.GetZRotationMatrix(
-            //        45.0));
-            //box.Transform = mt;
-
             Matrix3D mXRotation = Helper3D.GetXRotationMatrix(45.0);
             Matrix3D mZRotation = Helper3D.GetZRotationMatrix(45.0);
             MatrixTransform3D mt = new MatrixTransform3D(mXRotation * mZRotation);
             box.Transform = mt;
-            Matrix m;
         }
 
         private void DisplayPoint(Point3D p, Workshop3D workshop, Material material = null)

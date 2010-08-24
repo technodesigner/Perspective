@@ -79,7 +79,7 @@
             Header="Right-handed">
             <p:Workshop3D>
                 <p:XyzAxis3D 
-                    Length="3.0"/>
+                    Length="2.0"/>
                 <StaticResource ResourceKey="Ring"/>
             </p:Workshop3D>
         </TabItem>
@@ -87,7 +87,7 @@
             Header="Left-handed">
             <p:Workshop3D>
                 <p:XyzAxis3D 
-                    Length="3.0"
+                    Length="2.0"
                     CoordinateSystemKind="LeftHanded"/>
                 <ContainerUIElement3D>
                     <ContainerUIElement3D.Transform>
@@ -105,7 +105,7 @@
             Header="Rotation X">
             <p:Workshop3D
                 Name="xWorkshop">
-                <p:XyzAxis3D Length="3.0"/>
+                <p:XyzAxis3D Length="2.0"/>
                 <ContainerUIElement3D>
                     <ContainerUIElement3D.Transform>
                         <RotateTransform3D>
@@ -122,7 +122,7 @@
             Header="Rotation Y">
             <p:Workshop3D
                 Name="yWorkshop">
-                <p:XyzAxis3D Length="3.0"/>
+                <p:XyzAxis3D Length="2.0"/>
                 <StaticResource ResourceKey="Ring"/>
             </p:Workshop3D>
         </TabItem>
@@ -130,7 +130,7 @@
             Header="Rotation Z">
             <p:Workshop3D
                 Name="zWorkshop">
-                <p:XyzAxis3D Length="3.0"/>
+                <p:XyzAxis3D Length="2.0"/>
                 <ContainerUIElement3D>
                     <ContainerUIElement3D.Transform>
                         <RotateTransform3D>
@@ -145,7 +145,7 @@
         </TabItem>
         <TabItem Header="Multiplication">
             <p:Workshop3D>
-                <p:XyzAxis3D Length="3.0"/>
+                <p:XyzAxis3D Length="2.0"/>
                 <p:Box3D x:Name="box" />
             </p:Workshop3D>
         </TabItem>
