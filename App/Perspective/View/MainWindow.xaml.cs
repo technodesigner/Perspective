@@ -39,6 +39,10 @@ namespace Perspective.View
         public MainWindow()
         {
             InitializeComponent();
+
+            //Uri uri = new Uri("pack://application:,,,/Perspective;component/Perspective.ico", UriKind.Absolute);
+            //this.Icon = BitmapFrame.Create(uri); 
+
             this.DataContext = _mainViewModel;
 
             const string category = "Perspective";
