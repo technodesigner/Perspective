@@ -1,11 +1,5 @@
 What's new in Perspective library ?
 
-This file describes the main new functionalities since the last offical release (1.0).
-
-Now Perspective 2.0 is under construction :
-- .NET 4.0 support (but Perspective 2.0 is not fully compatible with previous .NET versions),
-- new functionalities coming soon.
-
 What's new since version 2.0 beta :
 - BREAKING CHANGE : Namespace change from Perspective.Core.Primitives to Perspective.Core.Wpf : AxisDirection, Helper3D
 - Perspective.Core.Wpf
@@ -13,14 +7,19 @@ RenderingHelper : new property IsHWAccelerationDisabled, which enables to turn o
 GeometryHelper : new methods GetRotationMatrix, GetTranslationMatrix, GetScaleMatrix, GetSkewMatrix and RotatePoint
 Helper3D : new methods GetScaleMatrix, GetTranslationMatrix, GetXRotationMatrix, GetYRotationMatrix, GetZRotationMatrix
 - Perspective.Hosting
-Extension : new property SortOrder
+Extension : new property SortOrder, AssemblyName abstract property moved to ItemBase
 - Perspective.Wpf3D.Shapes
 XyzAxis3D : new property CoordinateSystemKind (to display right-handed or left-handed coordinate systems)
 - New icons color
+- BREAKING CHANGE : SignalCommand.Executing event renamed as SignalCommand.Executed (to be coherent with CommandBinding)
+- Perspective application :
+Now displays a warning when no module is loaded (i.e. for security reasons)
+Has a new background color
+Perspective.Model.MainModel renamed as Perspective.Model.ExtensionModel
 
 What's new since version 1.0 and 2.0 beta :
+- .NET 4.0 support (but Perspective 2.0 is not fully compatible with previous .NET versions),
 - BREAKING CHANGE : Namespace change from Perspective.Core.Primitives to Perspective.Core.Wpf : AxisDirection, Helper3D.
-- BREAKING CHANGE : SignalCommand.Executing event renamed as SignalCommand.Executed (to be coherent with CommandBinding).
 
 Perspective.Core
 ----------------
@@ -38,7 +37,6 @@ Helper3D : static methods DegreeToRadian and RadianToDegree are now deprecated, 
 Perspective.Core.Wpf.Data
 -------------------------
 SignalCommand : A Command implementation for the MVVM pattern using events (inspired by Josh Smith work about RelayCommand and MVVM).
-BREAKING CHANGE : SignalCommand.Executing event renamed as SignalCommand.Executed (to be coherent with CommandBinding).
 
 Perspective.Wpf.Panels
 ------------------------
@@ -72,7 +70,6 @@ XyzAxis3D : new property CoordinateSystemKind (to display right-handed or left-h
 
 Perspective application project
 -------------------------------
-UNDER CONSTRUCTION !
 A new WPF 4 application which can dynamically load pages from extension assemblies using MEF. 
 This application is used here as demo of Perspective library.
 The background image is loaded randomly from a PerspectiveAlbum subdirectory in the application directory or in the system Images directories.

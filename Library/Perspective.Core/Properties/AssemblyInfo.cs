@@ -64,9 +64,11 @@ namespace Perspective.Core
         /// <summary>
         /// Perspective global version number.
         /// 2.0.0.1 : beta
-        /// 2.0.0.2 : beta 2
+        /// 2.0.0.2 : beta 2 (not published)
+        /// 2.0.0.3 : beta 3 (not published)
+        /// 2.0.0.4 : final 2.0
         /// </summary>
-        public const string GlobalVersion = "2.0.0.3";
+        public const string GlobalVersion = "2.0.0.4";
 
         /// <summary>
         /// Global company name.

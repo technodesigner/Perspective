@@ -16,13 +16,15 @@ using Perspective.Hosting;
 using System.ComponentModel.Composition.Hosting;
 using System.Windows.Media.Imaging;
 using System.IO;
+using System.Windows;
+using Perspective.Wpf.ResourceStrings;
 
 namespace Perspective.Model
 {
     /// <summary>
     /// Manages the data that represent the extensions.
     /// </summary>
-    public class MainModel
+    public class ExtensionModel
     {
         //[ImportMany(AllowRecomposition = true)]
         //public IEnumerable<Extension> Extensions { get; set; }
@@ -35,7 +37,7 @@ namespace Perspective.Model
         /// <summary>
         /// Initializes a new instance of MainModel.
         /// </summary>
-        public MainModel()
+        public ExtensionModel()
         {
             Compose();
 
@@ -44,7 +46,17 @@ namespace Perspective.Model
             {
                 Extensions.Add(extension);
             }
-            Extensions.Sort(CompareExtensions);
+            if (Extensions.Count == 0)
+            {
+                ResourceStringManager resourceStringManager = new ResourceStringManager(
+                    ResourceAssembly.AssemblyNameConst,
+                    "Model.Strings.ExtensionModel");
+                MessageBox.Show(resourceStringManager.GetString("NoMefModuleWarning"));
+            }
+            else
+            {
+                Extensions.Sort(CompareExtensions);
+            }
         }
 
         private void Compose()
@@ -54,7 +66,7 @@ namespace Perspective.Model
             container.ComposeParts(this);
         }
 
-        private BitmapImage GetRandomImage(string dirName)
+        private static BitmapImage GetRandomImage(string dirName)
         {
             BitmapImage randomImage = null;
             DirectoryInfo di = new DirectoryInfo(dirName);

@@ -12,6 +12,9 @@ namespace Perspective
     /// </summary>
     public partial class App : Application
     {
+        /// <summary>
+        /// Constructor.
+        /// </summary>
         public App()
         {
             //// Localization test
@@ -23,7 +26,6 @@ namespace Perspective
             //    new System.Globalization.CultureInfo(culture);
 
             //Console.WriteLine("CurrentUICulture {0}.", System.Globalization.CultureInfo.CurrentUICulture.Name);
-
 
             // Internationalization
             Perspective.Wpf.ResourceAssembly.Register();
@@ -38,7 +40,7 @@ namespace Perspective
         private void Application_Startup(object sender, StartupEventArgs e)
         {
             IsolatedStorageHelper.LoadFromUserStoreForDomain(this.Properties, _configFilename);
-
+            Perspective.ResourceAssembly.Register();
             Perspective.View.MainWindow mw = new Perspective.View.MainWindow();
             mw.Show();
         }

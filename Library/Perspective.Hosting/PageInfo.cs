@@ -30,42 +30,6 @@ namespace Perspective.Hosting
             _extension = extension;
         }
 
-        //private string _title;
-
-        ///// <summary>
-        ///// Gets or sets the page info title.
-        ///// </summary>
-        //public string Title
-        //{
-        //    get
-        //    {
-        //        return _title;
-        //    }
-        //    set
-        //    {
-        //        _title = value;
-        //        // NotifyPropertyChanged("Title");
-        //    }
-        //}
-
-        //private string _iconKey;
-
-        ///// <summary>
-        ///// Gets or sets the page info icon resource key.
-        ///// </summary>
-        //public string IconKey
-        //{
-        //    get
-        //    {
-        //        return _iconKey;
-        //    }
-        //    set
-        //    {
-        //        _iconKey = value;
-        //        // NotifyPropertyChanged("IconKey");
-        //    }
-        //}
-
         private Extension _extension;
 
         /// <summary>
@@ -75,31 +39,6 @@ namespace Perspective.Hosting
         {
             get { return _extension; }
         }
-
-        ///// <summary>
-        ///// Gets a DrawingImage containing the icon.
-        ///// </summary>
-        //public DrawingImage Icon
-        //{
-        //    get
-        //    {
-        //        DrawingImage di = null;
-        //        Object resource = Application.Current.Resources[IconKey];
-        //        if (resource != null)
-        //        {
-        //            if (resource is DrawingBrush)
-        //            {
-        //                DrawingBrush brush = resource as DrawingBrush;
-        //                di = new DrawingImage(brush.Drawing);
-        //            }
-        //            else if (resource is DrawingImage)
-        //            {
-        //                di = resource as DrawingImage;
-        //            }
-        //        }
-        //        return di;
-        //    }
-        //}
 
         private Uri _uri = null;
 
@@ -135,28 +74,18 @@ namespace Perspective.Hosting
             {
                 _partialClassName = value;
                 _uri = null;
-                // NotifyPropertyChanged("PartialClassName");
             }
         }
 
-        //#region INotifyPropertyChanged Members
-
-        ///// <summary>
-        ///// Occurs when a property value changes.
-        ///// </summary>
-        //public event PropertyChangedEventHandler PropertyChanged;
-
-        ///// <summary>
-        ///// Method called when a property value changes.
-        ///// </summary>
-        //protected void NotifyPropertyChanged(string propertyName)
-        //{
-        //    if (PropertyChanged != null)
-        //    {
-        //        PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-        //    }
-        //}
-
-        //#endregion
+        /// <summary>
+        /// Gets the assembly name.
+        /// </summary>
+        public override string AssemblyName
+        {
+            get
+            {
+                return _extension.AssemblyName;
+            }
+        }
     }
 }

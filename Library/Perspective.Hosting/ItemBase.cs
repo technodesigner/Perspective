@@ -37,7 +37,6 @@ namespace Perspective.Hosting
             set
             {
                 _title = value;
-                // NotifyPropertyChanged("Title");
             }
         }
 
@@ -55,7 +54,6 @@ namespace Perspective.Hosting
             set
             {
                 _iconKey = value;
-                // NotifyPropertyChanged("IconKey");
             }
         }
 
@@ -83,5 +81,11 @@ namespace Perspective.Hosting
                 return di;
             }
         }
+
+        /// <summary>
+        /// Property to override to specify the assembly name of the inherited class (i.e. "PerspectiveDemo.Wpf3D")
+        /// </summary>
+        /// <returns></returns>
+        public abstract string AssemblyName { get; }
     }
 }

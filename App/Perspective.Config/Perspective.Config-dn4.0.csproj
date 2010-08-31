@@ -28,6 +28,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -69,9 +70,22 @@
     <Compile Include="ResourceAssembly.cs" />
     <Compile Include="ResourceKeys.cs" />
     <Compile Include="SkinManager.cs" />
+    <Compile Include="Strings\Extension.fr.Designer.cs">
+      <DependentUpon>Extension.fr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Strings\Extension.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Extension.resx</DependentUpon>
+    </Compile>
     <Compile Include="ViewModel\LocalizationViewModel.cs" />
     <Compile Include="ViewModel\ScreenSizeToScaleFactorConverter.cs" />
     <Compile Include="ViewModel\SkinViewModel.cs" />
+    <Compile Include="View\About.xaml.cs">
+      <DependentUpon>About.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\DpiScaling.xaml.cs">
       <DependentUpon>DpiScaling.xaml</DependentUpon>
     </Compile>
@@ -84,11 +98,37 @@
     <Compile Include="View\SkinConfig.xaml.cs">
       <DependentUpon>SkinConfig.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Strings\About.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>About.resx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Strings\About.fr.Designer.cs">
+      <DependentUpon>About.fr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <EmbeddedResource Include="Model\Strings\LocalizationModel.fr.resx" />
     <EmbeddedResource Include="Model\Strings\LocalizationModel.resx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Strings\Extension.fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Extension.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Strings\Extension.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Extension.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Strings\About.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>About.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Strings\About.fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>About.fr.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Strings\DpiScaling.fr.resx" />
     <EmbeddedResource Include="View\Strings\DpiScaling.resx" />
@@ -140,6 +180,10 @@
     <Page Include="Skins\PsycheRock.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="View\About.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\DpiScaling.xaml">
       <SubType>Designer</SubType>

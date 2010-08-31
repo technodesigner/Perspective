@@ -12,6 +12,7 @@
 using System;
 using Perspective.Hosting;
 using System.Collections.Generic;
+using Perspective.Wpf.ResourceStrings;
 
 namespace PerspectiveDemo.Wpf3D
 {
@@ -66,6 +67,10 @@ namespace PerspectiveDemo.Wpf3D
             Title = _title;
             IconKey = _iconKey;
             SortOrder = 110;
+            ResourceAssembly.Register();
+            ResourceStringManager resourceStringManager = new ResourceStringManager(
+                AssemblyNameConst,
+                "Strings.Extension");
             _pageInfos = new List<PageInfo>
             {
                 new PageInfo(this)
@@ -88,7 +93,7 @@ namespace PerspectiveDemo.Wpf3D
                 },
                 new PageInfo(this)
                 {
-                    Title = "Open Box3D",
+                    Title = resourceStringManager.GetString("OpenBox3D"),
                     IconKey = _iconKey,
                     PartialClassName = "View/Box3DOpenDemo.xaml"
                 },            
@@ -100,7 +105,7 @@ namespace PerspectiveDemo.Wpf3D
                 },
                 new PageInfo(this)
                 {
-                    Title = "Interactivity",
+                    Title = resourceStringManager.GetString("Interactivity"),
                     IconKey = _iconKey,
                     PartialClassName = "View/InteractivityDemo.xaml"
                 },
@@ -142,7 +147,7 @@ namespace PerspectiveDemo.Wpf3D
                 },
                 new PageInfo(this)
                 {
-                    Title = "Cylinder",
+                    Title = resourceStringManager.GetString("Cylinder"),
                     IconKey = _iconKey,
                     PartialClassName = "View/CylinderDemo.xaml"
                 },
@@ -190,7 +195,7 @@ namespace PerspectiveDemo.Wpf3D
                 },
                 new PageInfo(this)
                 {
-                    Title = "Bubble chart",
+                    Title = resourceStringManager.GetString("BubbleChart"),
                     IconKey = _iconKey,
                     PartialClassName = "View/BubbleChartDemo.xaml"
                 },
@@ -214,7 +219,7 @@ namespace PerspectiveDemo.Wpf3D
                 },
                 new PageInfo(this)
                 {
-                    Title = "PieSlice",
+                    Title = resourceStringManager.GetString("PieSlice"),
                     IconKey = _iconKey,
                     PartialClassName = "View/PieSliceDemo.xaml"
                 },
@@ -232,19 +237,19 @@ namespace PerspectiveDemo.Wpf3D
                 },
                 new PageInfo(this)
                 {
-                    Title = "Range3D controls",
+                    Title = resourceStringManager.GetString("Range3D"),
                     IconKey = _iconKey,
                     PartialClassName = "View/ButtonFaderKnob3DDemo.xaml"
                 },
                 new PageInfo(this)
                 {
-                    Title = "Mixer device",
+                    Title = resourceStringManager.GetString("Mixer"),
                     IconKey = _iconKey,
                     PartialClassName = "View/MixerDemo.xaml"
                 },
                 new PageInfo(this)
                 {
-                    Title = "Custom Knob3D",
+                    Title = resourceStringManager.GetString("CustomKnob3D"),
                     IconKey = _iconKey,
                     PartialClassName = "View/CustomKnob3DDemo.xaml"
                 },

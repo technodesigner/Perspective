@@ -33,6 +33,7 @@
             <Setter Property="Padding" Value="10" />
             <Setter Property="Foreground" Value="Black" />
             <Setter Property="Background" Value="White" />
+            <Setter Property="ToolTip" Value="{Binding Path=Title}" />
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
@@ -111,6 +112,7 @@
         <DataTemplate x:Key="ExtensionTemplate">
             <Grid 
                 Margin="6">
+                <!--ToolTip="{Binding Path=Title}"-->
                 <Grid.RowDefinitions>
                     <RowDefinition />
                     <RowDefinition Height="Auto"/>
@@ -353,7 +355,7 @@
             </TaskbarItemInfo.ThumbButtonInfos>
         </TaskbarItemInfo>
     </Window.TaskbarItemInfo>
-    <Grid Background="MediumSlateBlue">
+    <Grid Background="#EBB462">
         <Image 
             Source="{Binding RandomImage}"
             Stretch="UniformToFill"/>

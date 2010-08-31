@@ -28,6 +28,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -63,6 +64,16 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="ResourceAssembly.cs" />
+    <Compile Include="Strings\Extension.fr.Designer.cs">
+      <DependentUpon>Extension.fr.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Strings\Extension.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Extension.resx</DependentUpon>
+    </Compile>
     <Compile Include="ViewModel\ScreenSizeToScaleFactorConverter.cs" />
     <Compile Include="View\BeePanelDemo.xaml.cs">
       <DependentUpon>BeePanelDemo.xaml</DependentUpon>
@@ -82,6 +93,14 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Strings\Extension.fr.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Extension.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Strings\Extension.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Extension.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="View\Strings\RangeControls.fr.resx" />
     <EmbeddedResource Include="View\Strings\RangeControls.resx" />
@@ -106,6 +125,7 @@
     <ProjectReference Include="..\..\Library\Perspective.Wpf3D\Perspective.Wpf3D-dn4.0.csproj">
       <Project>{F1121E62-AE79-4460-9419-E74F19C011F7}</Project>
       <Name>Perspective.Wpf3D-dn4.0</Name>
+      <Private>False</Private>
     </ProjectReference>
     <ProjectReference Include="..\..\Library\Perspective.Wpf\Perspective.Wpf-dn4.0.csproj">
       <Project>{34860E9C-F566-4F14-BFB9-45F6B37503F9}</Project>

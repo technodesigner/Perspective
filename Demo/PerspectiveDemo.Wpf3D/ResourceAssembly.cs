@@ -13,12 +13,25 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Reflection;
+using Perspective.Wpf.ResourceStrings;
 
-namespace Perspective.Config.Entities
+namespace PerspectiveDemo.Wpf3D
 {
-    public class LocaleInfo
+    public static class ResourceAssembly
     {
-        public string Title { get; set; }
-        public string CultureName { get; set; }
+        private static bool _registered;
+
+        public static void Register()
+        {
+            if (!_registered)
+            {
+                Assembly assembly = Assembly.GetExecutingAssembly();
+                CultureManager.Current.ResourceAssemblies.Add(
+                    Extension.AssemblyNameConst,
+                    assembly);
+                _registered = true;
+            }
+        }
     }
 }

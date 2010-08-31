@@ -24,7 +24,7 @@ namespace Perspective.ViewModel
     /// </summary>
     public class MainViewModel : INotifyPropertyChanged
     {
-        private MainModel _model;
+        private ExtensionModel _model;
 
         /// <summary>
         /// Updates the CurrentPageInfo property.
@@ -36,7 +36,7 @@ namespace Perspective.ViewModel
         /// </summary>
         public MainViewModel()
         {
-            _model = new MainModel();
+            _model = new ExtensionModel();
             SetCurrentPageInfoCommand = new SignalCommand();
             SetCurrentPageInfoCommand.Executed += (sender, e) =>
             {

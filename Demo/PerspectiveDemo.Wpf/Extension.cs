@@ -12,6 +12,7 @@
 using System;
 using System.Collections.Generic;
 using Perspective.Hosting;
+using Perspective.Wpf.ResourceStrings;
 
 namespace PerspectiveDemo.Wpf
 {
@@ -66,23 +67,27 @@ namespace PerspectiveDemo.Wpf
             Title = _title;
             IconKey = _iconKey;
             SortOrder = 100;
+            ResourceAssembly.Register();
+            ResourceStringManager resourceStringManager = new ResourceStringManager(
+                AssemblyNameConst,
+                "Strings.Extension");
             _pageInfos = new List<PageInfo>
             {
                 new PageInfo(this)
                 {
-                    Title = "Shapes",
+                    Title = resourceStringManager.GetString("Shapes"),
                     IconKey = _iconKey,
                     PartialClassName = "View/ShapeDemo.xaml"
                 },
                 new PageInfo(this)
                 {
-                    Title = "Matrix",
+                    Title = resourceStringManager.GetString("Matrix"),
                     IconKey = _iconKey,
                     PartialClassName = "View/MatrixDemo.xaml"
                 },
                 new PageInfo(this)
                 {
-                    Title = "Range controls",
+                    Title = resourceStringManager.GetString("RangeControls"),
                     IconKey = _iconKey,
                     PartialClassName = "View/RangeControlDemo.xaml"
                 },
@@ -94,12 +99,11 @@ namespace PerspectiveDemo.Wpf
                 },
                 new PageInfo(this)
                 {
-                    Title = "MayaEase animation",
+                    Title = resourceStringManager.GetString("MayaEase"),
                     IconKey = _iconKey,
                     PartialClassName = "View/MayaEaseDemo.xaml"
                 }
             };
-            ResourceAssembly.Register();
         }
     }
 }

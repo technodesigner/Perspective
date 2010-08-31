@@ -16,11 +16,21 @@ using System.Text;
 using System.Reflection;
 using Perspective.Wpf.ResourceStrings;
 
-namespace PerspectiveDemo.Wpf
+namespace Perspective
 {
     public static class ResourceAssembly
     {
         private static bool _registered;
+
+        private static string _assemblyName = "Perspective";
+
+        /// <summary>
+        /// Gets the assembly name.
+        /// </summary>
+        public static string AssemblyNameConst
+        {
+            get { return _assemblyName; }
+        }
 
         public static void Register()
         {
@@ -28,7 +38,7 @@ namespace PerspectiveDemo.Wpf
             {
                 Assembly assembly = Assembly.GetExecutingAssembly();
                 CultureManager.Current.ResourceAssemblies.Add(
-                    Extension.AssemblyNameConst,
+                    AssemblyNameConst,
                     assembly);
                 _registered = true;
             }
