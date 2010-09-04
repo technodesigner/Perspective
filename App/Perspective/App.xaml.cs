@@ -4,6 +4,7 @@ using System.Configuration;
 using System.Linq;
 using System.Windows;
 using Perspective.Core;
+using System.Text;
 
 namespace Perspective
 {
@@ -48,6 +49,31 @@ namespace Perspective
         private void Application_Exit(object sender, ExitEventArgs e)
         {
             IsolatedStorageHelper.SaveToUserStoreForDomain(this.Properties, _configFilename);
+        }
+
+        private void Application_DispatcherUnhandledException(object sender, System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e)
+        {
+            string logFileName = "Perspective.Errors.log";
+            var errorStringBuilder = new StringBuilder();
+            var exception = e.Exception;
+            errorStringBuilder.AppendLine(String.Format("{0} - Log : {1}\n", DateTime.Now, logFileName));
+            errorStringBuilder.AppendLine("");
+            errorStringBuilder.AppendLine(exception.ToString());
+            var compactErrorText = (String.Format("{0} : {1}\n\nLog : {2}", exception.GetType().ToString(), exception.Message, logFileName));
+            while (exception.InnerException != null)
+            {
+                exception = exception.InnerException;
+                errorStringBuilder.AppendLine("");
+                errorStringBuilder.AppendLine("InnerException :");
+                errorStringBuilder.AppendLine(exception.ToString());
+            }
+            var errortext = errorStringBuilder.ToString();
+            using (var writer = new System.IO.StreamWriter(logFileName, true))
+            {
+                writer.Write(errortext);
+            }
+            MessageBox.Show(compactErrorText, "Exception", MessageBoxButton.OK, MessageBoxImage.Error);
+            e.Handled = true;
         }
     }
 }
