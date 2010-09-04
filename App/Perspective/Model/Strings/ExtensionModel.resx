@@ -118,6 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="NoMefModuleWarning" xml:space="preserve">
-    <value>No module has been loaded. Check for files in the Extensions folder. Verify that no security issue prevent the loading of dll files..</value>
+    <value>No module has been loaded. Check for files in the Extensions folder. Verify that no security issue prevent the loading of dll files.</value>
   </data>
 </root>

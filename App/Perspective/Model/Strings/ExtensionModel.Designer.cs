@@ -61,7 +61,7 @@ namespace Perspective.Model.Strings {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à No module has been loaded. Check for files in the Extensions folder. Verify that no security issue prevent the loading of dll files...
+        ///   Recherche une chaîne localisée semblable à No module has been loaded. Check for files in the Extensions folder. Verify that no security issue prevent the loading of dll files..
         /// </summary>
         internal static string NoMefModuleWarning {
             get {

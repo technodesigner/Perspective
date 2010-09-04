@@ -56,7 +56,7 @@ namespace Perspective
             string logFileName = "Perspective.Errors.log";
             var errorStringBuilder = new StringBuilder();
             var exception = e.Exception;
-            errorStringBuilder.AppendLine(String.Format("{0} - Log : {1}\n", DateTime.Now, logFileName));
+            errorStringBuilder.AppendLine(String.Format("{0} - Log : {1}", DateTime.Now, logFileName));
             errorStringBuilder.AppendLine("");
             errorStringBuilder.AppendLine(exception.ToString());
             var compactErrorText = (String.Format("{0} : {1}\n\nLog : {2}", exception.GetType().ToString(), exception.Message, logFileName));
@@ -67,6 +67,9 @@ namespace Perspective
                 errorStringBuilder.AppendLine("InnerException :");
                 errorStringBuilder.AppendLine(exception.ToString());
             }
+            errorStringBuilder.AppendLine("");
+            errorStringBuilder.AppendLine("--------------------------------------------------------------------------------");
+            errorStringBuilder.AppendLine("");
             var errortext = errorStringBuilder.ToString();
             using (var writer = new System.IO.StreamWriter(logFileName, true))
             {
