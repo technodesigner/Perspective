@@ -73,7 +73,7 @@ namespace Perspective.Core
         /// <summary>
         /// Global company name.
         /// </summary>
-        public const string Company = "www.odewit.net";
+        public const string Company = "perspective.codeplex.com";
 
         /// <summary>
         /// Global copyright information.
