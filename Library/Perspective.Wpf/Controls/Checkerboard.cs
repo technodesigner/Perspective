@@ -156,9 +156,9 @@ namespace Perspective.Wpf.Controls
             using (StreamGeometryContext darkContext = darkGeometry.Open())
             {
                 // using (StreamGeometryContext lightContext = lightGeometry.Open())
-                for (int i = 0; i < RowCount; i++)
+                for (int i = 0; i < ColumnCount; i++)
                 {
-                    for (int j = 0; j < ColumnCount; j++)
+                    for (int j = 0; j < RowCount; j++)
                     {
                         if (((i % 2 == 0) && (j % 2 == 0))
                             || ((i % 2 == 1) && (j % 2 == 1)))

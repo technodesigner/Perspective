@@ -54,7 +54,7 @@ namespace Perspective.Wpf3D.Shapes
             DependencyProperty.Register(
                 "AngleValue",
                 typeof(double),
-                typeof(PolygonalElement3D),
+                typeof(PieSlice3D),
                 new PropertyMetadata(
                     0.0, 
                     VisualPropertyChanged));
@@ -76,7 +76,7 @@ namespace Perspective.Wpf3D.Shapes
             DependencyProperty.Register(
                 "PieRadius",
                 typeof(double),
-                typeof(PolygonalElement3D),
+                typeof(PieSlice3D),
                 new PropertyMetadata(
                     1.0, 
                     VisualPropertyChanged));
