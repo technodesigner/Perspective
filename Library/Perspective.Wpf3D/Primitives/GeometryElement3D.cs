@@ -237,7 +237,8 @@ namespace Perspective.Wpf3D.Primitives
         /// <summary>
         /// Gets or sets the associated Sculptor object.
         /// </summary>
-        protected Sculptor Sculptor
+        // protected Sculptor Sculptor
+        public Sculptor Sculptor
         {
             get { return _sculptor; }
             set { _sculptor = value; }

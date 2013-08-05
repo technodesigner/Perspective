@@ -67,8 +67,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controls\Gyroscope3D.cs" />
+    <Compile Include="Export\IModel3dEncoder.cs" />
+    <Compile Include="Export\StlEncoder.cs" />
     <Compile Include="Primitives\CoordinateSystemKind.cs" />
     <Compile Include="Primitives\MeshBuiltEventArgs.cs" />
+    <Compile Include="Sculptors\HouseSculptor.cs" />
     <Compile Include="Sculptors\PieSliceSculptor.cs" />
     <Compile Include="Sculptors\SliceSculptor.cs">
       <SubType>Code</SubType>
@@ -79,6 +82,7 @@
     <Compile Include="Primitives\BoxSides.cs" />
     <Compile Include="Controls\Button3D.cs" />
     <Compile Include="Shapes\Conical3D.cs" />
+    <Compile Include="Shapes\House3D.cs" />
     <Compile Include="Shapes\Football3D.cs" />
     <Compile Include="Shapes\Isocahedron3D.cs" />
     <Compile Include="Controls\Knob3D.cs" />

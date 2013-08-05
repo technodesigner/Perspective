@@ -258,6 +258,12 @@ namespace PerspectiveDemo.Wpf3D
                     Title = "Matrix3D",
                     IconKey = _iconKey,
                     PartialClassName = "View/Matrix3DDemo.xaml"
+                },
+                new PageInfo(this)
+                {
+                    Title = "House3D+Export",
+                    IconKey = _iconKey,
+                    PartialClassName = "View/HouseDemo.xaml"
                 }
             };
         }

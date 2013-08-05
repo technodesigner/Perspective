@@ -123,6 +123,9 @@
     <Compile Include="View\Gyroscope3DDemo.xaml.cs">
       <DependentUpon>Gyroscope3DDemo.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\HouseDemo.xaml.cs">
+      <DependentUpon>HouseDemo.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\InteractivityDemo.xaml.cs">
       <DependentUpon>InteractivityDemo.xaml</DependentUpon>
     </Compile>
@@ -276,6 +279,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\Gyroscope3DDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\HouseDemo.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -53,6 +53,16 @@ namespace Perspective.Wpf3D.Primitives
             }
         }
 
+        /// <summary>
+        ///  Initializes a new instance of Sculptor.
+        /// </summary>
+        /// <param name="s">Source Sculptor</param>
+        public Sculptor(Sculptor s)
+        {
+            _points = new Point3DCollection();
+            CopyFrom(s);
+        }
+
         private Point3DCollection _points;
 
         /// <summary>
@@ -173,7 +183,7 @@ namespace Perspective.Wpf3D.Primitives
         /// <summary>
         /// Copies the points and triangles from a Sculptor object
         /// </summary>
-        /// <param name="s"></param>
+        /// <param name="s">Source Sculptor</param>
         protected void CopyFrom(Sculptor s)
         {
             foreach (Point3D p in s.Points)

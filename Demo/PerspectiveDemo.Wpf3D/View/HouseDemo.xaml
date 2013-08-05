@@ -1,0 +1,36 @@
+﻿<Page x:Class="PerspectiveDemo.Wpf3D.View.HouseDemo"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:p="http://www.codeplex.com/perspective"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+    mc:Ignorable="d" Style="{StaticResource PageStyle}"
+	Title="House3D - Export for 3D printer - Export pour imprimante 3D" d:DesignHeight="500" d:DesignWidth="500">
+    <Page.Resources>
+        <Style 
+            TargetType="Button" BasedOn="{StaticResource GlassButtonStyle}">
+        </Style>
+    </Page.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <p:Workshop3D ShowCommandPanel="True">
+            <p:XyzAxis3D Length="3.0"/>
+            <p:House3D x:Name="house" />
+        </p:Workshop3D>
+        <StackPanel 
+            Height="50"
+            Grid.Row="1"
+            HorizontalAlignment="Center"
+            Orientation="Horizontal">
+            <Button
+                Name="exportButton"
+                Content="Export"
+                Click="exportButton_Click"/>
+ 
+        </StackPanel>
+    </Grid>
+
+</Page>

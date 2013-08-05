@@ -1,5 +1,14 @@
 What's new in Perspective library ?
 
+What's new in version 2.1.0.1 : 
+- Perspective 3D models may now be exported in STL (STereoLithography) files. 
+This enable 3D printing (tested for MakerBot Replicator 2X and MakerWare).
+Thanks to the makespace.org community in Cambridge (UK) for their help, in particular Kim Spence-Jones and Nicholas Johnson
+- New class SltEncoder (Perspective.Wpf3D.Export)
+- New shape House3D and new demo page House3D+Export
+- GeometryElement3D.Sculptor is now public
+- Environment : Visual Studio Ultimate 2013 Preview, Windows 8.1 Pro Preview, .NET 4, MakerBot Replicator 2X and MakerWare
+
 What's new since version 2.0 beta :
 - BREAKING CHANGE : Namespace change from Perspective.Core.Primitives to Perspective.Core.Wpf : AxisDirection, Helper3D
 - Perspective.Core.Wpf
