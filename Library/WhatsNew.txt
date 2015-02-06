@@ -1,6 +1,22 @@
-What's new in Perspective library ?
+THE PERSPECTIVE LIBRARY FOR WPF
 
+http://www.codeplex.com/perspective
+Main author : Olivier Dewit - http://technodesign.solutions/
+
+First build
+===========
+Because of MEF weak references, compile the source code in that order :
+1. Perspective library
+2. Perspective.Config-dn4.0
+3. Demo
+4. Perspective-dn4.0
+
+Set Perspective-dn4.0 as StartUp project.
+
+What's new in Perspective library ?
+===================================
 What's new in version 2.2.0.1 : 
+-------------------------------
 - Perspective.Wpf3D.Panels :
 New 3D panels : Grid3D, BeeGrid3D (honeycomb layout)
 - Perspective.Wpf3D.Shapes :
