@@ -21,84 +21,53 @@ using System.Windows.Media.Media3D;
 namespace Perspective.Wpf3D.Panels
 {
     /// <summary>
-    /// A grid panel for 3D elements.
+    /// A 3D grid panel for 3D elements.
     /// </summary>
-    public class Grid3D : Panel3D
+    public class Grid3D : Grid2DPanel3D
     {
         /// <summary>
-        /// Identifies the X attached dependency property.
+        /// Identifies the Z attached dependency property.
         /// </summary>
-        public static readonly DependencyProperty XProperty =
+        public static readonly DependencyProperty ZProperty =
             DependencyProperty.RegisterAttached(
-                "X",
+                "Z",
                 typeof(int),
                 typeof(Grid3D),
                 new PropertyMetadata(0));
 
         /// <summary>
-        /// Gets the value of the X attached property from the specified UIElement3D.
+        /// Gets the value of the Z attached property from the specified UIElement3D.
         /// </summary>
         /// <param name="element">The element from which to read the property value.</param>
-        /// <returns>The value of the X attached property</returns>
+        /// <returns>The value of the Z attached property</returns>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters")]
-        public static int GetX(UIElement3D element)
+        public static int GetZ(UIElement3D element)
         {
-            return (int)element.GetValue(XProperty);
+            return (int)element.GetValue(ZProperty);
         }
 
         /// <summary>
-        /// Sets the value of the X attached property to the specified UIElement3D.
+        /// Sets the value of the Z attached property to the specified UIElement3D.
         /// </summary>
-        /// <param name="element">The element on which to set the X attached property.</param>
+        /// <param name="element">The element on which to set the Z attached property.</param>
         /// <param name="value">The property value to set.</param>
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters")]
-        public static void SetX(UIElement3D element, int value)
+        public static void SetZ(UIElement3D element, int value)
         {
-            element.SetValue(XProperty, value);
-        }
-
-        /// <summary>
-        /// Identifies the Y attached dependency property.
-        /// </summary>
-        public static readonly DependencyProperty YProperty =
-            DependencyProperty.RegisterAttached(
-                "Y",
-                typeof(int),
-                typeof(Grid3D),
-                new PropertyMetadata(0));
-
-        /// <summary>
-        /// Gets the value of the Y attached property from the specified UIElement3D.
-        /// </summary>
-        /// <param name="element">The element from which to read the property value.</param>
-        /// <returns>The value of the Y attached property</returns>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters")]
-        public static int GetY(UIElement3D element)
-        {
-            return (int)element.GetValue(YProperty);
-        }
-
-        /// <summary>
-        /// Sets the value of the Y attached property to the specified UIElement3D.
-        /// </summary>
-        /// <param name="element">The element on which to set the Y attached property.</param>
-        /// <param name="value">The property value to set.</param>
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1011:ConsiderPassingBaseTypesAsParameters")]
-        public static void SetY(UIElement3D element, int value)
-        {
-            element.SetValue(YProperty, value);
+            element.SetValue(ZProperty, value);
         }
 
         /// <summary>
         /// Defines the transform to apply to the 3D element.
         /// </summary>
         /// <param name="element">The 3D element.</param>
-        /// <returns></returns>
+        /// <returns>A TranslateTransform3D object.</returns>
         protected override Transform3D ComputeTransform(UIElement3D element) 
         {
             int x = GetX(element);
             int y = GetY(element);
-            return new TranslateTransform3D(x, y, 0);
+            int z = GetZ(element);
+            return new TranslateTransform3D(x, y, z);
         }
     }
 }

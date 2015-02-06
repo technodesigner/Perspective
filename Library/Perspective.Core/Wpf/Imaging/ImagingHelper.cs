@@ -83,7 +83,7 @@ namespace Perspective.Core.Wpf.Imaging
         }
 
         /// <summary>
-        /// Creates a PNG file from a UIElement, named radix_wwwwxhhhh.png.
+        /// Creates a PNG file from a UIElement, named [radix]_[width]x[height].png.
         /// </summary>
         /// <param name="uie">The UIElement.</param>
         /// <param name="pixelWidth">The width of the bitmap.</param>
@@ -107,7 +107,7 @@ namespace Perspective.Core.Wpf.Imaging
         }
 
         /// <summary>
-        /// Creates a 96 DPI PNG file from a FrameworkElement, named radix_wwwwxhhhh.png.
+        /// Creates a 96 DPI PNG file from a FrameworkElement, named [radix]_[width]x[height].png.
         /// </summary>
         /// <param name="element">The FrameworkElement.</param>
         /// <param name="directory">The output directory (optional).</param>
@@ -118,7 +118,7 @@ namespace Perspective.Core.Wpf.Imaging
         }
 
         /// <summary>
-        /// Creates a JPEG file from a UIElement, named radix_wwwwxhhhh.jpg.
+        /// Creates a JPEG file from a UIElement, named [radix]_[width]x[height].jpg.
         /// </summary>
         /// <param name="uie">The UIElement.</param>
         /// <param name="pixelWidth">The width of the bitmap.</param>
@@ -136,7 +136,7 @@ namespace Perspective.Core.Wpf.Imaging
         }
 
         /// <summary>
-        /// Creates a 96 DPI JPEG file from a FrameworkElement, named radix_wwwwxhhhh.jpg.
+        /// Creates a 96 DPI JPEG file from a FrameworkElement, named [radix]_[width]x[height].jpg.
         /// </summary>
         /// <param name="element">The FrameworkElement.</param>
         /// <param name="directory">The output directory (optional).</param>
@@ -147,7 +147,7 @@ namespace Perspective.Core.Wpf.Imaging
         }
 
         /// <summary>
-        /// Creates a XAML file from a FrameworkElement, named radix.xaml.
+        /// Creates a XAML file from a FrameworkElement, named [radix].xaml.
         /// </summary>
         /// <param name="element">The FrameworkElement.</param>
         /// <param name="directory">The output directory (optional).</param>

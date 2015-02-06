@@ -20,9 +20,9 @@ using System.Windows.Media.Media3D;
 namespace Perspective.Wpf3D.Panels
 {
     /// <summary>
-    /// A honeycomb layout system for 3D models.
+    /// A 2D honeycomb layout system for 3D models.
     /// </summary>
-    public class BeeGrid3D : Grid3D
+    public class BeeGrid3D : Grid2DPanel3D
     {
         /// <summary>
         /// Indicates if a cell has a tip base.
@@ -49,7 +49,7 @@ namespace Perspective.Wpf3D.Panels
         /// Defines the transform to apply to the 3D element.
         /// </summary>
         /// <param name="element">The 3D element.</param>
-        /// <returns></returns>
+        /// <returns>A TranslateTransform3D object.</returns>
         protected override Transform3D ComputeTransform(UIElement3D element)
         {
             int x = GetX(element);

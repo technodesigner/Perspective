@@ -20,22 +20,22 @@ namespace Perspective.Wpf3D.Export
     public interface I3dModelEncoder
     {
         /// <summary>
-        /// 
+        /// Gets or sets the name of the model.
         /// </summary>
         string ModelName { get; set; }
         
         /// <summary>
-        /// 
+        /// Gets or sets the Sculptor object.
         /// </summary>
         Sculptor Sculptor { get; set; }
         
         /// <summary>
-        /// 
+        /// Gets or sets the Transform object applied to the points.
         /// </summary>
         Transform3D PointsTransform { get; set; }
         
         /// <summary>
-        /// 
+        /// Saves the data.
         /// </summary>
         void Save();
     }

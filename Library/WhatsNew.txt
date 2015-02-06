@@ -18,11 +18,12 @@ What's new in Perspective library ?
 What's new in version 2.2.0.1 : 
 -------------------------------
 - Perspective.Wpf3D.Panels :
-New 3D panels : Grid3D, BeeGrid3D (honeycomb layout)
+New 3D panels : Grid3D, BeeGrid3D (2D honeycomb layout)
 - Perspective.Wpf3D.Shapes :
 New 3D shapes : CompositeBar3D (with a specific texture for the ends), BeeBar3D (a 3D hexagonal bar element, with a specific texture for the ends).
-- Perspective.Wpf.Controls :
-Workshop3D : new Camera property.
+- Perspective.Wpf.Controls.Workshop3D : 
+New Camera property.
+Ctrl-S Saves the scene in the user's Pictures folder in a PNG file named [3DScene_yyyy-MM-dd_HH-mm-ss-fff]_[width]x[height].png.
 - Perspective.Core.Wpf.Imaging
 ImagingHelper : new static class with image file creation methods, from a Visual, UIElement or FrameworkElement.
 - BREAKING CHANGE : DrawingHelper has moved from Perspective.Wpf (Perspective.Wpf.dll) to Perspective.Core.Wpf (Perspective.Core.dll).

@@ -319,26 +319,65 @@
         <ScaleTransform3D x:Key="T40" ScaleZ="4" />
         <ScaleTransform3D x:Key="T50" ScaleZ="4.2" />
         <ScaleTransform3D x:Key="T60" ScaleZ="4" />
-        <Transform3DGroup x:Key="compositeBarTransform" >
+        
             <!--<RotateTransform3D CenterX="0.5" CenterY="0.5">
                 <RotateTransform3D.Rotation>
                     <AxisAngleRotation3D Axis="0, 0, 1" Angle="45"/>
                 </RotateTransform3D.Rotation>
             </RotateTransform3D>-->
-            <!--<ScaleTransform3D 
-                CenterX="0.5" CenterY="0.5" CenterZ="0.5"
-                ScaleX="0.48" ScaleY="0.48" ScaleZ="4" />-->
+        <ScaleTransform3D x:Key="sphericalTransform"
+            CenterX="0.5" CenterY="0.5" CenterZ="0.5"
+            ScaleX="0.25" ScaleY="0.25" ScaleZ="0.25" />
             <!--<ScaleTransform3D 
                 CenterX="0.5" CenterY="0.5"
                 ScaleX="0.48" ScaleY="0.48"/>-->
-            <ScaleTransform3D 
-                ScaleZ="4" />
-        </Transform3DGroup>
+        <ScaleTransform3D x:Key="compositeBarTransform"
+            ScaleZ="4" />
+        
     </Page.Resources>
     <TabControl Style="{StaticResource SkinedTabControl}">
         <TabItem 
+            Header="Grid3D">
+            <p:Workshop3D Width="1200" Height="750">
+                <p:Grid3D>
+                    <p:Spherical3D ParallelCount="40" 
+                        p:Grid3D.X="0" p:Grid3D.Y="0" p:Grid3D.Z="0"                      
+                        Material="{StaticResource SideMaterial}"
+                        Transform="{StaticResource sphericalTransform}"/>
+                    <p:Spherical3D ParallelCount="40" 
+                        p:Grid3D.X="0" p:Grid3D.Y="0" p:Grid3D.Z="1"                      
+                        Material="{StaticResource SideMaterial}"
+                        Transform="{StaticResource sphericalTransform}"/>
+                    <p:Spherical3D ParallelCount="40" 
+                        p:Grid3D.X="1" p:Grid3D.Y="0" p:Grid3D.Z="1"                      
+                        Material="{StaticResource SideMaterial}"
+                        Transform="{StaticResource sphericalTransform}"/>
+                    <p:Spherical3D ParallelCount="40" 
+                        p:Grid3D.X="1" p:Grid3D.Y="0" p:Grid3D.Z="0"                      
+                        Material="{StaticResource SideMaterial}"
+                        Transform="{StaticResource sphericalTransform}"/>
+                    <p:Spherical3D ParallelCount="40" 
+                        p:Grid3D.X="0" p:Grid3D.Y="1" p:Grid3D.Z="0"                      
+                        Material="{StaticResource SideMaterial}"
+                        Transform="{StaticResource sphericalTransform}"/>
+                    <p:Spherical3D ParallelCount="40" 
+                        p:Grid3D.X="0" p:Grid3D.Y="1" p:Grid3D.Z="1"                      
+                        Material="{StaticResource SideMaterial}"
+                        Transform="{StaticResource sphericalTransform}"/>
+                    <p:Spherical3D ParallelCount="40" 
+                        p:Grid3D.X="1" p:Grid3D.Y="1" p:Grid3D.Z="1"                      
+                        Material="{StaticResource SideMaterial}"
+                        Transform="{StaticResource sphericalTransform}"/>
+                    <p:Spherical3D ParallelCount="40" 
+                        p:Grid3D.X="1" p:Grid3D.Y="1" p:Grid3D.Z="0"                      
+                        Material="{StaticResource SideMaterial}"
+                        Transform="{StaticResource sphericalTransform}"/>
+                </p:Grid3D>
+            </p:Workshop3D>
+        </TabItem>
+        <TabItem 
             Header="Grid3D + CompositeBar3D">
-            <p:Workshop3D Name="gridScene" Width="1200" Height="750" DefaultLighting="False" ShowCommandPanel="False">
+            <p:Workshop3D Name="gridScene" Width="1200" Height="750" DefaultLighting="False">
                 <p:Workshop3D.Camera >
                     <PerspectiveCamera Position="0, 0, 12" FieldOfView="70" LookDirection="0, 0, -1">
                         <PerspectiveCamera.Transform>

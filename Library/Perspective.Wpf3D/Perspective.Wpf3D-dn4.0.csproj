@@ -70,6 +70,7 @@
     <Compile Include="Export\IModel3dEncoder.cs" />
     <Compile Include="Export\StlEncoder.cs" />
     <Compile Include="Panels\BeeGrid3D.cs" />
+    <Compile Include="Panels\Grid2DPanel3D.cs" />
     <Compile Include="Panels\Grid3D.cs" />
     <Compile Include="Panels\Panel3D.cs" />
     <Compile Include="Primitives\CoordinateSystemKind.cs" />

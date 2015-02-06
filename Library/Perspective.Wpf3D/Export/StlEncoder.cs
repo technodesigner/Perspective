@@ -24,17 +24,17 @@ namespace Perspective.Wpf3D.Export
     public class StlEncoder : I3dModelEncoder
     {
         /// <summary>
-        /// 
+        /// Gets or sets the name of the model. 
         /// </summary>
         public string ModelName { get; set; }
         
         /// <summary>
-        /// 
+        /// Gets or sets the Sculptor object. 
         /// </summary>
         public Sculptor Sculptor { get; set; }
 
         /// <summary>
-        /// 
+        /// Gets or sets the Transform object applied to the points.
         /// </summary>
         public Transform3D PointsTransform { get; set; }
 
@@ -42,7 +42,7 @@ namespace Perspective.Wpf3D.Export
         private StreamWriter _writer;
 
         /// <summary>
-        /// 
+        /// Saves the data in a STL file.
         /// </summary>
         public void Save()
         {

@@ -36,6 +36,7 @@ namespace Perspective.Wpf.Controls
     /// - When the Ctrl key is pressed, they move the orientation of the camera according to a vertical plane (Up and Down arrows) or horizontal plane (Left and Right arrows). 
     /// - When the Shift key is pressed, they turn the camera around the origin according to a vertical plane (Up and Down arrows or position joystick's buttons) or horizontal plane (Left and Right arrows or position joystick's buttons). 
     /// - The key 5 or Ctrl-Plus of the numeric keypad elevate the position of the camera. Keys Ctrl-5 or Ctrl-Minus reduce the height of the camera position.
+    /// - Ctrl-S saves the scene in a PNG file on the desktop.
     /// <remarks>Binding between elements using ElementName is not currently supported in a Workshop3D, because it is not possible to get an inheritance context pointer. Use the Source or RelativeSource property. See http://blogs.msdn.com/nickkramer/archive/2006/08/18/705116.aspx</remarks>
     /// </summary>
     [ContentProperty("Children")]
@@ -434,22 +435,13 @@ namespace Perspective.Wpf.Controls
                         {
                             if (!double.IsNaN(Width) && !double.IsNaN(Height))
                             {
-                                // Saves the scene
-
-                                
-
+                                // Saves the scene in the user's Pictures folder in a PNG file named [3DScene_yyyy-MM-dd_HH-mm-ss-fff]_[width]x[height].png
                                 var pixelWidth = Convert.ToInt32(this.Width);
                                 var pixelHeight = Convert.ToInt32(this.Height);
-                                //ImagingHelper.SaveTargetBitmap(TakeScreenshot(96), "3DScene", new PngBitmapEncoder());
-                                ImagingHelper.CreatePngFile(_viewport, pixelWidth, pixelHeight, 96, null, null, "3DScene");
-                                ImagingHelper.CreateJpegFile(_viewport, pixelWidth, pixelHeight, 96, null, "3DScene");
-                                var scp = ShowCommandPanel;
-                                ShowCommandPanel = false;
-                                //InvalidateVisual();
-                                ImagingHelper.CreatePngFile(this, pixelWidth, pixelHeight, 96, Brushes.White, null, "3DSceneB");
-                                ShowCommandPanel = scp;
-                                ImagingHelper.CreatePngFile(this, pixelWidth, pixelHeight, 96, Brushes.White, null, "3DSceneBP");
-                                ImagingHelper.CreateJpegFile(this, pixelWidth, pixelHeight, 96, null, "3DSceneBP");
+                                ImagingHelper.CreatePngFile(_viewport, 
+                                    pixelWidth, pixelHeight, 96, null,
+                                    Environment.GetFolderPath(Environment.SpecialFolder.MyPictures),
+                                    String.Format("3DScene_{0:yyyy-MM-dd_HH-mm-ss-fff}", DateTime.Now));
                             }
                         }
                         break;
