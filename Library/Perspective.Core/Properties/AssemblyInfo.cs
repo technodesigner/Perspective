@@ -68,8 +68,9 @@ namespace Perspective.Core
         /// 2.0.0.3 : beta 3 (not published)
         /// 2.0.0.4 : final 2.0
         /// 2.1.0.1 : beta 2.1
+        /// 2.2.0.1 : beta 2.2
         /// </summary>
-        public const string GlobalVersion = "2.1.0.1";
+        public const string GlobalVersion = "2.2.0.1";
 
         /// <summary>
         /// Global company name.
@@ -79,6 +80,6 @@ namespace Perspective.Core
         /// <summary>
         /// Global copyright information.
         /// </summary>
-        public const string Copyright = "Copyright © http://perspective.codeplex.com 2008-2013";
+        public const string Copyright = "Copyright © http://perspective.codeplex.com";
     }
 }

@@ -14,11 +14,29 @@ using System.Windows;
 using System.Windows.Media.Media3D;
 namespace Perspective.Wpf3D.Export
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public interface I3dModelEncoder
     {
+        /// <summary>
+        /// 
+        /// </summary>
         string ModelName { get; set; }
+        
+        /// <summary>
+        /// 
+        /// </summary>
         Sculptor Sculptor { get; set; }
+        
+        /// <summary>
+        /// 
+        /// </summary>
         Transform3D PointsTransform { get; set; }
+        
+        /// <summary>
+        /// 
+        /// </summary>
         void Save();
     }
 }

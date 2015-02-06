@@ -44,7 +44,7 @@ namespace Perspective.Wpf.Panels
                 DPHelper.IsIntValuePositive);
 
         /// <summary>
-        /// Gets or sets the number of columns. The default value is 4The default value is 4, and applies if the Width is not set.
+        /// Gets or sets the number of columns. The default value is 4, and applies if the Width is not set.
         /// </summary>
         public int ColumnCount
         {

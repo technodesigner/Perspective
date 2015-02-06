@@ -1,5 +1,17 @@
 What's new in Perspective library ?
 
+What's new in version 2.2.0.1 : 
+- Perspective.Wpf3D.Panels :
+New 3D panels : Grid3D, BeeGrid3D (honeycomb layout)
+- Perspective.Wpf3D.Shapes :
+New 3D shapes : CompositeBar3D (with a specific texture for the ends), BeeBar3D (a 3D hexagonal bar element, with a specific texture for the ends).
+- Perspective.Wpf.Controls :
+Workshop3D : new Camera property.
+- Perspective.Core.Wpf.Imaging
+ImagingHelper : new static class with image file creation methods, from a Visual, UIElement or FrameworkElement.
+- BREAKING CHANGE : DrawingHelper has moved from Perspective.Wpf (Perspective.Wpf.dll) to Perspective.Core.Wpf (Perspective.Core.dll).
+- .NET 4.5 support.
+
 What's new in version 2.1.0.1 : 
 - Perspective 3D models may now be exported in STL (STereoLithography) files. 
 This enable 3D printing (tested for MakerBot Replicator 2X and MakerWare).

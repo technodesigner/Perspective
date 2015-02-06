@@ -18,15 +18,32 @@ using System.Windows.Media.Media3D;
 
 namespace Perspective.Wpf3D.Export
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class StlEncoder : I3dModelEncoder
     {
+        /// <summary>
+        /// 
+        /// </summary>
         public string ModelName { get; set; }
+        
+        /// <summary>
+        /// 
+        /// </summary>
         public Sculptor Sculptor { get; set; }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public Transform3D PointsTransform { get; set; }
 
         private IndentedTextWriter _out;
         private StreamWriter _writer;
+
+        /// <summary>
+        /// 
+        /// </summary>
         public void Save()
         {
             var sculptor = new Sculptor(Sculptor);

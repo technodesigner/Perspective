@@ -81,6 +81,7 @@
     <Compile Include="Wpf\DPHelper.cs" />
     <Compile Include="Wpf\Dimensions.cs" />
     <Compile Include="Wpf\Direction.cs" />
+    <Compile Include="Wpf\DrawingHelper.cs" />
     <Compile Include="Wpf\GeometryHelper.cs" />
     <Compile Include="Wpf\Handedness3D.cs">
       <SubType>Code</SubType>
@@ -91,6 +92,7 @@
     <Compile Include="Wpf\Imaging\BitmapToJpegConverter.cs" />
     <Compile Include="Wpf\Imaging\BitmapToPngConverter.cs" />
     <Compile Include="Wpf\Imaging\IBitmapConverter.cs" />
+    <Compile Include="Wpf\Imaging\ImagingHelper.cs" />
     <Compile Include="Wpf\Primitives\IRangeElement.cs" />
     <Compile Include="Wpf\Primitives\RangeElementSelectionManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

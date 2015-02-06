@@ -6,7 +6,7 @@ using System.Text;
 namespace Perspective.Wpf3D.Primitives
 {
     /// <summary>
-    /// A Flags enumeration to identify the sides od a cube 
+    /// A Flags enumeration to identify the sides of a cube 
     /// (seen from an X, Y, Z positive position).
     /// </summary>
     [Flags()]

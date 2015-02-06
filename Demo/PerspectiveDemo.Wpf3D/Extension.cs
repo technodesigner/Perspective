@@ -261,9 +261,15 @@ namespace PerspectiveDemo.Wpf3D
                 },
                 new PageInfo(this)
                 {
-                    Title = "House3D+Export",
+                    Title = "House3D + Export",
                     IconKey = _iconKey,
                     PartialClassName = "View/HouseDemo.xaml"
+                },
+                new PageInfo(this)
+                {
+                    Title = "3D panels",
+                    IconKey = _iconKey,
+                    PartialClassName = "View/Panel3DDemo.xaml"
                 }
             };
         }

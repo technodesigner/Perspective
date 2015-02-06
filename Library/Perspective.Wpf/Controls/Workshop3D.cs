@@ -23,6 +23,7 @@ using Perspective.Wpf.ResourceStrings;
 using Perspective.Core.Wpf.Converters;
 using Perspective.Core.Wpf.Data;
 using System.Windows.Media.Imaging;
+using Perspective.Core.Wpf.Imaging;
 
 namespace Perspective.Wpf.Controls
 {
@@ -71,6 +72,31 @@ namespace Perspective.Wpf.Controls
         {
             Horizontal,
             Vertical
+        }
+
+
+        /// <summary>
+        /// Gets or sets the Camera object.
+        /// </summary>
+        public Camera Camera
+        {
+            get { return (Camera)GetValue(CameraProperty); }
+            set { SetValue(CameraProperty, value); }
+        }
+
+        /// <summary>
+        /// Identifies the Camera dependency property.
+        /// </summary>
+        public static readonly DependencyProperty CameraProperty =
+            DependencyProperty.Register("Camera", typeof(Camera), typeof(Workshop3D),
+                                new PropertyMetadata(
+                    null,
+                    CameraPropertyChanged));
+
+        static void CameraPropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            var scene = (Workshop3D)d;
+            scene._viewport.Camera = scene.Camera;
         }
 
         /// <summary>
@@ -313,7 +339,8 @@ namespace Perspective.Wpf.Controls
             }
             else
             {
-                w._commandPanel.Visibility = Visibility.Collapsed;
+                // w._commandPanel.Visibility = Visibility.Collapsed;
+                w._commandPanel.Visibility = Visibility.Hidden;         //2.2.0.1
             }
         }
 
@@ -399,6 +426,31 @@ namespace Perspective.Wpf.Controls
                         {
                             // Resets the camera
                             InitializeCamera();
+                        }
+                        break;
+
+                    case Key.S:
+                        if (Keyboard.Modifiers == (ModifierKeys.Control))
+                        {
+                            if (!double.IsNaN(Width) && !double.IsNaN(Height))
+                            {
+                                // Saves the scene
+
+                                
+
+                                var pixelWidth = Convert.ToInt32(this.Width);
+                                var pixelHeight = Convert.ToInt32(this.Height);
+                                //ImagingHelper.SaveTargetBitmap(TakeScreenshot(96), "3DScene", new PngBitmapEncoder());
+                                ImagingHelper.CreatePngFile(_viewport, pixelWidth, pixelHeight, 96, null, null, "3DScene");
+                                ImagingHelper.CreateJpegFile(_viewport, pixelWidth, pixelHeight, 96, null, "3DScene");
+                                var scp = ShowCommandPanel;
+                                ShowCommandPanel = false;
+                                //InvalidateVisual();
+                                ImagingHelper.CreatePngFile(this, pixelWidth, pixelHeight, 96, Brushes.White, null, "3DSceneB");
+                                ShowCommandPanel = scp;
+                                ImagingHelper.CreatePngFile(this, pixelWidth, pixelHeight, 96, Brushes.White, null, "3DSceneBP");
+                                ImagingHelper.CreateJpegFile(this, pixelWidth, pixelHeight, 96, null, "3DSceneBP");
+                            }
                         }
                         break;
 

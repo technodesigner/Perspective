@@ -38,7 +38,7 @@ namespace Perspective.Wpf3D.Shapes
                     VisualPropertyChanged));
         }
 
-        // private BarSculptor _sculptor = new BarSculptor();
+
 
         /// <summary>
         /// Called by UIElement3D.InvalidateModel() to update the 3D model.
@@ -46,10 +46,31 @@ namespace Perspective.Wpf3D.Shapes
         protected override void OnUpdateModel()
         {
             Sculptor = new BarSculptor(SideCount, InitialAngle, RoundingRate);
+            (Sculptor as BarSculptor).TexturePosition = this.TexturePosition;
             // _sculptor.Initialize(SideCount, InitialAngle, RoundingRate);
             //_sculptor.BuildMesh();
             //Geometry = _sculptor.Mesh;
             base.OnUpdateModel();
         }
+
+
+        /// <summary>
+        /// Gets or sets the position a a texture. Default is OnSides.
+        /// </summary>
+        public TexturePositions TexturePosition
+        {
+            get { return (TexturePositions)GetValue(TexturePositionProperty); }
+            set { SetValue(TexturePositionProperty, value); }
+        }
+
+        /// <summary>
+        /// Identifies the TexturePosition dependency property.
+        /// </summary>
+        public static readonly DependencyProperty TexturePositionProperty =
+            DependencyProperty.Register("TexturePosition", typeof(TexturePositions), typeof(Bar3D), new PropertyMetadata(TexturePositions.OnSides));
+
+
+
+        
     }
 }

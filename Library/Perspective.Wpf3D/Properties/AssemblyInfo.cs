@@ -44,4 +44,5 @@ using System.Windows.Markup;
 [assembly: XmlnsDefinition(Perspective.Core.LibraryInfo.XmlNamespace, "Perspective.Wpf3D")]
 [assembly: XmlnsDefinition(Perspective.Core.LibraryInfo.XmlNamespace, "Perspective.Wpf3D.Shapes")]
 [assembly: XmlnsDefinition(Perspective.Core.LibraryInfo.XmlNamespace, "Perspective.Wpf3D.Controls")]
+[assembly: XmlnsDefinition(Perspective.Core.LibraryInfo.XmlNamespace, "Perspective.Wpf3D.Panels")]
 
