@@ -18,7 +18,7 @@ What's new in Perspective library ?
 What's new in version 2.2.0.1 : 
 -------------------------------
 - Perspective.Wpf3D.Panels :
-New 3D panels : Grid3D, BeeGrid3D (2D honeycomb layout)
+New 3D layout managers : Space3D, XYBeeSpace3D (2D honeycomb layout)
 - Perspective.Wpf3D.Shapes :
 New 3D shapes : CompositeBar3D (with a specific texture for the ends), BeeBar3D (a 3D hexagonal bar element, with a specific texture for the ends).
 - Perspective.Wpf.Controls.Workshop3D : 

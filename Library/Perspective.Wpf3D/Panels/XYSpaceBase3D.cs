@@ -23,7 +23,7 @@ namespace Perspective.Wpf3D.Panels
     /// <summary>
     /// A 2D grid panel for 3D elements.
     /// </summary>
-    public abstract class Grid2DPanel3D : Panel3D
+    public abstract class XYSpaceBase3D : SpaceBase3D
     {
         /// <summary>
         /// Identifies the X attached dependency property.
@@ -32,7 +32,7 @@ namespace Perspective.Wpf3D.Panels
             DependencyProperty.RegisterAttached(
                 "X",
                 typeof(int),
-                typeof(Grid2DPanel3D),
+                typeof(XYSpaceBase3D),
                 new PropertyMetadata(0));
 
         /// <summary>
@@ -64,7 +64,7 @@ namespace Perspective.Wpf3D.Panels
             DependencyProperty.RegisterAttached(
                 "Y",
                 typeof(int),
-                typeof(Grid2DPanel3D),
+                typeof(XYSpaceBase3D),
                 new PropertyMetadata(0));
 
         /// <summary>
@@ -89,16 +89,16 @@ namespace Perspective.Wpf3D.Panels
             element.SetValue(YProperty, value);
         }
 
-        /// <summary>
-        /// Defines the transform to apply to the 3D element.
-        /// </summary>
-        /// <param name="element">The 3D element.</param>
-        /// <returns>A TranslateTransform3D object.</returns>
-        protected override Transform3D ComputeTransform(UIElement3D element)
-        {
-            int x = GetX(element);
-            int y = GetY(element);
-            return new TranslateTransform3D(x, y, 0);
-        }
+        ///// <summary>
+        ///// Defines the transform to apply to the 3D element.
+        ///// </summary>
+        ///// <param name="element">The 3D element.</param>
+        ///// <returns>A TranslateTransform3D object.</returns>
+        //protected override Transform3D ComputeTransform(UIElement3D element)
+        //{
+        //    int x = GetX(element);
+        //    int y = GetY(element);
+        //    return new TranslateTransform3D(x, y, 0);
+        //}
     }
 }

@@ -15,18 +15,13 @@ using System.Windows.Shapes;
 namespace PerspectiveDemo.Wpf3D.View
 {
     /// <summary>
-    /// Interaction logic for Panel3DDemo.xaml
+    /// Interaction logic for Space3DDemo.xaml
     /// </summary>
-    public partial class Panel3DDemo : Page
+    public partial class Space3DDemo : Page
     {
-        public Panel3DDemo()
+        public Space3DDemo()
         {
             InitializeComponent();
-        }
-
-        private void Page_Loaded(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿<Page x:Class="PerspectiveDemo.Wpf3D.View.Panel3DDemo"
+﻿<Page x:Class="PerspectiveDemo.Wpf3D.View.Space3DDemo"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -8,8 +8,7 @@
     mc:Ignorable="d" 
     d:DesignHeight="300" d:DesignWidth="300"
     Style="{StaticResource PageStyle}"
-    Loaded="Page_Loaded"
-	Title="Panel3DDemo">
+	Title="Space3DDemo">
     <Page.Resources>
         <Style TargetType="Grid">
             <Setter Property="Width" Value="200" />
@@ -319,64 +318,55 @@
         <ScaleTransform3D x:Key="T40" ScaleZ="4" />
         <ScaleTransform3D x:Key="T50" ScaleZ="4.2" />
         <ScaleTransform3D x:Key="T60" ScaleZ="4" />
-        
-            <!--<RotateTransform3D CenterX="0.5" CenterY="0.5">
-                <RotateTransform3D.Rotation>
-                    <AxisAngleRotation3D Axis="0, 0, 1" Angle="45"/>
-                </RotateTransform3D.Rotation>
-            </RotateTransform3D>-->
         <ScaleTransform3D x:Key="sphericalTransform"
             CenterX="0.5" CenterY="0.5" CenterZ="0.5"
             ScaleX="0.25" ScaleY="0.25" ScaleZ="0.25" />
-            <!--<ScaleTransform3D 
-                CenterX="0.5" CenterY="0.5"
-                ScaleX="0.48" ScaleY="0.48"/>-->
         <ScaleTransform3D x:Key="compositeBarTransform"
             ScaleZ="4" />
         
     </Page.Resources>
     <TabControl Style="{StaticResource SkinedTabControl}">
         <TabItem 
-            Header="Grid3D">
+            Header="Space3D">
             <p:Workshop3D Width="1200" Height="750">
-                <p:Grid3D>
+                <p:Space3D>
                     <p:Spherical3D ParallelCount="40" 
-                        p:Grid3D.X="0" p:Grid3D.Y="0" p:Grid3D.Z="0"                      
+                        p:Space3D.X="0" p:Space3D.Y="0" p:Space3D.Z="0"                      
                         Material="{StaticResource SideMaterial}"
                         Transform="{StaticResource sphericalTransform}"/>
                     <p:Spherical3D ParallelCount="40" 
-                        p:Grid3D.X="0" p:Grid3D.Y="0" p:Grid3D.Z="1"                      
+                        p:Space3D.X="0" p:Space3D.Y="0" p:Space3D.Z="1"                      
                         Material="{StaticResource SideMaterial}"
                         Transform="{StaticResource sphericalTransform}"/>
                     <p:Spherical3D ParallelCount="40" 
-                        p:Grid3D.X="1" p:Grid3D.Y="0" p:Grid3D.Z="1"                      
+                        p:Space3D.X="1" p:Space3D.Y="0" p:Space3D.Z="1"                      
                         Material="{StaticResource SideMaterial}"
                         Transform="{StaticResource sphericalTransform}"/>
                     <p:Spherical3D ParallelCount="40" 
-                        p:Grid3D.X="1" p:Grid3D.Y="0" p:Grid3D.Z="0"                      
+                        p:Space3D.X="1" p:Space3D.Y="0" p:Space3D.Z="0"                      
                         Material="{StaticResource SideMaterial}"
                         Transform="{StaticResource sphericalTransform}"/>
                     <p:Spherical3D ParallelCount="40" 
-                        p:Grid3D.X="0" p:Grid3D.Y="1" p:Grid3D.Z="0"                      
+                        p:Space3D.X="0" p:Space3D.Y="1" p:Space3D.Z="0"                      
                         Material="{StaticResource SideMaterial}"
                         Transform="{StaticResource sphericalTransform}"/>
                     <p:Spherical3D ParallelCount="40" 
-                        p:Grid3D.X="0" p:Grid3D.Y="1" p:Grid3D.Z="1"                      
+                        p:Space3D.X="0" p:Space3D.Y="1" p:Space3D.Z="1"                      
                         Material="{StaticResource SideMaterial}"
                         Transform="{StaticResource sphericalTransform}"/>
                     <p:Spherical3D ParallelCount="40" 
-                        p:Grid3D.X="1" p:Grid3D.Y="1" p:Grid3D.Z="1"                      
+                        p:Space3D.X="1" p:Space3D.Y="1" p:Space3D.Z="1"                      
                         Material="{StaticResource SideMaterial}"
                         Transform="{StaticResource sphericalTransform}"/>
                     <p:Spherical3D ParallelCount="40" 
-                        p:Grid3D.X="1" p:Grid3D.Y="1" p:Grid3D.Z="0"                      
+                        p:Space3D.X="1" p:Space3D.Y="1" p:Space3D.Z="0"                      
                         Material="{StaticResource SideMaterial}"
                         Transform="{StaticResource sphericalTransform}"/>
-                </p:Grid3D>
+                </p:Space3D>
             </p:Workshop3D>
         </TabItem>
         <TabItem 
-            Header="Grid3D + CompositeBar3D">
+            Header="Space3D + CompositeBar3D">
             <p:Workshop3D Name="gridScene" Width="1200" Height="750" DefaultLighting="False">
                 <p:Workshop3D.Camera >
                     <PerspectiveCamera Position="0, 0, 12" FieldOfView="70" LookDirection="0, 0, -1">
@@ -395,9 +385,9 @@
                         </Model3DGroup>
                     </ModelVisual3D.Content>
                 </ModelVisual3D>
-                <p:Grid3D x:Name="grid">
+                <p:Space3D x:Name="grid">
                     <p:CompositeBar3D 
-                        p:Grid3D.X="-2" p:Grid3D.Y="2"
+                        p:Space3D.X="-2" p:Space3D.Y="2"
                         DefaultTextureMapping="True"
                         RoundingRate="0.2"
                         SideCount="12"
@@ -405,7 +395,7 @@
                         Transform="{StaticResource compositeBarTransform}"
                         EndMaterial="{StaticResource NewYear1Material}" />
                     <p:CompositeBar3D 
-                        p:Grid3D.X="0" p:Grid3D.Y="2"
+                        p:Space3D.X="0" p:Space3D.Y="2"
                         DefaultTextureMapping="True"
                         RoundingRate="0.2"
                         SideCount="12"                        
@@ -413,7 +403,7 @@
                         Transform="{StaticResource compositeBarTransform}"
                         EndMaterial="{StaticResource NewYear2Material}" />
                     <p:CompositeBar3D 
-                        p:Grid3D.X="4" p:Grid3D.Y="-2"
+                        p:Space3D.X="4" p:Space3D.Y="-2"
                         DefaultTextureMapping="True"
                         RoundingRate="0.2"
                         SideCount="12"
@@ -421,7 +411,7 @@
                         Transform="{StaticResource compositeBarTransform}"
                         EndMaterial="{StaticResource SignMaterial}" />
                     <p:CompositeBar3D 
-                        p:Grid3D.X="2" p:Grid3D.Y="2" 
+                        p:Space3D.X="2" p:Space3D.Y="2" 
                         DefaultTextureMapping="True"
                         RoundingRate="0.2"
                         SideCount="12"
@@ -429,7 +419,7 @@
                         Transform="{StaticResource compositeBarTransform}"
                         EndMaterial="{StaticResource UsefulMaterial}" />
                     <p:CompositeBar3D 
-                        p:Grid3D.X="2" p:Grid3D.Y="0"
+                        p:Space3D.X="2" p:Space3D.Y="0"
                         DefaultTextureMapping="True"
                         RoundingRate="0.2"
                         SideCount="12"
@@ -437,7 +427,7 @@
                         Transform="{StaticResource compositeBarTransform}"
                         EndMaterial="{StaticResource InnoMaterial}" />
                     <p:CompositeBar3D 
-                        p:Grid3D.X="2" p:Grid3D.Y="-2"
+                        p:Space3D.X="2" p:Space3D.Y="-2"
                         DefaultTextureMapping="True"
                         RoundingRate="0.2"
                         SideCount="12"
@@ -445,7 +435,7 @@
                         Transform="{StaticResource compositeBarTransform}"
                         EndMaterial="{StaticResource AttractiveMaterial}" />
                     <p:CompositeBar3D 
-                        p:Grid3D.X="0" p:Grid3D.Y="-2"
+                        p:Space3D.X="0" p:Space3D.Y="-2"
                         DefaultTextureMapping="True"
                         RoundingRate="0.2"
                         SideCount="12"                        
@@ -453,7 +443,7 @@
                         Transform="{StaticResource compositeBarTransform}"
                         EndMaterial="{StaticResource CompMaterial}" />
                     <p:CompositeBar3D 
-                        p:Grid3D.X="-2" p:Grid3D.Y="-2"
+                        p:Space3D.X="-2" p:Space3D.Y="-2"
                         DefaultTextureMapping="True"
                         RoundingRate="0.2"
                         SideCount="12"
@@ -461,7 +451,7 @@
                         Transform="{StaticResource compositeBarTransform}"
                         EndMaterial="{StaticResource RefMaterial}" />
                     <p:CompositeBar3D 
-                        p:Grid3D.X="-2" p:Grid3D.Y="0"
+                        p:Space3D.X="-2" p:Space3D.Y="0"
                         DefaultTextureMapping="True"
                         RoundingRate="0.2"
                         SideCount="12"
@@ -469,18 +459,18 @@
                         Transform="{StaticResource compositeBarTransform}"
                         EndMaterial="{StaticResource RoiMaterial}" />
                     <p:CompositeBar3D 
-                        p:Grid3D.X="0" p:Grid3D.Y="0"
+                        p:Space3D.X="0" p:Space3D.Y="0"
                         DefaultTextureMapping="True"
                         RoundingRate="0.2"
                         SideCount="12"                        
                         Material="{StaticResource SideMaterial}"
                         Transform="{StaticResource compositeBarTransform}"
                         EndMaterial="{StaticResource LogoMaterial}" />
-                </p:Grid3D>
+                </p:Space3D>
             </p:Workshop3D>
         </TabItem>
         <TabItem 
-            Header="BeeGrid3D + BeeBar3D">
+            Header="BeeSpace3D + BeeBar3D">
             <p:Workshop3D Name="scene" Width="1200" Height="750" DefaultLighting="False" ShowCommandPanel="False">
                 <p:Workshop3D.Camera >
                     <PerspectiveCamera Position="-2.1, 1, 8.6" FieldOfView="90" LookDirection="0.25, 0, -1">
@@ -499,58 +489,58 @@
                         </Model3DGroup>
                     </ModelVisual3D.Content>
                 </ModelVisual3D>
-                <p:BeeGrid3D x:Name="beeGrid">
+                <p:BeeSpace3D x:Name="beeGrid">
                     <p:BeeBar3D 
-                        p:BeeGrid3D.X="-2" p:BeeGrid3D.Y="2"
+                        p:BeeSpace3D.X="-2" p:BeeSpace3D.Y="2"
                         Material="{StaticResource SideMaterial}"
                         Transform="{StaticResource TitleScaling}"
                         EndMaterial="{StaticResource NewYear1Material}" />
                     <p:BeeBar3D 
-                        p:BeeGrid3D.X="-1" p:BeeGrid3D.Y="1"
+                        p:BeeSpace3D.X="-1" p:BeeSpace3D.Y="1"
                         Material="{StaticResource SideMaterial}"
                         Transform="{StaticResource TitleScaling}"
                         EndMaterial="{StaticResource NewYear2Material}" />
                     <p:BeeBar3D 
-                        p:BeeGrid3D.X="-2" p:BeeGrid3D.Y="1"
+                        p:BeeSpace3D.X="-2" p:BeeSpace3D.Y="1"
                         Material="{StaticResource SideMaterial}"
                         Transform="{StaticResource BaseScaling}"
                         EndMaterial="{StaticResource SignMaterial}" />
                     <p:BeeBar3D 
-                        p:BeeGrid3D.X="0" p:BeeGrid3D.Y="1" 
+                        p:BeeSpace3D.X="0" p:BeeSpace3D.Y="1" 
                         Material="{StaticResource SideMaterial}"
                         Transform="{StaticResource T10}"
                         EndMaterial="{StaticResource UsefulMaterial}" />
                     <p:BeeBar3D 
-                        p:BeeGrid3D.X="1" p:BeeGrid3D.Y="1"
+                        p:BeeSpace3D.X="1" p:BeeSpace3D.Y="1"
                         Material="{StaticResource SideMaterial}"
                         Transform="{StaticResource T20}"
                         EndMaterial="{StaticResource InnoMaterial}" />
                     <p:BeeBar3D 
-                        p:BeeGrid3D.X="2" p:BeeGrid3D.Y="0"
+                        p:BeeSpace3D.X="2" p:BeeSpace3D.Y="0"
                         Material="{StaticResource SideMaterial}"
                         Transform="{StaticResource T30}"
                         EndMaterial="{StaticResource AttractiveMaterial}" />
                     <p:BeeBar3D 
-                        p:BeeGrid3D.X="2" p:BeeGrid3D.Y="-1"
+                        p:BeeSpace3D.X="2" p:BeeSpace3D.Y="-1"
                         Material="{StaticResource SideMaterial}"
                         Transform="{StaticResource T40}"
                         EndMaterial="{StaticResource CompMaterial}" />
                     <p:BeeBar3D 
-                        p:BeeGrid3D.X="1" p:BeeGrid3D.Y="-1"
+                        p:BeeSpace3D.X="1" p:BeeSpace3D.Y="-1"
                         Material="{StaticResource SideMaterial}"
                         Transform="{StaticResource T50}"
                         EndMaterial="{StaticResource RefMaterial}" />
                     <p:BeeBar3D 
-                        p:BeeGrid3D.X="0" p:BeeGrid3D.Y="0"
+                        p:BeeSpace3D.X="0" p:BeeSpace3D.Y="0"
                         Material="{StaticResource SideMaterial}"
                         Transform="{StaticResource T60}"
                         EndMaterial="{StaticResource RoiMaterial}" />
                     <p:BeeBar3D 
-                        p:BeeGrid3D.X="1" p:BeeGrid3D.Y="0"
+                        p:BeeSpace3D.X="1" p:BeeSpace3D.Y="0"
                         Material="{StaticResource SideMaterial}"
                         Transform="{StaticResource LogoScaling}"
                         EndMaterial="{StaticResource LogoMaterial}" />
-                </p:BeeGrid3D>
+                </p:BeeSpace3D>
             </p:Workshop3D>
         </TabItem>
     </TabControl>

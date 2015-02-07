@@ -267,9 +267,9 @@ namespace PerspectiveDemo.Wpf3D
                 },
                 new PageInfo(this)
                 {
-                    Title = "3D panels",
+                    Title = "3D spaces",
                     IconKey = _iconKey,
-                    PartialClassName = "View/Panel3DDemo.xaml"
+                    PartialClassName = "View/Space3DDemo.xaml"
                 }
             };
         }

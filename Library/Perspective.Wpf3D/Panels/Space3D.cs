@@ -23,7 +23,7 @@ namespace Perspective.Wpf3D.Panels
     /// <summary>
     /// A 3D grid panel for 3D elements.
     /// </summary>
-    public class Grid3D : Grid2DPanel3D
+    public class Space3D : XYSpaceBase3D
     {
         /// <summary>
         /// Identifies the Z attached dependency property.
@@ -32,7 +32,7 @@ namespace Perspective.Wpf3D.Panels
             DependencyProperty.RegisterAttached(
                 "Z",
                 typeof(int),
-                typeof(Grid3D),
+                typeof(Space3D),
                 new PropertyMetadata(0));
 
         /// <summary>

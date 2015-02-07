@@ -23,7 +23,7 @@ namespace Perspective.Wpf3D.Panels
     /// Base class for panel for 3D elements.
     /// </summary>
     [ContentProperty("Children")]
-    public abstract class Panel3D : UIElement3D
+    public abstract class SpaceBase3D : UIElement3D
     {
         private readonly List<UIElement3D> _children;
         private readonly Dictionary<UIElement3D, Transform3D> _transforms;
@@ -31,7 +31,7 @@ namespace Perspective.Wpf3D.Panels
         /// <summary>
         /// Initializes a new Panel3D object.
         /// </summary>
-        protected Panel3D()
+        protected SpaceBase3D()
         {
             _children = new List<UIElement3D>();
             _transforms = new Dictionary<UIElement3D, Transform3D>();

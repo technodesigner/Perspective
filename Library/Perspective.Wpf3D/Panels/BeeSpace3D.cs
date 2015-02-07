@@ -22,7 +22,7 @@ namespace Perspective.Wpf3D.Panels
     /// <summary>
     /// A 2D honeycomb layout system for 3D models.
     /// </summary>
-    public class BeeGrid3D : Grid2DPanel3D
+    public class BeeSpace3D : XYSpaceBase3D
     {
         /// <summary>
         /// Indicates if a cell has a tip base.
@@ -37,11 +37,11 @@ namespace Perspective.Wpf3D.Panels
         /// Identifies the HasTriangleCellCap dependency property.
         /// </summary>
         public static readonly DependencyProperty HasTriangleCellCapProperty =
-            DependencyProperty.Register("HasTriangleCellCap", typeof(bool), typeof(BeeGrid3D), new PropertyMetadata(false, BeeGrid3DPropertiesChanged));
+            DependencyProperty.Register("HasTriangleCellCap", typeof(bool), typeof(BeeSpace3D), new PropertyMetadata(false, BeeGrid3DPropertiesChanged));
 
         private static void BeeGrid3DPropertiesChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
-            BeeGrid3D panel = ((BeeGrid3D)d);
+            BeeSpace3D panel = ((BeeSpace3D)d);
             panel.InvalidateModel();
         }         
 
